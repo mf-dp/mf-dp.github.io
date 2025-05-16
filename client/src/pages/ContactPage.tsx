@@ -8,10 +8,13 @@ export default function ContactPage() {
     <main 
       className="flex flex-col min-h-screen"
       style={{
-        backgroundImage: "url('/backgrounds/contact-bg.svg')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1920&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(255, 255, 255, 0.92)"
       }}
     >
       <SEO 

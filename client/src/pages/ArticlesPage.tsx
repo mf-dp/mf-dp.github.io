@@ -8,10 +8,13 @@ export default function ArticlesPage() {
     <main 
       className="flex flex-col min-h-screen"
       style={{
-        backgroundImage: "url('/backgrounds/articles-bg.svg')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1920&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(255, 255, 255, 0.92)"
       }}
     >
       <SEO 

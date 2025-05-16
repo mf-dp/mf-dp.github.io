@@ -8,10 +8,13 @@ export default function ResumePage() {
     <main 
       className="flex flex-col min-h-screen"
       style={{
-        backgroundImage: "url('/backgrounds/resume-bg.svg')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1920&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(255, 255, 255, 0.92)"
       }}
     >
       <SEO 

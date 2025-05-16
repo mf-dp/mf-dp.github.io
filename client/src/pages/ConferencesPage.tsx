@@ -8,10 +8,13 @@ export default function ConferencesPage() {
     <main 
       className="flex flex-col min-h-screen"
       style={{
-        backgroundImage: "url('/backgrounds/conferences-bg.svg')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1920&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(255, 255, 255, 0.92)"
       }}
     >
       <SEO 
