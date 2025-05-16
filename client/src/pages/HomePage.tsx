@@ -60,7 +60,15 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div 
+      className="min-h-screen flex flex-col"
+      style={{
+        backgroundImage: "url('/backgrounds/home-bg.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
+    >
       <Header />
       
       <main>

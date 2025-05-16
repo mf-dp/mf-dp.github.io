@@ -5,9 +5,17 @@ import { Projects } from "@/components/Projects";
 
 export default function ProjectsPage() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main 
+      className="flex flex-col min-h-screen"
+      style={{
+        backgroundImage: "url('/backgrounds/projects-bg.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
+    >
       <SEO 
-        title="Projects - Mahdieh Fakhar"
+        title="MAHDIEH FAKHAR - Projects"
         description="Research projects and professional work by Mahdieh Fakhar in data science and big data analysis."
       />
       <Header />
