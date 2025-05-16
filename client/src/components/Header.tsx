@@ -40,8 +40,8 @@ export function Header() {
     <header className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-md border-b ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-800' : 'bg-transparent border-transparent'}`}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold flex items-center space-x-2">
-          <MFLogo className="w-12 h-12" />
+        <Link href="/" className="text-2xl font-bold flex items-center space-x-3">
+          <MFLogo className="w-16 h-16" />
           <span>MAHDIEH FAKHAR</span>
         </Link>
 

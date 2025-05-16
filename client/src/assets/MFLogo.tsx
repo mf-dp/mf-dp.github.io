@@ -2,10 +2,22 @@ import React from "react";
 
 export const MFLogo = ({ className = "w-10 h-10" }: { className?: string }) => {
   return (
-    <img 
-      src="/src/assets/MFLogo.png" 
-      alt="MAHDIEH FAKHAR Logo" 
-      className={className} 
-    />
+    <svg className={className} viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Columns - Graph part */}
+      <path d="M280 120L360 40V240H280V120Z" fill="#2B6CB0" />
+      <path d="M180 155L260 75V240H180V155Z" />
+      <path d="M180 155L260 75V240H180V155Z" fill="#2B6CB0" />
+      <path d="M80 190L160 110V240H80V190Z" />
+      <path d="M80 190L160 110V240H80V190Z" fill="#2B6CB0" />
+      
+      {/* Horizontal Line */}
+      <rect x="80" y="280" width="280" height="20" fill="#2B6CB0" />
+      
+      {/* M letter */}
+      <path d="M120 320L160 320L180 360L200 320L240 320L240 460L200 460L200 380L180 420L160 380L160 460L120 460L120 320Z" fill="#2B6CB0" />
+      
+      {/* F letter */}
+      <path d="M280 320L380 320L380 360L320 360L320 380L360 380L360 420L320 420L320 460L280 460L280 320Z" fill="#2B6CB0" />
+    </svg>
   );
 };
