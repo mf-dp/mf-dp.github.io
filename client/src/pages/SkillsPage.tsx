@@ -8,10 +8,13 @@ export default function SkillsPage() {
     <main 
       className="flex flex-col min-h-screen"
       style={{
-        backgroundImage: "url('/backgrounds/skills-bg.svg')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1920&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(255, 255, 255, 0.92)"
       }}
     >
       <SEO 

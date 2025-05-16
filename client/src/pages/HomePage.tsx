@@ -63,10 +63,13 @@ export default function HomePage() {
     <div 
       className="min-h-screen flex flex-col"
       style={{
-        backgroundImage: "url('/backgrounds/home-bg.svg')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1524645343120-a4ae9f7d4343?q=80&w=1920&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
+        backgroundColor: "rgba(255, 255, 255, 0.92)"
       }}
     >
       <Header />
