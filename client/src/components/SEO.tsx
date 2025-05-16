@@ -113,11 +113,11 @@ export function SEO({
       }
     };
     
-    let scriptTag = document.querySelector('#structured-data');
+    let scriptTag = document.querySelector('#structured-data') as HTMLScriptElement | null;
     if (!scriptTag) {
       scriptTag = document.createElement('script');
       scriptTag.id = 'structured-data';
-      scriptTag.type = 'application/ld+json';
+      scriptTag.setAttribute('type', 'application/ld+json');
       document.head.appendChild(scriptTag);
     }
     scriptTag.textContent = JSON.stringify(structuredData);

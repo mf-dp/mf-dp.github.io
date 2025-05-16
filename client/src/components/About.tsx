@@ -2,7 +2,9 @@ import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
-import { FaLinkedin, FaGithub, FaTwitter, FaFileAlt } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaGlobe, FaFileAlt } from 'react-icons/fa';
+import { LazyImage } from '@/components/ui/lazy-image';
+import profileImage from '@assets/3.jpg';
 
 export function About() {
   const { t } = useLanguage();
@@ -51,11 +53,16 @@ export function About() {
             className="md:w-2/5"
             variants={itemVariants}
           >
-            <img 
-              src="/src/assets/profile2.png" 
-              alt="Profile Photo" 
-              className="w-full h-auto rounded-lg shadow-lg" 
-            />
+            <div className="relative rounded-lg overflow-hidden shadow-lg border-4 border-white dark:border-gray-800 shadow-primary/20">
+              <LazyImage 
+                src={profileImage} 
+                alt="Mahdieh Fakhar" 
+                className="w-full h-auto rounded-lg" 
+                placeholderBlur={true}
+                placeholderColor="#f3f4f6"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-30 rounded-lg"></div>
+            </div>
           </motion.div>
           
           <motion.div 
@@ -94,19 +101,37 @@ export function About() {
               className="flex flex-wrap gap-4 pt-4"
               variants={itemVariants}
             >
-              <a href="#" className="text-primary hover:text-primary/80 flex items-center gap-2">
+              <a 
+                href="https://www.linkedin.com/in/mahdieh-fakhar" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors duration-300"
+              >
                 <FaLinkedin className="text-xl" />
                 <span>{t('about.linkedin')}</span>
               </a>
-              <a href="#" className="text-primary hover:text-primary/80 flex items-center gap-2">
+              <a 
+                href="https://github.com/mahdieh-fakhar" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors duration-300"
+              >
                 <FaGithub className="text-xl" />
                 <span>{t('about.github')}</span>
               </a>
-              <a href="#" className="text-primary hover:text-primary/80 flex items-center gap-2">
-                <FaTwitter className="text-xl" />
-                <span>{t('about.twitter')}</span>
+              <a 
+                href="https://mahdieh-fakhar.github.io/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors duration-300"
+              >
+                <FaGlobe className="text-xl" />
+                <span>{t('about.website')}</span>
               </a>
-              <a href="#resume" className="text-primary hover:text-primary/80 flex items-center gap-2">
+              <a 
+                href="#resume" 
+                className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors duration-300"
+              >
                 <FaFileAlt className="text-xl" />
                 <span>{t('about.resumeLink')}</span>
               </a>

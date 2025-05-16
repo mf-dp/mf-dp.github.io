@@ -1,5 +1,5 @@
 import { useLanguage } from '@/context/LanguageContext';
-import { FaLinkedinIn, FaGithub, FaTwitter, FaDribbble } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaGlobe } from 'react-icons/fa';
 import { MFLogo } from '@/assets/MFLogo';
 
 export function Footer() {
