@@ -2,8 +2,9 @@ import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef, useState } from 'react';
-import { FaArrowRight, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa';
+import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt, FaGraduationCap } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
+import { LazyImage } from '@/components/ui/lazy-image';
 import {
   Dialog,
   DialogContent,
@@ -11,6 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import profileImage from '../assets/profile.jpg';
 
 export function Conferences() {
   const { t } = useLanguage();
@@ -38,11 +40,11 @@ export function Conferences() {
   const conferencesData = t('conferences.items');
   const conferences = Array.isArray(conferencesData) ? conferencesData : [];
 
-  // Sample conference images (using the existing Conference folder images)
+  // Conference images using actual profile photo
   const conferenceImages = [
-    "/src/assets/conference1.jpg",
-    "/src/assets/conference2.jpg", 
-    "/src/assets/conference3.jpg"
+    profileImage,
+    profileImage,
+    profileImage
   ];
 
   const openConferenceDetails = (conference: any) => {
@@ -74,10 +76,11 @@ export function Conferences() {
           {conferences.map((conference, index) => (
             <motion.div key={index} variants={itemVariants}>
               <Card className="overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg relative">
-                <img 
+                <LazyImage 
                   src={conferenceImages[index % conferenceImages.length]} 
                   alt={conference.title} 
                   className="w-full h-48 object-cover" 
+                  placeholderBlur={true}
                 />
                 
                 <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -115,10 +118,11 @@ export function Conferences() {
                         </DialogTitle>
                       </DialogHeader>
                       <div className="grid gap-4 py-4">
-                        <img 
+                        <LazyImage 
                           src={conferenceImages[index % conferenceImages.length]} 
                           alt={conference.title} 
                           className="w-full h-48 object-cover rounded-md" 
+                          placeholderBlur={true}
                         />
                         <p className="text-gray-700 dark:text-gray-300">{conference.description}</p>
                         <div className="flex items-center text-gray-600 dark:text-gray-400">

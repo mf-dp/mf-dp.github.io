@@ -4,7 +4,8 @@ import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
 import { FaLinkedin, FaGithub, FaGlobe, FaFileAlt } from 'react-icons/fa';
 import { LazyImage } from '@/components/ui/lazy-image';
-import profileImage from '@assets/3.jpg';
+// Import profile image
+import profileImage from '../assets/profile.jpg';
 
 export function About() {
   const { t } = useLanguage();
