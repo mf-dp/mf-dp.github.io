@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
+import { Link } from 'wouter';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -47,14 +48,14 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild>
-                <a href="#contact">
+                <Link href="/contact">
                   {t('hero.contactButton')}
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="#projects">
+                <Link href="/projects">
                   {t('hero.projectsButton')}
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>
