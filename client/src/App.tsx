@@ -5,6 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
+import AboutPage from "@/pages/AboutPage";
+import SkillsPage from "@/pages/SkillsPage";
+import ResumePage from "@/pages/ResumePage";
+import ConferencesPage from "@/pages/ConferencesPage";
+import ProjectsPage from "@/pages/ProjectsPage";
+import ArticlesPage from "@/pages/ArticlesPage";
+import ContactPage from "@/pages/ContactPage";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { SEO } from "@/components/SEO";
@@ -12,36 +19,15 @@ import { SEO } from "@/components/SEO";
 function Router() {
   return (
     <Switch>
-      <Route path="/">
-        {(params) => <HomePage />}
-      </Route>
-      <Route path="/about">
-        {(params) => <HomePage initialSection="about" />}
-      </Route>
-      <Route path="/skills">
-        {(params) => <HomePage initialSection="skills" />}
-      </Route>
-      <Route path="/education">
-        {(params) => <HomePage initialSection="education" />}
-      </Route>
-      <Route path="/career">
-        {(params) => <HomePage initialSection="career" />}
-      </Route>
-      <Route path="/projects">
-        {(params) => <HomePage initialSection="projects" />}
-      </Route>
-      <Route path="/articles">
-        {(params) => <HomePage initialSection="articles" />}
-      </Route>
-      <Route path="/conferences">
-        {(params) => <HomePage initialSection="conferences" />}
-      </Route>
-      <Route path="/contact">
-        {(params) => <HomePage initialSection="contact" />}
-      </Route>
-      <Route>
-        {(params) => <NotFound />}
-      </Route>
+      <Route path="/" component={HomePage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/skills" component={SkillsPage} />
+      <Route path="/resume" component={ResumePage} />
+      <Route path="/conferences" component={ConferencesPage} />
+      <Route path="/projects" component={ProjectsPage} />
+      <Route path="/articles" component={ArticlesPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
