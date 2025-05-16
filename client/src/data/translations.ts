@@ -1,90 +1,93 @@
 export const translations = {
   en: {
     meta: {
-      title: "John Smith - Professional Portfolio",
-      description: "Professional portfolio of John Smith, UI/UX Designer & Frontend Developer"
+      title: "Mahdieh Fakhar - Professional Portfolio",
+      description: "Professional portfolio of Mahdieh Fakhar, Data Science and Big Data Specialist"
     },
     nav: {
+      home: "Home",
       about: "About",
+      education: "Education",
+      articles: "Articles",
+      conferences: "Conferences",
+      memberships: "Memberships",
+      career: "Career History",
       skills: "Skills",
       projects: "Projects",
-      conferences: "Conferences",
-      articles: "Articles",
       resume: "Resume",
-      memberships: "Memberships",
       contact: "Contact"
     },
     hero: {
-      title: "Creative Designer & Developer",
-      subtitle: "Building exceptional digital experiences with modern technologies",
+      title: "Data Scientist & Researcher",
+      subtitle: "Specializing in data analysis, bibliometrics, and AI-driven analytics",
       contactButton: "Get in Touch",
       projectsButton: "View Projects"
     },
     about: {
       title: "About Me",
-      name: "John Smith",
-      role: "Senior UI/UX Designer & Frontend Developer",
-      bio: "I'm a passionate designer and developer with over 8 years of experience creating intuitive, accessible, and visually appealing digital products. My approach combines user-centered design principles with cutting-edge frontend technologies to deliver exceptional experiences.",
-      bio2: "I specialize in React, TypeScript, and modern CSS frameworks, with a strong foundation in design systems, accessibility, and performance optimization. I enjoy collaborating with cross-functional teams to transform complex problems into elegant solutions.",
+      name: "Mahdieh Fakhar",
+      role: "Data Science & Big Data Specialist",
+      bio: "I'm currently a Momentum master student of data science and big data. I enjoy analyzing data, conducting scientometric and bibliometric analysis, and learning new software. I am passionate about leveraging technology to enhance research and analysis capabilities.",
+      bio2: "I am currently working on data analysis and digitalization of databases, while continuously learning new technologies including R, Python, and AI applications for data analysis. I'm looking to participate in courses on data analysis, visualization, AI in data analysis, and database digitalization.",
       resumeLink: "View Resume",
       linkedin: "LinkedIn",
       github: "GitHub",
-      twitter: "Twitter"
+      website: "Website"
     },
     skills: {
       title: "Skills & Expertise",
-      design: {
-        title: "Design",
+      dataAnalysis: {
+        title: "Data Analysis",
         items: [
-          { name: "UI/UX Design", level: 5 },
-          { name: "Figma / Adobe XD", level: 4 },
-          { name: "Design Systems", level: 5 },
-          { name: "Wireframing", level: 4 }
+          { name: "Data Analysis with R", level: 5 },
+          { name: "Python", level: 4 },
+          { name: "Statistical Analysis", level: 5 },
+          { name: "Artificial Intelligence", level: 4 }
         ]
       },
-      frontend: {
-        title: "Frontend",
+      visualization: {
+        title: "Data Visualization",
         items: [
-          { name: "React / Next.js", level: 5 },
-          { name: "TypeScript", level: 4 },
-          { name: "Tailwind CSS", level: 5 },
-          { name: "Responsive Design", level: 5 }
+          { name: "Chart Creation", level: 5 },
+          { name: "Visualization Tools", level: 4 },
+          { name: "Interactive Dashboards", level: 4 },
+          { name: "Data Storytelling", level: 5 }
         ]
       },
       tools: {
-        title: "Tools & Methods",
+        title: "Software & Tools",
         items: [
-          { name: "Git / GitHub", level: 5 },
-          { name: "Agile / Scrum", level: 4 },
-          { name: "CI/CD", level: 3 },
-          { name: "Testing", level: 4 }
+          { name: "SPSS", level: 5 },
+          { name: "VosViewer", level: 5 },
+          { name: "Nvivo / MAXQDA", level: 4 },
+          { name: "Mendeley", level: 5 }
         ]
       },
       soft: {
-        title: "Soft Skills",
+        title: "Research Skills",
         items: [
-          { name: "Communication", level: 5 },
-          { name: "Problem Solving", level: 5 },
-          { name: "Team Collaboration", level: 4 },
-          { name: "Time Management", level: 4 }
+          { name: "Scientific Research", level: 5 },
+          { name: "Bibliometric Analysis", level: 5 },
+          { name: "Scientometric Analysis", level: 5 },
+          { name: "Academic Writing", level: 5 }
         ]
       },
-      backend: {
-        title: "Backend",
+      analytics: {
+        title: "Advanced Analytics",
         items: [
-          { name: "Node.js", level: 4 },
-          { name: "Express / NestJS", level: 3 },
-          { name: "MongoDB / PostgreSQL", level: 3 },
-          { name: "GraphQL", level: 3 }
+          { name: "Structural Equation Modeling", level: 4 },
+          { name: "Smart-PLS4 / Lisrel / Amos", level: 4 },
+          { name: "Meta Analysis (CMA)", level: 4 },
+          { name: "Inferential Statistics", level: 4 }
         ]
       },
-      uxresearch: {
-        title: "UX Research",
+      web: {
+        title: "Web & Digital Skills",
         items: [
-          { name: "User Interviews", level: 4 },
-          { name: "Usability Testing", level: 4 },
-          { name: "A/B Testing", level: 3 },
-          { name: "Information Architecture", level: 4 }
+          { name: "Web Design", level: 4 },
+          { name: "Database Management", level: 4 },
+          { name: "Database Automatization", level: 3 },
+          { name: "Digital Competence", level: 5 }
         ]
       }
     },
@@ -93,28 +96,28 @@ export const translations = {
       viewAllButton: "View All Projects",
       items: [
         {
-          title: "E-commerce Dashboard",
-          description: "Designed and developed a comprehensive admin dashboard for an e-commerce platform with real-time analytics.",
-          image: "/path/to/ecommerce-dashboard.jpg",
-          tags: ["React", "Tailwind", "Chart.js"],
-          liveDemo: "https://example.com/demo",
-          github: "https://github.com/example/project"
+          title: "Data Analysis with R, Python and AI",
+          description: "Comprehensive data analysis project using R and Python with AI techniques for pattern recognition and insight generation.",
+          image: "/path/to/data-analysis.jpg",
+          tags: ["R", "Python", "AI", "Data Analysis"],
+          liveDemo: "https://github.com/mahdieh-fakhar/data-analysis",
+          github: "https://github.com/mahdieh-fakhar/data-analysis"
         },
         {
-          title: "Social Media App",
-          description: "Created a responsive social media application with real-time messaging and content sharing capabilities.",
-          image: "/path/to/social-media-app.jpg",
-          tags: ["Next.js", "Firebase", "TypeScript"],
-          liveDemo: "https://example.com/demo",
-          github: "https://github.com/example/project"
+          title: "Database Automatization",
+          description: "Project focused on automating database processes, improving efficiency and reducing manual intervention in data management.",
+          image: "/path/to/database-auto.jpg",
+          tags: ["Database", "Automation", "SQL", "Process Optimization"],
+          liveDemo: "https://github.com/mahdieh-fakhar/database-automation",
+          github: "https://github.com/mahdieh-fakhar/database-automation"
         },
         {
-          title: "Financial Analytics Dashboard",
-          description: "Designed a comprehensive financial analytics dashboard with interactive visualizations and data insights.",
-          image: "/path/to/financial-dashboard.jpg",
-          tags: ["React", "D3.js", "Material UI"],
-          liveDemo: "https://example.com/demo",
-          github: "https://github.com/example/project"
+          title: "IHUPA Institute Website",
+          description: "Web design project for El Instituto de Investigación en Humanidades y Patrimonio UNED-Alcañiz (IHUPA), creating a professional research institute web presence.",
+          image: "/path/to/ihupa-website.jpg",
+          tags: ["Web Design", "Academic Website", "UI/UX", "Content Management"],
+          liveDemo: "https://mahdieh-fakhar.github.io/ihupa",
+          github: "https://github.com/mahdieh-fakhar/ihupa"
         }
       ]
     },
@@ -124,25 +127,25 @@ export const translations = {
       viewAllButton: "View All Conferences",
       items: [
         {
-          title: "Web Development Summit",
+          title: "TELLSI Conference",
           year: "2022",
-          description: "Presented \"Building Accessible React Components\" to an audience of 200+ developers.",
-          location: "New York, USA",
-          image: "/path/to/conference1.jpg"
+          description: "Presented \"Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills: The Case of Medium App\"",
+          location: "Birjand University, Iran",
+          image: "@assets/conference1.jpg"
         },
         {
-          title: "UX Design Conference",
+          title: "TELLSI Conference",
           year: "2021",
-          description: "Led a workshop on \"Design Systems Implementation\" with hands-on exercises.",
-          location: "San Francisco, USA",
-          image: "/path/to/conference2.jpg"
+          description: "Presented \"Visualized Network of Online Interactions in an Ed-Tech Enhanced EFL Language Learning Context Using Gephi Software\"",
+          location: "Tarbiat Modares University, Iran",
+          image: "@assets/conference2.jpg"
         },
         {
-          title: "JavaScript Summit",
-          year: "2019",
-          description: "Speaker on \"State Management Patterns in Modern Web Applications\".",
-          location: "Berlin, Germany",
-          image: "/path/to/conference3.jpg"
+          title: "ATLAS-ÁGORA Conference",
+          year: "2023",
+          description: "Scientific Committee member of \"II Jornadas ATLAS-ÁGORA de Formación de Profesorado de Lenguas en Entornos Rurales\"",
+          location: "Madrid, Spain",
+          image: "@assets/conference3.jpg"
         }
       ]
     },
@@ -150,25 +153,32 @@ export const translations = {
       title: "Education & Certifications",
       items: [
         {
-          degree: "Master's in Computer Science",
-          institution: "Stanford University",
-          period: "2015 - 2017",
-          description: "Specialized in Human-Computer Interaction and User Experience Design. Graduated with honors.",
-          tags: ["UX Research", "AI/ML", "Data Visualization"]
+          degree: "Master's in Big Data and Data Science",
+          institution: "UNIR",
+          period: "2025 - 2026",
+          description: "Currently a Momentum master student studying data science and big data.",
+          tags: ["Data Science", "Big Data", "AI", "Analytics"]
         },
         {
-          degree: "Bachelor's in Information Technology",
-          institution: "MIT",
-          period: "2011 - 2015",
-          description: "Focus on web technologies and software engineering. Graduated summa cum laude.",
-          tags: ["Web Development", "Algorithms", "Software Architecture"]
+          degree: "Master's in Information and Communication Technologies in Language Teaching",
+          institution: "UNED",
+          period: "2022 - 2024",
+          description: "Selected in 2023 as one of the top 100 online master's programs in Spain (ranked 3rd in Education). Average grade: Excellent, 9.29/10. Master's Thesis: 'Improvement of digital competence scales for 21st-century English language teachers' (Grade: Excellent 9/10).",
+          tags: ["ICT", "Language Teaching", "Digital Competence", "Educational Technology"]
         },
         {
-          degree: "UX Design Certification",
-          institution: "Google",
-          period: "2018",
-          description: "Professional certification in UX Design principles, research methods, and prototype testing.",
-          certificate: "https://example.com/certificate"
+          degree: "Master's in Teaching English as a Foreign Language (TEFL)",
+          institution: "University of Ilam",
+          period: "2014 - 2016",
+          description: "Average grade: Excellent, 9.09/10. Master's Thesis: 'The relationship between identity, change, and professional development of teachers in the Iranian context of English as a foreign language' (Grade: Excellent 19.80/20).",
+          tags: ["TEFL", "Education", "Professional Development", "Research"]
+        },
+        {
+          degree: "Bachelor's in English Language Translation",
+          institution: "Payame Noor University",
+          period: "2009 - 2013",
+          description: "Average grade: Good, 7.91/10. Final Project: 'Translation of a collection of short stories and two motivational videos by Anthony Robbins' (Grade: Excellent 19.88/20).",
+          tags: ["English", "Translation", "Languages", "Academic Writing"]
         }
       ]
     },
@@ -176,43 +186,43 @@ export const translations = {
       title: "Career History",
       items: [
         {
-          role: "Senior UX Designer",
-          company: "Google",
-          period: "2019 - Present",
-          description: "Leading UX design for enterprise product suite. Responsible for establishing design systems, conducting user research, and mentoring junior designers.",
+          role: "Research Assistant",
+          company: "UNED (ATLAS Research Group)",
+          period: "2022 - Present",
+          description: "Conducting research on educational technology, data analysis, and digital competence in language teaching contexts.",
           achievements: [
-            "Led the redesign of Admin Console, improving task completion rate by 35%",
-            "Established a comprehensive component library used by 200+ designers",
-            "Conducted 100+ user interviews and usability testing sessions",
-            "Mentored 5 junior designers through structured program"
+            "Collaborated on IHUPA (Humanities and Heritage Research Institute UNED-Alcañiz) project",
+            "Participated in AGORA technological and methodological innovations project",
+            "Conducted data analysis for educational research studies",
+            "Published research in peer-reviewed journals and conference proceedings"
           ],
-          tags: ["UX Design", "Design Systems", "Leadership", "User Research"]
+          tags: ["Research", "Data Analysis", "Educational Technology", "Academic Writing"]
         },
         {
-          role: "UI/UX Designer",
-          company: "Amazon",
-          period: "2017 - 2019",
-          description: "Designed user interfaces for mobile and web applications within the retail ecosystem. Worked closely with product managers and engineers to implement user-centered design solutions.",
+          role: "Data Analyst and Database Specialist",
+          company: "Independent Research",
+          period: "2019 - 2022",
+          description: "Specialized in bibliometric and scientometric analysis using advanced analytical tools and techniques.",
           achievements: [
-            "Redesigned checkout process, resulting in 15% increase in conversion rate",
-            "Created responsive designs for 10+ key user flows",
-            "Implemented A/B testing framework for design optimization",
-            "Collaborated with engineers to ensure pixel-perfect implementation"
+            "Developed bibliometric analyses for academic research projects",
+            "Improved data visualization techniques for research presentations",
+            "Implemented database automation techniques to improve research efficiency",
+            "Conducted statistical analyses using SPSS and other specialized software"
           ],
-          tags: ["UI Design", "Mobile Design", "A/B Testing", "Prototyping"]
+          tags: ["Data Analysis", "Bibliometrics", "Scientometrics", "Database Management"]
         },
         {
-          role: "Frontend Developer",
-          company: "Startup.io",
-          period: "2015 - 2017",
-          description: "Built responsive web applications using modern JavaScript frameworks. Collaborated in an agile environment to deliver features on tight deadlines.",
+          role: "Research Scholar",
+          company: "Ministry of Science, Research, and Technology of Iran",
+          period: "2022",
+          description: "Awarded 6-month scholarship for research at UNED's ATLAS research group (Madrid, €4,000).",
           achievements: [
-            "Developed 20+ UI components for the company's design system",
-            "Improved application load time by 40% through optimization",
-            "Implemented responsive designs for various screen sizes",
-            "Mentored junior developers in frontend best practices"
+            "Conducted research on language teaching technologies",
+            "Collaborated with international researchers on educational technology projects",
+            "Presented research findings at academic conferences",
+            "Contributed to research publications and scholarly works"
           ],
-          tags: ["React", "JavaScript", "CSS", "Responsive Design"]
+          tags: ["Scholarship", "Research", "Academic Collaboration", "International Studies"]
         }
       ]
     },
@@ -222,32 +232,32 @@ export const translations = {
       viewAllButton: "View All Articles",
       items: [
         {
-          title: "Designing for Accessibility: A Practical Guide",
-          category: "UX Design",
-          date: "Jun 15, 2023",
-          description: "Learn how to make your digital products more accessible with these practical guidelines and real-world examples.",
-          link: "https://example.com/article1"
+          title: "Approaches on Machine Translation: Quality Assessment, Acceptance, and Language Trends",
+          category: "Translation Technology",
+          date: "2024 (in press)",
+          description: "Research article investigating approaches to machine translation, focusing on quality assessment, user acceptance, and language trends in the field.",
+          link: "https://doi.org/10.1075/ttmc"
         },
         {
-          title: "Building Performant React Applications",
-          category: "Development",
-          date: "Apr 22, 2023",
-          description: "Advanced techniques for optimizing React applications for better performance and user experience.",
-          link: "https://example.com/article2"
+          title: "Two Decades of Technology-Mediated Reading Enhancement: A Systematic Review and Bibliometric Analysis",
+          category: "Educational Technology",
+          date: "2024 (in press)",
+          description: "Comprehensive systematic review and bibliometric analysis of technology-mediated reading enhancement over the past twenty years.",
+          link: "https://www.peterlang.com/"
         },
         {
-          title: "Creating a Scalable Design System from Scratch",
-          category: "Design Systems",
-          date: "Feb 8, 2023",
-          description: "The complete process of building a design system that can grow with your organization's needs.",
-          link: "https://example.com/article3"
+          title: "The Study of EFL Students' Self-Regulation, Locus of Control, and Academic Achievement through Mobile-Assisted Language Learning",
+          category: "Language Learning",
+          date: "2023",
+          description: "Research study on the impact of mobile applications on language learning, focusing on self-regulation, locus of control, and academic achievement of English language learners.",
+          link: "https://doi.org/10.1075/ttmc"
         },
         {
-          title: "Effective User Interview Techniques",
-          category: "User Research",
-          date: "Jan 3, 2023",
-          description: "How to extract valuable insights during user interviews and apply them to your product development process.",
-          link: "https://example.com/article4"
+          title: "Development, Factor Analysis, and Validation of an EFL Teacher Change Scale (TCS)",
+          category: "Education Research",
+          date: "2016",
+          description: "Development and validation of a measurement scale for assessing changes in teaching practices among English as a Foreign Language (EFL) teachers.",
+          link: "https://journals.modares.ac.ir/article-14-11064-en.html"
         }
       ]
     },
