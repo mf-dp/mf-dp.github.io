@@ -21,7 +21,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-6 md:mb-0">
             <MFLogo className="w-8 h-8 mr-2" />
-            <span className="text-xl font-bold">John Smith</span>
+            <span className="text-xl font-bold">Mahdieh Fakhar</span>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8 mb-6 md:mb-0">
@@ -37,23 +37,35 @@ export function Footer() {
           </div>
           
           <div className="flex gap-4">
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+            <a 
+              href="https://www.linkedin.com/in/mahdieh-fakhar" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+            >
               <FaLinkedinIn className="text-lg" />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+            <a 
+              href="https://github.com/mahdieh-fakhar" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+            >
               <FaGithub className="text-lg" />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
-              <FaTwitter className="text-lg" />
-            </a>
-            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
-              <FaDribbble className="text-lg" />
+            <a 
+              href="https://mahdieh-fakhar.github.io/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+            >
+              <FaGlobe className="text-lg" />
             </a>
           </div>
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; {currentYear} John Smith. {t('footer.rights')}</p>
+          <p>&copy; {currentYear} Mahdieh Fakhar. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>
