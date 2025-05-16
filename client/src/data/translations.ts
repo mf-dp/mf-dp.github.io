@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     meta: {
-      title: "Mahdieh Fakhar - Professional Portfolio",
+      title: "MAHDIEH FAKHAR",
       description: "Professional portfolio of Mahdieh Fakhar, Data Science and Big Data Specialist"
     },
     nav: {
