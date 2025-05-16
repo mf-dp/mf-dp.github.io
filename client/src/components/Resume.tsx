@@ -239,7 +239,7 @@ export function Resume() {
                         </ul>
                       )}
                     </div>
-                  ))}
+                  )) : <p>No career data available</p>}
                 </div>
               </CardContent>
             </Card>
@@ -251,7 +251,7 @@ export function Resume() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {education.map((edu: any, index: number) => (
+                  {Array.isArray(education) ? education.map((edu: any, index: number) => (
                     <div key={index} className={index < education.length - 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
                       <div className="flex justify-between mb-2">
                         <h3 className="font-semibold text-lg">{edu.degree}</h3>
@@ -260,7 +260,7 @@ export function Resume() {
                       <h4 className="text-primary">{edu.institution}</h4>
                       <p className="mt-2 text-gray-700 dark:text-gray-300">{edu.description}</p>
                     </div>
-                  ))}
+                  )) : <p>No education data available</p>}
                 </div>
               </CardContent>
             </Card>
