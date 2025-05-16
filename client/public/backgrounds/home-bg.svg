@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle gradient background -->
+  <rect width="1920" height="1080" fill="url(#home-gradient)" />
+  
+  <!-- Network/Data visualization pattern for Home page -->
+  <g opacity="0.05">
+    <!-- Connection dots -->
+    <circle cx="200" cy="200" r="5" fill="#2B6CB0" />
+    <circle cx="400" cy="150" r="5" fill="#2B6CB0" />
+    <circle cx="600" cy="300" r="5" fill="#2B6CB0" />
+    <circle cx="800" cy="150" r="5" fill="#2B6CB0" />
+    <circle cx="1000" cy="300" r="5" fill="#2B6CB0" />
+    <circle cx="1200" cy="200" r="5" fill="#2B6CB0" />
+    <circle cx="1400" cy="400" r="5" fill="#2B6CB0" />
+    <circle cx="1600" cy="250" r="5" fill="#2B6CB0" />
+    <circle cx="1800" cy="350" r="5" fill="#2B6CB0" />
+    
+    <circle cx="300" cy="400" r="5" fill="#2B6CB0" />
+    <circle cx="500" cy="500" r="5" fill="#2B6CB0" />
+    <circle cx="700" cy="450" r="5" fill="#2B6CB0" />
+    <circle cx="900" cy="600" r="5" fill="#2B6CB0" />
+    <circle cx="1100" cy="500" r="5" fill="#2B6CB0" />
+    <circle cx="1300" cy="650" r="5" fill="#2B6CB0" />
+    <circle cx="1500" cy="550" r="5" fill="#2B6CB0" />
+    <circle cx="1700" cy="700" r="5" fill="#2B6CB0" />
+    
+    <circle cx="200" cy="700" r="5" fill="#2B6CB0" />
+    <circle cx="400" cy="800" r="5" fill="#2B6CB0" />
+    <circle cx="600" cy="750" r="5" fill="#2B6CB0" />
+    <circle cx="800" cy="900" r="5" fill="#2B6CB0" />
+    <circle cx="1000" cy="800" r="5" fill="#2B6CB0" />
+    <circle cx="1200" cy="850" r="5" fill="#2B6CB0" />
+    <circle cx="1400" cy="750" r="5" fill="#2B6CB0" />
+    <circle cx="1600" cy="900" r="5" fill="#2B6CB0" />
+    
+    <!-- Connection lines -->
+    <line x1="200" y1="200" x2="400" y2="150" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="400" y1="150" x2="600" y2="300" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="600" y1="300" x2="800" y2="150" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="800" y1="150" x2="1000" y2="300" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1000" y1="300" x2="1200" y2="200" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1200" y1="200" x2="1400" y2="400" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1400" y1="400" x2="1600" y2="250" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1600" y1="250" x2="1800" y2="350" stroke="#2B6CB0" stroke-width="1" />
+    
+    <line x1="300" y1="400" x2="500" y2="500" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="500" y1="500" x2="700" y2="450" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="700" y1="450" x2="900" y2="600" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="900" y1="600" x2="1100" y2="500" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1100" y1="500" x2="1300" y2="650" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1300" y1="650" x2="1500" y2="550" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1500" y1="550" x2="1700" y2="700" stroke="#2B6CB0" stroke-width="1" />
+    
+    <line x1="200" y1="700" x2="400" y2="800" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="400" y1="800" x2="600" y2="750" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="600" y1="750" x2="800" y2="900" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="800" y1="900" x2="1000" y2="800" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1000" y1="800" x2="1200" y2="850" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1200" y1="850" x2="1400" y2="750" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1400" y1="750" x2="1600" y2="900" stroke="#2B6CB0" stroke-width="1" />
+    
+    <!-- Cross connections -->
+    <line x1="200" y1="200" x2="300" y2="400" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="400" y1="150" x2="500" y2="500" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="600" y1="300" x2="700" y2="450" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="800" y1="150" x2="900" y2="600" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1000" y1="300" x2="1100" y2="500" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1200" y1="200" x2="1300" y2="650" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1400" y1="400" x2="1500" y2="550" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1600" y1="250" x2="1700" y2="700" stroke="#2B6CB0" stroke-width="1" />
+    
+    <line x1="300" y1="400" x2="200" y2="700" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="500" y1="500" x2="400" y2="800" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="700" y1="450" x2="600" y2="750" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="900" y1="600" x2="800" y2="900" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1100" y1="500" x2="1000" y2="800" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1300" y1="650" x2="1200" y2="850" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1500" y1="550" x2="1400" y2="750" stroke="#2B6CB0" stroke-width="1" />
+    <line x1="1700" y1="700" x2="1600" y2="900" stroke="#2B6CB0" stroke-width="1" />
+  </g>
+  
+  <!-- Abstract data wave at the bottom -->
+  <path d="M0,850 C300,950 600,800 900,900 C1200,1000 1500,850 1920,950 L1920,1080 L0,1080 Z" fill="#2B6CB0" opacity="0.05" />
+  
+  <!-- Defs for gradients -->
+  <defs>
+    <linearGradient id="home-gradient" x1="0" y1="0" x2="0" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7FAFC" />
+      <stop offset="1" stop-color="#EDF2F7" />
+    </linearGradient>
+  </defs>
+</svg>

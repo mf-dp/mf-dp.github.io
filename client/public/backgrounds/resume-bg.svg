@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle gradient background -->
+  <rect width="1920" height="1080" fill="url(#resume-gradient)" />
+  
+  <!-- Resume abstract elements -->
+  <g opacity="0.06">
+    <!-- Resume document patterns -->
+    <rect x="150" y="100" width="400" height="50" rx="5" fill="#2B6CB0" />
+    <rect x="150" y="170" width="350" height="20" rx="5" fill="#3182CE" />
+    <rect x="150" y="210" width="380" height="20" rx="5" fill="#3182CE" />
+    <rect x="150" y="250" width="400" height="20" rx="5" fill="#3182CE" />
+    
+    <rect x="150" y="300" width="250" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="150" y="350" width="380" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="380" width="350" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="410" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="440" width="370" height="15" rx="5" fill="#3182CE" />
+    
+    <rect x="150" y="490" width="250" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="150" y="540" width="380" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="570" width="350" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="600" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="630" width="370" height="15" rx="5" fill="#3182CE" />
+    
+    <rect x="150" y="680" width="250" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="150" y="730" width="380" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="760" width="350" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="790" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="150" y="820" width="370" height="15" rx="5" fill="#3182CE" />
+    
+    <!-- Second column -->
+    <rect x="650" y="100" width="400" height="50" rx="5" fill="#2B6CB0" />
+    <rect x="650" y="170" width="350" height="20" rx="5" fill="#3182CE" />
+    <rect x="650" y="210" width="380" height="20" rx="5" fill="#3182CE" />
+    <rect x="650" y="250" width="400" height="20" rx="5" fill="#3182CE" />
+    
+    <rect x="650" y="300" width="250" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="650" y="350" width="380" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="380" width="350" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="410" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="440" width="370" height="15" rx="5" fill="#3182CE" />
+    
+    <rect x="650" y="490" width="250" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="650" y="540" width="380" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="570" width="350" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="600" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="630" width="370" height="15" rx="5" fill="#3182CE" />
+    
+    <rect x="650" y="680" width="250" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="650" y="730" width="380" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="760" width="350" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="790" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="650" y="820" width="370" height="15" rx="5" fill="#3182CE" />
+    
+    <!-- Skills column -->
+    <rect x="1150" y="100" width="400" height="50" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1150" y="170" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="1150" y="195" width="300" height="10" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1150" y="220" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="1150" y="245" width="350" height="10" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1150" y="270" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="1150" y="295" width="370" height="10" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1150" y="320" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="1150" y="345" width="340" height="10" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1150" y="370" width="400" height="15" rx="5" fill="#3182CE" />
+    <rect x="1150" y="395" width="380" height="10" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1150" y="450" width="400" height="50" rx="5" fill="#2B6CB0" />
+    
+    <circle cx="1200" cy="550" r="40" stroke="#2B6CB0" stroke-width="10" fill="none" />
+    <circle cx="1300" cy="550" r="40" stroke="#3182CE" stroke-width="10" fill="none" />
+    <circle cx="1400" cy="550" r="40" stroke="#2B6CB0" stroke-width="10" fill="none" />
+    <circle cx="1500" cy="550" r="40" stroke="#3182CE" stroke-width="10" fill="none" />
+  </g>
+  
+  <!-- Defs for gradients -->
+  <defs>
+    <linearGradient id="resume-gradient" x1="0" y1="1080" x2="1920" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EFF6FF" />
+      <stop offset="1" stop-color="#FAFAFA" />
+    </linearGradient>
+  </defs>
+</svg>

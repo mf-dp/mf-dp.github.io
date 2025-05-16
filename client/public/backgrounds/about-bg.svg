@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle gradient background -->
+  <rect width="1920" height="1080" fill="url(#about-gradient)" />
+  
+  <!-- Abstract shapes for About page -->
+  <g opacity="0.07">
+    <!-- Abstract geometric shapes -->
+    <path d="M0,300 C100,250 200,350 300,300 C400,250 500,350 600,300 C700,250 800,350 900,300 C1000,250 1100,350 1200,300 C1300,250 1400,350 1500,300 C1600,250 1700,350 1800,300 C1900,250 2000,350 2100,300 L2100,0 L0,0 Z" fill="#2B6CB0" />
+    
+    <!-- Circular elements -->
+    <circle cx="200" cy="500" r="50" fill="#4299E1" opacity="0.2" />
+    <circle cx="300" cy="650" r="70" fill="#3182CE" opacity="0.15" />
+    <circle cx="500" cy="450" r="90" fill="#2B6CB0" opacity="0.1" />
+    <circle cx="800" cy="550" r="120" fill="#2C5282" opacity="0.07" />
+    <circle cx="1100" cy="450" r="100" fill="#2B6CB0" opacity="0.12" />
+    <circle cx="1400" cy="600" r="80" fill="#3182CE" opacity="0.15" />
+    <circle cx="1700" cy="500" r="60" fill="#4299E1" opacity="0.2" />
+    
+    <!-- Abstract line elements -->
+    <line x1="100" y1="800" x2="400" y2="800" stroke="#2B6CB0" stroke-width="2" opacity="0.2" />
+    <line x1="450" y1="820" x2="750" y2="820" stroke="#2B6CB0" stroke-width="2" opacity="0.2" />
+    <line x1="800" y1="800" x2="1100" y2="800" stroke="#2B6CB0" stroke-width="2" opacity="0.2" />
+    <line x1="1150" y1="820" x2="1450" y2="820" stroke="#2B6CB0" stroke-width="2" opacity="0.2" />
+    <line x1="1500" y1="800" x2="1800" y2="800" stroke="#2B6CB0" stroke-width="2" opacity="0.2" />
+    
+    <line x1="100" y1="850" x2="250" y2="850" stroke="#2B6CB0" stroke-width="2" opacity="0.15" />
+    <line x1="300" y1="870" x2="550" y2="870" stroke="#2B6CB0" stroke-width="2" opacity="0.15" />
+    <line x1="600" y1="850" x2="850" y2="850" stroke="#2B6CB0" stroke-width="2" opacity="0.15" />
+    <line x1="900" y1="870" x2="1150" y2="870" stroke="#2B6CB0" stroke-width="2" opacity="0.15" />
+    <line x1="1200" y1="850" x2="1450" y2="850" stroke="#2B6CB0" stroke-width="2" opacity="0.15" />
+    <line x1="1500" y1="870" x2="1750" y2="870" stroke="#2B6CB0" stroke-width="2" opacity="0.15" />
+  </g>
+  
+  <!-- Defs for gradients -->
+  <defs>
+    <linearGradient id="about-gradient" x1="0" y1="0" x2="0" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F0F9FF" />
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle gradient background -->
+  <rect width="1920" height="1080" fill="url(#skills-gradient)" />
+  
+  <!-- Skills visualization background elements -->
+  <g opacity="0.06">
+    <!-- Chart/graph abstract elements -->
+    <rect x="100" y="300" width="25" height="150" rx="5" fill="#2B6CB0" />
+    <rect x="150" y="250" width="25" height="200" rx="5" fill="#3182CE" />
+    <rect x="200" y="200" width="25" height="250" rx="5" fill="#2B6CB0" />
+    <rect x="250" y="150" width="25" height="300" rx="5" fill="#3182CE" />
+    <rect x="300" y="100" width="25" height="350" rx="5" fill="#2B6CB0" />
+    
+    <rect x="500" y="250" width="25" height="200" rx="5" fill="#2B6CB0" />
+    <rect x="550" y="200" width="25" height="250" rx="5" fill="#3182CE" />
+    <rect x="600" y="150" width="25" height="300" rx="5" fill="#2B6CB0" />
+    <rect x="650" y="200" width="25" height="250" rx="5" fill="#3182CE" />
+    <rect x="700" y="250" width="25" height="200" rx="5" fill="#2B6CB0" />
+    
+    <rect x="900" y="225" width="25" height="225" rx="5" fill="#2B6CB0" />
+    <rect x="950" y="175" width="25" height="275" rx="5" fill="#3182CE" />
+    <rect x="1000" y="125" width="25" height="325" rx="5" fill="#2B6CB0" />
+    <rect x="1050" y="175" width="25" height="275" rx="5" fill="#3182CE" />
+    <rect x="1100" y="225" width="25" height="225" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1300" y="275" width="25" height="175" rx="5" fill="#2B6CB0" />
+    <rect x="1350" y="225" width="25" height="225" rx="5" fill="#3182CE" />
+    <rect x="1400" y="175" width="25" height="275" rx="5" fill="#2B6CB0" />
+    <rect x="1450" y="225" width="25" height="225" rx="5" fill="#3182CE" />
+    <rect x="1500" y="275" width="25" height="175" rx="5" fill="#2B6CB0" />
+    
+    <rect x="1700" y="250" width="25" height="200" rx="5" fill="#2B6CB0" />
+    <rect x="1750" y="200" width="25" height="250" rx="5" fill="#3182CE" />
+    <rect x="1800" y="150" width="25" height="300" rx="5" fill="#2B6CB0" />
+    
+    <!-- Circular progress elements -->
+    <circle cx="200" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="410, 502" opacity="0.8" />
+    <circle cx="450" cy="700" r="80" stroke="#3182CE" stroke-width="10" stroke-dasharray="380, 502" opacity="0.7" />
+    <circle cx="700" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="440, 502" opacity="0.9" />
+    <circle cx="950" cy="700" r="80" stroke="#3182CE" stroke-width="10" stroke-dasharray="400, 502" opacity="0.8" />
+    <circle cx="1200" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="470, 502" opacity="0.95" />
+    <circle cx="1450" cy="700" r="80" stroke="#3182CE" stroke-width="10" stroke-dasharray="420, 502" opacity="0.85" />
+    <circle cx="1700" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="450, 502" opacity="0.9" />
+    
+    <!-- Connecting dot pattern -->
+    <path d="M100,900 L1800,900" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="10, 15" />
+    <path d="M100,950 L1800,950" stroke="#3182CE" stroke-width="1" stroke-dasharray="15, 20" />
+    <path d="M100,1000 L1800,1000" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="20, 25" />
+  </g>
+  
+  <!-- Defs for gradients -->
+  <defs>
+    <linearGradient id="skills-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FAFC" />
+      <stop offset="1" stop-color="#DBEAFE" />
+    </linearGradient>
+  </defs>
+</svg>

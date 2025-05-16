@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle gradient background -->
+  <rect width="1920" height="1080" fill="url(#contact-gradient)" />
+  
+  <!-- Contact abstract elements -->
+  <g opacity="0.06">
+    <!-- Abstract envelope shape at the top -->
+    <path d="M950,100 L1600,100 L1600,500 L950,500 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <path d="M950,100 L1275,300 L1600,100" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <path d="M950,500 L1150,300 L1400,300 L1600,500" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <path d="M950,100 L950,500 L1275,300 L1600,500 L1600,100 Z" fill="#2B6CB0" fill-opacity="0.05" />
+    
+    <!-- Location pin -->
+    <circle cx="300" cy="300" r="40" fill="#2B6CB0" fill-opacity="0.1" />
+    <path d="M300,260 L300,350 L350,300 Z" fill="#2B6CB0" />
+    
+    <!-- Phone icon -->
+    <rect x="250" y="500" width="100" height="180" rx="15" stroke="#2B6CB0" stroke-width="4" fill="none" />
+    <rect x="280" y="520" width="40" height="5" rx="2" fill="#2B6CB0" />
+    <circle cx="300" cy="580" r="30" stroke="#2B6CB0" stroke-width="4" fill="none" />
+    <circle cx="300" cy="650" r="10" fill="#2B6CB0" />
+    
+    <!-- Form elements -->
+    <rect x="950" y="600" width="600" height="60" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
+    <rect x="950" y="700" width="600" height="60" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
+    <rect x="950" y="800" width="600" height="60" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
+    <rect x="950" y="900" width="600" height="100" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
+    
+    <!-- Social media icons -->
+    <circle cx="200" cy="800" r="30" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <circle cx="300" cy="800" r="30" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <circle cx="400" cy="800" r="30" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    
+    <!-- Connection lines -->
+    <path d="M0,1080 C200,980 500,1030 800,980 C1100,930 1400,980 1700,930 C1800,910 1900,950 1920,930" stroke="#2B6CB0" stroke-width="1" fill="none" />
+    <path d="M0,1030 C300,1000 600,950 900,1000 C1200,1050 1500,1000 1800,1050 C1850,1060 1900,1040 1920,1050" stroke="#3182CE" stroke-width="1" fill="none" />
+  </g>
+  
+  <!-- Defs for gradients -->
+  <defs>
+    <linearGradient id="contact-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FAFAFA" />
+      <stop offset="1" stop-color="#EBF8FF" />
+    </linearGradient>
+  </defs>
+</svg>
