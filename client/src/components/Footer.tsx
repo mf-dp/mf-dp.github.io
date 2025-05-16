@@ -20,8 +20,8 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-6 md:mb-0">
-            <MFLogo className="w-8 h-8 mr-2" />
-            <span className="text-xl font-bold">Mahdieh Fakhar</span>
+            <MFLogo className="w-12 h-12 mr-2" />
+            <span className="text-xl font-bold">MAHDIEH FAKHAR</span>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8 mb-6 md:mb-0">

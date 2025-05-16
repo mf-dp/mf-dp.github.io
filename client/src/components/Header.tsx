@@ -41,7 +41,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold flex items-center space-x-2">
-          <MFLogo className="w-8 h-8" />
+          <MFLogo className="w-12 h-12" />
           <span>MAHDIEH FAKHAR</span>
         </Link>
 
