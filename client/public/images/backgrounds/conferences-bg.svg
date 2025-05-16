@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main background gradient with conference theme -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fefce8" />
+      <stop offset="100%" stop-color="#fef9c3" />
+    </linearGradient>
+    
+    <linearGradient id="accent-gradient" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)" />
+  
+  <!-- Abstract conference pattern -->
+  <g opacity="0.1">
+    <!-- Conference stage outline -->
+    <path d="M300,400 L1620,400 L1620,750 C1620,770 1600,790 1580,790 L340,790 C320,790 300,770 300,750 Z" 
+          fill="white" stroke="#ca8a04" stroke-width="3" />
+    
+    <!-- Podium/Speaker area -->
+    <rect x="900" y="500" width="120" height="90" rx="5" fill="#eab308" fill-opacity="0.8" />
+    <rect x="880" y="590" width="160" height="20" rx="5" fill="#eab308" fill-opacity="0.8" />
+    
+    <!-- Screen/Presentation area -->
+    <rect x="700" y="430" width="520" height="300" rx="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="2" />
+    <rect x="720" y="450" width="480" height="260" rx="5" fill="#eab308" fill-opacity="0.3" />
+    
+    <!-- Audience seating areas -->
+    <g opacity="0.7">
+      <!-- Left Section -->
+      <g transform="translate(400, 550)">
+        <rect x="0" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+      </g>
+      
+      <!-- Center Left Section -->
+      <g transform="translate(550, 600)">
+        <rect x="0" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+      </g>
+      
+      <!-- Center Right Section -->
+      <g transform="translate(1250, 600)">
+        <rect x="0" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+      </g>
+      
+      <!-- Right Section -->
+      <g transform="translate(1400, 550)">
+        <rect x="0" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="0" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="25" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="50" width="15" height="15" rx="2" fill="#ca8a04" />
+        
+        <rect x="0" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="25" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="50" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="75" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+        <rect x="100" y="75" width="15" height="15" rx="2" fill="#ca8a04" />
+      </g>
+    </g>
+    
+    <!-- Conference decorative elements -->
+    <g opacity="0.5">
+      <!-- Hanging lights -->
+      <line x1="500" y1="400" x2="500" y2="430" stroke="#ca8a04" stroke-width="2" />
+      <circle cx="500" cy="440" r="10" fill="#eab308" />
+      
+      <line x1="700" y1="400" x2="700" y2="430" stroke="#ca8a04" stroke-width="2" />
+      <circle cx="700" cy="440" r="10" fill="#eab308" />
+      
+      <line x1="900" y1="400" x2="900" y2="430" stroke="#ca8a04" stroke-width="2" />
+      <circle cx="900" cy="440" r="10" fill="#eab308" />
+      
+      <line x1="1100" y1="400" x2="1100" y2="430" stroke="#ca8a04" stroke-width="2" />
+      <circle cx="1100" cy="440" r="10" fill="#eab308" />
+      
+      <line x1="1300" y1="400" x2="1300" y2="430" stroke="#ca8a04" stroke-width="2" />
+      <circle cx="1300" cy="440" r="10" fill="#eab308" />
+      
+      <line x1="1500" y1="400" x2="1500" y2="430" stroke="#ca8a04" stroke-width="2" />
+      <circle cx="1500" cy="440" r="10" fill="#eab308" />
+    </g>
+    
+    <!-- Conference Schedule Board -->
+    <g transform="translate(200, 250)">
+      <rect x="0" y="0" width="200" height="300" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="2" />
+      <text x="40" y="30" font-family="Arial" font-size="20" fill="#854d0e" font-weight="bold">SCHEDULE</text>
+      <line x1="20" y1="45" x2="180" y2="45" stroke="#ca8a04" stroke-width="2" />
+      
+      <rect x="20" y="60" width="160" height="30" rx="5" fill="#fef08a" />
+      <rect x="20" y="100" width="160" height="30" rx="5" fill="#fef08a" />
+      <rect x="20" y="140" width="160" height="30" rx="5" fill="#fef08a" />
+      <rect x="20" y="180" width="160" height="30" rx="5" fill="#fef08a" />
+      <rect x="20" y="220" width="160" height="30" rx="5" fill="#fef08a" />
+      <rect x="20" y="260" width="160" height="30" rx="5" fill="#fef08a" />
+    </g>
+    
+    <!-- Registration/Badge Area -->
+    <g transform="translate(1600, 250)">
+      <rect x="0" y="0" width="120" height="180" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="2" />
+      <text x="15" y="30" font-family="Arial" font-size="14" fill="#854d0e" font-weight="bold">BADGE</text>
+      <rect x="20" y="50" width="80" height="100" rx="5" fill="#fef08a" />
+      <circle cx="60" cy="80" r="20" fill="#eab308" />
+      <rect x="35" y="110" width="50" height="10" rx="2" fill="#eab308" />
+      <rect x="35" y="130" width="50" height="10" rx="2" fill="#eab308" />
+    </g>
+    
+    <!-- Abstract data flow -->
+    <path d="M100,200 C300,150 500,250 700,200 S900,150 1100,200 S1300,250 1500,200 S1700,150 1900,200" 
+          stroke="url(#accent-gradient)" stroke-width="3" fill="none" opacity="0.2" stroke-linecap="round" />
+    
+    <path d="M100,900 C300,850 500,950 700,900 S900,850 1100,900 S1300,950 1500,900 S1700,850 1900,900" 
+          stroke="url(#accent-gradient)" stroke-width="3" fill="none" opacity="0.2" stroke-linecap="round" />
+  </g>
+</svg>
