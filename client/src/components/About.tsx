@@ -1,115 +1,121 @@
-import { useLanguage } from "../context/LanguageContext";
-import { translations } from "../utils/translations";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { useLanguage } from '@/context/LanguageContext';
+import { motion } from 'framer-motion';
+import { useInView } from '@/hooks/useIntersectionObserver';
+import { useRef } from 'react';
+import { FaLinkedin, FaGithub, FaTwitter, FaFileAlt } from 'react-icons/fa';
 
-const About: React.FC = () => {
-  const { language } = useLanguage();
-  const [sectionRef, isVisible] = useIntersectionObserver<HTMLDivElement>();
-  const [contentRef, isContentVisible] = useIntersectionObserver<HTMLDivElement>({
-    threshold: 0.2
-  });
-  
-  const t = translations[language as keyof typeof translations];
+export function About() {
+  const { t } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+  };
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-light dark:bg-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-          ref={sectionRef}
-          className={`text-center mb-16 transform transition-all duration-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+    <section 
+      id="about"
+      ref={sectionRef}
+      className="py-20 bg-white dark:bg-gray-900"
+    >
+      <div className="container mx-auto px-4">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold mb-12 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary dark:text-primary-light mb-4">
-            {t.about.title}
-          </h2>
-          <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto"></div>
-        </div>
+          {t('about.title')}
+        </motion.h2>
         
-        <div 
-          ref={contentRef}
-          className={`grid md:grid-cols-2 gap-12 items-center transform transition-all duration-1000 ${
-            isContentVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+        <motion.div 
+          className="flex flex-col md:flex-row gap-10 items-center"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
         >
-          <div className="order-2 md:order-1">
-            <div className="bg-white dark:bg-dark-lighter rounded-xl shadow-lg p-8">
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary dark:text-primary-light">
-                    <i className="fas fa-user-graduate"></i>
-                  </div>
-                  <p className="ml-3 text-gray-700 dark:text-gray-300">{t.about.current}</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary dark:text-primary-light">
-                    <i className="fas fa-laptop-code"></i>
-                  </div>
-                  <p className="ml-3 text-gray-700 dark:text-gray-300">{t.about.working}</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary dark:text-primary-light">
-                    <i className="fas fa-brain"></i>
-                  </div>
-                  <p className="ml-3 text-gray-700 dark:text-gray-300">{t.about.learning}</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary dark:text-primary-light">
-                    <i className="fas fa-search"></i>
-                  </div>
-                  <p className="ml-3 text-gray-700 dark:text-gray-300">{t.about.looking}</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary dark:text-primary-light">
-                    <i className="fas fa-question-circle"></i>
-                  </div>
-                  <p className="ml-3 text-gray-700 dark:text-gray-300">{t.about.askMe}</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary dark:text-primary-light">
-                    <i className="fas fa-envelope"></i>
-                  </div>
-                  <p className="ml-3 text-gray-700 dark:text-gray-300">{t.about.reachMe}</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 text-primary dark:text-primary-light">
-                    <i className="fas fa-heart"></i>
-                  </div>
-                  <p className="ml-3 text-gray-700 dark:text-gray-300">{t.about.interests}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <motion.div 
+            className="md:w-2/5"
+            variants={itemVariants}
+          >
+            <img 
+              src="/src/assets/profile2.png" 
+              alt="Profile Photo" 
+              className="w-full h-auto rounded-lg shadow-lg" 
+            />
+          </motion.div>
           
-          <div className="order-1 md:order-2">
-            <div className="relative">
-              <img 
-                src="/src/assets/professional.jpg" 
-                alt="Professional data scientist working with visualizations" 
-                className="w-full h-auto rounded-xl shadow-lg"
-                onError={(e) => {
-                  // Fallback image if the actual image doesn't load
-                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80";
-                }}
-              />
-              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-dark-lighter rounded-lg shadow-lg p-4 w-32 h-32 flex flex-col items-center justify-center">
-                <div className="text-4xl text-primary dark:text-primary-light mb-2">
-                  <i className="fas fa-chart-line"></i>
-                </div>
-                <div className="text-lg font-bold text-center">Data Science</div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <motion.div 
+            className="md:w-3/5 space-y-6"
+            variants={containerVariants}
+          >
+            <motion.h3 
+              className="text-2xl font-semibold text-primary"
+              variants={itemVariants}
+            >
+              {t('about.name')}
+            </motion.h3>
+            
+            <motion.h4 
+              className="text-xl text-gray-600 dark:text-gray-400"
+              variants={itemVariants}
+            >
+              {t('about.role')}
+            </motion.h4>
+            
+            <motion.p 
+              className="text-gray-700 dark:text-gray-300"
+              variants={itemVariants}
+            >
+              {t('about.bio')}
+            </motion.p>
+            
+            <motion.p 
+              className="text-gray-700 dark:text-gray-300"
+              variants={itemVariants}
+            >
+              {t('about.bio2')}
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-wrap gap-4 pt-4"
+              variants={itemVariants}
+            >
+              <a href="#" className="text-primary hover:text-primary/80 flex items-center gap-2">
+                <FaLinkedin className="text-xl" />
+                <span>{t('about.linkedin')}</span>
+              </a>
+              <a href="#" className="text-primary hover:text-primary/80 flex items-center gap-2">
+                <FaGithub className="text-xl" />
+                <span>{t('about.github')}</span>
+              </a>
+              <a href="#" className="text-primary hover:text-primary/80 flex items-center gap-2">
+                <FaTwitter className="text-xl" />
+                <span>{t('about.twitter')}</span>
+              </a>
+              <a href="#resume" className="text-primary hover:text-primary/80 flex items-center gap-2">
+                <FaFileAlt className="text-xl" />
+                <span>{t('about.resumeLink')}</span>
+              </a>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
-};
+}
 
 export default About;

@@ -1,149 +1,116 @@
-import { useLanguage } from "../context/LanguageContext";
-import { translations } from "../utils/translations";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { useLanguage } from '@/context/LanguageContext';
+import { motion } from 'framer-motion';
+import { useInView } from '@/hooks/useIntersectionObserver';
+import { useRef } from 'react';
+import { FaLink, FaGithub, FaArrowRight } from 'react-icons/fa';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
-const Projects: React.FC = () => {
-  const { language } = useLanguage();
-  const [sectionRef, isVisible] = useIntersectionObserver<HTMLDivElement>();
-  const [projectsRef, isProjectsVisible] = useIntersectionObserver<HTMLDivElement>({
-    threshold: 0.1
-  });
-  const [researchRef, isResearchVisible] = useIntersectionObserver<HTMLDivElement>({
-    threshold: 0.1
-  });
-  
-  const t = translations[language as keyof typeof translations];
+export function Projects() {
+  const { t } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+  };
+
+  const projects = t<any[]>('projects.items', 'projects');
+
+  // Sample project images (since we can't directly use the binary image files)
+  const projectImages = [
+    "/src/assets/conference1.jpg",
+    "/src/assets/conference2.jpg", 
+    "/src/assets/conference3.jpg"
+  ];
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-light dark:bg-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-          ref={sectionRef}
-          className={`text-center mb-16 transform transition-all duration-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+    <section 
+      id="projects"
+      ref={sectionRef}
+      className="py-20 bg-white dark:bg-gray-900"
+    >
+      <div className="container mx-auto px-4">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold mb-12 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary dark:text-primary-light mb-4">
-            {t.projects.title}
-          </h2>
-          <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto"></div>
-        </div>
+          {t('projects.title')}
+        </motion.h2>
         
-        <div 
-          ref={projectsRef}
-          className={`grid md:grid-cols-2 gap-12 items-start transform transition-all duration-1000 ${
-            isProjectsVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
         >
-          {/* Project 1 */}
-          <div className="bg-white dark:bg-dark-lighter rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <img 
-              src="/src/assets/project-ihupa.jpg" 
-              alt="IHUPA Website Project" 
-              className="w-full h-48 object-cover"
-              onError={(e) => {
-                // Fallback to a placeholder if image fails to load
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450&q=80";
-              }}
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">{t.projects.ihupa}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{t.projects.ihupaBrief}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">HTML5</span>
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">CSS3</span>
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">JavaScript</span>
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">Responsive Design</span>
-              </div>
-              <a href="#" className="inline-flex items-center text-primary dark:text-primary-light hover:underline">
-                <span>{t.projects.viewProject}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          {/* Project 2 */}
-          <div className="bg-white dark:bg-dark-lighter rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
-            <img 
-              src="/src/assets/project-resume.jpg" 
-              alt="Resume Website Project" 
-              className="w-full h-48 object-cover"
-              onError={(e) => {
-                // Fallback to a placeholder if image fails to load
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450&q=80";
-              }}
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-100">{t.projects.resumeSite}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{t.projects.resumeBrief}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">HTML5</span>
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">CSS3</span>
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">JavaScript</span>
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">React</span>
-                <span className="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded-full">Tailwind CSS</span>
-              </div>
-              <a href="#" className="inline-flex items-center text-primary dark:text-primary-light hover:underline">
-                <span>{t.projects.viewProject}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+          {projects.map((project, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              <Card className="overflow-hidden h-full transition-transform hover:-translate-y-1 hover:shadow-lg">
+                <img 
+                  src={projectImages[index % projectImages.length]} 
+                  alt={project.title} 
+                  className="w-full h-48 object-cover" 
+                />
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.map((tag: string, tagIdx: number) => (
+                      <Badge key={tagIdx} variant="secondary" className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <a href={project.liveDemo} className="text-primary hover:text-primary/80 flex items-center gap-1">
+                      <FaLink className="text-sm" />
+                      <span>Live Demo</span>
+                    </a>
+                    <a href={project.github} className="text-primary hover:text-primary/80 flex items-center gap-1">
+                      <FaGithub className="text-sm" />
+                      <span>GitHub</span>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
         
-        {/* Research Projects */}
-        <div 
-          ref={researchRef}
-          className={`mt-16 transform transition-all duration-1000 ${
-            isResearchVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+        <motion.div 
+          className="mt-12 text-center"
+          variants={itemVariants}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <h3 className="text-2xl font-bold text-center text-primary dark:text-primary-light mb-8">{t.projects.research}</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Research Project 1 */}
-            <div className="bg-white dark:bg-dark rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-4">
-                <h4 className="text-lg font-bold text-gray-800 dark:text-gray-100">IHUPA</h4>
-                <p className="text-gray-500 dark:text-gray-400">Director: Dr. María García Alonso, UNED, Madrid (2021-2023)</p>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300">{t.projects.ihupa2}</p>
-            </div>
-            
-            {/* Research Project 2 */}
-            <div className="bg-white dark:bg-dark rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="mb-4">
-                <h4 className="text-lg font-bold text-gray-800 dark:text-gray-100">AGORA</h4>
-                <p className="text-gray-500 dark:text-gray-400">Directors: Elena Bárcena and Timothy Read, UNED, Madrid (2022-2025)</p>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300">{t.projects.agora}</p>
-            </div>
-          </div>
-        </div>
-        
-        {/* Memberships */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center text-primary dark:text-primary-light mb-8">{t.projects.committee}</h3>
-          <div className="animate-fadeIn">
-            <div className="bg-white dark:bg-dark rounded-lg p-6 shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="bg-primary text-white rounded-full p-2 mr-3 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h4 className="text-lg font-bold text-gray-800 dark:text-gray-100">{t.projects.journadas}</h4>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300">{t.projects.journadasBrief}</p>
-            </div>
-          </div>
-        </div>
+          <a href="#" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
+            <span>{t('projects.viewAllButton')}</span>
+            <FaArrowRight />
+          </a>
+        </motion.div>
       </div>
     </section>
   );
-};
+}
 
 export default Projects;
