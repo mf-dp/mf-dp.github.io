@@ -12,7 +12,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import profileImage from '../assets/profile.jpg';
+// Use direct path to image in public folder
+const conferenceImagePath = '/images/profile.jpg';
 
 export function Conferences() {
   const { t } = useLanguage();
@@ -42,9 +43,9 @@ export function Conferences() {
 
   // Conference images using actual profile photo
   const conferenceImages = [
-    profileImage,
-    profileImage,
-    profileImage
+    conferenceImagePath,
+    conferenceImagePath,
+    conferenceImagePath
   ];
 
   const openConferenceDetails = (conference: any) => {

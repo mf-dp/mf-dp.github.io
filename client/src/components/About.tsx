@@ -4,8 +4,8 @@ import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
 import { FaLinkedin, FaGithub, FaGlobe, FaFileAlt } from 'react-icons/fa';
 import { LazyImage } from '@/components/ui/lazy-image';
-// Import profile image
-import profileImage from '../assets/profile.jpg';
+// Use direct path to image in public folder
+const profileImagePath = '/images/profile.jpg';
 
 export function About() {
   const { t } = useLanguage();
@@ -56,7 +56,7 @@ export function About() {
           >
             <div className="relative rounded-lg overflow-hidden shadow-lg border-4 border-white dark:border-gray-800 shadow-primary/20">
               <LazyImage 
-                src={profileImage} 
+                src={profileImagePath} 
                 alt="Mahdieh Fakhar" 
                 className="w-full h-auto rounded-lg" 
                 placeholderBlur={true}
