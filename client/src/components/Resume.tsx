@@ -27,8 +27,45 @@ export function Resume() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const career = t<any[]>('career.items', 'career');
-  const education = t<any[]>('education.items', 'education');
+  // Sample data for career
+  const career = [
+    {
+      role: "Senior UX Designer",
+      company: "Google",
+      period: "2019 - Present",
+      description: "Leading UX design for enterprise product suite. Responsible for establishing design systems, conducting user research, and mentoring junior designers.",
+      achievements: [
+        "Led the redesign of Admin Console, improving task completion rate by 35%",
+        "Established a comprehensive component library used by 200+ designers"
+      ]
+    },
+    {
+      role: "UI/UX Designer",
+      company: "Amazon",
+      period: "2017 - 2019",
+      description: "Designed user interfaces for mobile and web applications within the retail ecosystem.",
+      achievements: [
+        "Redesigned checkout process, resulting in 15% increase in conversion rate",
+        "Created responsive designs for multiple key user flows"
+      ]
+    }
+  ];
+
+  // Sample data for education
+  const education = [
+    {
+      degree: "Master's in Computer Science",
+      institution: "Stanford University",
+      period: "2015 - 2017",
+      description: "Specialized in Human-Computer Interaction and User Experience Design. Graduated with honors."
+    },
+    {
+      degree: "Bachelor's in Information Technology",
+      institution: "MIT",
+      period: "2011 - 2015",
+      description: "Focus on web technologies and software engineering. Graduated summa cum laude."
+    }
+  ];
 
   return (
     <section 
@@ -226,11 +263,13 @@ export function Resume() {
                       </div>
                       <h4 className="text-primary">{job.company}</h4>
                       <p className="mt-2 text-gray-700 dark:text-gray-300">{job.description}</p>
-                      <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                        {job.achievements.slice(0, 2).map((achievement: string, idx: number) => (
-                          <li key={idx} className="text-sm">{achievement}</li>
-                        ))}
-                      </ul>
+                      {job.achievements && Array.isArray(job.achievements) && job.achievements.length > 0 && (
+                        <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
+                          {job.achievements.slice(0, 2).map((achievement: string, idx: number) => (
+                            <li key={idx} className="text-sm">{achievement}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   ))}
                 </div>

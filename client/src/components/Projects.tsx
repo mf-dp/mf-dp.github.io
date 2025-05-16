@@ -27,7 +27,9 @@ export function Projects() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const projects = t<any[]>('projects.items', 'projects');
+  // Get projects from translations
+  const projectsData = t('projects.items');
+  const projects = Array.isArray(projectsData) ? projectsData : [];
 
   // Sample project images (since we can't directly use the binary image files)
   const projectImages = [

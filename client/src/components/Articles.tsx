@@ -27,7 +27,9 @@ export function Articles() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const articles = t<any[]>('articles.items', 'articles');
+  // Get articles from translations
+  const articlesData = t('articles.items');
+  const articles = Array.isArray(articlesData) ? articlesData : [];
 
   // Get category color based on category name
   const getCategoryColor = (category: string) => {
@@ -67,8 +69,8 @@ export function Articles() {
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
         >
-          {articles.map((article, index) => {
-            const color = getCategoryColor(article.category);
+          {articles.map((article: any, index: number) => {
+            const color = getCategoryColor(article?.category || '');
             
             return (
               <motion.div key={index} variants={itemVariants}>
@@ -76,22 +78,22 @@ export function Articles() {
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex justify-between items-start mb-4">
                       <Badge 
-                        className={`bg-${color}-100 dark:bg-${color}-900/30 text-${color}-800 dark:text-${color}-300`}
+                        className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300"
                         variant="secondary"
                       >
-                        {article.category}
+                        {article?.category || 'Uncategorized'}
                       </Badge>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">{article.date}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-400">{article?.date || ''}</span>
                     </div>
                     
-                    <h3 className="text-xl font-semibold mb-3">{article.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3">{article?.title || 'Untitled Article'}</h3>
                     
                     <p className="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
-                      {article.description}
+                      {article?.description || ''}
                     </p>
                     
                     <a 
-                      href={article.link} 
+                      href={article?.link || '#'} 
                       className="text-primary hover:text-primary/80 flex items-center gap-1 mt-auto self-start"
                       target="_blank"
                       rel="noopener noreferrer"

@@ -26,7 +26,9 @@ export function Education() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const education = t<any[]>('education.items', 'education');
+  // Get education from translations
+  const educationData = t('education.items');
+  const education = Array.isArray(educationData) ? educationData : [];
 
   return (
     <section 

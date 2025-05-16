@@ -26,7 +26,9 @@ export function Memberships() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const memberships = t<any[]>('memberships.items', 'memberships');
+  // Get memberships from translations
+  const membershipsData = t('memberships.items');
+  const memberships = Array.isArray(membershipsData) ? membershipsData : [];
 
   return (
     <section 

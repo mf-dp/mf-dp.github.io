@@ -34,7 +34,9 @@ export function Conferences() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const conferences = t<any[]>('conferences.items', 'conferences');
+  // Get conferences from translations
+  const conferencesData = t('conferences.items');
+  const conferences = Array.isArray(conferencesData) ? conferencesData : [];
 
   // Sample conference images (using the existing Conference folder images)
   const conferenceImages = [

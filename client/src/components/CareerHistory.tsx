@@ -25,7 +25,9 @@ export function CareerHistory() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const career = t<any[]>('career.items', 'career');
+  // Get career history from translations
+  const careerData = t('career.items');
+  const career = Array.isArray(careerData) ? careerData : [];
 
   return (
     <section 
