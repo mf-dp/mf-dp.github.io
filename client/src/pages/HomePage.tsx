@@ -14,7 +14,11 @@ import Resume from "@/components/Resume";
 import Memberships from "@/components/Memberships";
 import Footer from "@/components/Footer";
 
-export default function HomePage() {
+interface HomePageProps {
+  initialSection?: string;
+}
+
+export default function HomePage({ initialSection }: HomePageProps) {
   const { t, language } = useLanguage();
 
   // Set document title and meta description based on language
@@ -45,19 +49,34 @@ export default function HomePage() {
         const id = target.getAttribute('href')?.slice(1);
         if (!id) return;
         
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }
+        scrollToSection(id);
       }
     };
 
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
   }, []);
+  
+  // Scroll to section if initialSection is provided
+  useEffect(() => {
+    if (initialSection) {
+      // Small delay to ensure the page is fully loaded
+      setTimeout(() => {
+        scrollToSection(initialSection);
+      }, 300);
+    }
+  }, [initialSection]);
+  
+  // Helper function to scroll to a section
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col">

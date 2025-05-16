@@ -12,8 +12,36 @@ import { SEO } from "@/components/SEO";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={HomePage} />
-      <Route component={NotFound} />
+      <Route path="/">
+        {(params) => <HomePage />}
+      </Route>
+      <Route path="/about">
+        {(params) => <HomePage initialSection="about" />}
+      </Route>
+      <Route path="/skills">
+        {(params) => <HomePage initialSection="skills" />}
+      </Route>
+      <Route path="/education">
+        {(params) => <HomePage initialSection="education" />}
+      </Route>
+      <Route path="/career">
+        {(params) => <HomePage initialSection="career" />}
+      </Route>
+      <Route path="/projects">
+        {(params) => <HomePage initialSection="projects" />}
+      </Route>
+      <Route path="/articles">
+        {(params) => <HomePage initialSection="articles" />}
+      </Route>
+      <Route path="/conferences">
+        {(params) => <HomePage initialSection="conferences" />}
+      </Route>
+      <Route path="/contact">
+        {(params) => <HomePage initialSection="contact" />}
+      </Route>
+      <Route>
+        {(params) => <NotFound />}
+      </Route>
     </Switch>
   );
 }
