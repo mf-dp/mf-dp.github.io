@@ -41,11 +41,15 @@ export function Conferences() {
   const conferencesData = t('conferences.items');
   const conferences = Array.isArray(conferencesData) ? conferencesData : [];
 
-  // Conference images using actual profile photo
+  // Conference images from the extracted zip file
   const conferenceImages = [
-    conferenceImagePath,
-    conferenceImagePath,
-    conferenceImagePath
+    '/images/conferences/2018.11.14-16.jpg',
+    '/images/conferences/2019.01-02.30-01.01.jpg',
+    '/images/conferences/2019.10.25.01.jpg',
+    '/images/conferences/2019.11.20-21.jpg',
+    '/images/conferences/2017.01.25-27.jpg',
+    '/images/conferences/2016.11.16-18.jpg',
+    '/images/conferences/2015.11.17-19.01.jpg'
   ];
 
   const openConferenceDetails = (conference: any) => {
