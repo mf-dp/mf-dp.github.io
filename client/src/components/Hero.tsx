@@ -67,6 +67,7 @@ export function Hero() {
               src="/src/assets/mahdieh-profile.jpg" 
               alt="MAHDIEH FAKHAR Professional Headshot" 
               className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-xl" 
+              style={{ objectPosition: '50% 10%' }}
             />
           </motion.div>
         </motion.div>

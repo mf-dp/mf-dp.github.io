@@ -61,6 +61,7 @@ export function About() {
                 className="w-full h-auto rounded-lg" 
                 placeholderBlur={true}
                 placeholderColor="#f3f4f6"
+                style={{ objectPosition: '50% 20%', objectFit: 'cover' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-30 rounded-lg"></div>
             </div>
