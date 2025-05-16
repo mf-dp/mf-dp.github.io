@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main background gradient with data science theme -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    
+    <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    
+    <linearGradient id="node-gradient" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)" />
+  
+  <!-- Data visualization patterns -->
+  <g opacity="0.1">
+    <!-- Network nodes and connections -->
+    <circle cx="300" cy="200" r="12" fill="url(#node-gradient)" />
+    <circle cx="450" cy="150" r="8" fill="url(#node-gradient)" />
+    <circle cx="550" cy="250" r="10" fill="url(#node-gradient)" />
+    <circle cx="380" cy="320" r="8" fill="url(#node-gradient)" />
+    <circle cx="480" cy="400" r="12" fill="url(#node-gradient)" />
+    
+    <path d="M300,200 L450,150" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M300,200 L550,250" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M300,200 L380,320" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M450,150 L550,250" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M380,320 L480,400" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M550,250 L480,400" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    
+    <!-- Second node cluster -->
+    <circle cx="1600" cy="300" r="12" fill="url(#node-gradient)" />
+    <circle cx="1450" cy="250" r="8" fill="url(#node-gradient)" />
+    <circle cx="1350" cy="350" r="10" fill="url(#node-gradient)" />
+    <circle cx="1520" cy="420" r="8" fill="url(#node-gradient)" />
+    <circle cx="1420" cy="500" r="12" fill="url(#node-gradient)" />
+    
+    <path d="M1600,300 L1450,250" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M1600,300 L1350,350" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M1600,300 L1520,420" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M1450,250 L1350,350" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M1520,420 L1420,500" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    <path d="M1350,350 L1420,500" stroke="url(#line-gradient)" stroke-width="2" opacity="0.6" />
+    
+    <!-- Data flow paths -->
+    <path d="M100,500 C300,450 500,550 700,500 S900,450 1100,500 S1300,550 1500,500 S1700,450 1900,500" 
+          stroke="url(#line-gradient)" stroke-width="3" fill="none" opacity="0.3" stroke-linecap="round" />
+    
+    <path d="M100,600 C300,650 500,550 700,600 S900,650 1100,600 S1300,550 1500,600 S1700,650 1900,600" 
+          stroke="url(#line-gradient)" stroke-width="3" fill="none" opacity="0.3" stroke-linecap="round" />
+    
+    <!-- Neural network representation -->
+    <g transform="translate(960, 800) scale(1)">
+      <!-- Input layer -->
+      <circle cx="-300" cy="-50" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="-300" cy="0" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="-300" cy="50" r="10" fill="#60a5fa" opacity="0.5" />
+      
+      <!-- Hidden layer 1 -->
+      <circle cx="-150" cy="-75" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="-150" cy="-25" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="-150" cy="25" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="-150" cy="75" r="10" fill="#60a5fa" opacity="0.5" />
+      
+      <!-- Hidden layer 2 -->
+      <circle cx="0" cy="-75" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="0" cy="-25" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="0" cy="25" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="0" cy="75" r="10" fill="#60a5fa" opacity="0.5" />
+      
+      <!-- Hidden layer 3 -->
+      <circle cx="150" cy="-50" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="150" cy="0" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="150" cy="50" r="10" fill="#60a5fa" opacity="0.5" />
+      
+      <!-- Output layer -->
+      <circle cx="300" cy="-25" r="10" fill="#60a5fa" opacity="0.5" />
+      <circle cx="300" cy="25" r="10" fill="#60a5fa" opacity="0.5" />
+      
+      <!-- Connections -->
+      <!-- Input to Hidden 1 -->
+      <line x1="-300" y1="-50" x2="-150" y2="-75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="-50" x2="-150" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="-50" x2="-150" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="0" x2="-150" y2="-75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="0" x2="-150" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="0" x2="-150" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="0" x2="-150" y2="75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="50" x2="-150" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="50" x2="-150" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-300" y1="50" x2="-150" y2="75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      
+      <!-- Hidden 1 to Hidden 2 connections -->
+      <!-- Only showing a subset for clarity -->
+      <line x1="-150" y1="-75" x2="0" y2="-75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="-75" x2="0" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="-25" x2="0" y2="-75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="-25" x2="0" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="-25" x2="0" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="25" x2="0" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="25" x2="0" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="25" x2="0" y2="75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="75" x2="0" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="-150" y1="75" x2="0" y2="75" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      
+      <!-- Hidden 2 to Hidden 3 connections -->
+      <!-- Similar pattern of connections -->
+      <line x1="0" y1="-75" x2="150" y2="-50" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="0" y1="-25" x2="150" y2="-50" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="0" y1="-25" x2="150" y2="0" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="0" y1="25" x2="150" y2="0" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="0" y1="25" x2="150" y2="50" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="0" y1="75" x2="150" y2="50" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      
+      <!-- Hidden 3 to Output connections -->
+      <line x1="150" y1="-50" x2="300" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="150" y1="0" x2="300" y2="-25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="150" y1="0" x2="300" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+      <line x1="150" y1="50" x2="300" y2="25" stroke="#60a5fa" stroke-width="1" opacity="0.2" />
+    </g>
+    
+    <!-- Data visualization elements -->
+    <g transform="translate(350, 800)">
+      <!-- Bar chart -->
+      <rect x="0" y="0" width="20" height="80" fill="#60a5fa" opacity="0.5" rx="2" />
+      <rect x="30" y="20" width="20" height="60" fill="#60a5fa" opacity="0.5" rx="2" />
+      <rect x="60" y="40" width="20" height="40" fill="#60a5fa" opacity="0.5" rx="2" />
+      <rect x="90" y="10" width="20" height="70" fill="#60a5fa" opacity="0.5" rx="2" />
+      <rect x="120" y="30" width="20" height="50" fill="#60a5fa" opacity="0.5" rx="2" />
+    </g>
+    
+    <g transform="translate(1500, 800)">
+      <!-- Pie chart -->
+      <path d="M0,0 L50,0 A50,50 0 0,1 25,43.3 z" fill="#60a5fa" opacity="0.5" />
+      <path d="M0,0 L25,43.3 A50,50 0 0,1 -40.45,29.39 z" fill="#93c5fd" opacity="0.5" />
+      <path d="M0,0 L-40.45,29.39 A50,50 0 0,1 -40.45,-29.39 z" fill="#bfdbfe" opacity="0.5" />
+      <path d="M0,0 L-40.45,-29.39 A50,50 0 0,1 25,-43.3 z" fill="#dbeafe" opacity="0.5" />
+      <path d="M0,0 L25,-43.3 A50,50 0 0,1 50,0 z" fill="#eff6ff" opacity="0.5" />
+    </g>
+  </g>
+</svg>
