@@ -2,7 +2,21 @@ import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
-import { FaPaintBrush, FaCode, FaToolbox, FaComments, FaDatabase, FaSearch } from 'react-icons/fa';
+import { FaPaintBrush, FaCode, FaToolbox, FaComments, FaDatabase, FaSearch, FaChartBar, FaLaptopCode } from 'react-icons/fa';
+
+// Define skill item type
+interface SkillItem {
+  name: string;
+  level: number;
+}
+
+// Define skill category type
+interface SkillCategory {
+  id: string;
+  icon: JSX.Element;
+  title: string;
+  items: SkillItem[];
+}
 
 export function Skills() {
   const { t } = useLanguage();
@@ -25,55 +39,45 @@ export function Skills() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  // Get skill items from translations
-  const getSkillItems = (category: string) => {
-    try {
-      const items = t(`skills.${category}.items`);
-      return Array.isArray(items) ? items : [];
-    } catch (error) {
-      console.warn(`Could not get items for ${category}`, error);
-      return [];
-    }
+  // Create sample skill data to ensure the component still renders
+  const sampleSkillData: Record<string, SkillItem[]> = {
+    dataAnalysis: [
+      { name: "Data Analysis with R", level: 5 },
+      { name: "Python", level: 4 },
+      { name: "Statistical Analysis", level: 5 },
+      { name: "Artificial Intelligence", level: 4 }
+    ],
+    visualization: [
+      { name: "Chart Creation", level: 5 },
+      { name: "Visualization Tools", level: 4 },
+      { name: "Interactive Dashboards", level: 4 },
+      { name: "Data Storytelling", level: 5 }
+    ],
+    tools: [
+      { name: "SPSS", level: 5 },
+      { name: "VosViewer", level: 5 },
+      { name: "Nvivo / MAXQDA", level: 4 },
+      { name: "Mendeley", level: 5 }
+    ],
+    soft: [
+      { name: "Scientific Research", level: 5 },
+      { name: "Bibliometric Analysis", level: 5 },
+      { name: "Scientometric Analysis", level: 5 },
+      { name: "Academic Writing", level: 5 }
+    ],
+    analytics: [
+      { name: "Structural Equation Modeling", level: 4 },
+      { name: "Smart-PLS4 / Lisrel / Amos", level: 4 },
+      { name: "Meta Analysis (CMA)", level: 4 },
+      { name: "Inferential Statistics", level: 4 }
+    ],
+    web: [
+      { name: "Web Design", level: 4 },
+      { name: "Database Management", level: 4 },
+      { name: "Database Automatization", level: 3 },
+      { name: "Digital Competence", level: 5 }
+    ]
   };
-
-  const skillCategories = [
-    {
-      id: 'design',
-      icon: <FaPaintBrush className="text-2xl text-primary mr-3" />,
-      title: t('skills.design.title'),
-      items: getSkillItems('design')
-    },
-    {
-      id: 'frontend',
-      icon: <FaCode className="text-2xl text-primary mr-3" />,
-      title: t('skills.frontend.title'),
-      items: getSkillItems('frontend')
-    },
-    {
-      id: 'tools',
-      icon: <FaToolbox className="text-2xl text-primary mr-3" />,
-      title: t('skills.tools.title'),
-      items: getSkillItems('tools')
-    },
-    {
-      id: 'soft',
-      icon: <FaComments className="text-2xl text-primary mr-3" />,
-      title: t('skills.soft.title'),
-      items: getSkillItems('soft')
-    },
-    {
-      id: 'backend',
-      icon: <FaDatabase className="text-2xl text-primary mr-3" />,
-      title: t('skills.backend.title'),
-      items: getSkillItems('backend')
-    },
-    {
-      id: 'uxresearch',
-      icon: <FaSearch className="text-2xl text-primary mr-3" />,
-      title: t('skills.uxresearch.title'),
-      items: getSkillItems('uxresearch')
-    }
-  ];
 
   // Render skill dots based on level (1-5)
   const renderSkillLevel = (level: number) => {
@@ -89,59 +93,19 @@ export function Skills() {
     );
   };
 
-  // Create sample skill data to ensure the component still renders
-  const sampleSkillData = {
-    design: [
-      { name: "UI/UX Design", level: 5 },
-      { name: "Figma / Adobe XD", level: 4 },
-      { name: "Design Systems", level: 5 },
-      { name: "Wireframing", level: 4 }
-    ],
-    frontend: [
-      { name: "React / Next.js", level: 5 },
-      { name: "TypeScript", level: 4 },
-      { name: "Tailwind CSS", level: 5 },
-      { name: "Responsive Design", level: 5 }
-    ],
-    tools: [
-      { name: "Git / GitHub", level: 5 },
-      { name: "Agile / Scrum", level: 4 },
-      { name: "CI/CD", level: 3 },
-      { name: "Testing", level: 4 }
-    ],
-    soft: [
-      { name: "Communication", level: 5 },
-      { name: "Problem Solving", level: 5 },
-      { name: "Team Collaboration", level: 4 },
-      { name: "Time Management", level: 4 }
-    ],
-    backend: [
-      { name: "Node.js", level: 4 },
-      { name: "Express / NestJS", level: 3 },
-      { name: "MongoDB / PostgreSQL", level: 3 },
-      { name: "GraphQL", level: 3 }
-    ],
-    uxresearch: [
-      { name: "User Interviews", level: 4 },
-      { name: "Usability Testing", level: 4 },
-      { name: "A/B Testing", level: 3 },
-      { name: "Information Architecture", level: 4 }
-    ]
-  };
-
-  // Update skillCategories to use the sample data
-  const updatedSkillCategories = [
+  // Create skill categories with appropriate icons
+  const skillCategories: SkillCategory[] = [
     {
-      id: 'design',
-      icon: <FaPaintBrush className="text-2xl text-primary mr-3" />,
-      title: t('skills.design.title'),
-      items: sampleSkillData.design
+      id: 'dataAnalysis',
+      icon: <FaDatabase className="text-2xl text-primary mr-3" />,
+      title: t('skills.dataAnalysis.title'),
+      items: sampleSkillData.dataAnalysis
     },
     {
-      id: 'frontend',
-      icon: <FaCode className="text-2xl text-primary mr-3" />,
-      title: t('skills.frontend.title'),
-      items: sampleSkillData.frontend
+      id: 'visualization',
+      icon: <FaChartBar className="text-2xl text-primary mr-3" />,
+      title: t('skills.visualization.title'),
+      items: sampleSkillData.visualization
     },
     {
       id: 'tools',
@@ -156,16 +120,16 @@ export function Skills() {
       items: sampleSkillData.soft
     },
     {
-      id: 'backend',
-      icon: <FaDatabase className="text-2xl text-primary mr-3" />,
-      title: t('skills.backend.title'),
-      items: sampleSkillData.backend
+      id: 'analytics',
+      icon: <FaSearch className="text-2xl text-primary mr-3" />,
+      title: t('skills.analytics.title'),
+      items: sampleSkillData.analytics
     },
     {
-      id: 'uxresearch',
-      icon: <FaSearch className="text-2xl text-primary mr-3" />,
-      title: t('skills.uxresearch.title'),
-      items: sampleSkillData.uxresearch
+      id: 'web',
+      icon: <FaLaptopCode className="text-2xl text-primary mr-3" />,
+      title: t('skills.web.title'),
+      items: sampleSkillData.web
     }
   ];
 
@@ -173,11 +137,11 @@ export function Skills() {
     <section 
       id="skills"
       ref={sectionRef}
-      className="py-20 bg-gray-50 dark:bg-gray-800"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
     >
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-12 text-center"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
@@ -191,20 +155,20 @@ export function Skills() {
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
         >
-          {updatedSkillCategories.map((category) => (
+          {skillCategories.map((category) => (
             <motion.div 
               key={category.id}
-              className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6 card-hover transition-transform hover:-translate-y-1"
+              className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-100 dark:border-gray-700"
               variants={itemVariants}
             >
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-6">
                 {category.icon}
-                <h3 className="text-xl font-semibold">{category.title}</h3>
+                <h3 className="text-xl font-semibold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">{category.title}</h3>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {category.items.map((skill, idx) => (
                   <li key={idx} className="flex justify-between items-center">
-                    <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
                     {renderSkillLevel(skill.level)}
                   </li>
                 ))}

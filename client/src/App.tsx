@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { SEO } from "@/components/SEO";
 
 function Router() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <ThemeProvider>
         <LanguageProvider>
           <TooltipProvider>
+            <SEO />
             <Toaster />
             <Router />
           </TooltipProvider>

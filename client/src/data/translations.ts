@@ -263,13 +263,13 @@ export const translations = {
     },
     contact: {
       title: "Get in Touch",
-      description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out using the form or through my social profiles.",
+      description: "I'm always interested in discussing data analysis projects, research collaborations, or opportunities in the field of data science and bibliometrics. Feel free to reach out using the form or through my contact details.",
       emailLabel: "Email",
-      email: "hello@johnsmith.com",
-      phoneLabel: "Phone",
-      phone: "+1 (555) 123-4567",
+      email: "mfsh.intl@gmail.com",
+      phoneLabel: "Phone/WhatsApp/Telegram",
+      phone: "+34 624 81 01 66",
       locationLabel: "Location",
-      location: "San Francisco, CA",
+      location: "Madrid, Spain",
       socialLabel: "Connect with Me",
       form: {
         name: "Name",
@@ -302,76 +302,85 @@ export const translations = {
       title: "Professional Memberships",
       items: [
         {
-          organization: "Interaction Design Association (IxDA)",
-          role: "Member",
-          period: "2018 - Present",
-          description: "Participating in local meetups and annual conferences focused on interaction design practices."
+          organization: "ATLAS Research Group (UNED)",
+          role: "Researcher",
+          period: "2022 - Present",
+          description: "Collaborating on research projects related to technology-enhanced language learning and teaching methodology."
         },
         {
-          organization: "User Experience Professionals Association (UXPA)",
-          role: "Member",
-          period: "2019 - Present",
-          description: "Engaging with the UX community to share knowledge and promote best practices in user experience design."
+          organization: "AGORA Research Project",
+          role: "Researcher",
+          period: "2022 - 2025",
+          description: "Contributing to technological and methodological innovations for language teaching and synergy generation in rural areas."
         },
         {
-          organization: "Association for Computing Machinery (ACM)",
-          role: "Member",
-          period: "2015 - Present",
-          description: "Participating in the ACM Special Interest Group on Computer-Human Interaction (SIGCHI)."
+          organization: "IHUPA (Humanities and Heritage Research Institute)",
+          role: "Research Collaborator",
+          period: "2021 - 2023",
+          description: "Supporting research initiatives in humanities and cultural heritage preservation through digital technologies and data analysis."
+        },
+        {
+          organization: "Scientific Committee - ATLAS-ÁGORA Conference",
+          role: "Committee Member",
+          period: "2023",
+          description: "Serving on the scientific committee for \"II Jornadas ATLAS-ÁGORA de Formación de Profesorado de Lenguas en Entornos Rurales\" conference."
         }
       ]
     }
   },
   es: {
     meta: {
-      title: "John Smith - Portafolio Profesional",
-      description: "Portafolio profesional de John Smith, Diseñador UI/UX y Desarrollador Frontend"
+      title: "Mahdieh Fakhar - Portafolio Profesional",
+      description: "Portafolio profesional de Mahdieh Fakhar, Especialista en Ciencia de Datos y Big Data"
     },
     nav: {
+      home: "Inicio",
       about: "Sobre mí",
+      education: "Educación",
+      articles: "Artículos",
+      conferences: "Conferencias",
+      memberships: "Membresías",
+      career: "Historial Profesional",
       skills: "Habilidades",
       projects: "Proyectos",
-      conferences: "Conferencias",
-      articles: "Artículos",
       resume: "Currículum",
-      memberships: "Membresías",
       contact: "Contacto"
     },
     hero: {
-      title: "Diseñador y Desarrollador Creativo",
-      subtitle: "Construyendo experiencias digitales excepcionales con tecnologías modernas",
-      contactButton: "Contáctame",
+      title: "Científica de Datos e Investigadora",
+      subtitle: "Especializada en análisis de datos, bibliometría y analítica impulsada por IA",
+      contactButton: "Contactar",
       projectsButton: "Ver Proyectos"
     },
     about: {
       title: "Sobre mí",
-      name: "John Smith",
-      role: "Diseñador UI/UX Senior y Desarrollador Frontend",
-      bio: "Soy un diseñador y desarrollador apasionado con más de 8 años de experiencia creando productos digitales intuitivos, accesibles y visualmente atractivos. Mi enfoque combina principios de diseño centrados en el usuario con tecnologías frontend de vanguardia para ofrecer experiencias excepcionales.",
-      bio2: "Me especializo en React, TypeScript y frameworks modernos de CSS, con una sólida base en sistemas de diseño, accesibilidad y optimización de rendimiento. Disfruto colaborando con equipos multifuncionales para transformar problemas complejos en soluciones elegantes.",
+      name: "Mahdieh Fakhar",
+      role: "Especialista en Ciencia de Datos y Big Data",
+      bio: "Actualmente soy estudiante del máster Momentum en ciencia de datos y big data. Disfruto analizando datos, realizando análisis cienciométricos y bibliométricos, y aprendiendo nuevo software. Me apasiona aprovechar la tecnología para mejorar las capacidades de investigación y análisis.",
+      bio2: "Actualmente trabajo en análisis de datos y digitalización de bases de datos, mientras continúo aprendiendo nuevas tecnologías incluyendo R, Python y aplicaciones de IA para análisis de datos. Busco participar en cursos sobre análisis de datos, visualización, IA en análisis de datos y digitalización de bases de datos.",
       resumeLink: "Ver Currículum",
       linkedin: "LinkedIn",
       github: "GitHub",
-      twitter: "Twitter"
+      website: "Sitio Web"
     },
     skills: {
       title: "Habilidades y Experiencia",
-      design: {
-        title: "Diseño",
+      dataAnalysis: {
+        title: "Análisis de Datos",
         items: [
-          { name: "Diseño UI/UX", level: 5 },
-          { name: "Figma / Adobe XD", level: 4 },
-          { name: "Sistemas de Diseño", level: 5 },
-          { name: "Wireframing", level: 4 }
+          { name: "Análisis de Datos con R", level: 5 },
+          { name: "Python", level: 4 },
+          { name: "Análisis Estadístico", level: 5 },
+          { name: "Inteligencia Artificial", level: 4 }
         ]
       },
-      frontend: {
-        title: "Frontend",
+      visualization: {
+        title: "Visualización de Datos",
         items: [
-          { name: "React / Next.js", level: 5 },
-          { name: "TypeScript", level: 4 },
-          { name: "Tailwind CSS", level: 5 },
-          { name: "Diseño Responsivo", level: 5 }
+          { name: "Creación de Gráficos", level: 5 },
+          { name: "Herramientas de Visualización", level: 4 },
+          { name: "Dashboards Interactivos", level: 4 },
+          { name: "Narrativa de Datos", level: 5 }
         ]
       },
       tools: {
