@@ -78,7 +78,7 @@ export function Header() {
                 {navItems.map(item => (
                   <a 
                     key={item.id} 
-                    href={`#${item.id}`} 
+                    href={item.url} 
                     className="text-lg font-medium hover:text-primary transition-colors"
                     onClick={handleMobileMenuClose}
                   >

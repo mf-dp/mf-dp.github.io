@@ -27,45 +27,13 @@ export function Resume() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  // Sample data for career
-  const career = [
-    {
-      role: "Senior UX Designer",
-      company: "Google",
-      period: "2019 - Present",
-      description: "Leading UX design for enterprise product suite. Responsible for establishing design systems, conducting user research, and mentoring junior designers.",
-      achievements: [
-        "Led the redesign of Admin Console, improving task completion rate by 35%",
-        "Established a comprehensive component library used by 200+ designers"
-      ]
-    },
-    {
-      role: "UI/UX Designer",
-      company: "Amazon",
-      period: "2017 - 2019",
-      description: "Designed user interfaces for mobile and web applications within the retail ecosystem.",
-      achievements: [
-        "Redesigned checkout process, resulting in 15% increase in conversion rate",
-        "Created responsive designs for multiple key user flows"
-      ]
-    }
-  ];
+  // Career data from translations
+  const careerData = t('career.items');
+  const career = Array.isArray(careerData) ? careerData : [];
 
-  // Sample data for education
-  const education = [
-    {
-      degree: "Master's in Computer Science",
-      institution: "Stanford University",
-      period: "2015 - 2017",
-      description: "Specialized in Human-Computer Interaction and User Experience Design. Graduated with honors."
-    },
-    {
-      degree: "Bachelor's in Information Technology",
-      institution: "MIT",
-      period: "2011 - 2015",
-      description: "Focus on web technologies and software engineering. Graduated summa cum laude."
-    }
-  ];
+  // Education data from translations
+  const educationData = t('education.items');
+  const education = Array.isArray(educationData) ? educationData : [];
 
   return (
     <section 
@@ -255,7 +223,7 @@ export function Resume() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {career.map((job, index) => (
+                  {Array.isArray(career) ? career.map((job: any, index: number) => (
                     <div key={index} className={index < career.length - 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
                       <div className="flex justify-between mb-2">
                         <h3 className="font-semibold text-lg">{job.role}</h3>
@@ -283,8 +251,8 @@ export function Resume() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {education.slice(0, 2).map((edu, index) => (
-                    <div key={index} className={index < 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
+                  {education.map((edu: any, index: number) => (
+                    <div key={index} className={index < education.length - 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
                       <div className="flex justify-between mb-2">
                         <h3 className="font-semibold text-lg">{edu.degree}</h3>
                         <span className="text-sm text-gray-600 dark:text-gray-400">{edu.period}</span>
