@@ -1,80 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Subtle gradient background -->
+  <!-- Main background gradient -->
   <rect width="1920" height="1080" fill="url(#resume-gradient)" />
   
-  <!-- Resume abstract elements -->
-  <g opacity="0.06">
-    <!-- Document header -->
-    <rect x="200" y="80" width="1520" height="100" rx="5" stroke="#2B6CB0" stroke-width="2" />
-    <rect x="220" y="110" width="600" height="40" rx="3" fill="#2B6CB0" />
-    <rect x="1400" y="110" width="300" height="40" rx="3" fill="#2B6CB0" />
+  <!-- Resume visualization pattern -->
+  <g opacity="0.1">
+    <!-- Resume header section -->
+    <rect x="300" y="120" width="1320" height="120" rx="10" stroke="url(#header-stroke)" stroke-width="3" fill="none" />
+    <rect x="320" y="140" width="600" height="40" rx="5" fill="url(#name-gradient)" fill-opacity="0.3" />
+    <text x="340" y="170" font-family="Arial" font-size="26" fill="#2C5282" font-weight="bold">MAHDIEH FAKHAR</text>
+    <rect x="320" y="190" width="400" height="25" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+    <text x="340" y="210" font-family="Arial" font-size="18" fill="#2C5282">Data Science Specialist</text>
     
-    <!-- Resume sections -->
-    <rect x="200" y="220" width="1520" height="60" rx="3" stroke="#3182CE" stroke-width="2" />
-    <rect x="220" y="240" width="300" height="20" rx="3" fill="#3182CE" />
+    <rect x="980" y="140" width="250" height="35" rx="5" fill="url(#contact-gradient)" fill-opacity="0.3" />
+    <rect x="980" y="185" width="300" height="35" rx="5" fill="url(#contact-gradient)" fill-opacity="0.3" />
     
-    <!-- Education section -->
-    <rect x="200" y="300" width="1520" height="150" rx="3" stroke="#3182CE" stroke-width="2" />
-    <rect x="220" y="320" width="200" height="20" rx="3" fill="#3182CE" />
-    <rect x="220" y="350" width="500" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="375" width="450" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="400" width="480" height="15" rx="2" fill="#3182CE" />
-    <rect x="1300" y="320" width="200" height="20" rx="3" fill="#3182CE" />
+    <!-- Contact icons -->
+    <circle cx="1000" cy="158" r="10" fill="#3182CE" />
+    <circle cx="1000" cy="203" r="10" fill="#3182CE" />
     
-    <!-- Experience section -->
-    <rect x="200" y="470" width="1520" height="250" rx="3" stroke="#3182CE" stroke-width="2" />
-    <rect x="220" y="490" width="200" height="20" rx="3" fill="#3182CE" />
-    <rect x="220" y="520" width="500" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="545" width="450" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="570" width="480" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="595" width="600" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="620" width="500" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="645" width="520" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="670" width="550" height="15" rx="2" fill="#3182CE" />
-    <rect x="1300" y="490" width="200" height="20" rx="3" fill="#3182CE" />
+    <!-- Professional summary section -->
+    <rect x="300" y="270" width="1320" height="100" rx="10" stroke="url(#section-stroke)" stroke-width="2" fill="none" />
+    <rect x="320" y="285" width="250" height="30" rx="5" fill="url(#section-title-gradient)" fill-opacity="0.3" />
+    <text x="340" y="308" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Professional Summary</text>
+    <rect x="320" y="325" width="1280" height="10" rx="5" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="320" y="345" width="1200" height="10" rx="5" fill="#3182CE" fill-opacity="0.3" />
     
     <!-- Skills section -->
-    <rect x="200" y="740" width="1520" height="150" rx="3" stroke="#3182CE" stroke-width="2" />
-    <rect x="220" y="760" width="200" height="20" rx="3" fill="#3182CE" />
+    <rect x="300" y="400" width="1320" height="180" rx="10" stroke="url(#section-stroke)" stroke-width="2" fill="none" />
+    <rect x="320" y="415" width="150" height="30" rx="5" fill="url(#section-title-gradient)" fill-opacity="0.3" />
+    <text x="340" y="438" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Skills</text>
     
-    <!-- Skill bars -->
-    <rect x="220" y="790" width="150" height="15" rx="2" fill="#3182CE" />
-    <rect x="380" y="790" width="500" height="15" rx="7.5" fill="#2B6CB0" />
+    <!-- Skill bars left column -->
+    <g transform="translate(350, 460)">
+      <text x="0" y="15" font-family="Arial" font-size="14" fill="#2C5282">Data Analysis</text>
+      <rect x="150" y="5" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="5" width="180" height="15" rx="7.5" fill="url(#skill-fill)" />
+      
+      <text x="0" y="45" font-family="Arial" font-size="14" fill="#2C5282">Machine Learning</text>
+      <rect x="150" y="35" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="35" width="170" height="15" rx="7.5" fill="url(#skill-fill)" />
+      
+      <text x="0" y="75" font-family="Arial" font-size="14" fill="#2C5282">Statistics</text>
+      <rect x="150" y="65" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="65" width="190" height="15" rx="7.5" fill="url(#skill-fill)" />
+      
+      <text x="0" y="105" font-family="Arial" font-size="14" fill="#2C5282">Python</text>
+      <rect x="150" y="95" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="95" width="185" height="15" rx="7.5" fill="url(#skill-fill)" />
+    </g>
     
-    <rect x="220" y="815" width="150" height="15" rx="2" fill="#3182CE" />
-    <rect x="380" y="815" width="400" height="15" rx="7.5" fill="#2B6CB0" />
+    <!-- Skill bars right column -->
+    <g transform="translate(850, 460)">
+      <text x="0" y="15" font-family="Arial" font-size="14" fill="#2C5282">Data Visualization</text>
+      <rect x="150" y="5" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="5" width="175" height="15" rx="7.5" fill="url(#skill-fill)" />
+      
+      <text x="0" y="45" font-family="Arial" font-size="14" fill="#2C5282">Big Data</text>
+      <rect x="150" y="35" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="35" width="165" height="15" rx="7.5" fill="url(#skill-fill)" />
+      
+      <text x="0" y="75" font-family="Arial" font-size="14" fill="#2C5282">R</text>
+      <rect x="150" y="65" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="65" width="160" height="15" rx="7.5" fill="url(#skill-fill)" />
+      
+      <text x="0" y="105" font-family="Arial" font-size="14" fill="#2C5282">SQL</text>
+      <rect x="150" y="95" width="200" height="15" rx="7.5" stroke="#3182CE" stroke-width="1" fill="none" />
+      <rect x="150" y="95" width="180" height="15" rx="7.5" fill="url(#skill-fill)" />
+    </g>
     
-    <rect x="220" y="840" width="150" height="15" rx="2" fill="#3182CE" />
-    <rect x="380" y="840" width="450" height="15" rx="7.5" fill="#2B6CB0" />
+    <!-- Experience section -->
+    <rect x="300" y="610" width="1320" height="350" rx="10" stroke="url(#section-stroke)" stroke-width="2" fill="none" />
+    <rect x="320" y="625" width="200" height="30" rx="5" fill="url(#section-title-gradient)" fill-opacity="0.3" />
+    <text x="340" y="648" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Work Experience</text>
     
-    <rect x="700" y="790" width="150" height="15" rx="2" fill="#3182CE" />
-    <rect x="860" y="790" width="350" height="15" rx="7.5" fill="#2B6CB0" />
+    <!-- Experience 1 -->
+    <rect x="330" y="670" width="1260" height="90" rx="5" stroke="#3182CE" stroke-width="1" stroke-opacity="0.3" fill="none" />
+    <rect x="350" y="685" width="300" height="25" rx="5" fill="url(#job-title-gradient)" fill-opacity="0.2" />
+    <text x="360" y="705" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Lead Data Scientist</text>
+    <text x="680" y="705" font-family="Arial" font-size="14" fill="#3182CE" font-weight="bold">Company Name</text>
+    <text x="1100" y="705" font-family="Arial" font-size="14" fill="#3182CE">2020 - Present</text>
+    <rect x="350" y="720" width="1220" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+    <rect x="350" y="740" width="1180" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
     
-    <rect x="700" y="815" width="150" height="15" rx="2" fill="#3182CE" />
-    <rect x="860" y="815" width="470" height="15" rx="7.5" fill="#2B6CB0" />
+    <!-- Experience 2 -->
+    <rect x="330" y="770" width="1260" height="90" rx="5" stroke="#3182CE" stroke-width="1" stroke-opacity="0.3" fill="none" />
+    <rect x="350" y="785" width="300" height="25" rx="5" fill="url(#job-title-gradient)" fill-opacity="0.2" />
+    <text x="360" y="805" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Senior Data Analyst</text>
+    <text x="680" y="805" font-family="Arial" font-size="14" fill="#3182CE" font-weight="bold">Previous Company</text>
+    <text x="1100" y="805" font-family="Arial" font-size="14" fill="#3182CE">2017 - 2020</text>
+    <rect x="350" y="820" width="1220" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+    <rect x="350" y="840" width="1180" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
     
-    <rect x="700" y="840" width="150" height="15" rx="2" fill="#3182CE" />
-    <rect x="860" y="840" width="420" height="15" rx="7.5" fill="#2B6CB0" />
+    <!-- Experience 3 -->
+    <rect x="330" y="870" width="1260" height="90" rx="5" stroke="#3182CE" stroke-width="1" stroke-opacity="0.3" fill="none" />
+    <rect x="350" y="885" width="300" height="25" rx="5" fill="url(#job-title-gradient)" fill-opacity="0.2" />
+    <text x="360" y="905" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Research Assistant</text>
+    <text x="680" y="905" font-family="Arial" font-size="14" fill="#3182CE" font-weight="bold">University Research Center</text>
+    <text x="1100" y="905" font-family="Arial" font-size="14" fill="#3182CE">2015 - 2017</text>
+    <rect x="350" y="920" width="1220" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+    <rect x="350" y="940" width="1180" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
     
-    <!-- References section -->
-    <rect x="200" y="910" width="1520" height="100" rx="3" stroke="#3182CE" stroke-width="2" />
-    <rect x="220" y="930" width="200" height="20" rx="3" fill="#3182CE" />
-    <rect x="220" y="960" width="400" height="15" rx="2" fill="#3182CE" />
-    <rect x="220" y="985" width="350" height="15" rx="2" fill="#3182CE" />
+    <!-- Education section (minimized at bottom) -->
+    <rect x="300" y="990" width="1320" height="60" rx="10" stroke="url(#section-stroke)" stroke-width="2" fill="none" />
+    <rect x="320" y="1005" width="180" height="30" rx="5" fill="url(#section-title-gradient)" fill-opacity="0.3" />
+    <text x="340" y="1028" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Education</text>
+    <text x="530" y="1028" font-family="Arial" font-size="16" fill="#3182CE">Ph.D. in Data Science</text>
+    <text x="750" y="1028" font-family="Arial" font-size="16" fill="#3182CE">M.Sc. in Computer Science</text>
+    <text x="1050" y="1028" font-family="Arial" font-size="16" fill="#3182CE">B.Sc. in Mathematics</text>
     
-    <rect x="700" y="960" width="400" height="15" rx="2" fill="#3182CE" />
-    <rect x="700" y="985" width="350" height="15" rx="2" fill="#3182CE" />
-    
-    <rect x="1180" y="960" width="400" height="15" rx="2" fill="#3182CE" />
-    <rect x="1180" y="985" width="350" height="15" rx="2" fill="#3182CE" />
+    <!-- Decorative corner elements -->
+    <rect x="300" y="120" width="30" height="30" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
+    <rect x="1590" y="120" width="30" height="30" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
+    <rect x="300" y="1020" width="30" height="30" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
+    <rect x="1590" y="1020" width="30" height="30" rx="5" stroke="#3182CE" stroke-width="2" fill="none" />
   </g>
+  
+  <!-- Abstract data flow pattern -->
+  <path d="M100,200 C300,150 500,250 700,200 S1000,150 1200,200 S1500,250 1700,200" 
+        stroke="url(#flow-gradient)" stroke-width="3" fill="none" stroke-opacity="0.1" stroke-linecap="round" />
+  <path d="M100,900 C300,850 500,950 700,900 S1000,850 1200,900 S1500,950 1700,900" 
+        stroke="url(#flow-gradient)" stroke-width="3" fill="none" stroke-opacity="0.1" stroke-linecap="round" />
   
   <!-- Defs for gradients -->
   <defs>
+    <!-- Main background gradient (works in light/dark mode) -->
     <linearGradient id="resume-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F7FAFC" />
       <stop offset="1" stop-color="#EDF2F7" />
+    </linearGradient>
+    
+    <!-- Header stroke gradient -->
+    <linearGradient id="header-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Section stroke gradient -->
+    <linearGradient id="section-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Name gradient -->
+    <linearGradient id="name-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Title gradient -->
+    <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Contact gradient -->
+    <linearGradient id="contact-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Section title gradient -->
+    <linearGradient id="section-title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Job title gradient -->
+    <linearGradient id="job-title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Skill fill gradient -->
+    <linearGradient id="skill-fill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Data flow gradient -->
+    <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3182CE" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#4299E1" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3182CE" stop-opacity="0.2" />
     </linearGradient>
   </defs>
 </svg>

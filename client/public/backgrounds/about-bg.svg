@@ -1,105 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Subtle gradient background -->
+  <!-- Main background gradient -->
   <rect width="1920" height="1080" fill="url(#about-gradient)" />
   
-  <!-- About abstract elements -->
-  <g opacity="0.06">
-    <!-- Personal profile pattern -->
-    <circle cx="350" cy="300" r="180" stroke="#2B6CB0" stroke-width="3" fill="none" />
-    <circle cx="350" cy="300" r="178" stroke="#3182CE" stroke-width="1" fill="none" />
+  <!-- About page elements -->
+  <g opacity="0.1">
+    <!-- Professional profile photo frame -->
+    <circle cx="400" cy="350" r="200" stroke="url(#photo-stroke)" stroke-width="5" fill="none" />
+    <circle cx="400" cy="350" r="180" stroke="#3182CE" stroke-width="1" stroke-opacity="0.6" fill="none" />
     
-    <!-- Educational pattern -->
-    <rect x="600" y="100" width="400" height="150" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="620" y="120" width="300" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="620" y="160" width="360" height="15" rx="3" fill="#3182CE" />
-    <rect x="620" y="185" width="320" height="15" rx="3" fill="#3182CE" />
-    <rect x="620" y="210" width="340" height="15" rx="3" fill="#3182CE" />
+    <!-- Decorative photo frame elements -->
+    <path d="M400,150 L400,200" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M400,500 L400,550" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M200,350 L250,350" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M550,350 L600,350" stroke="#2B6CB0" stroke-width="2" />
     
-    <rect x="600" y="280" width="400" height="150" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="620" y="300" width="300" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="620" y="340" width="360" height="15" rx="3" fill="#3182CE" />
-    <rect x="620" y="365" width="320" height="15" rx="3" fill="#3182CE" />
-    <rect x="620" y="390" width="340" height="15" rx="3" fill="#3182CE" />
+    <!-- Abstract diagonal lines around photo -->
+    <path d="M250,200 L300,250" stroke="#3182CE" stroke-width="1.5" />
+    <path d="M500,450 L550,500" stroke="#3182CE" stroke-width="1.5" />
+    <path d="M250,500 L300,450" stroke="#3182CE" stroke-width="1.5" />
+    <path d="M500,250 L550,200" stroke="#3182CE" stroke-width="1.5" />
     
-    <!-- Professional profile pattern -->
-    <rect x="1100" y="100" width="600" height="330" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="1120" y="120" width="400" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="1120" y="170" width="560" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="195" width="520" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="220" width="540" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="245" width="530" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="270" width="550" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="295" width="510" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="320" width="560" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="345" width="500" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="370" width="540" height="15" rx="3" fill="#3182CE" />
-    <rect x="1120" y="395" width="520" height="15" rx="3" fill="#3182CE" />
+    <!-- Professional bio section -->
+    <g transform="translate(750, 200)">
+      <!-- Name title -->
+      <rect x="0" y="0" width="600" height="60" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="20" y="38" font-family="Arial" font-size="32" fill="#2C5282" font-weight="bold">MAHDIEH FAKHAR</text>
+      
+      <!-- Professional title -->
+      <rect x="0" y="80" width="450" height="40" rx="5" fill="url(#subtitle-gradient)" fill-opacity="0.3" />
+      <text x="20" y="108" font-family="Arial" font-size="24" fill="#2C5282">Data Science Specialist</text>
+      
+      <!-- Bio text lines -->
+      <rect x="0" y="150" width="900" height="15" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="0" y="180" width="850" height="15" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="0" y="210" width="875" height="15" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="0" y="240" width="700" height="15" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="0" y="270" width="825" height="15" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="0" y="300" width="775" height="15" rx="3" fill="#3182CE" fill-opacity="0.3" />
+    </g>
     
-    <!-- Timeline element pattern -->
-    <line x1="960" y1="500" x2="960" y2="900" stroke="#2B6CB0" stroke-width="3" />
+    <!-- Education timeline -->
+    <g transform="translate(200, 650)">
+      <!-- Timeline vertical line -->
+      <line x1="50" y1="0" x2="50" y2="350" stroke="#2B6CB0" stroke-width="3" />
+      
+      <!-- Education 1 -->
+      <circle cx="50" cy="50" r="15" fill="url(#timeline-node)" />
+      <rect x="80" y="30" width="300" height="40" rx="5" fill="url(#edu-gradient)" fill-opacity="0.3" />
+      <text x="95" y="55" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Ph.D. in Data Science</text>
+      <rect x="80" y="80" width="400" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="80" y="100" width="350" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Education 2 -->
+      <circle cx="50" cy="170" r="15" fill="url(#timeline-node)" />
+      <rect x="80" y="150" width="300" height="40" rx="5" fill="url(#edu-gradient)" fill-opacity="0.3" />
+      <text x="95" y="175" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">M.Sc. in Computer Science</text>
+      <rect x="80" y="200" width="400" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="80" y="220" width="350" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Education 3 -->
+      <circle cx="50" cy="290" r="15" fill="url(#timeline-node)" />
+      <rect x="80" y="270" width="300" height="40" rx="5" fill="url(#edu-gradient)" fill-opacity="0.3" />
+      <text x="95" y="295" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">B.Sc. in Mathematics</text>
+      <rect x="80" y="320" width="400" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="80" y="340" width="350" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+    </g>
     
-    <circle cx="960" cy="550" r="15" fill="#2B6CB0" />
-    <rect x="990" y="520" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="990" y="560" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="990" y="585" width="350" height="15" rx="3" fill="#3182CE" />
+    <!-- Professional experience timeline -->
+    <g transform="translate(750, 650)">
+      <!-- Timeline vertical line -->
+      <line x1="50" y1="0" x2="50" y2="350" stroke="#2B6CB0" stroke-width="3" />
+      
+      <!-- Experience 1 -->
+      <circle cx="50" cy="50" r="15" fill="url(#timeline-node)" />
+      <rect x="80" y="30" width="350" height="40" rx="5" fill="url(#exp-gradient)" fill-opacity="0.3" />
+      <text x="95" y="55" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Lead Data Scientist</text>
+      <rect x="80" y="80" width="500" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="80" y="100" width="450" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Experience 2 -->
+      <circle cx="50" cy="170" r="15" fill="url(#timeline-node)" />
+      <rect x="80" y="150" width="350" height="40" rx="5" fill="url(#exp-gradient)" fill-opacity="0.3" />
+      <text x="95" y="175" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Senior Data Analyst</text>
+      <rect x="80" y="200" width="500" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="80" y="220" width="450" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Experience 3 -->
+      <circle cx="50" cy="290" r="15" fill="url(#timeline-node)" />
+      <rect x="80" y="270" width="350" height="40" rx="5" fill="url(#exp-gradient)" fill-opacity="0.3" />
+      <text x="95" y="295" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Research Assistant</text>
+      <rect x="80" y="320" width="500" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="80" y="340" width="450" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+    </g>
     
-    <circle cx="960" cy="650" r="15" fill="#2B6CB0" />
-    <rect x="990" y="620" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="990" y="660" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="990" y="685" width="350" height="15" rx="3" fill="#3182CE" />
+    <!-- Interests/Specialty icons -->
+    <g opacity="0.2">
+      <!-- Research icon -->
+      <circle cx="1500" cy="200" r="60" stroke="#3182CE" stroke-width="2" fill="none" />
+      <path d="M1470,170 L1530,230 M1470,230 L1530,170" stroke="#3182CE" stroke-width="3" />
+      <text x="1460" y="270" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Research</text>
+      
+      <!-- Teaching icon -->
+      <circle cx="1650" cy="200" r="60" stroke="#3182CE" stroke-width="2" fill="none" />
+      <path d="M1625,200 L1675,200 M1650,175 L1650,225" stroke="#3182CE" stroke-width="3" />
+      <text x="1620" y="270" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Teaching</text>
+      
+      <!-- Publications icon -->
+      <circle cx="1500" cy="400" r="60" stroke="#3182CE" stroke-width="2" fill="none" />
+      <path d="M1480,380 L1520,380 M1480,400 L1520,400 M1480,420 L1520,420" stroke="#3182CE" stroke-width="3" />
+      <text x="1465" y="470" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Publications</text>
+      
+      <!-- Presentations icon -->
+      <circle cx="1650" cy="400" r="60" stroke="#3182CE" stroke-width="2" fill="none" />
+      <path d="M1630,390 L1670,390 L1650,420 Z" stroke="#3182CE" stroke-width="3" fill="none" />
+      <text x="1615" y="470" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Presentations</text>
+    </g>
     
-    <circle cx="960" cy="750" r="15" fill="#2B6CB0" />
-    <rect x="990" y="720" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="990" y="760" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="990" y="785" width="350" height="15" rx="3" fill="#3182CE" />
+    <!-- Abstract connection pattern -->
+    <path d="M600,350 C700,300 800,400 900,350 S1100,300 1200,350 S1400,400 1500,300" 
+          stroke="url(#connection-gradient)" stroke-width="2" fill="none" />
     
-    <circle cx="960" cy="850" r="15" fill="#2B6CB0" />
-    <rect x="990" y="820" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="990" y="860" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="990" y="885" width="350" height="15" rx="3" fill="#3182CE" />
+    <!-- Quote section -->
+    <rect x="1350" y="800" width="400" height="150" rx="10" stroke="#3182CE" stroke-width="2" fill="none" />
+    <path d="M1380,830 L1400,830 L1390,850 Z" fill="#3182CE" />
+    <rect x="1380" y="860" width="340" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="1380" y="880" width="300" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="1380" y="900" width="320" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+    <path d="M1420,930 L1400,930 L1410,910 Z" fill="#3182CE" />
     
-    <rect x="530" y="520" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="530" y="560" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="530" y="585" width="350" height="15" rx="3" fill="#3182CE" />
-    
-    <rect x="530" y="620" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="530" y="660" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="530" y="685" width="350" height="15" rx="3" fill="#3182CE" />
-    
-    <rect x="530" y="720" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="530" y="760" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="530" y="785" width="350" height="15" rx="3" fill="#3182CE" />
-    
-    <rect x="530" y="820" width="200" height="30" rx="3" fill="#2B6CB0" />
-    <rect x="530" y="860" width="400" height="15" rx="3" fill="#3182CE" />
-    <rect x="530" y="885" width="350" height="15" rx="3" fill="#3182CE" />
-    
-    <!-- Interests pattern -->
-    <circle cx="200" cy="600" r="60" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <circle cx="200" cy="600" r="30" fill="#3182CE" fill-opacity="0.3" />
-    <line x1="200" y1="540" x2="200" y2="660" stroke="#2B6CB0" stroke-width="1" />
-    <line x1="140" y1="600" x2="260" y2="600" stroke="#2B6CB0" stroke-width="1" />
-    
-    <circle cx="200" cy="780" r="60" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <circle cx="200" cy="780" r="30" fill="#3182CE" fill-opacity="0.3" />
-    <path d="M170,750 L230,810" stroke="#2B6CB0" stroke-width="1" />
-    <path d="M170,810 L230,750" stroke="#2B6CB0" stroke-width="1" />
-    
-    <circle cx="1700" cy="600" r="60" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <circle cx="1700" cy="600" r="30" fill="#3182CE" fill-opacity="0.3" />
-    <path d="M1680,580 L1720,580 L1700,620 Z" stroke="#2B6CB0" stroke-width="1" fill="none" />
-    
-    <circle cx="1700" cy="780" r="60" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <circle cx="1700" cy="780" r="30" fill="#3182CE" fill-opacity="0.3" />
-    <rect x="1680" y="760" width="40" height="40" stroke="#2B6CB0" stroke-width="1" fill="none" />
+    <!-- Languages section -->
+    <g transform="translate(300, 1020)">
+      <circle cx="0" cy="0" r="15" fill="#3182CE" />
+      <text x="25" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">English</text>
+      
+      <circle cx="150" cy="0" r="15" fill="#3182CE" />
+      <text x="175" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Persian</text>
+      
+      <circle cx="300" cy="0" r="15" fill="#3182CE" />
+      <text x="325" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Spanish</text>
+    </g>
   </g>
   
   <!-- Defs for gradients -->
   <defs>
-    <linearGradient id="about-gradient" x1="0" y1="1080" x2="1920" y2="0" gradientUnits="userSpaceOnUse">
+    <!-- Main background gradient (works in light/dark mode) -->
+    <linearGradient id="about-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F7FAFC" />
       <stop offset="1" stop-color="#EFF6FF" />
+    </linearGradient>
+    
+    <!-- Photo frame gradient -->
+    <linearGradient id="photo-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Title gradient -->
+    <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Subtitle gradient -->
+    <linearGradient id="subtitle-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Timeline node gradient -->
+    <radialGradient id="timeline-node" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </radialGradient>
+    
+    <!-- Education gradient -->
+    <linearGradient id="edu-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Experience gradient -->
+    <linearGradient id="exp-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Connection gradient -->
+    <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3182CE" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#4299E1" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3182CE" stop-opacity="0.2" />
     </linearGradient>
   </defs>
 </svg>

@@ -1,88 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Subtle gradient background -->
+  <!-- Main background gradient -->
   <rect width="1920" height="1080" fill="url(#articles-gradient)" />
   
-  <!-- Articles abstract elements -->
-  <g opacity="0.06">
-    <!-- Document patterns -->
-    <rect x="100" y="100" width="500" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" />
-    <rect x="120" y="130" width="460" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="120" y="180" width="200" height="15" rx="3" fill="#3182CE" />
-    <rect x="120" y="210" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="120" y="230" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="120" y="250" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="120" y="270" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="120" y="290" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="120" y="310" width="300" height="10" rx="3" fill="#3182CE" />
-    <rect x="120" y="350" width="150" height="25" rx="5" fill="#2B6CB0" />
+  <!-- Articles visualization pattern -->
+  <g opacity="0.1">
+    <!-- Academic paper pattern - Left side -->
+    <g transform="translate(300, 180)">
+      <!-- Paper outline -->
+      <rect x="0" y="0" width="600" height="800" rx="10" stroke="url(#paper-stroke)" stroke-width="2" fill="none" />
+      
+      <!-- Paper title -->
+      <rect x="50" y="50" width="500" height="60" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="70" y="90" font-family="Arial" font-size="24" fill="#2C5282" font-weight="bold">Research Article Title</text>
+      
+      <!-- Authors -->
+      <rect x="50" y="130" width="400" height="30" rx="5" fill="url(#author-gradient)" fill-opacity="0.2" />
+      <text x="70" y="152" font-family="Arial" font-size="18" fill="#2C5282">MAHDIEH FAKHAR, et al.</text>
+      
+      <!-- Abstract section -->
+      <rect x="50" y="180" width="150" height="30" rx="5" fill="url(#section-gradient)" fill-opacity="0.3" />
+      <text x="70" y="202" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Abstract</text>
+      
+      <!-- Abstract text -->
+      <rect x="50" y="220" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="240" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="260" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="280" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="300" width="300" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      
+      <!-- Introduction section -->
+      <rect x="50" y="340" width="200" height="30" rx="5" fill="url(#section-gradient)" fill-opacity="0.3" />
+      <text x="70" y="362" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Introduction</text>
+      
+      <!-- Introduction text -->
+      <rect x="50" y="380" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="400" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="420" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="440" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="460" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="480" width="500" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="50" y="500" width="350" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      
+      <!-- Figure -->
+      <rect x="100" y="540" width="400" height="200" rx="5" stroke="#3182CE" stroke-width="1" stroke-opacity="0.5" fill="none" />
+      <text x="250" y="650" font-family="Arial" font-size="16" fill="#2C5282">Figure 1</text>
+      
+      <!-- Caption -->
+      <rect x="100" y="750" width="400" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="100" y="770" width="350" height="10" rx="5" fill="#3182CE" fill-opacity="0.2" />
+    </g>
     
-    <rect x="700" y="100" width="500" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" />
-    <rect x="720" y="130" width="460" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="720" y="180" width="200" height="15" rx="3" fill="#3182CE" />
-    <rect x="720" y="210" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="720" y="230" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="720" y="250" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="720" y="270" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="720" y="290" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="720" y="310" width="300" height="10" rx="3" fill="#3182CE" />
-    <rect x="720" y="350" width="150" height="25" rx="5" fill="#2B6CB0" />
+    <!-- Right side - Article cards -->
+    <g transform="translate(1100, 150)">
+      <!-- Newest article card -->
+      <rect x="0" y="0" width="500" height="200" rx="10" stroke="url(#paper-stroke)" stroke-width="2" fill="none" />
+      <rect x="0" y="0" width="500" height="60" rx="10 10 0 0" fill="url(#card-header)" fill-opacity="0.15" />
+      <text x="20" y="40" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Latest Publication</text>
+      <rect x="20" y="80" width="460" height="20" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="110" width="420" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="130" width="430" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="150" width="410" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <text x="380" y="180" font-family="Arial" font-size="14" fill="#3182CE">2023</text>
+      
+      <!-- Second article card -->
+      <rect x="0" y="220" width="500" height="200" rx="10" stroke="url(#paper-stroke)" stroke-width="2" fill="none" />
+      <rect x="0" y="220" width="500" height="60" rx="10 10 0 0" fill="url(#card-header)" fill-opacity="0.15" />
+      <text x="20" y="260" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Featured Article</text>
+      <rect x="20" y="300" width="460" height="20" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="330" width="420" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="350" width="430" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="370" width="410" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <text x="380" y="400" font-family="Arial" font-size="14" fill="#3182CE">2022</text>
+      
+      <!-- Third article card -->
+      <rect x="0" y="440" width="500" height="200" rx="10" stroke="url(#paper-stroke)" stroke-width="2" fill="none" />
+      <rect x="0" y="440" width="500" height="60" rx="10 10 0 0" fill="url(#card-header)" fill-opacity="0.15" />
+      <text x="20" y="480" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Highly Cited</text>
+      <rect x="20" y="520" width="460" height="20" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="550" width="420" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="570" width="430" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="590" width="410" height="10" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <text x="380" y="620" font-family="Arial" font-size="14" fill="#3182CE">2021</text>
+      
+      <!-- Citation metrics -->
+      <rect x="100" y="680" width="300" height="120" rx="10" stroke="url(#metrics-stroke)" stroke-width="2" fill="none" />
+      <text x="120" y="720" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Citation Metrics</text>
+      
+      <rect x="120" y="740" width="80" height="40" rx="5" fill="url(#metrics-box)" fill-opacity="0.2" />
+      <text x="140" y="765" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">245</text>
+      <text x="135" y="780" font-family="Arial" font-size="12" fill="#3182CE">Citations</text>
+      
+      <rect x="220" y="740" width="80" height="40" rx="5" fill="url(#metrics-box)" fill-opacity="0.2" />
+      <text x="240" y="765" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">15</text>
+      <text x="225" y="780" font-family="Arial" font-size="12" fill="#3182CE">h-index</text>
+      
+      <rect x="320" y="740" width="80" height="40" rx="5" fill="url(#metrics-box)" fill-opacity="0.2" />
+      <text x="340" y="765" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">28</text>
+      <text x="335" y="780" font-family="Arial" font-size="12" fill="#3182CE">Articles</text>
+    </g>
     
-    <rect x="1300" y="100" width="500" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" />
-    <rect x="1320" y="130" width="460" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="1320" y="180" width="200" height="15" rx="3" fill="#3182CE" />
-    <rect x="1320" y="210" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1320" y="230" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1320" y="250" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1320" y="270" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1320" y="290" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1320" y="310" width="300" height="10" rx="3" fill="#3182CE" />
-    <rect x="1320" y="350" width="150" height="25" rx="5" fill="#2B6CB0" />
+    <!-- Academic decorative elements -->
+    <g opacity="0.2">
+      <!-- Research fields -->
+      <rect x="100" y="50" width="200" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="150" y="75" font-family="Arial" font-size="16" fill="#2C5282">Data Science</text>
+      
+      <rect x="320" y="50" width="160" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="350" y="75" font-family="Arial" font-size="16" fill="#2C5282">Big Data</text>
+      
+      <rect x="500" y="50" width="180" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="525" y="75" font-family="Arial" font-size="16" fill="#2C5282">Machine Learning</text>
+      
+      <rect x="700" y="50" width="120" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="730" y="75" font-family="Arial" font-size="16" fill="#2C5282">AI</text>
+      
+      <!-- Citation connection lines -->
+      <path d="M900,650 C1000,500 1050,400 950,250" stroke="#3182CE" stroke-width="1" stroke-opacity="0.3" fill="none" stroke-dasharray="5,5" />
+      <path d="M900,450 C1000,350 950,200 800,150" stroke="#3182CE" stroke-width="1" stroke-opacity="0.3" fill="none" stroke-dasharray="5,5" />
+      <path d="M700,350 C750,250 800,200 850,150" stroke="#3182CE" stroke-width="1" stroke-opacity="0.3" fill="none" stroke-dasharray="5,5" />
+      
+      <!-- Journal logos -->
+      <circle cx="1700" cy="200" r="50" stroke="#3182CE" stroke-width="2" fill="none" />
+      <text x="1670" y="205" font-family="Arial" font-size="14" fill="#2C5282" font-weight="bold">Journal 1</text>
+      
+      <circle cx="1700" cy="350" r="50" stroke="#3182CE" stroke-width="2" fill="none" />
+      <text x="1670" y="355" font-family="Arial" font-size="14" fill="#2C5282" font-weight="bold">Journal 2</text>
+      
+      <circle cx="1700" cy="500" r="50" stroke="#3182CE" stroke-width="2" fill="none" />
+      <text x="1670" y="505" font-family="Arial" font-size="14" fill="#2C5282" font-weight="bold">Journal 3</text>
+    </g>
     
-    <rect x="300" y="450" width="500" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" />
-    <rect x="320" y="480" width="460" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="320" y="530" width="200" height="15" rx="3" fill="#3182CE" />
-    <rect x="320" y="560" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="320" y="580" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="320" y="600" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="320" y="620" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="320" y="640" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="320" y="660" width="300" height="10" rx="3" fill="#3182CE" />
-    <rect x="320" y="700" width="150" height="25" rx="5" fill="#2B6CB0" />
-    
-    <rect x="1000" y="450" width="500" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" />
-    <rect x="1020" y="480" width="460" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="1020" y="530" width="200" height="15" rx="3" fill="#3182CE" />
-    <rect x="1020" y="560" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1020" y="580" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1020" y="600" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1020" y="620" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1020" y="640" width="460" height="10" rx="3" fill="#3182CE" />
-    <rect x="1020" y="660" width="300" height="10" rx="3" fill="#3182CE" />
-    <rect x="1020" y="700" width="150" height="25" rx="5" fill="#2B6CB0" />
-    
-    <!-- Pattern for publication dates -->
-    <rect x="120" y="850" width="200" height="20" rx="5" fill="#2B6CB0" />
-    <rect x="350" y="850" width="200" height="20" rx="5" fill="#2B6CB0" />
-    <rect x="600" y="850" width="200" height="20" rx="5" fill="#2B6CB0" />
-    <rect x="850" y="850" width="200" height="20" rx="5" fill="#2B6CB0" />
-    <rect x="1100" y="850" width="200" height="20" rx="5" fill="#2B6CB0" />
-    <rect x="1350" y="850" width="200" height="20" rx="5" fill="#2B6CB0" />
-    <rect x="1600" y="850" width="200" height="20" rx="5" fill="#2B6CB0" />
-    
-    <!-- Citation pattern -->
-    <rect x="120" y="900" width="1600" height="2" fill="#3182CE" />
-    <rect x="120" y="930" width="1600" height="2" fill="#3182CE" />
-    <rect x="120" y="960" width="1600" height="2" fill="#3182CE" />
-    <rect x="120" y="990" width="1600" height="2" fill="#3182CE" />
-    <rect x="120" y="1020" width="1600" height="2" fill="#3182CE" />
+    <!-- Abstract wave patterns -->
+    <path d="M100,1000 C300,950 500,1050 700,1000 S1000,950 1200,1000 S1500,1050 1700,1000" 
+          stroke="url(#flow-gradient)" stroke-width="4" fill="none" stroke-opacity="0.2" stroke-linecap="round" />
   </g>
   
   <!-- Defs for gradients -->
   <defs>
-    <linearGradient id="articles-gradient" x1="1920" y1="1080" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+    <!-- Main background gradient (works in light/dark mode) -->
+    <linearGradient id="articles-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F7FAFC" />
       <stop offset="1" stop-color="#E6FFFA" />
+    </linearGradient>
+    
+    <!-- Paper stroke gradient -->
+    <linearGradient id="paper-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Metrics stroke gradient -->
+    <linearGradient id="metrics-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Title gradient -->
+    <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Author gradient -->
+    <linearGradient id="author-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Section gradient -->
+    <linearGradient id="section-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Card header gradient -->
+    <linearGradient id="card-header" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Metrics box gradient -->
+    <linearGradient id="metrics-box" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Flow gradient -->
+    <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3182CE" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#4299E1" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3182CE" stop-opacity="0.2" />
     </linearGradient>
   </defs>
 </svg>

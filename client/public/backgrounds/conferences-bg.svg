@@ -1,66 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Subtle gradient background -->
+  <!-- Main background gradient -->
   <rect width="1920" height="1080" fill="url(#conferences-gradient)" />
   
-  <!-- Conferences abstract elements -->
-  <g opacity="0.06">
-    <!-- Conference stage patterns -->
-    <path d="M0,400 C100,350 300,375 500,350 C700,325 900,350 1100,325 C1300,300 1500,325 1700,300 C1800,287.5 1900,300 1920,287.5 L1920,500 L0,500 Z" fill="#2B6CB0" />
+  <!-- Conferences visualization pattern -->
+  <g opacity="0.1">
+    <!-- Conference stage and podium -->
+    <path d="M300,400 C600,320 1200,320 1500,400 L1500,500 L300,500 Z" stroke="url(#stage-stroke)" stroke-width="2" fill="none" />
+    <rect x="800" y="320" width="200" height="80" rx="5" stroke="url(#podium-stroke)" stroke-width="2" fill="none" />
+    <path d="M800,400 L1000,400 L1050,500 L750,500 Z" stroke="url(#podium-stroke)" stroke-width="2" fill="none" />
     
-    <!-- Speaker podium -->
-    <rect x="800" y="300" width="300" height="100" rx="10" fill="#3182CE" />
-    <rect x="850" y="250" width="200" height="50" rx="10" fill="#2B6CB0" />
+    <!-- Speaker icon -->
+    <circle cx="900" cy="360" r="30" fill="url(#speaker-gradient)" fill-opacity="0.3" />
+    <path d="M900,330 L900,390" stroke="#3182CE" stroke-width="2" />
+    <path d="M880,340 L920,340" stroke="#3182CE" stroke-width="2" />
+    <path d="M870,360 L930,360" stroke="#3182CE" stroke-width="2" />
+    <path d="M880,380 L920,380" stroke="#3182CE" stroke-width="2" />
     
-    <!-- Audience seating pattern -->
-    <path d="M200,550 L300,550 L350,650 L150,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M400,550 L500,550 L550,650 L350,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M600,550 L700,550 L750,650 L550,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M800,550 L900,550 L950,650 L750,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1000,550 L1100,550 L1150,650 L950,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1200,550 L1300,550 L1350,650 L1150,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1400,550 L1500,550 L1550,650 L1350,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1600,550 L1700,550 L1750,650 L1550,650 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <!-- Conference title banner -->
+    <rect x="400" y="200" width="1000" height="80" rx="10" stroke="url(#banner-stroke)" stroke-width="2" fill="none" />
+    <rect x="500" y="220" width="800" height="40" rx="5" fill="url(#title-gradient)" fill-opacity="0.2" />
+    <text x="650" y="250" font-family="Arial" font-size="24" fill="#2C5282" font-weight="bold">International Conference on Data Science</text>
     
-    <path d="M300,700 L400,700 L450,800 L250,800 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M500,700 L600,700 L650,800 L450,800 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M700,700 L800,700 L850,800 L650,800 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M900,700 L1000,700 L1050,800 L850,800 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1100,700 L1200,700 L1250,800 L1050,800 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1300,700 L1400,700 L1450,800 L1250,800 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1500,700 L1600,700 L1650,800 L1450,800 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <!-- Audience seating -->
+    <g>
+      <!-- Row 1 -->
+      <path d="M400,550 L550,550 L570,600 L380,600 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M600,550 L750,550 L770,600 L580,600 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M800,550 L950,550 L970,600 L780,600 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M1000,550 L1150,550 L1170,600 L980,600 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M1200,550 L1350,550 L1370,600 L1180,600 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      
+      <!-- Row 2 -->
+      <path d="M350,630 L520,630 L540,680 L330,680 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M570,630 L740,630 L760,680 L550,680 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M790,630 L960,630 L980,680 L770,680 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M1010,630 L1180,630 L1200,680 L990,680 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M1230,630 L1400,630 L1420,680 L1210,680 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      
+      <!-- Row 3 -->
+      <path d="M300,710 L490,710 L510,760 L280,760 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M540,710 L730,710 L750,760 L520,760 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M780,710 L970,710 L990,760 L760,760 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M1020,710 L1210,710 L1230,760 L1000,760 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+      <path d="M1260,710 L1450,710 L1470,760 L1240,760 Z" stroke="#3182CE" stroke-width="1" fill="none" />
+    </g>
     
-    <path d="M400,850 L500,850 L550,950 L350,950 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M600,850 L700,850 L750,950 L550,950 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M800,850 L900,850 L950,950 L750,950 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1000,850 L1100,850 L1150,950 L950,950 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1200,850 L1300,850 L1350,950 L1150,950 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <path d="M1400,850 L1500,850 L1550,950 L1350,950 Z" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <!-- Conference schedule cards -->
+    <g transform="translate(250, 800)">
+      <!-- Day 1 -->
+      <rect x="0" y="0" width="350" height="200" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="0" y="0" width="350" height="50" rx="10 10 0 0" fill="url(#day-gradient)" fill-opacity="0.2" />
+      <text x="140" y="32" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Day 1</text>
+      
+      <rect x="20" y="70" width="310" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="95" width="250" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="120" width="290" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="145" width="270" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="170" width="200" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+    </g>
     
-    <!-- Conference banner -->
-    <rect x="400" y="100" width="1100" height="120" rx="10" stroke="#3182CE" stroke-width="3" fill="none" />
-    <rect x="500" y="130" width="900" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="700" y="180" width="500" height="15" rx="3" fill="#3182CE" />
+    <g transform="translate(750, 800)">
+      <!-- Day 2 -->
+      <rect x="0" y="0" width="350" height="200" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="0" y="0" width="350" height="50" rx="10 10 0 0" fill="url(#day-gradient)" fill-opacity="0.2" />
+      <text x="140" y="32" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Day 2</text>
+      
+      <rect x="20" y="70" width="310" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="95" width="250" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="120" width="290" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="145" width="270" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="170" width="200" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+    </g>
     
-    <!-- Connection pattern -->
-    <circle cx="250" cy="200" r="40" fill="#2B6CB0" fill-opacity="0.2" />
-    <circle cx="400" cy="220" r="30" fill="#3182CE" fill-opacity="0.2" />
-    <circle cx="550" cy="180" r="35" fill="#2B6CB0" fill-opacity="0.2" />
-    <line x1="250" y1="200" x2="400" y2="220" stroke="#2B6CB0" stroke-width="1" />
-    <line x1="400" y1="220" x2="550" y2="180" stroke="#2B6CB0" stroke-width="1" />
+    <g transform="translate(1250, 800)">
+      <!-- Day 3 -->
+      <rect x="0" y="0" width="350" height="200" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="0" y="0" width="350" height="50" rx="10 10 0 0" fill="url(#day-gradient)" fill-opacity="0.2" />
+      <text x="140" y="32" font-family="Arial" font-size="20" fill="#2C5282" font-weight="bold">Day 3</text>
+      
+      <rect x="20" y="70" width="310" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="95" width="250" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="120" width="290" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="145" width="270" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+      <rect x="20" y="170" width="200" height="15" rx="3" fill="#3182CE" fill-opacity="0.2" />
+    </g>
     
-    <circle cx="1650" cy="200" r="40" fill="#2B6CB0" fill-opacity="0.2" />
-    <circle cx="1500" cy="220" r="30" fill="#3182CE" fill-opacity="0.2" />
-    <circle cx="1350" cy="180" r="35" fill="#2B6CB0" fill-opacity="0.2" />
-    <line x1="1650" y1="200" x2="1500" y2="220" stroke="#2B6CB0" stroke-width="1" />
-    <line x1="1500" y1="220" x2="1350" y2="180" stroke="#2B6CB0" stroke-width="1" />
+    <!-- Presentation topics -->
+    <g opacity="0.2">
+      <rect x="100" y="150" width="200" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="125" y="175" font-family="Arial" font-size="16" fill="#2C5282">Big Data Analytics</text>
+      
+      <rect x="100" y="250" width="200" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="132" y="275" font-family="Arial" font-size="16" fill="#2C5282">Neural Networks</text>
+      
+      <rect x="1600" y="150" width="200" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="1650" y="175" font-family="Arial" font-size="16" fill="#2C5282">AI Ethics</text>
+      
+      <rect x="1600" y="250" width="200" height="40" rx="20" stroke="#3182CE" stroke-width="1" fill="none" />
+      <text x="1637" y="275" font-family="Arial" font-size="16" fill="#2C5282">Data Mining</text>
+    </g>
+    
+    <!-- Location and dates -->
+    <g transform="translate(1600, 650)">
+      <rect x="0" y="0" width="250" height="120" rx="10" stroke="url(#info-stroke)" stroke-width="2" fill="none" />
+      <text x="75" y="35" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Conference Info</text>
+      
+      <text x="30" y="65" font-family="Arial" font-size="14" fill="#3182CE">Location: University Center</text>
+      <text x="30" y="90" font-family="Arial" font-size="14" fill="#3182CE">Date: June 15-17, 2023</text>
+    </g>
+    
+    <!-- Networking pattern -->
+    <g opacity="0.15">
+      <!-- Nodes -->
+      <circle cx="150" cy="450" r="20" fill="url(#node-gradient)" />
+      <circle cx="250" cy="400" r="15" fill="url(#node-gradient)" />
+      <circle cx="200" cy="550" r="18" fill="url(#node-gradient)" />
+      <circle cx="100" cy="520" r="12" fill="url(#node-gradient)" />
+      
+      <circle cx="1700" cy="450" r="20" fill="url(#node-gradient)" />
+      <circle cx="1600" cy="400" r="15" fill="url(#node-gradient)" />
+      <circle cx="1650" cy="550" r="18" fill="url(#node-gradient)" />
+      <circle cx="1750" cy="520" r="12" fill="url(#node-gradient)" />
+      
+      <!-- Connections -->
+      <line x1="150" y1="450" x2="250" y2="400" stroke="#3182CE" stroke-width="1.5" />
+      <line x1="150" y1="450" x2="200" y2="550" stroke="#3182CE" stroke-width="1.5" />
+      <line x1="150" y1="450" x2="100" y2="520" stroke="#3182CE" stroke-width="1.5" />
+      <line x1="250" y1="400" x2="200" y2="550" stroke="#3182CE" stroke-width="1.5" />
+      
+      <line x1="1700" y1="450" x2="1600" y2="400" stroke="#3182CE" stroke-width="1.5" />
+      <line x1="1700" y1="450" x2="1650" y2="550" stroke="#3182CE" stroke-width="1.5" />
+      <line x1="1700" y1="450" x2="1750" y2="520" stroke="#3182CE" stroke-width="1.5" />
+      <line x1="1600" y1="400" x2="1650" y2="550" stroke="#3182CE" stroke-width="1.5" />
+    </g>
+    
+    <!-- Abstract flow patterns -->
+    <path d="M150,100 C350,50 550,150 750,100 S950,50 1150,100 S1350,150 1550,100" 
+          stroke="url(#flow-gradient)" stroke-width="4" fill="none" stroke-opacity="0.2" stroke-linecap="round" />
   </g>
   
   <!-- Defs for gradients -->
   <defs>
-    <linearGradient id="conferences-gradient" x1="0" y1="1080" x2="1920" y2="0" gradientUnits="userSpaceOnUse">
+    <!-- Main background gradient (works in light/dark mode) -->
+    <linearGradient id="conferences-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#EBF8FF" />
       <stop offset="1" stop-color="#FFFAF0" />
+    </linearGradient>
+    
+    <!-- Stage stroke gradient -->
+    <linearGradient id="stage-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Podium stroke gradient -->
+    <linearGradient id="podium-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Banner stroke gradient -->
+    <linearGradient id="banner-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Card stroke gradient -->
+    <linearGradient id="card-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Info card stroke gradient -->
+    <linearGradient id="info-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Title gradient -->
+    <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Day header gradient -->
+    <linearGradient id="day-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Speaker gradient -->
+    <radialGradient id="speaker-gradient" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </radialGradient>
+    
+    <!-- Network node gradient -->
+    <radialGradient id="node-gradient" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </radialGradient>
+    
+    <!-- Flow gradient -->
+    <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3182CE" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#4299E1" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3182CE" stop-opacity="0.2" />
     </linearGradient>
   </defs>
 </svg>

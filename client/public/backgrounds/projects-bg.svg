@@ -1,97 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Subtle gradient background -->
+  <!-- Main background gradient -->
   <rect width="1920" height="1080" fill="url(#projects-gradient)" />
   
-  <!-- Projects abstract elements -->
-  <g opacity="0.06">
-    <!-- Project cards pattern -->
-    <rect x="200" y="100" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="200" y="100" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
-    <rect x="220" y="270" width="200" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="220" y="310" width="360" height="10" rx="5" fill="#3182CE" />
-    <rect x="220" y="330" width="300" height="10" rx="5" fill="#3182CE" />
-    <rect x="220" y="350" width="320" height="10" rx="5" fill="#3182CE" />
+  <!-- Projects visualization pattern -->
+  <g opacity="0.1">
+    <!-- Project cards grid pattern -->
+    <g>
+      <!-- Project Card 1 -->
+      <rect x="300" y="180" width="360" height="280" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="300" y="180" width="360" height="140" rx="10 10 0 0" fill="url(#card-fill)" fill-opacity="0.15" />
+      <rect x="320" y="340" width="200" height="30" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="330" y="362" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Data Analysis</text>
+      <rect x="320" y="380" width="320" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="320" y="400" width="290" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="320" y="420" width="310" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Project Card 2 -->
+      <rect x="700" y="180" width="360" height="280" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="700" y="180" width="360" height="140" rx="10 10 0 0" fill="url(#card-fill)" fill-opacity="0.15" />
+      <rect x="720" y="340" width="200" height="30" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="730" y="362" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Machine Learning</text>
+      <rect x="720" y="380" width="320" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="720" y="400" width="290" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="720" y="420" width="310" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Project Card 3 -->
+      <rect x="1100" y="180" width="360" height="280" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="1100" y="180" width="360" height="140" rx="10 10 0 0" fill="url(#card-fill)" fill-opacity="0.15" />
+      <rect x="1120" y="340" width="200" height="30" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="1130" y="362" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Big Data Systems</text>
+      <rect x="1120" y="380" width="320" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="1120" y="400" width="290" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="1120" y="420" width="310" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Project Card 4 -->
+      <rect x="300" y="500" width="360" height="280" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="300" y="500" width="360" height="140" rx="10 10 0 0" fill="url(#card-fill)" fill-opacity="0.15" />
+      <rect x="320" y="660" width="200" height="30" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="330" y="682" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Neural Networks</text>
+      <rect x="320" y="700" width="320" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="320" y="720" width="290" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="320" y="740" width="310" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Project Card 5 -->
+      <rect x="700" y="500" width="360" height="280" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="700" y="500" width="360" height="140" rx="10 10 0 0" fill="url(#card-fill)" fill-opacity="0.15" />
+      <rect x="720" y="660" width="200" height="30" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="730" y="682" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Data Visualization</text>
+      <rect x="720" y="700" width="320" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="720" y="720" width="290" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="720" y="740" width="310" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      
+      <!-- Project Card 6 -->
+      <rect x="1100" y="500" width="360" height="280" rx="10" stroke="url(#card-stroke)" stroke-width="2" fill="none" />
+      <rect x="1100" y="500" width="360" height="140" rx="10 10 0 0" fill="url(#card-fill)" fill-opacity="0.15" />
+      <rect x="1120" y="660" width="200" height="30" rx="5" fill="url(#title-gradient)" fill-opacity="0.3" />
+      <text x="1130" y="682" font-family="Arial" font-size="18" fill="#2C5282" font-weight="bold">Predictive Analytics</text>
+      <rect x="1120" y="700" width="320" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="1120" y="720" width="290" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+      <rect x="1120" y="740" width="310" height="10" rx="3" fill="#3182CE" fill-opacity="0.3" />
+    </g>
     
-    <rect x="650" y="100" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="650" y="100" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
-    <rect x="670" y="270" width="200" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="670" y="310" width="360" height="10" rx="5" fill="#3182CE" />
-    <rect x="670" y="330" width="300" height="10" rx="5" fill="#3182CE" />
-    <rect x="670" y="350" width="320" height="10" rx="5" fill="#3182CE" />
+    <!-- Project technologies visualization -->
+    <g transform="translate(480, 900)">
+      <circle cx="0" cy="0" r="50" fill="url(#tech-node-1)" fill-opacity="0.3" />
+      <text x="-30" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Python</text>
+      
+      <circle cx="200" cy="0" r="50" fill="url(#tech-node-2)" fill-opacity="0.3" />
+      <text x="175" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">R</text>
+      
+      <circle cx="400" cy="0" r="50" fill="url(#tech-node-3)" fill-opacity="0.3" />
+      <text x="375" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">SQL</text>
+      
+      <circle cx="600" cy="0" r="50" fill="url(#tech-node-4)" fill-opacity="0.3" />
+      <text x="560" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Tableau</text>
+      
+      <circle cx="800" cy="0" r="50" fill="url(#tech-node-1)" fill-opacity="0.3" />
+      <text x="750" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">TensorFlow</text>
+      
+      <circle cx="1000" cy="0" r="50" fill="url(#tech-node-2)" fill-opacity="0.3" />
+      <text x="965" y="5" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Spark</text>
+    </g>
     
-    <rect x="1100" y="100" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="1100" y="100" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
-    <rect x="1120" y="270" width="200" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="1120" y="310" width="360" height="10" rx="5" fill="#3182CE" />
-    <rect x="1120" y="330" width="300" height="10" rx="5" fill="#3182CE" />
-    <rect x="1120" y="350" width="320" height="10" rx="5" fill="#3182CE" />
+    <!-- Connection lines between projects -->
+    <path d="M480,320 L700,320" stroke="#3182CE" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M1060,320 L1100,320" stroke="#3182CE" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M480,640 L700,640" stroke="#3182CE" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M1060,640 L1100,640" stroke="#3182CE" stroke-width="1.5" stroke-dasharray="5,5" />
     
-    <rect x="200" y="450" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="200" y="450" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
-    <rect x="220" y="620" width="200" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="220" y="660" width="360" height="10" rx="5" fill="#3182CE" />
-    <rect x="220" y="680" width="300" height="10" rx="5" fill="#3182CE" />
-    <rect x="220" y="700" width="320" height="10" rx="5" fill="#3182CE" />
+    <path d="M480,320 C550,400 630,500 480,640" stroke="#3182CE" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M880,320 C950,400 1030,500 880,640" stroke="#3182CE" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M1280,320 C1350,400 1430,500 1280,640" stroke="#3182CE" stroke-width="1.5" stroke-dasharray="5,5" />
     
-    <rect x="650" y="450" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="650" y="450" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
-    <rect x="670" y="620" width="200" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="670" y="660" width="360" height="10" rx="5" fill="#3182CE" />
-    <rect x="670" y="680" width="300" height="10" rx="5" fill="#3182CE" />
-    <rect x="670" y="700" width="320" height="10" rx="5" fill="#3182CE" />
+    <!-- Category labels -->
+    <rect x="100" y="230" width="150" height="40" rx="5" fill="url(#category-gradient)" fill-opacity="0.2" />
+    <text x="125" y="255" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Analysis</text>
     
-    <rect x="1100" y="450" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="1100" y="450" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
-    <rect x="1120" y="620" width="200" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="1120" y="660" width="360" height="10" rx="5" fill="#3182CE" />
-    <rect x="1120" y="680" width="300" height="10" rx="5" fill="#3182CE" />
-    <rect x="1120" y="700" width="320" height="10" rx="5" fill="#3182CE" />
+    <rect x="100" y="550" width="150" height="40" rx="5" fill="url(#category-gradient)" fill-opacity="0.2" />
+    <text x="120" y="575" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Research</text>
     
-    <rect x="400" y="800" width="800" height="200" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="400" y="800" width="800" height="50" rx="10 10 0 0" fill="#2B6CB0" fill-opacity="0.3" />
-    <rect x="430" y="815" width="400" height="20" rx="5" fill="#3182CE" />
-    <rect x="430" y="870" width="740" height="10" rx="5" fill="#3182CE" />
-    <rect x="430" y="890" width="700" height="10" rx="5" fill="#3182CE" />
-    <rect x="430" y="910" width="720" height="10" rx="5" fill="#3182CE" />
-    <rect x="430" y="930" width="680" height="10" rx="5" fill="#3182CE" />
-    <rect x="430" y="950" width="660" height="10" rx="5" fill="#3182CE" />
-    <rect x="430" y="970" width="640" height="10" rx="5" fill="#3182CE" />
+    <rect x="1520" y="230" width="150" height="40" rx="5" fill="url(#category-gradient)" fill-opacity="0.2" />
+    <text x="1535" y="255" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Enterprise</text>
     
-    <!-- Connection lines -->
-    <line x1="400" y1="250" x2="600" y2="250" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="850" y1="250" x2="1050" y2="250" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="400" y1="600" x2="600" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="850" y1="600" x2="1050" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="1300" y1="600" x2="1500" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="1300" y1="250" x2="1500" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="400" y1="400" x2="800" y2="800" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="850" y1="750" x2="800" y2="800" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="1300" y1="400" x2="800" y2="800" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <rect x="1520" y="550" width="150" height="40" rx="5" fill="url(#category-gradient)" fill-opacity="0.2" />
+    <text x="1550" y="575" font-family="Arial" font-size="16" fill="#2C5282" font-weight="bold">Tools</text>
     
-    <!-- Data flow symbols -->
-    <circle cx="400" cy="250" r="5" fill="#2B6CB0" />
-    <circle cx="600" cy="250" r="5" fill="#2B6CB0" />
-    <circle cx="850" cy="250" r="5" fill="#2B6CB0" />
-    <circle cx="1050" cy="250" r="5" fill="#2B6CB0" />
-    <circle cx="400" cy="600" r="5" fill="#2B6CB0" />
-    <circle cx="600" cy="600" r="5" fill="#2B6CB0" />
-    <circle cx="850" cy="600" r="5" fill="#2B6CB0" />
-    <circle cx="1050" cy="600" r="5" fill="#2B6CB0" />
-    <circle cx="1300" cy="600" r="5" fill="#2B6CB0" />
-    <circle cx="1500" cy="600" r="5" fill="#2B6CB0" />
-    <circle cx="1300" cy="250" r="5" fill="#2B6CB0" />
-    <circle cx="400" cy="400" r="5" fill="#2B6CB0" />
-    <circle cx="800" cy="800" r="5" fill="#2B6CB0" />
-    <circle cx="850" cy="750" r="5" fill="#2B6CB0" />
-    <circle cx="1300" cy="400" r="5" fill="#2B6CB0" />
+    <!-- Workflow diagram arrows -->
+    <path d="M100,350 L250,350" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M100,670 L250,670" stroke="#2B6CB0" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M1520,350 L1670,350" stroke="#2B6CB0" stroke-width="2" marker-start="url(#arrow)" />
+    <path d="M1520,670 L1670,670" stroke="#2B6CB0" stroke-width="2" marker-start="url(#arrow)" />
+    
+    <!-- Project status indicators -->
+    <circle cx="620" cy="200" r="10" fill="#48BB78" /> <!-- Completed -->
+    <circle cx="1020" cy="200" r="10" fill="#F6AD55" /> <!-- In Progress -->
+    <circle cx="1420" cy="200" r="10" fill="#F6AD55" /> <!-- In Progress -->
+    <circle cx="620" cy="520" r="10" fill="#48BB78" /> <!-- Completed -->
+    <circle cx="1020" cy="520" r="10" fill="#48BB78" /> <!-- Completed -->
+    <circle cx="1420" cy="520" r="10" fill="#F6AD55" /> <!-- In Progress -->
+    
+    <!-- Abstract data flow pattern -->
+    <path d="M200,100 C400,50 600,150 800,100 S1100,50 1300,100 S1600,150 1800,100" 
+          stroke="url(#flow-gradient)" stroke-width="4" fill="none" stroke-opacity="0.2" stroke-linecap="round" />
+    <path d="M200,1000 C400,950 600,1050 800,1000 S1100,950 1300,1000 S1600,1050 1800,1000" 
+          stroke="url(#flow-gradient)" stroke-width="4" fill="none" stroke-opacity="0.2" stroke-linecap="round" />
   </g>
   
-  <!-- Defs for gradients -->
+  <!-- Defs for gradients and markers -->
   <defs>
-    <linearGradient id="projects-gradient" x1="1920" y1="0" x2="0" y2="1080" gradientUnits="userSpaceOnUse">
+    <!-- Main background gradient (works in light/dark mode) -->
+    <linearGradient id="projects-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F0F5FF" />
       <stop offset="1" stop-color="#FEFCFF" />
     </linearGradient>
+    
+    <!-- Card stroke gradient -->
+    <linearGradient id="card-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Card fill gradient -->
+    <linearGradient id="card-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </linearGradient>
+    
+    <!-- Title gradient -->
+    <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <!-- Category gradient -->
+    <linearGradient id="category-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </linearGradient>
+    
+    <!-- Technology node gradients -->
+    <radialGradient id="tech-node-1" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </radialGradient>
+    
+    <radialGradient id="tech-node-2" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#63B3ED" />
+      <stop offset="100%" stop-color="#3182CE" />
+    </radialGradient>
+    
+    <radialGradient id="tech-node-3" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#90CDF4" />
+      <stop offset="100%" stop-color="#4299E1" />
+    </radialGradient>
+    
+    <radialGradient id="tech-node-4" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#BEE3F8" />
+      <stop offset="100%" stop-color="#63B3ED" />
+    </radialGradient>
+    
+    <!-- Data flow gradient -->
+    <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3182CE" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#4299E1" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#3182CE" stop-opacity="0.2" />
+    </linearGradient>
+    
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+            markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2B6CB0"/>
+    </marker>
   </defs>
 </svg>

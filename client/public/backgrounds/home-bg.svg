@@ -1,91 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Subtle gradient background -->
+  <!-- Main background gradient -->
   <rect width="1920" height="1080" fill="url(#home-gradient)" />
   
-  <!-- Home abstract elements -->
-  <g opacity="0.06">
-    <!-- Abstract data science elements -->
-    <circle cx="200" cy="200" r="80" stroke="#2B6CB0" stroke-width="2" />
-    <circle cx="200" cy="200" r="40" fill="#3182CE" fill-opacity="0.4" />
-    <line x1="200" y1="120" x2="200" y2="280" stroke="#2B6CB0" stroke-width="1" />
-    <line x1="120" y1="200" x2="280" y2="200" stroke="#2B6CB0" stroke-width="1" />
+  <!-- Data science pattern -->
+  <g opacity="0.1">
+    <!-- Top left data visualization pattern -->
+    <circle cx="200" cy="200" r="100" stroke="url(#circle-stroke1)" stroke-width="3" stroke-opacity="0.8" fill="none" />
+    <circle cx="200" cy="200" r="70" stroke="url(#circle-stroke2)" stroke-width="2" stroke-opacity="0.6" fill="none" />
+    <circle cx="200" cy="200" r="40" stroke="url(#circle-stroke3)" stroke-width="1.5" fill="none" />
     
-    <circle cx="1720" cy="200" r="80" stroke="#2B6CB0" stroke-width="2" />
-    <circle cx="1720" cy="200" r="40" fill="#3182CE" fill-opacity="0.4" />
-    <line x1="1720" y1="120" x2="1720" y2="280" stroke="#2B6CB0" stroke-width="1" />
-    <line x1="1640" y1="200" x2="1800" y2="200" stroke="#2B6CB0" stroke-width="1" />
+    <!-- Data nodes -->
+    <circle cx="160" cy="150" r="6" fill="#2B6CB0" />
+    <circle cx="240" cy="170" r="6" fill="#2B6CB0" />
+    <circle cx="220" cy="240" r="6" fill="#2B6CB0" />
+    <circle cx="150" cy="230" r="6" fill="#2B6CB0" />
+    <circle cx="270" cy="220" r="6" fill="#2B6CB0" />
     
-    <!-- Connection lines pattern -->
-    <line x1="280" y1="200" x2="500" y2="300" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
-    <line x1="1640" y1="200" x2="1420" y2="300" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <!-- Connection lines -->
+    <line x1="160" y1="150" x2="240" y2="170" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="240" y1="170" x2="220" y2="240" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="220" y1="240" x2="150" y2="230" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="150" y1="230" x2="160" y2="150" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="240" y1="170" x2="270" y2="220" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="270" y1="220" x2="220" y2="240" stroke="#2B6CB0" stroke-width="1.5" />
     
-    <!-- Central decoration pattern -->
-    <rect x="500" y="100" width="920" height="400" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <circle cx="960" cy="300" r="150" stroke="#3182CE" stroke-width="3" fill="none" />
-    <circle cx="960" cy="300" r="100" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <circle cx="960" cy="300" r="50" fill="#3182CE" fill-opacity="0.3" />
+    <!-- Bottom right data visualization pattern -->
+    <circle cx="1720" cy="880" r="100" stroke="url(#circle-stroke1)" stroke-width="3" stroke-opacity="0.8" fill="none" />
+    <circle cx="1720" cy="880" r="70" stroke="url(#circle-stroke2)" stroke-width="2" stroke-opacity="0.6" fill="none" />
+    <circle cx="1720" cy="880" r="40" stroke="url(#circle-stroke3)" stroke-width="1.5" fill="none" />
     
-    <!-- Data points -->
-    <circle cx="850" cy="220" r="8" fill="#2B6CB0" />
-    <circle cx="900" cy="180" r="8" fill="#2B6CB0" />
-    <circle cx="980" cy="200" r="8" fill="#2B6CB0" />
-    <circle cx="1020" cy="250" r="8" fill="#2B6CB0" />
-    <circle cx="1050" cy="320" r="8" fill="#2B6CB0" />
-    <circle cx="1000" cy="380" r="8" fill="#2B6CB0" />
-    <circle cx="920" cy="400" r="8" fill="#2B6CB0" />
-    <circle cx="860" cy="370" r="8" fill="#2B6CB0" />
-    <circle cx="830" cy="310" r="8" fill="#2B6CB0" />
+    <!-- Data nodes -->
+    <circle cx="1680" cy="830" r="6" fill="#2B6CB0" />
+    <circle cx="1760" cy="850" r="6" fill="#2B6CB0" />
+    <circle cx="1740" cy="920" r="6" fill="#2B6CB0" />
+    <circle cx="1670" cy="910" r="6" fill="#2B6CB0" />
+    <circle cx="1790" cy="900" r="6" fill="#2B6CB0" />
     
-    <!-- Connection lines between data points -->
-    <line x1="850" y1="220" x2="900" y2="180" stroke="#3182CE" stroke-width="1" />
-    <line x1="900" y1="180" x2="980" y2="200" stroke="#3182CE" stroke-width="1" />
-    <line x1="980" y1="200" x2="1020" y2="250" stroke="#3182CE" stroke-width="1" />
-    <line x1="1020" y1="250" x2="1050" y2="320" stroke="#3182CE" stroke-width="1" />
-    <line x1="1050" y1="320" x2="1000" y2="380" stroke="#3182CE" stroke-width="1" />
-    <line x1="1000" y1="380" x2="920" y2="400" stroke="#3182CE" stroke-width="1" />
-    <line x1="920" y1="400" x2="860" y2="370" stroke="#3182CE" stroke-width="1" />
-    <line x1="860" y1="370" x2="830" y2="310" stroke="#3182CE" stroke-width="1" />
-    <line x1="830" y1="310" x2="850" y2="220" stroke="#3182CE" stroke-width="1" />
+    <!-- Connection lines -->
+    <line x1="1680" y1="830" x2="1760" y2="850" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="1760" y1="850" x2="1740" y2="920" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="1740" y1="920" x2="1670" y2="910" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="1670" y1="910" x2="1680" y2="830" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="1760" y1="850" x2="1790" y2="900" stroke="#2B6CB0" stroke-width="1.5" />
+    <line x1="1790" y1="900" x2="1740" y2="920" stroke="#2B6CB0" stroke-width="1.5" />
     
-    <!-- Text-like pattern -->
-    <rect x="580" y="520" width="760" height="30" rx="5" fill="#2B6CB0" />
-    <rect x="580" y="570" width="600" height="20" rx="5" fill="#3182CE" />
-    <rect x="580" y="610" width="700" height="20" rx="5" fill="#3182CE" />
-    <rect x="580" y="650" width="500" height="20" rx="5" fill="#3182CE" />
+    <!-- Central data science elements -->
+    <g transform="translate(960, 540) scale(1.5)" opacity="0.15">
+      <!-- Neural network abstract representation -->
+      <!-- Input layer -->
+      <circle cx="-120" cy="-80" r="10" fill="#2B6CB0" />
+      <circle cx="-120" cy="-40" r="10" fill="#2B6CB0" />
+      <circle cx="-120" cy="0" r="10" fill="#2B6CB0" />
+      <circle cx="-120" cy="40" r="10" fill="#2B6CB0" />
+      <circle cx="-120" cy="80" r="10" fill="#2B6CB0" />
+      
+      <!-- Hidden layer 1 -->
+      <circle cx="-40" cy="-60" r="10" fill="#2B6CB0" />
+      <circle cx="-40" cy="-20" r="10" fill="#2B6CB0" />
+      <circle cx="-40" cy="20" r="10" fill="#2B6CB0" />
+      <circle cx="-40" cy="60" r="10" fill="#2B6CB0" />
+      
+      <!-- Hidden layer 2 -->
+      <circle cx="40" cy="-40" r="10" fill="#2B6CB0" />
+      <circle cx="40" cy="0" r="10" fill="#2B6CB0" />
+      <circle cx="40" cy="40" r="10" fill="#2B6CB0" />
+      
+      <!-- Output layer -->
+      <circle cx="120" cy="-20" r="10" fill="#2B6CB0" />
+      <circle cx="120" cy="20" r="10" fill="#2B6CB0" />
+      
+      <!-- Connections between input and hidden layer 1 -->
+      <line x1="-120" y1="-80" x2="-40" y2="-60" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="-80" x2="-40" y2="-20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="-80" x2="-40" y2="20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="-40" x2="-40" y2="-60" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="-40" x2="-40" y2="-20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="-40" x2="-40" y2="20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="0" x2="-40" y2="-20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="0" x2="-40" y2="20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="0" x2="-40" y2="60" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="40" x2="-40" y2="20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="40" x2="-40" y2="60" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="80" x2="-40" y2="20" stroke="#3182CE" stroke-width="1" />
+      <line x1="-120" y1="80" x2="-40" y2="60" stroke="#3182CE" stroke-width="1" />
+      
+      <!-- Connections between hidden layer 1 and hidden layer 2 -->
+      <line x1="-40" y1="-60" x2="40" y2="-40" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="-60" x2="40" y2="0" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="-20" x2="40" y2="-40" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="-20" x2="40" y2="0" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="-20" x2="40" y2="40" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="20" x2="40" y2="0" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="20" x2="40" y2="40" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="60" x2="40" y2="0" stroke="#3182CE" stroke-width="1" />
+      <line x1="-40" y1="60" x2="40" y2="40" stroke="#3182CE" stroke-width="1" />
+      
+      <!-- Connections between hidden layer 2 and output layer -->
+      <line x1="40" y1="-40" x2="120" y2="-20" stroke="#3182CE" stroke-width="1" />
+      <line x1="40" y1="0" x2="120" y2="-20" stroke="#3182CE" stroke-width="1" />
+      <line x1="40" y1="0" x2="120" y2="20" stroke="#3182CE" stroke-width="1" />
+      <line x1="40" y1="40" x2="120" y2="20" stroke="#3182CE" stroke-width="1" />
+    </g>
     
-    <!-- Bottom patterns -->
-    <rect x="200" y="750" width="400" height="220" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="220" y="780" width="360" height="160" rx="5" stroke="#3182CE" stroke-width="1" fill="none" />
-    <rect x="230" y="790" width="340" height="140" rx="5" stroke="#3182CE" stroke-width="1" fill="none" />
+    <!-- Abstract data flow lines -->
+    <path d="M350 150 C500 50, 700 200, 850 100 S1100 150, 1250 50 S1500 200, 1650 100" 
+          stroke="#3182CE" stroke-width="2" fill="none" stroke-opacity="0.4" />
+    <path d="M350 950 C500 850, 700 1000, 850 900 S1100 950, 1250 850 S1500 1000, 1650 900" 
+          stroke="#3182CE" stroke-width="2" fill="none" stroke-opacity="0.4" />
     
-    <rect x="700" y="750" width="400" height="220" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="720" y="780" width="360" height="160" rx="5" stroke="#3182CE" stroke-width="1" fill="none" />
-    <rect x="730" y="790" width="340" height="140" rx="5" stroke="#3182CE" stroke-width="1" fill="none" />
-    
-    <rect x="1200" y="750" width="400" height="220" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
-    <rect x="1220" y="780" width="360" height="160" rx="5" stroke="#3182CE" stroke-width="1" fill="none" />
-    <rect x="1230" y="790" width="340" height="140" rx="5" stroke="#3182CE" stroke-width="1" fill="none" />
-    
-    <!-- Bottom text-like pattern -->
-    <rect x="240" y="840" width="320" height="15" rx="3" fill="#3182CE" />
-    <rect x="240" y="865" width="280" height="15" rx="3" fill="#3182CE" />
-    <rect x="240" y="890" width="300" height="15" rx="3" fill="#3182CE" />
-    
-    <rect x="740" y="840" width="320" height="15" rx="3" fill="#3182CE" />
-    <rect x="740" y="865" width="280" height="15" rx="3" fill="#3182CE" />
-    <rect x="740" y="890" width="300" height="15" rx="3" fill="#3182CE" />
-    
-    <rect x="1240" y="840" width="320" height="15" rx="3" fill="#3182CE" />
-    <rect x="1240" y="865" width="280" height="15" rx="3" fill="#3182CE" />
-    <rect x="1240" y="890" width="300" height="15" rx="3" fill="#3182CE" />
+    <!-- Data science symbols scattered around -->
+    <g opacity="0.2">
+      <!-- Bar chart icon -->
+      <rect x="400" y="300" width="10" height="40" rx="2" fill="#2B6CB0" />
+      <rect x="420" y="320" width="10" height="20" rx="2" fill="#2B6CB0" />
+      <rect x="440" y="280" width="10" height="60" rx="2" fill="#2B6CB0" />
+      <rect x="460" y="310" width="10" height="30" rx="2" fill="#2B6CB0" />
+      
+      <!-- Pie chart icon -->
+      <circle cx="1500" cy="320" r="30" stroke="#2B6CB0" stroke-width="2" fill="none" />
+      <path d="M1500 320 L1500 290 A30 30 0 0 1 1526 335 Z" fill="#2B6CB0" />
+      
+      <!-- Line graph -->
+      <polyline points="1300,750 1330,720 1360,740 1390,700 1420,730 1450,710" 
+                stroke="#2B6CB0" stroke-width="2" fill="none" />
+      
+      <!-- Scatter plot -->
+      <circle cx="500" cy="700" r="4" fill="#2B6CB0" />
+      <circle cx="520" cy="720" r="4" fill="#2B6CB0" />
+      <circle cx="540" cy="690" r="4" fill="#2B6CB0" />
+      <circle cx="560" cy="730" r="4" fill="#2B6CB0" />
+      <circle cx="580" cy="710" r="4" fill="#2B6CB0" />
+      <circle cx="510" cy="750" r="4" fill="#2B6CB0" />
+      <circle cx="530" cy="680" r="4" fill="#2B6CB0" />
+      <circle cx="550" cy="700" r="4" fill="#2B6CB0" />
+      <circle cx="570" cy="740" r="4" fill="#2B6CB0" />
+    </g>
   </g>
   
   <!-- Defs for gradients -->
   <defs>
+    <!-- Main background gradient (works in light/dark mode) -->
     <linearGradient id="home-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#EBF8FF" />
       <stop offset="1" stop-color="#F7FAFC" />
+    </linearGradient>
+    
+    <!-- Circle stroke gradients -->
+    <linearGradient id="circle-stroke1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4299E1" />
+      <stop offset="100%" stop-color="#2B6CB0" />
+    </linearGradient>
+    
+    <linearGradient id="circle-stroke2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3182CE" />
+      <stop offset="100%" stop-color="#2C5282" />
+    </linearGradient>
+    
+    <linearGradient id="circle-stroke3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B6CB0" />
+      <stop offset="100%" stop-color="#2A4365" />
     </linearGradient>
   </defs>
 </svg>
