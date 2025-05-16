@@ -5,64 +5,93 @@
   
   <!-- Projects abstract elements -->
   <g opacity="0.06">
-    <!-- Code-like abstract patterns -->
-    <path d="M100,100 L300,100" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M100,130 L250,130" stroke="#3182CE" stroke-width="2" />
-    <path d="M100,160 L400,160" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M150,190 L350,190" stroke="#3182CE" stroke-width="2" />
-    <path d="M150,220 L300,220" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M100,250 L450,250" stroke="#3182CE" stroke-width="2" />
+    <!-- Project cards pattern -->
+    <rect x="200" y="100" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="200" y="100" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="220" y="270" width="200" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="220" y="310" width="360" height="10" rx="5" fill="#3182CE" />
+    <rect x="220" y="330" width="300" height="10" rx="5" fill="#3182CE" />
+    <rect x="220" y="350" width="320" height="10" rx="5" fill="#3182CE" />
     
-    <path d="M500,100 L700,100" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M500,130 L650,130" stroke="#3182CE" stroke-width="2" />
-    <path d="M500,160 L800,160" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M550,190 L750,190" stroke="#3182CE" stroke-width="2" />
-    <path d="M550,220 L700,220" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M500,250 L850,250" stroke="#3182CE" stroke-width="2" />
+    <rect x="650" y="100" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="650" y="100" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="670" y="270" width="200" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="670" y="310" width="360" height="10" rx="5" fill="#3182CE" />
+    <rect x="670" y="330" width="300" height="10" rx="5" fill="#3182CE" />
+    <rect x="670" y="350" width="320" height="10" rx="5" fill="#3182CE" />
     
-    <path d="M900,100 L1100,100" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M900,130 L1050,130" stroke="#3182CE" stroke-width="2" />
-    <path d="M900,160 L1200,160" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M950,190 L1150,190" stroke="#3182CE" stroke-width="2" />
-    <path d="M950,220 L1100,220" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M900,250 L1250,250" stroke="#3182CE" stroke-width="2" />
+    <rect x="1100" y="100" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="1100" y="100" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="1120" y="270" width="200" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="1120" y="310" width="360" height="10" rx="5" fill="#3182CE" />
+    <rect x="1120" y="330" width="300" height="10" rx="5" fill="#3182CE" />
+    <rect x="1120" y="350" width="320" height="10" rx="5" fill="#3182CE" />
     
-    <path d="M1300,100 L1500,100" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M1300,130 L1450,130" stroke="#3182CE" stroke-width="2" />
-    <path d="M1300,160 L1600,160" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M1350,190 L1550,190" stroke="#3182CE" stroke-width="2" />
-    <path d="M1350,220 L1500,220" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M1300,250 L1650,250" stroke="#3182CE" stroke-width="2" />
+    <rect x="200" y="450" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="200" y="450" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="220" y="620" width="200" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="220" y="660" width="360" height="10" rx="5" fill="#3182CE" />
+    <rect x="220" y="680" width="300" height="10" rx="5" fill="#3182CE" />
+    <rect x="220" y="700" width="320" height="10" rx="5" fill="#3182CE" />
     
-    <path d="M1700,100 L1900,100" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M1700,130 L1850,130" stroke="#3182CE" stroke-width="2" />
-    <path d="M1700,160 L2000,160" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M1750,190 L1950,190" stroke="#3182CE" stroke-width="2" />
-    <path d="M1750,220 L1900,220" stroke="#2B6CB0" stroke-width="2" />
-    <path d="M1700,250 L2050,250" stroke="#3182CE" stroke-width="2" />
+    <rect x="650" y="450" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="650" y="450" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="670" y="620" width="200" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="670" y="660" width="360" height="10" rx="5" fill="#3182CE" />
+    <rect x="670" y="680" width="300" height="10" rx="5" fill="#3182CE" />
+    <rect x="670" y="700" width="320" height="10" rx="5" fill="#3182CE" />
     
-    <!-- Project card elements -->
-    <rect x="150" y="400" width="400" height="250" rx="10" stroke="#2B6CB0" stroke-width="2" fill="#2B6CB0" fill-opacity="0.05" />
-    <rect x="600" y="400" width="400" height="250" rx="10" stroke="#3182CE" stroke-width="2" fill="#3182CE" fill-opacity="0.05" />
-    <rect x="1050" y="400" width="400" height="250" rx="10" stroke="#2B6CB0" stroke-width="2" fill="#2B6CB0" fill-opacity="0.05" />
-    <rect x="1500" y="400" width="400" height="250" rx="10" stroke="#3182CE" stroke-width="2" fill="#3182CE" fill-opacity="0.05" />
+    <rect x="1100" y="450" width="400" height="300" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="1100" y="450" width="400" height="150" rx="10 10 0 0" fill="#3182CE" fill-opacity="0.3" />
+    <rect x="1120" y="620" width="200" height="30" rx="5" fill="#2B6CB0" />
+    <rect x="1120" y="660" width="360" height="10" rx="5" fill="#3182CE" />
+    <rect x="1120" y="680" width="300" height="10" rx="5" fill="#3182CE" />
+    <rect x="1120" y="700" width="320" height="10" rx="5" fill="#3182CE" />
     
-    <rect x="300" y="700" width="400" height="250" rx="10" stroke="#3182CE" stroke-width="2" fill="#3182CE" fill-opacity="0.05" />
-    <rect x="750" y="700" width="400" height="250" rx="10" stroke="#2B6CB0" stroke-width="2" fill="#2B6CB0" fill-opacity="0.05" />
-    <rect x="1200" y="700" width="400" height="250" rx="10" stroke="#3182CE" stroke-width="2" fill="#3182CE" fill-opacity="0.05" />
+    <rect x="400" y="800" width="800" height="200" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="400" y="800" width="800" height="50" rx="10 10 0 0" fill="#2B6CB0" fill-opacity="0.3" />
+    <rect x="430" y="815" width="400" height="20" rx="5" fill="#3182CE" />
+    <rect x="430" y="870" width="740" height="10" rx="5" fill="#3182CE" />
+    <rect x="430" y="890" width="700" height="10" rx="5" fill="#3182CE" />
+    <rect x="430" y="910" width="720" height="10" rx="5" fill="#3182CE" />
+    <rect x="430" y="930" width="680" height="10" rx="5" fill="#3182CE" />
+    <rect x="430" y="950" width="660" height="10" rx="5" fill="#3182CE" />
+    <rect x="430" y="970" width="640" height="10" rx="5" fill="#3182CE" />
     
-    <!-- Abstract connection patterns -->
-    <path d="M350,650 L350,700" stroke="#2B6CB0" stroke-width="2" stroke-dasharray="5, 8" />
-    <path d="M800,650 L800,700" stroke="#3182CE" stroke-width="2" stroke-dasharray="5, 8" />
-    <path d="M1250,650 L1250,700" stroke="#2B6CB0" stroke-width="2" stroke-dasharray="5, 8" />
-    <path d="M1700,650 L1400,700" stroke="#3182CE" stroke-width="2" stroke-dasharray="5, 8" />
+    <!-- Connection lines -->
+    <line x1="400" y1="250" x2="600" y2="250" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="850" y1="250" x2="1050" y2="250" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="400" y1="600" x2="600" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="850" y1="600" x2="1050" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="1300" y1="600" x2="1500" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="1300" y1="250" x2="1500" y2="600" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="400" y1="400" x2="800" y2="800" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="850" y1="750" x2="800" y2="800" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    <line x1="1300" y1="400" x2="800" y2="800" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="5 5" />
+    
+    <!-- Data flow symbols -->
+    <circle cx="400" cy="250" r="5" fill="#2B6CB0" />
+    <circle cx="600" cy="250" r="5" fill="#2B6CB0" />
+    <circle cx="850" cy="250" r="5" fill="#2B6CB0" />
+    <circle cx="1050" cy="250" r="5" fill="#2B6CB0" />
+    <circle cx="400" cy="600" r="5" fill="#2B6CB0" />
+    <circle cx="600" cy="600" r="5" fill="#2B6CB0" />
+    <circle cx="850" cy="600" r="5" fill="#2B6CB0" />
+    <circle cx="1050" cy="600" r="5" fill="#2B6CB0" />
+    <circle cx="1300" cy="600" r="5" fill="#2B6CB0" />
+    <circle cx="1500" cy="600" r="5" fill="#2B6CB0" />
+    <circle cx="1300" cy="250" r="5" fill="#2B6CB0" />
+    <circle cx="400" cy="400" r="5" fill="#2B6CB0" />
+    <circle cx="800" cy="800" r="5" fill="#2B6CB0" />
+    <circle cx="850" cy="750" r="5" fill="#2B6CB0" />
+    <circle cx="1300" cy="400" r="5" fill="#2B6CB0" />
   </g>
   
   <!-- Defs for gradients -->
   <defs>
     <linearGradient id="projects-gradient" x1="1920" y1="0" x2="0" y2="1080" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#F0F9FF" />
-      <stop offset="1" stop-color="#F8FAFC" />
+      <stop offset="0" stop-color="#F0F5FF" />
+      <stop offset="1" stop-color="#FEFCFF" />
     </linearGradient>
   </defs>
 </svg>

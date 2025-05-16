@@ -3,57 +3,127 @@
   <!-- Subtle gradient background -->
   <rect width="1920" height="1080" fill="url(#skills-gradient)" />
   
-  <!-- Skills visualization background elements -->
+  <!-- Skills abstract elements -->
   <g opacity="0.06">
-    <!-- Chart/graph abstract elements -->
-    <rect x="100" y="300" width="25" height="150" rx="5" fill="#2B6CB0" />
-    <rect x="150" y="250" width="25" height="200" rx="5" fill="#3182CE" />
-    <rect x="200" y="200" width="25" height="250" rx="5" fill="#2B6CB0" />
-    <rect x="250" y="150" width="25" height="300" rx="5" fill="#3182CE" />
-    <rect x="300" y="100" width="25" height="350" rx="5" fill="#2B6CB0" />
+    <!-- Skill bars pattern -->
+    <rect x="200" y="100" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="360" y="100" width="500" height="30" rx="15" fill="#3182CE" />
     
-    <rect x="500" y="250" width="25" height="200" rx="5" fill="#2B6CB0" />
-    <rect x="550" y="200" width="25" height="250" rx="5" fill="#3182CE" />
-    <rect x="600" y="150" width="25" height="300" rx="5" fill="#2B6CB0" />
-    <rect x="650" y="200" width="25" height="250" rx="5" fill="#3182CE" />
-    <rect x="700" y="250" width="25" height="200" rx="5" fill="#2B6CB0" />
+    <rect x="200" y="150" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="360" y="150" width="400" height="30" rx="15" fill="#3182CE" />
     
-    <rect x="900" y="225" width="25" height="225" rx="5" fill="#2B6CB0" />
-    <rect x="950" y="175" width="25" height="275" rx="5" fill="#3182CE" />
-    <rect x="1000" y="125" width="25" height="325" rx="5" fill="#2B6CB0" />
-    <rect x="1050" y="175" width="25" height="275" rx="5" fill="#3182CE" />
-    <rect x="1100" y="225" width="25" height="225" rx="5" fill="#2B6CB0" />
+    <rect x="200" y="200" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="360" y="200" width="600" height="30" rx="15" fill="#3182CE" />
     
-    <rect x="1300" y="275" width="25" height="175" rx="5" fill="#2B6CB0" />
-    <rect x="1350" y="225" width="25" height="225" rx="5" fill="#3182CE" />
-    <rect x="1400" y="175" width="25" height="275" rx="5" fill="#2B6CB0" />
-    <rect x="1450" y="225" width="25" height="225" rx="5" fill="#3182CE" />
-    <rect x="1500" y="275" width="25" height="175" rx="5" fill="#2B6CB0" />
+    <rect x="200" y="250" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="360" y="250" width="350" height="30" rx="15" fill="#3182CE" />
     
-    <rect x="1700" y="250" width="25" height="200" rx="5" fill="#2B6CB0" />
-    <rect x="1750" y="200" width="25" height="250" rx="5" fill="#3182CE" />
-    <rect x="1800" y="150" width="25" height="300" rx="5" fill="#2B6CB0" />
+    <rect x="200" y="300" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="360" y="300" width="450" height="30" rx="15" fill="#3182CE" />
     
-    <!-- Circular progress elements -->
-    <circle cx="200" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="410, 502" opacity="0.8" />
-    <circle cx="450" cy="700" r="80" stroke="#3182CE" stroke-width="10" stroke-dasharray="380, 502" opacity="0.7" />
-    <circle cx="700" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="440, 502" opacity="0.9" />
-    <circle cx="950" cy="700" r="80" stroke="#3182CE" stroke-width="10" stroke-dasharray="400, 502" opacity="0.8" />
-    <circle cx="1200" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="470, 502" opacity="0.95" />
-    <circle cx="1450" cy="700" r="80" stroke="#3182CE" stroke-width="10" stroke-dasharray="420, 502" opacity="0.85" />
-    <circle cx="1700" cy="700" r="80" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="450, 502" opacity="0.9" />
+    <!-- Programming languages pattern -->
+    <rect x="1000" y="100" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="1160" y="100" width="560" height="30" rx="15" fill="#3182CE" />
     
-    <!-- Connecting dot pattern -->
-    <path d="M100,900 L1800,900" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="10, 15" />
-    <path d="M100,950 L1800,950" stroke="#3182CE" stroke-width="1" stroke-dasharray="15, 20" />
-    <path d="M100,1000 L1800,1000" stroke="#2B6CB0" stroke-width="1" stroke-dasharray="20, 25" />
+    <rect x="1000" y="150" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="1160" y="150" width="400" height="30" rx="15" fill="#3182CE" />
+    
+    <rect x="1000" y="200" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="1160" y="200" width="300" height="30" rx="15" fill="#3182CE" />
+    
+    <rect x="1000" y="250" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="1160" y="250" width="500" height="30" rx="15" fill="#3182CE" />
+    
+    <rect x="1000" y="300" width="150" height="30" rx="3" fill="#2B6CB0" />
+    <rect x="1160" y="300" width="450" height="30" rx="15" fill="#3182CE" />
+    
+    <!-- Database pattern -->
+    <rect x="200" y="400" width="1520" height="200" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="220" y="420" width="200" height="30" rx="3" fill="#2B6CB0" />
+    
+    <rect x="220" y="470" width="150" height="20" rx="3" fill="#3182CE" />
+    <rect x="220" y="500" width="130" height="20" rx="3" fill="#3182CE" />
+    <rect x="220" y="530" width="170" height="20" rx="3" fill="#3182CE" />
+    <rect x="220" y="560" width="140" height="20" rx="3" fill="#3182CE" />
+    
+    <rect x="420" y="470" width="150" height="20" rx="3" fill="#3182CE" />
+    <rect x="420" y="500" width="130" height="20" rx="3" fill="#3182CE" />
+    <rect x="420" y="530" width="170" height="20" rx="3" fill="#3182CE" />
+    <rect x="420" y="560" width="140" height="20" rx="3" fill="#3182CE" />
+    
+    <rect x="620" y="470" width="150" height="20" rx="3" fill="#3182CE" />
+    <rect x="620" y="500" width="130" height="20" rx="3" fill="#3182CE" />
+    <rect x="620" y="530" width="170" height="20" rx="3" fill="#3182CE" />
+    <rect x="620" y="560" width="140" height="20" rx="3" fill="#3182CE" />
+    
+    <rect x="820" y="470" width="150" height="20" rx="3" fill="#3182CE" />
+    <rect x="820" y="500" width="130" height="20" rx="3" fill="#3182CE" />
+    <rect x="820" y="530" width="170" height="20" rx="3" fill="#3182CE" />
+    <rect x="820" y="560" width="140" height="20" rx="3" fill="#3182CE" />
+    
+    <rect x="1020" y="470" width="150" height="20" rx="3" fill="#3182CE" />
+    <rect x="1020" y="500" width="130" height="20" rx="3" fill="#3182CE" />
+    <rect x="1020" y="530" width="170" height="20" rx="3" fill="#3182CE" />
+    <rect x="1020" y="560" width="140" height="20" rx="3" fill="#3182CE" />
+    
+    <rect x="1220" y="470" width="150" height="20" rx="3" fill="#3182CE" />
+    <rect x="1220" y="500" width="130" height="20" rx="3" fill="#3182CE" />
+    <rect x="1220" y="530" width="170" height="20" rx="3" fill="#3182CE" />
+    <rect x="1220" y="560" width="140" height="20" rx="3" fill="#3182CE" />
+    
+    <rect x="1420" y="470" width="150" height="20" rx="3" fill="#3182CE" />
+    <rect x="1420" y="500" width="130" height="20" rx="3" fill="#3182CE" />
+    <rect x="1420" y="530" width="170" height="20" rx="3" fill="#3182CE" />
+    <rect x="1420" y="560" width="140" height="20" rx="3" fill="#3182CE" />
+    
+    <!-- Charts pattern -->
+    <circle cx="300" cy="700" r="100" stroke="#2B6CB0" stroke-width="3" fill="none" />
+    <path d="M300,700 L300,600" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M300,700 L380,650" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M300,700 L380,750" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M300,700 L300,800" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M300,700 L220,750" stroke="#2B6CB0" stroke-width="2" />
+    <path d="M300,700 L220,650" stroke="#2B6CB0" stroke-width="2" />
+    
+    <rect x="500" y="650" width="300" height="30" rx="3" fill="#3182CE" />
+    <rect x="500" y="690" width="400" height="30" rx="3" fill="#3182CE" />
+    <rect x="500" y="730" width="200" height="30" rx="3" fill="#3182CE" />
+    
+    <circle cx="1000" cy="700" r="100" stroke="#2B6CB0" stroke-width="3" fill="none" />
+    <path d="M1000,700 L1000,600" stroke="#2B6CB0" stroke-width="10" stroke-dasharray="10 5" />
+    <path d="M1000,700 L1080,650" stroke="#2B6CB0" stroke-width="25" stroke-dasharray="10 5" />
+    <path d="M1000,700 L1080,750" stroke="#2B6CB0" stroke-width="15" stroke-dasharray="10 5" />
+    <path d="M1000,700 L1000,800" stroke="#2B6CB0" stroke-width="20" stroke-dasharray="10 5" />
+    <path d="M1000,700 L920,750" stroke="#2B6CB0" stroke-width="30" stroke-dasharray="10 5" />
+    <path d="M1000,700 L920,650" stroke="#2B6CB0" stroke-width="5" stroke-dasharray="10 5" />
+    
+    <rect x="1200" y="650" width="300" height="30" rx="3" fill="#3182CE" />
+    <rect x="1200" y="690" width="400" height="30" rx="3" fill="#3182CE" />
+    <rect x="1200" y="730" width="200" height="30" rx="3" fill="#3182CE" />
+    
+    <!-- Code pattern -->
+    <rect x="200" y="900" width="1520" height="120" rx="10" stroke="#2B6CB0" stroke-width="2" fill="none" />
+    <rect x="220" y="920" width="400" height="15" rx="3" fill="#3182CE" />
+    <rect x="240" y="945" width="380" height="15" rx="3" fill="#3182CE" />
+    <rect x="260" y="970" width="360" height="15" rx="3" fill="#3182CE" />
+    <rect x="240" y="995" width="380" height="15" rx="3" fill="#3182CE" />
+    
+    <rect x="700" y="920" width="400" height="15" rx="3" fill="#3182CE" />
+    <rect x="720" y="945" width="380" height="15" rx="3" fill="#3182CE" />
+    <rect x="740" y="970" width="360" height="15" rx="3" fill="#3182CE" />
+    <rect x="720" y="995" width="380" height="15" rx="3" fill="#3182CE" />
+    
+    <rect x="1180" y="920" width="400" height="15" rx="3" fill="#3182CE" />
+    <rect x="1200" y="945" width="380" height="15" rx="3" fill="#3182CE" />
+    <rect x="1220" y="970" width="360" height="15" rx="3" fill="#3182CE" />
+    <rect x="1200" y="995" width="380" height="15" rx="3" fill="#3182CE" />
   </g>
   
   <!-- Defs for gradients -->
   <defs>
     <linearGradient id="skills-gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#F8FAFC" />
-      <stop offset="1" stop-color="#DBEAFE" />
+      <stop offset="0" stop-color="#EBF8FF" />
+      <stop offset="1" stop-color="#E6FFFA" />
     </linearGradient>
   </defs>
 </svg>
