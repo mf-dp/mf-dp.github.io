@@ -1,83 +1,41 @@
-import { useEffect } from "react";
-import { useLanguage } from "@/context/LanguageContext";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Conferences from "@/components/Conferences";
-import Education from "@/components/Education";
-import CareerHistory from "@/components/CareerHistory";
-import Articles from "@/components/Articles";
-import Contact from "@/components/Contact";
-import Resume from "@/components/Resume";
-import Memberships from "@/components/Memberships";
-import Footer from "@/components/Footer";
+import { useRef } from "react";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Education from "../components/Education";
+import Articles from "../components/Articles";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Resume from "../components/Resume";
+import Contact from "../components/Contact";
 
-export default function HomePage() {
-  const { t, language } = useLanguage();
-
-  // Set document title and meta description based on language
-  useEffect(() => {
-    document.title = t("meta.title");
-    
-    // Set meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", t("meta.description"));
-    } else {
-      const newMetaDescription = document.createElement("meta");
-      newMetaDescription.name = "description";
-      newMetaDescription.content = t("meta.description");
-      document.head.appendChild(newMetaDescription);
-    }
-    
-    // Set language attribute on html element
-    document.documentElement.lang = language;
-  }, [t, language]);
-
-  // Implement smooth scrolling
-  useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
-        e.preventDefault();
-        const id = target.getAttribute('href')?.slice(1);
-        if (!id) return;
-        
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }
-      }
-    };
-
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, []);
+const HomePage = () => {
+  // Refs for sections to allow scrolling
+  const aboutRef = useRef<HTMLElement>(null);
+  const educationRef = useRef<HTMLElement>(null);
+  const articlesRef = useRef<HTMLElement>(null);
+  const conferencesRef = useRef<HTMLElement>(null);
+  const membershipsRef = useRef<HTMLElement>(null);
+  const careerRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
+  const resumeRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Conferences />
-        <Education />
-        <CareerHistory />
-        <Articles />
-        <Memberships />
-        <Resume />
-        <Contact />
-      </main>
-      
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <About ref={aboutRef} id="about" />
+      <Education ref={educationRef} id="education" />
+      <Articles ref={articlesRef} id="articles" />
+      <div ref={conferencesRef} id="conferences" className="section-anchor"></div>
+      <div ref={membershipsRef} id="memberships" className="section-anchor"></div>
+      <div ref={careerRef} id="career" className="section-anchor"></div>
+      <Skills ref={skillsRef} id="skills" />
+      <Projects ref={projectsRef} id="projects" />
+      <Resume ref={resumeRef} id="resume" />
+      <Contact ref={contactRef} id="contact" />
+    </>
   );
-}
+};
+
+export default HomePage;

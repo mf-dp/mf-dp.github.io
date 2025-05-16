@@ -1,277 +1,141 @@
-import { useLanguage } from '@/context/LanguageContext';
-import { motion } from 'framer-motion';
-import { useInView } from '@/hooks/useIntersectionObserver';
-import { useRef } from 'react';
-import { FaDownload, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../utils/translations";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-export function Resume() {
-  const { t } = useLanguage();
-  const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
+const Resume: React.FC = () => {
+  const { language } = useLanguage();
+  const [sectionRef, isVisible] = useIntersectionObserver<HTMLDivElement>();
+  const [resumeRef, isResumeVisible] = useIntersectionObserver<HTMLDivElement>({
+    threshold: 0.1
+  });
+  
+  const t = translations[language as keyof typeof translations];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
+  const handleDownload = () => {
+    // In a real implementation, this would point to the actual CV file
+    alert("In a production environment, this would download the full CV.");
   };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
-  };
-
-  const career = t<any[]>('career.items', 'career');
-  const education = t<any[]>('education.items', 'education');
 
   return (
-    <section 
-      id="resume"
-      ref={sectionRef}
-      className="py-20 bg-white dark:bg-gray-900"
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold"
-            initial={{ opacity: 0, y: -20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            {t('resume.title')}
-          </motion.h2>
-          
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Button variant="outline" className="flex items-center gap-2">
-              <FaDownload className="text-sm" />
-              <span>{t('resume.download')}</span>
-            </Button>
-          </motion.div>
+    <section id="resume" className="py-16 md:py-24 bg-gray-50 dark:bg-dark-lighter">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          ref={sectionRef}
+          className={`text-center mb-16 transform transition-all duration-1000 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary dark:text-primary-light mb-4">
+            {t.resume.title}
+          </h2>
+          <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto"></div>
+          <p className="mt-6 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            {t.resume.intro}
+          </p>
         </div>
         
-        <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={containerVariants}
+        <div 
+          ref={resumeRef}
+          className={`max-w-4xl mx-auto bg-white dark:bg-dark rounded-xl shadow-lg p-8 mb-8 transform transition-all duration-1000 ${
+            isResumeVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
-          {/* Left Column */}
-          <motion.div 
-            className="space-y-8"
-            variants={itemVariants}
-          >
-            {/* Contact Information */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t('resume.contact')}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-2">
-                  <FaEnvelope className="text-primary" />
-                  <span>{t('contact.email')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaPhone className="text-primary" />
-                  <span>{t('contact.phone')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaMapMarkerAlt className="text-primary" />
-                  <span>{t('contact.location')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaGlobe className="text-primary" />
-                  <span>johnsmith.com</span>
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* Skills */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t('resume.skills')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div>
-                    <div className="flex justify-between">
-                      <span>UI/UX Design</span>
-                      <span>95%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '95%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>React / Next.js</span>
-                      <span>90%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>TypeScript</span>
-                      <span>85%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>Design Systems</span>
-                      <span>95%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '95%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>Node.js</span>
-                      <span>75%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '75%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* Languages */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t('resume.languages')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div>
-                    <div className="flex justify-between">
-                      <span>English</span>
-                      <span>Native</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '100%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>Spanish</span>
-                      <span>Fluent</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>German</span>
-                      <span>Basic</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">CURRICULUM VITAE</h3>
           
-          {/* Middle and Right Column */}
-          <motion.div 
-            className="lg:col-span-2 space-y-8"
-            variants={itemVariants}
-          >
-            {/* Summary */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t('resume.summary')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{t('resume.summaryText')}</p>
-              </CardContent>
-            </Card>
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-primary dark:text-primary-light mb-4">{t.resume.personalInfo}</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <p className="text-gray-700 dark:text-gray-300"><span className="font-semibold">{t.resume.name}:</span> Mahdieh</p>
+                <p className="text-gray-700 dark:text-gray-300"><span className="font-semibold">{t.resume.lastName}:</span> Fakhar Shahreza</p>
+                <p className="text-gray-700 dark:text-gray-300"><span className="font-semibold">{t.resume.dob}:</span> 08/06/1991</p>
+              </div>
+              <div>
+                <p className="text-gray-700 dark:text-gray-300"><span className="font-semibold">{t.resume.address}:</span> Madrid, Spain</p>
+                <p className="text-gray-700 dark:text-gray-300"><span className="font-semibold">{t.resume.email}:</span> mfsh.intl@gmail.com</p>
+                <p className="text-gray-700 dark:text-gray-300"><span className="font-semibold">{t.resume.phone}:</span> +34 624 81 01 66</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-primary dark:text-primary-light mb-4">{t.education.title}</h4>
+            <div className="space-y-6">
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-gray-100">{t.education.master1} at {t.education.school1} ({t.education.period1}).</p>
+              </div>
+              
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-gray-100">{t.education.master2} at {t.education.school2} ({t.education.period2})</p>
+                <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300">
+                  <li>{t.education.note2}</li>
+                  <li>{t.education.grade2}.</li>
+                  <li>{t.education.thesis2}.</li>
+                </ul>
+              </div>
+              
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-gray-100">{t.education.master3} at {t.education.school3} ({t.education.period3}).</p>
+                <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300">
+                  <li>{t.education.grade3}.</li>
+                  <li>{t.education.thesis3}.</li>
+                </ul>
+              </div>
+              
+              <div>
+                <p className="font-semibold text-gray-800 dark:text-gray-100">{t.education.bachelor} at {t.education.school4} ({t.education.period4}).</p>
+                <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300">
+                  <li>{t.education.grade4}.</li>
+                  <li>{t.education.thesis4}.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-primary dark:text-primary-light mb-4">{t.skills.languages}</h4>
+            <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <li>{t.skills.english}</li>
+              <li>{t.skills.spanish}</li>
+              <li>{t.skills.persian}</li>
+            </ul>
+          </div>
+          
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-primary dark:text-primary-light mb-4">{t.resume.scholarships}</h4>
+            <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <li>{t.resume.scholarship1}</li>
+            </ul>
+          </div>
+          
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-primary dark:text-primary-light mb-4">{t.resume.digitalSkills}</h4>
+            <p className="text-gray-700 dark:text-gray-300 mb-3">{t.resume.digitalSkillsText}</p>
             
-            {/* Work Experience */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t('resume.workExperience')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-6">
-                  {career.map((job, index) => (
-                    <div key={index} className={index < career.length - 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
-                      <div className="flex justify-between mb-2">
-                        <h3 className="font-semibold text-lg">{job.role}</h3>
-                        <span className="text-sm text-gray-600 dark:text-gray-400">{job.period}</span>
-                      </div>
-                      <h4 className="text-primary">{job.company}</h4>
-                      <p className="mt-2 text-gray-700 dark:text-gray-300">{job.description}</p>
-                      <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                        {job.achievements.slice(0, 2).map((achievement: string, idx: number) => (
-                          <li key={idx} className="text-sm">{achievement}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* Education */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t('resume.education')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-6">
-                  {education.slice(0, 2).map((edu, index) => (
-                    <div key={index} className={index < 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
-                      <div className="flex justify-between mb-2">
-                        <h3 className="font-semibold text-lg">{edu.degree}</h3>
-                        <span className="text-sm text-gray-600 dark:text-gray-400">{edu.period}</span>
-                      </div>
-                      <h4 className="text-primary">{edu.institution}</h4>
-                      <p className="mt-2 text-gray-700 dark:text-gray-300">{edu.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* References */}
-            <Card>
-              <CardHeader>
-                <CardTitle>{t('resume.references')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{t('resume.referencesAvailable')}</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </motion.div>
+            <p className="font-semibold text-gray-800 dark:text-gray-100 mt-4">{t.resume.coursesTitle}</p>
+            <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+              <li>{t.resume.course1}</li>
+              <li>{t.resume.course2}</li>
+              <li>{t.resume.course3}</li>
+              <li>{t.resume.course4}</li>
+            </ul>
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <button 
+              onClick={handleDownload}
+              className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-md font-medium transition duration-150 ease-in-out flex items-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+              </svg>
+              <span>{t.resume.download}</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Resume;

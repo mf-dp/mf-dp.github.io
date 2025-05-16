@@ -1,52 +1,38 @@
-import { useState, useEffect, RefObject } from 'react';
+import { useState, useEffect, useRef, RefObject } from 'react';
 
-interface UseIntersectionObserverOptions {
-  root?: Element | null;
+interface IntersectionObserverOptions {
+  root?: null | Element;
   rootMargin?: string;
   threshold?: number | number[];
-  once?: boolean;
 }
 
-export function useInView(
-  elementRef: RefObject<Element>,
-  options: UseIntersectionObserverOptions = {}
-): boolean {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const { root = null, rootMargin = '0px', threshold = 0, once = false } = options;
+export default function useIntersectionObserver<T extends Element>(
+  options: IntersectionObserverOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  }
+): [RefObject<T>, boolean] {
+  const elementRef = useRef<T>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // If entry is intersecting, set state to true
-        if (entry.isIntersecting) {
-          setIsIntersecting(true);
-          
-          // If once is true, disconnect the observer after first intersection
-          if (once && elementRef.current) {
-            observer.unobserve(elementRef.current);
-          }
-        } else {
-          // Only set to false if once is false
-          if (!once) {
-            setIsIntersecting(false);
-          }
-        }
-      },
-      { root, rootMargin, threshold }
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsVisible(entry.isIntersecting);
+    }, options);
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const currentElement = elementRef.current;
+
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
-  }, [elementRef, root, rootMargin, threshold, once]);
+  }, [options]);
 
-  return isIntersecting;
+  return [elementRef, isVisible];
 }
-
-export default useInView;

@@ -1,15 +1,34 @@
 import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
-import { useInView } from '@/hooks/useIntersectionObserver';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export function Articles() {
   const { t } = useLanguage();
-  const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+    
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,11 +46,9 @@ export function Articles() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  const articles = t<any[]>('articles.items', 'articles');
-
   // Get category color based on category name
   const getCategoryColor = (category: string) => {
-    const colors = {
+    const colors: Record<string, string> = {
       'UX Design': 'blue',
       'Development': 'green',
       'Design Systems': 'purple',
@@ -42,7 +59,7 @@ export function Articles() {
       'Investigación de Usuario': 'red'
     };
     
-    return colors[category as keyof typeof colors] || 'gray';
+    return colors[category] || 'gray';
   };
 
   return (

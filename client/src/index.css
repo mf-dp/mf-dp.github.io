@@ -56,3 +56,72 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+/* Timeline styles */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: rgba(30, 90, 135, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  width: 50%;
+  padding-right: 2.5rem;
+}
+
+.timeline-item.right {
+  left: 50%;
+  padding-left: 2.5rem;
+  padding-right: 0;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -10px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -10px;
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #1e5a87;
+  border-radius: 50%;
+  top: 1.5rem;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .timeline-container::after {
+    left: 31px;
+  }
+  
+  .timeline-item,
+  .timeline-item.right,
+  .timeline-item.left {
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 0;
+    left: 0;
+  }
+  
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 21px;
+    right: auto;
+  }
+}

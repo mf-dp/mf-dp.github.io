@@ -1,52 +1,26 @@
-import { useState } from 'react';
-import { useLanguage } from '@/context/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { useLanguage } from "../context/LanguageContext";
 
-export function LanguageSwitcher() {
+const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
 
-  const handleLanguageChange = (newLang: 'en' | 'es') => {
-    setLanguage(newLang);
-    setIsOpen(false);
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "es" : "en");
   };
 
   return (
-    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-      <DropdownMenuTrigger asChild>
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800"
-          aria-label="Select language"
-        >
-          <Globe className="h-5 w-5 mr-1" />
-          <span className="text-sm font-medium">{language.toUpperCase()}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem 
-          onClick={() => handleLanguageChange('en')}
-          className={language === 'en' ? 'bg-gray-100 dark:bg-gray-700' : ''}
-        >
-          <span className="mr-2">🇺🇸</span> English
-        </DropdownMenuItem>
-        <DropdownMenuItem 
-          onClick={() => handleLanguageChange('es')}
-          className={language === 'es' ? 'bg-gray-100 dark:bg-gray-700' : ''}
-        >
-          <span className="mr-2">🇪🇸</span> Español
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <button
+      onClick={toggleLanguage}
+      className="flex items-center space-x-1 rounded-md py-1 px-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light transition-colors duration-200"
+      aria-label={`Switch to ${language === "en" ? "Spanish" : "English"}`}
+    >
+      <span className="mr-1">
+        {language === "en" ? "🇬🇧" : "🇪🇸"}
+      </span>
+      <span className="text-xs font-medium">
+        {language.toUpperCase()}
+      </span>
+    </button>
   );
-}
+};
 
 export default LanguageSwitcher;
