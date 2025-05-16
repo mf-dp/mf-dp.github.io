@@ -15,7 +15,6 @@ import ContactPage from "@/pages/ContactPage";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { SEO } from "@/components/SEO";
-import Sidebar from "@/components/Sidebar";
 
 function Router() {
   return (
@@ -41,12 +40,7 @@ function App() {
           <TooltipProvider>
             <SEO />
             <Toaster />
-            <div className="flex">
-              <Sidebar />
-              <div className="flex-1 pl-64">
-                <Router />
-              </div>
-            </div>
+            <Router />
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
