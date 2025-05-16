@@ -30,23 +30,23 @@ export function Resume() {
   // Sample data for career
   const career = [
     {
-      role: "Senior UX Designer",
-      company: "Google",
-      period: "2019 - Present",
-      description: "Leading UX design for enterprise product suite. Responsible for establishing design systems, conducting user research, and mentoring junior designers.",
+      role: "Research Assistant",
+      company: "UNED (ATLAS Research Group)",
+      period: "2022 - Present",
+      description: "Conducting research on educational technology, data analysis, and digital competence in language teaching contexts.",
       achievements: [
-        "Led the redesign of Admin Console, improving task completion rate by 35%",
-        "Established a comprehensive component library used by 200+ designers"
+        "Collaborated on IHUPA (Humanities and Heritage Research Institute UNED-Alcañiz) project",
+        "Participated in AGORA technological and methodological innovations project"
       ]
     },
     {
-      role: "UI/UX Designer",
-      company: "Amazon",
-      period: "2017 - 2019",
-      description: "Designed user interfaces for mobile and web applications within the retail ecosystem.",
+      role: "Data Analyst and Database Specialist",
+      company: "Independent Research",
+      period: "2019 - 2022",
+      description: "Specialized in bibliometric and scientometric analysis using advanced analytical tools and techniques.",
       achievements: [
-        "Redesigned checkout process, resulting in 15% increase in conversion rate",
-        "Created responsive designs for multiple key user flows"
+        "Developed bibliometric analyses for academic research projects",
+        "Improved data visualization techniques for research presentations"
       ]
     }
   ];
@@ -54,16 +54,16 @@ export function Resume() {
   // Sample data for education
   const education = [
     {
-      degree: "Master's in Computer Science",
-      institution: "Stanford University",
-      period: "2015 - 2017",
-      description: "Specialized in Human-Computer Interaction and User Experience Design. Graduated with honors."
+      degree: "Master's in Big Data and Data Science",
+      institution: "UNIR",
+      period: "2025 - 2026",
+      description: "Currently a Momentum master student studying data science and big data."
     },
     {
-      degree: "Bachelor's in Information Technology",
-      institution: "MIT",
-      period: "2011 - 2015",
-      description: "Focus on web technologies and software engineering. Graduated summa cum laude."
+      degree: "Master's in Information and Communication Technologies",
+      institution: "UNED",
+      period: "2022 - 2024",
+      description: "Selected in 2023 as one of the top 100 online master's programs in Spain (ranked 3rd in Education)."
     }
   ];
 
@@ -127,7 +127,7 @@ export function Resume() {
                 </div>
                 <div className="flex items-center gap-2">
                   <FaGlobe className="text-primary" />
-                  <span>johnsmith.com</span>
+                  <span>mahdiehfakhar.com</span>
                 </div>
               </CardContent>
             </Card>
@@ -141,7 +141,7 @@ export function Resume() {
                 <div className="space-y-2">
                   <div>
                     <div className="flex justify-between">
-                      <span>UI/UX Design</span>
+                      <span>Data Analysis with R</span>
                       <span>95%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
@@ -151,17 +151,7 @@ export function Resume() {
                   
                   <div>
                     <div className="flex justify-between">
-                      <span>React / Next.js</span>
-                      <span>90%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>TypeScript</span>
+                      <span>Python</span>
                       <span>85%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
@@ -171,7 +161,7 @@ export function Resume() {
                   
                   <div>
                     <div className="flex justify-between">
-                      <span>Design Systems</span>
+                      <span>Bibliometric Analysis</span>
                       <span>95%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
@@ -181,11 +171,11 @@ export function Resume() {
                   
                   <div>
                     <div className="flex justify-between">
-                      <span>Node.js</span>
-                      <span>75%</span>
+                      <span>Database Management</span>
+                      <span>80%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '75%' }}></div>
+                      <div className="bg-primary h-2 rounded-full" style={{ width: '80%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -202,16 +192,6 @@ export function Resume() {
                   <div>
                     <div className="flex justify-between">
                       <span>English</span>
-                      <span>Native</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '100%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between">
-                      <span>Spanish</span>
                       <span>Fluent</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
@@ -221,11 +201,21 @@ export function Resume() {
                   
                   <div>
                     <div className="flex justify-between">
-                      <span>German</span>
-                      <span>Basic</span>
+                      <span>Spanish</span>
+                      <span>Native</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
-                      <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }}></div>
+                      <div className="bg-primary h-2 rounded-full" style={{ width: '100%' }}></div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div className="flex justify-between">
+                      <span>Persian</span>
+                      <span>Native</span>
+                    </div>
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full mt-1">
+                      <div className="bg-primary h-2 rounded-full" style={{ width: '100%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -244,7 +234,7 @@ export function Resume() {
                 <CardTitle>{t('resume.summary')}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{t('resume.summaryText')}</p>
+                <p>Experienced Data Scientist and Researcher specializing in bibliometric analysis, data visualization, and educational technology. Skilled in R, Python, and various data analysis tools with a strong academic background.</p>
               </CardContent>
             </Card>
             
@@ -263,9 +253,9 @@ export function Resume() {
                       </div>
                       <h4 className="text-primary">{job.company}</h4>
                       <p className="mt-2 text-gray-700 dark:text-gray-300">{job.description}</p>
-                      {job.achievements && Array.isArray(job.achievements) && job.achievements.length > 0 && (
+                      {job.achievements && (
                         <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
-                          {job.achievements.slice(0, 2).map((achievement: string, idx: number) => (
+                          {job.achievements.map((achievement, idx) => (
                             <li key={idx} className="text-sm">{achievement}</li>
                           ))}
                         </ul>
@@ -283,8 +273,8 @@ export function Resume() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {education.slice(0, 2).map((edu, index) => (
-                    <div key={index} className={index < 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
+                  {education.map((edu, index) => (
+                    <div key={index} className={index < education.length - 1 ? "pb-6 border-b border-gray-200 dark:border-gray-700" : ""}>
                       <div className="flex justify-between mb-2">
                         <h3 className="font-semibold text-lg">{edu.degree}</h3>
                         <span className="text-sm text-gray-600 dark:text-gray-400">{edu.period}</span>
