@@ -5,9 +5,17 @@ import { Resume } from "@/components/Resume";
 
 export default function ResumePage() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main 
+      className="flex flex-col min-h-screen"
+      style={{
+        backgroundImage: "url('/backgrounds/resume-bg.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
+    >
       <SEO 
-        title="Resume - Mahdieh Fakhar"
+        title="MAHDIEH FAKHAR - Resume"
         description="Professional resume of Mahdieh Fakhar, highlighting education, experience, and achievements."
       />
       <Header />

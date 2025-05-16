@@ -5,9 +5,17 @@ import { Contact } from "@/components/Contact";
 
 export default function ContactPage() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main 
+      className="flex flex-col min-h-screen"
+      style={{
+        backgroundImage: "url('/backgrounds/contact-bg.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
+    >
       <SEO 
-        title="Contact - Mahdieh Fakhar"
+        title="MAHDIEH FAKHAR - Contact"
         description="Get in touch with Mahdieh Fakhar for collaboration, speaking engagements, or research opportunities."
       />
       <Header />
