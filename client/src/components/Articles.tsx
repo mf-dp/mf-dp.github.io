@@ -107,7 +107,7 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                 
                 return (
                   <motion.div key={`journal-${index}`} variants={itemVariants}>
-                    <Card className="overflow-hidden min-h-[550px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col border-gray-200 shadow-lg bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 dark:border-gray-700">
+                    <Card className="overflow-hidden min-h-[550px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col border-gray-200 shadow-md bg-blue-50 dark:bg-gray-800 dark:border-gray-700">
                       <CardContent className="p-6 flex-1 flex flex-col">
                         <div className="flex justify-between items-start mb-4">
                           <Badge 
@@ -190,7 +190,7 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
               {groupedArticles.conferences.map((article: any, index: number) => {
                 return (
                   <motion.div key={`conference-${index}`} variants={itemVariants}>
-                    <Card className="overflow-hidden min-h-[550px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col border-gray-200 shadow-lg bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 dark:border-gray-700">
+                    <Card className="overflow-hidden min-h-[550px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col border-gray-200 shadow-md bg-blue-50 dark:bg-gray-800 dark:border-gray-700">
                       <CardContent className="p-6 flex-1 flex flex-col">
                         <div className="flex justify-between items-start mb-4">
                           <Badge 
