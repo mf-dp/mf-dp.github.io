@@ -7,7 +7,6 @@ import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import { MFLogo } from '@/assets/MFLogo';
 import { Link, useLocation } from 'wouter';
-import { motion } from 'framer-motion';
 
 export function Header() {
   const { t } = useLanguage();
@@ -106,7 +105,7 @@ export function Header() {
                 (item.path !== '/' && location.startsWith(item.path));
               
               return (
-                <a 
+                <Link 
                   key={item.id}
                   href={item.path} 
                   className={`font-medium px-3 py-2 rounded-md transition-all duration-300 ${
@@ -121,7 +120,7 @@ export function Header() {
                       className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-0.5 rounded-full"
                     />
                   )}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -142,7 +141,7 @@ export function Header() {
                     (item.path !== '/' && location.startsWith(item.path));
                   
                   return (
-                    <a 
+                    <Link 
                       key={item.id}
                       href={item.path}
                       onClick={handleMobileMenuClose}
@@ -158,7 +157,7 @@ export function Header() {
                           className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-1 w-1/3 rounded-full"
                         />
                       )}
-                    </a>
+                    </Link>
                   );
                 })}
               </nav>
