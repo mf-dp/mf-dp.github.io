@@ -230,34 +230,81 @@ export const translations = {
       title: "Articles & Publications",
       readArticle: "Read Article",
       viewAllButton: "View All Articles",
+      journalTab: "Journal Publications",
+      conferenceTab: "Conference Papers",
+      subtitle: "Scholarly publications in language learning, educational technology, and data science",
       items: [
         {
           title: "Approaches on Machine Translation: Quality Assessment, Acceptance, and Language Trends",
           category: "Translation Technology",
           date: "2024 (in press)",
           description: "Research article investigating approaches to machine translation, focusing on quality assessment, user acceptance, and language trends in the field.",
-          link: "https://doi.org/10.1075/ttmc"
+          link: "https://doi.org/10.1075/ttmc",
+          type: "journal",
+          authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P."
         },
         {
           title: "Two Decades of Technology-Mediated Reading Enhancement: A Systematic Review and Bibliometric Analysis",
           category: "Educational Technology",
           date: "2024 (in press)",
           description: "Comprehensive systematic review and bibliometric analysis of technology-mediated reading enhancement over the past twenty years.",
-          link: "https://www.peterlang.com/"
+          link: "https://www.peterlang.com/",
+          type: "journal",
+          authors: "Fakhar Shahreza, M."
         },
         {
           title: "The Study of EFL Students' Self-Regulation, Locus of Control, and Academic Achievement through Mobile-Assisted Language Learning",
           category: "Language Learning",
           date: "2023",
           description: "Research study on the impact of mobile applications on language learning, focusing on self-regulation, locus of control, and academic achievement of English language learners.",
-          link: "https://doi.org/10.1075/ttmc"
+          link: "https://www.comares.com/libro/positive-impacts-of-mall_135583/",
+          type: "journal",
+          authors: "Fakhar Shahreza, M., Barcena Madera, E., & Khany, R."
         },
         {
           title: "Development, Factor Analysis, and Validation of an EFL Teacher Change Scale (TCS)",
           category: "Education Research",
           date: "2016",
           description: "Development and validation of a measurement scale for assessing changes in teaching practices among English as a Foreign Language (EFL) teachers.",
-          link: "https://journals.modares.ac.ir/article-14-11064-en.html"
+          link: "https://journals.modares.ac.ir/article-14-11064-en.html",
+          type: "journal",
+          authors: "Khany, R. & Fakhar Shahreza, M."
+        },
+        {
+          title: "Social Media in Higher Education: Case Studies, Reflections, and Analysis",
+          category: "Book Review",
+          date: "2022",
+          description: "A review of the book edited by C. Rowel, discussing case studies, reflections, and analysis of social media use in higher education contexts.",
+          link: "https://www.researchgate.net/publication/358943346_Social_Media_in_Higher_Education_Case_Studies_Reflections_and_Analysis",
+          type: "journal",
+          authors: "Fakhar Shahreza, M."
+        },
+        {
+          title: "Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills: The Case of Medium App",
+          category: "Conference Paper",
+          date: "2022",
+          venue: "19th International TELLSI Conference, Birjand University, Iran",
+          description: "Research presentation investigating how the Medium platform affects writing skills and critical thinking abilities of English language learners.",
+          type: "conference",
+          authors: "Khany, R., & Fakhar Shahreza, M."
+        },
+        {
+          title: "Visualized Network of Online Interactions in an Ed-Tech Enhanced EFL Language Learning Context Using Gephi Software",
+          category: "Conference Paper",
+          date: "2021",
+          venue: "18th International TELLSI Conference, Tarbiat Modares University, Iran",
+          description: "Presentation demonstrating network visualization techniques for analyzing online interactions in education technology contexts for language learning.",
+          type: "conference", 
+          authors: "Khany, R., & Fakhar Shahreza, M."
+        },
+        {
+          title: "Iranian University Students' Familiarity with Digital Portfolio Creation Tools during the COVID-19 Pandemic: Merits, Demerits",
+          category: "Conference Paper",
+          date: "2021",
+          venue: "International Conference on Current Trends in the Middle East, Virtual International Joint Conference on COVID-19",
+          description: "Research exploring Iranian students' knowledge and use of digital portfolio tools during the pandemic, highlighting benefits and challenges.",
+          type: "conference",
+          authors: "Aliakbari, M., & Fakhar Shahreza, M."
         }
       ]
     },
