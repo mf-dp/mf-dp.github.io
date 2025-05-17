@@ -7,14 +7,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   const quickLinks = [
-    { id: 'about', label: t('nav.about'), href: '/about' },
-    { id: 'education', label: 'Education', href: '/resume' },
-    { id: 'articles', label: t('nav.articles'), href: '/articles' },
-    { id: 'skills', label: t('nav.skills'), href: '/skills' },
-    { id: 'contact', label: t('nav.contact'), href: '/contact' },
     { id: 'home', label: t('nav.home'), href: '/' },
+    { id: 'about', label: t('nav.about'), href: '/about' },
+    { id: 'education', label: 'Education', href: '/education' },
+    { id: 'career', label: 'Career History', href: '/career' },
+    { id: 'skills', label: t('nav.skills'), href: '/skills' },
     { id: 'projects', label: t('nav.projects'), href: '/projects' },
+    { id: 'articles', label: t('nav.articles'), href: '/articles' },
     { id: 'conferences', label: t('nav.conferences'), href: '/conferences' },
+    { id: 'memberships', label: 'Memberships', href: '/memberships' },
+    { id: 'resume', label: 'Resume', href: '/resume' },
+    { id: 'contact', label: t('nav.contact'), href: '/contact' },
   ];
 
   return (

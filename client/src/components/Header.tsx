@@ -29,10 +29,14 @@ export function Header() {
   const navItems = [
     { id: 'home', label: t('nav.home'), path: '/' },
     { id: 'about', label: t('nav.about'), path: '/about' },
+    { id: 'education', label: 'Education', path: '/education' },
+    { id: 'career', label: 'Career History', path: '/career' },
     { id: 'skills', label: t('nav.skills'), path: '/skills' },
     { id: 'projects', label: t('nav.projects'), path: '/projects' },
-    { id: 'conferences', label: t('nav.conferences'), path: '/conferences' },
     { id: 'articles', label: t('nav.articles'), path: '/articles' },
+    { id: 'conferences', label: t('nav.conferences'), path: '/conferences' },
+    { id: 'memberships', label: 'Memberships', path: '/memberships' },
+    { id: 'resume', label: 'Resume', path: '/resume' },
     { id: 'contact', label: t('nav.contact'), path: '/contact' },
   ];
 
