@@ -339,7 +339,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <Card className="overflow-hidden h-full shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-200 dark:border-gray-700 dark:hover:border-blue-800 transition-all duration-300 bg-white dark:bg-gray-900 backdrop-blur-sm">
+              <Card className="overflow-hidden h-full shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-200 dark:border-gray-700 dark:hover:border-blue-800 transition-all duration-300 bg-blue-50 dark:bg-gray-900 backdrop-blur-sm">
                 <motion.div 
                   className="relative overflow-hidden"
                   variants={imageVariants}
@@ -417,7 +417,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                         </motion.div>
                       </motion.button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[600px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-blue-200 dark:border-blue-800">
+                    <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto bg-blue-50/95 dark:bg-gray-900/95 backdrop-blur-sm border-blue-200 dark:border-blue-800">
                       <DialogHeader>
                         <DialogTitle className="flex items-center gap-2">
                           <motion.span
