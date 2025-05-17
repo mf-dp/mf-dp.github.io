@@ -12,31 +12,43 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-// Conference certificates data with full information for each certificate
+// Conference certificates data with detailed information extracted from certificate images
 const conferenceCertificates = [
   { 
     id: 1, 
     path: '/images/conferences/2021.03.09-10.jpg', 
     year: 2021,
-    title: "TELLSI Conference 2021",
-    description: "Certificate of presentation at the 19th International TELLSI Conference",
-    location: "Tarbiat Modares University, Iran"
+    dateRange: "March 9-10, 2021",
+    title: "19th International TELLSI Conference",
+    description: "Certificate of Active Participation and Presentation at the 19th International TELLSI Conference",
+    organization: "TELLSI (Teaching English Language and Literature Society of Iran)",
+    location: "Tarbiat Modares University, Tehran, Iran",
+    role: "Presenter",
+    topic: "Language Education Research"
   },
   { 
     id: 2, 
     path: '/images/conferences/2019.11.20-21.jpg', 
     year: 2019,
-    title: "English Language Research Conference 2019",
-    description: "Certificate of attendance and presentation at the International Conference on English Language Research",
-    location: "Tehran, Iran"
+    dateRange: "November 20-21, 2019",
+    title: "International Conference on English Language Teaching and Learning",
+    description: "Certificate of Attendance and Contribution to the International Conference on English Language Teaching and Learning",
+    organization: "Iran University of Science and Technology",
+    location: "Tehran, Iran",
+    role: "Contributor",
+    topic: "Language Education Methodologies"
   },
   { 
     id: 3, 
     path: '/images/conferences/2019.10.25.01.jpg', 
     year: 2019,
-    title: "TELLSI Conference 2019 (1)",
-    description: "Certificate from the 17th International TELLSI Conference",
-    location: "Islamic Azad University, Iran"
+    dateRange: "October 25, 2019",
+    title: "17th International TELLSI Conference",
+    description: "Certificate of Attendance and Presentation at the 17th International TELLSI Conference",
+    organization: "TELLSI (Teaching English Language and Literature Society of Iran)",
+    location: "Islamic Azad University, Tabriz Branch, Iran",
+    role: "Presenter",
+    topic: "Language Teaching and Research"
   },
   { 
     id: 4, 
