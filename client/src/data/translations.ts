@@ -241,8 +241,7 @@ export const translations = {
           description: "This study proposes an optimal approach in item-based evaluation by utilizing Rasch-preselected items to enhance assessment accuracy and efficiency.",
           link: "https://www.researchgate.net/publication/370591206_Rasch-Preselected_Items_An_Optimal_Approach_in_Item-based_Evaluation",
           type: "journal",
-          authors: "Khany, R., Fakhar Shahreza, M., & Barcena Madera, M.E.",
-          journal: "Article"
+          authors: "Khany, R., Fakhar Shahreza, M., & Barcena Madera, M.E."
         },
         {
           title: "The study of EFL Students' Self-Regulation, Locus of Control, and Academic Achievement through Mobile-Assisted Language Learning; The Case of Duolingo® App",
@@ -251,9 +250,7 @@ export const translations = {
           description: "This study examines the effectiveness of the Duolingo® app on students' academic achievement, focusing on self-regulation and locus of control among EFL learners.",
           link: "https://www.researchgate.net/publication/370590863_The_study_of_EFL_Students_Self-Regulation_",
           type: "journal",
-          authors: "Fakhar Shahreza, M., Barcena Madera, M.E., & Khany, R.",
-          journal: "Positive Impacts of MALL",
-          publisher: "Comares"
+          authors: "Fakhar Shahreza, M., Barcena Madera, M.E., & Khany, R."
         },
         {
           title: "Social media in higher education: case studies, reflections and analysis",
@@ -262,34 +259,7 @@ export const translations = {
           description: "This article reflects on the role of social media in higher education, analyzing various case studies to understand its impact on teaching and learning processes.",
           link: "https://www.researchgate.net/publication/364507413_Social_media_in_higher_education_case_studies_reflections_and_analysis",
           type: "journal",
-          authors: "Fakhar Shahreza, M.",
-          publisher: "Open Book Publishers",
-          location: "Cambridge, UK",
-          isbn: "978-1-78374-668-2",
-          format: "Book Review"
-        },
-        {
-          title: "Approaches on Machine Translation: Quality Assessment, Acceptance, and Language Trends",
-          category: "Translation Technology",
-          date: "2024 (in press)",
-          description: "Research article investigating approaches to machine translation, focusing on quality assessment, user acceptance, and language trends in the field.",
-          link: "https://www.researchgate.net/publication/374539452_Approaches_on_Machine_Translation_Quality_Assessment_Acceptance_and_Language_Trends",
-          type: "journal",
-          authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P.",
-          journal: "Journal of Translation and Translanguaging in Multilingual Contexts",
-          note: "Special Issue on Machine Translation"
-        },
-        {
-          title: "Two Decades of Technology-Mediated Reading Enhancement: A Systematic Review and Bibliometric Analysis",
-          category: "Educational Technology",
-          date: "2024 (in press)",
-          description: "Comprehensive systematic review and bibliometric analysis of technology-mediated reading enhancement over the past twenty years.",
-          link: "https://www.researchgate.net/publication/374539565_Two_Decades_of_Technology-Mediated_Reading_Enhancement_A_Systematic_Review_and_Bibliometric_Analysis",
-          type: "journal",
-          authors: "Fakhar Shahreza, M.",
-          journal: "The Bumpy Road to Reading in the Digital Age",
-          publisher: "Peter Lang",
-          editors: "Bárcena, E. & Goicoechea, M. (Eds.)"
+          authors: "Fakhar Shahreza, M."
         },
         {
           title: "Development, Factor Analysis, and Validation of an EFL Teacher Change Scale (TCS)",
@@ -298,11 +268,7 @@ export const translations = {
           description: "The study focuses on developing and validating a reliable scale to measure teacher change in EFL contexts, providing insights into professional development and instructional transformation.",
           link: "https://www.researchgate.net/publication/370590863_Development_Factor_Analysis_and_Validation_of_an_EFL_Teacher_Change_Scale_TCS",
           type: "journal",
-          authors: "Khany, R. & Fakhar Shahreza, M.",
-          journal: "Journal of Applied Linguistic Studies",
-          volume: "8",
-          issue: "2",
-          pages: "123-158"
+          authors: "Khany, R., & Fakhar Shahreza, M."
         },
         {
           title: "Visualized Network of Online Interactions in an Ed-Tech Enhanced EFL Language Learning Context Using Gephi Software",
@@ -325,10 +291,10 @@ export const translations = {
           authors: "Khany, R., & Fakhar Shahreza, M."
         },
         {
-          title: "Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills: The Case of Medium App",
+          title: "Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills; The Case of Medium App",
           category: "Conference Paper",
           date: "Sep 2022",
-          venue: "19th International TELLSI Conference, Birjand University, Iran",
+          venue: "19th International TELLSI Conference",
           description: "This study examines the impact of the Medium app as an online writing platform on EFL students' writing and critical thinking skills, highlighting the benefits of learner-contributed approaches.",
           link: "https://www.researchgate.net/publication/370590860_Investigating_the_Impacts_of_an_Online_Writing_Platform_on_EFL",
           type: "conference",
@@ -338,7 +304,7 @@ export const translations = {
           title: "Iranian University Students' Familiarity with Digital Portfolio Creation Tools during the COVID-19 Pandemic: Merits, Demerits",
           category: "Conference Paper",
           date: "May 2021",
-          venue: "International Conference on Current Trends in the Middle East, Virtual International Joint Conference on COVID-19",
+          venue: "International Conference on Current Trends in the Middle East",
           description: "The research explores Iranian university students' familiarity with digital portfolio tools during the COVID-19 pandemic, discussing the advantages and challenges encountered.",
           link: "https://www.researchgate.net/publication/370590859_Iranian_University_Students_Familiarity_with_Digital_Portfolio_Creation_Tools_d",
           type: "conference",
@@ -725,11 +691,10 @@ export const translations = {
           title: "Rasch-Preselected Items: An Optimal Approach in Item-based Evaluation",
           category: "Metodología de Investigación",
           date: "Oct 2023",
-          description: "Este estudio presenta un enfoque para la evaluación basada en ítems utilizando el análisis Rasch para la preselección de ítems, optimizando los métodos de evaluación en contextos educativos.",
+          description: "Este estudio propone un enfoque óptimo en la evaluación basada en ítems mediante la utilización de ítems preseleccionados con Rasch para mejorar la precisión y eficiencia de la evaluación.",
           link: "https://www.researchgate.net/publication/370591206_Rasch-Preselected_Items_An_Optimal_Approach_in_Item-based_Evaluation",
           type: "journal",
-          authors: "Khany, R., Fakhar Shahreza, M., & Barcena Madera, M.E.",
-          journal: "Artículo"
+          authors: "Khany, R., Fakhar Shahreza, M., & Barcena Madera, M.E."
         },
         {
           title: "The study of EFL Students' Self-Regulation, Locus of Control, and Academic Achievement through Mobile-Assisted Language Learning; The Case of Duolingo® App",
@@ -738,45 +703,16 @@ export const translations = {
           description: "Este estudio examina la efectividad de la aplicación Duolingo® en el rendimiento académico de los estudiantes, centrándose en la autorregulación y el locus de control entre estudiantes de inglés como lengua extranjera.",
           link: "https://www.researchgate.net/publication/370590863_The_study_of_EFL_Students_Self-Regulation_",
           type: "journal",
-          authors: "Fakhar Shahreza, M., Barcena Madera, M.E., & Khany, R.",
-          journal: "Positive Impacts of MALL",
-          publisher: "Comares"
+          authors: "Fakhar Shahreza, M., Barcena Madera, M.E., & Khany, R."
         },
         {
-          title: "Approaches on Machine Translation: Quality Assessment, Acceptance, and Language Trends",
-          category: "Tecnología de Traducción",
-          date: "2024 (en prensa)",
-          description: "Artículo de investigación que estudia enfoques de traducción automática, centrándose en la evaluación de calidad, aceptación del usuario y tendencias lingüísticas en el campo.",
-          link: "https://www.researchgate.net/publication/374539452_Approaches_on_Machine_Translation_Quality_Assessment_Acceptance_and_Language_Trends",
-          type: "journal",
-          authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P.",
-          journal: "Journal of Translation and Translanguaging in Multilingual Contexts",
-          note: "Número Especial sobre Traducción Automática"
-        },
-        {
-          title: "Two Decades of Technology-Mediated Reading Enhancement: A Systematic Review and Bibliometric Analysis",
-          category: "Tecnología Educativa",
-          date: "2024 (en prensa)",
-          description: "Revisión sistemática exhaustiva y análisis bibliométrico de la mejora de la lectura mediada por tecnología durante las últimas dos décadas.",
-          link: "https://www.researchgate.net/publication/374539565_Two_Decades_of_Technology-Mediated_Reading_Enhancement_A_Systematic_Review_and_Bibliometric_Analysis",
-          type: "journal",
-          authors: "Fakhar Shahreza, M.",
-          journal: "The Bumpy Road to Reading in the Digital Age",
-          publisher: "Peter Lang",
-          editors: "Bárcena, E. & Goicoechea, M. (Eds.)"
-        },
-        {
-          title: "Social Media in Higher Education: Case Studies, Reflections, and Analysis",
+          title: "Social media in higher education: case studies, reflections and analysis",
           category: "Reseña de Libro",
           date: "Oct 2022",
           description: "Este artículo reflexiona sobre el papel de las redes sociales en la educación superior, analizando varios estudios de caso para comprender su impacto en los procesos de enseñanza y aprendizaje.",
           link: "https://www.researchgate.net/publication/364507413_Social_media_in_higher_education_case_studies_reflections_and_analysis",
           type: "journal",
-          authors: "Fakhar Shahreza, M.",
-          publisher: "Open Book Publishers",
-          location: "Cambridge, UK",
-          isbn: "978-1-78374-668-2",
-          format: "Reseña de Libro"
+          authors: "Fakhar Shahreza, M."
         },
         {
           title: "Development, Factor Analysis, and Validation of an EFL Teacher Change Scale (TCS)",
@@ -785,39 +721,45 @@ export const translations = {
           description: "El estudio se centra en desarrollar y validar una escala confiable para medir el cambio docente en contextos de EFL, proporcionando información sobre el desarrollo profesional y la transformación instruccional.",
           link: "https://www.researchgate.net/publication/370590863_Development_Factor_Analysis_and_Validation_of_an_EFL_Teacher_Change_Scale_TCS",
           type: "journal",
-          authors: "Khany, R. & Fakhar Shahreza, M.",
-          journal: "Journal of Applied Linguistic Studies",
-          volume: "8",
-          issue: "2",
-          pages: "123-158"
-        },
-        {
-          title: "Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills: The Case of Medium App",
-          category: "Ponencia de Conferencia",
-          date: "2022",
-          venue: "19ª Conferencia Internacional TELLSI, Universidad de Birjand, Irán",
-          description: "Presentación de investigación que estudia cómo la plataforma Medium afecta las habilidades de escritura y pensamiento crítico de los estudiantes de inglés.",
-          link: "https://www.researchgate.net/publication/365510453_Investigating_the_Impacts_of_an_Online_Writing_Platform_on_EFL_Students'_Writing_and_Critical_Thinking_Skills_The_Case_of_Medium_App",
-          type: "conference",
-          authors: "Khany, R., & Fakhar Shahreza, M."
+          authors: "Khany, R. & Fakhar Shahreza, M."
         },
         {
           title: "Visualized Network of Online Interactions in an Ed-Tech Enhanced EFL Language Learning Context Using Gephi Software",
           category: "Ponencia de Conferencia",
-          date: "2021",
-          venue: "18ª Conferencia Internacional TELLSI, Universidad Tarbiat Modares, Irán",
-          description: "Presentación que demuestra técnicas de visualización de redes para analizar interacciones en línea en contextos de tecnología educativa para el aprendizaje de idiomas.",
-          link: "https://www.researchgate.net/publication/354825307_Visualized_Network_of_Online_Interactions_in_an_Ed-Tech_Enhanced_EFL_Language_Learning_Context_Using_Gephi_Software", 
+          date: "May 2023",
+          venue: "Conferencia de Tecnología Educativa",
+          description: "Este estudio utiliza el Análisis de Redes Sociales (SNA) para explorar las interacciones en un contexto de aprendizaje de EFL mejorado por tecnología educativa, empleando el software Gephi para la visualización.",
+          link: "https://www.researchgate.net/publication/370590862_Visualized_Network_of_Online_Interactions_in_an_Ed-Tech_Enhanced_EFL_Language_Learning_Context",
           type: "conference", 
+          authors: "Khany, R., & Fakhar Shahreza, M."
+        },
+        {
+          title: "Investigating the effects of teachers' self-leadership on their professional development and change",
+          category: "Ponencia de Conferencia",
+          date: "May 2023",
+          venue: "Simposio de Desarrollo Profesional",
+          description: "El artículo investiga la relación entre el auto-liderazgo de los profesores de EFL y su desarrollo profesional y cambio, utilizando Modelado de Ecuaciones Estructurales (SEM) para el análisis de datos.",
+          link: "https://www.researchgate.net/publication/370590861_Investigating_the_effects_of_teachers_self-leadership_on_their_professional_development_and_change",
+          type: "conference", 
+          authors: "Khany, R., & Fakhar Shahreza, M."
+        },
+        {
+          title: "Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills; The Case of Medium App",
+          category: "Ponencia de Conferencia",
+          date: "Sep 2022",
+          venue: "19ª Conferencia Internacional TELLSI",
+          description: "Este estudio examina el impacto de la aplicación Medium como plataforma de escritura en línea sobre las habilidades de escritura y pensamiento crítico de los estudiantes de EFL, destacando los beneficios de los enfoques contribuidos por los estudiantes.",
+          link: "https://www.researchgate.net/publication/370590860_Investigating_the_Impacts_of_an_Online_Writing_Platform_on_EFL",
+          type: "conference",
           authors: "Khany, R., & Fakhar Shahreza, M."
         },
         {
           title: "Iranian University Students' Familiarity with Digital Portfolio Creation Tools during the COVID-19 Pandemic: Merits, Demerits",
           category: "Ponencia de Conferencia",
-          date: "2021",
-          venue: "Conferencia Internacional sobre Tendencias Actuales en Oriente Medio, Conferencia Conjunta Virtual Internacional sobre COVID-19",
-          description: "Investigación que explora el conocimiento y uso de herramientas de portafolio digital por parte de estudiantes iraníes durante la pandemia, destacando beneficios y desafíos.",
-          link: "https://www.researchgate.net/publication/355991622_Iranian_University_Students'_Familiarity_with_Digital_Portfolio_Creation_Tools_during_the_COVID-19_Pandemic_Merits_Demerits",
+          date: "May 2021",
+          venue: "Conferencia Internacional sobre Tendencias Actuales en Oriente Medio",
+          description: "La investigación explora la familiaridad de los estudiantes universitarios iraníes con las herramientas de creación de portafolios digitales durante la pandemia de COVID-19, discutiendo las ventajas y desafíos encontrados.",
+          link: "https://www.researchgate.net/publication/370590859_Iranian_University_Students_Familiarity_with_Digital_Portfolio_Creation_Tools_d",
           type: "conference",
           authors: "Aliakbari, M., & Fakhar Shahreza, M."
         }
