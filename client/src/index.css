@@ -52,7 +52,32 @@
     @apply border-border;
   }
 
-  body {
+  html, body {
     @apply font-sans antialiased text-foreground;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
   }
+}
+
+/* Background image for the entire site */
+body {
+  background-image: url('/background-image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Dark overlay for better readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
 }
