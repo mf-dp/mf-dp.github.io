@@ -23,7 +23,7 @@ export default function ConferencesPage() {
       />
       <Header />
       <div className="flex-grow">
-        <Conferences />
+        <Conferences showAll={true} />
       </div>
       <Footer />
     </main>

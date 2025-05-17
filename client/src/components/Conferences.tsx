@@ -122,7 +122,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
   };
 
   // Get conferences from translations
-  const conferencesData = t('conferences.items') as any[];
+  const conferencesData = t('conferences.items') as unknown as any[];
   const allConferences = Array.isArray(conferencesData) ? conferencesData : [];
   
   // If we're not showing all (on homepage), limit to 6 most recent conferences
@@ -264,7 +264,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
           animate={controls}
           variants={containerVariants}
         >
-          {conferences.map((conference, index) => (
+          {conferences.map((conference: any, index: number) => (
             <motion.div 
               key={index} 
               variants={itemVariants}
