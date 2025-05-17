@@ -1,8 +1,8 @@
 import { useLanguage } from '@/context/LanguageContext';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
-import { useRef } from 'react';
-import { FaPaintBrush, FaCode, FaToolbox, FaComments, FaDatabase, FaSearch, FaChartBar, FaLaptopCode } from 'react-icons/fa';
+import { useRef, useEffect } from 'react';
+import { FaPaintBrush, FaCode, FaToolbox, FaComments, FaDatabase, FaSearch, FaChartBar, FaLaptopCode, FaBrain, FaRobot, FaNetworkWired, FaCloudUploadAlt } from 'react-icons/fa';
 
 // Define skill item type
 interface SkillItem {
@@ -21,22 +21,74 @@ interface SkillCategory {
 export function Skills() {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
+  const isInView = useInView(sectionRef, { once: true, threshold: 0.2 });
+  const controls = useAnimation();
+  
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1
+        staggerChildren: 0.15,
+        delayChildren: 0.2
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+    hidden: { y: 30, opacity: 0 },
+    visible: { 
+      y: 0, 
+      opacity: 1, 
+      transition: { 
+        type: "spring", 
+        stiffness: 100, 
+        damping: 10,
+        duration: 0.7 
+      } 
+    }
+  };
+  
+  const skillBarVariants = {
+    hidden: { width: 0, opacity: 0 },
+    visible: (custom: number) => ({
+      width: `${custom * 20}%`,
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+        ease: "easeOut",
+        delay: 0.3
+      }
+    })
+  };
+  
+  const iconVariants = {
+    hidden: { scale: 0.8, opacity: 0, rotate: -10 },
+    visible: { 
+      scale: 1, 
+      opacity: 1, 
+      rotate: 0,
+      transition: {
+        type: "spring",
+        stiffness: 150,
+        damping: 15
+      }
+    },
+    hover: { 
+      scale: 1.2, 
+      rotate: 5,
+      transition: { 
+        type: "spring", 
+        stiffness: 400, 
+        damping: 10 
+      } 
+    }
   };
 
   // Create sample skill data to ensure the component still renders
