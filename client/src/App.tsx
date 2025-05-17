@@ -15,7 +15,6 @@ import ContactPage from "@/pages/ContactPage";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { SEO } from "@/components/SEO";
-import AIPatternBackground from "@/components/AIPatternBackground";
 
 function Router() {
   return (
