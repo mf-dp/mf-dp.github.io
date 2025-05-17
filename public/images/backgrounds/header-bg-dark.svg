@@ -3,36 +3,36 @@
   
   <!-- Professional abstract elements -->
   <g opacity="0.2">
-    <circle cx="100" cy="50" r="20" fill="#26A69A" />
-    <circle cx="1350" cy="80" r="30" fill="#26A69A" />
-    <circle cx="720" cy="170" r="15" fill="#26A69A" />
+    <circle cx="100" cy="50" r="20" fill="#4B9FFF" />
+    <circle cx="1350" cy="80" r="30" fill="#4B9FFF" />
+    <circle cx="720" cy="170" r="15" fill="#4B9FFF" />
     
-    <path d="M200 20C200 20 300 80 400 50C500 20 600 100 700 80C800 60 900 10 1000 40C1100 70 1200 30 1300 60" stroke="#26A69A" stroke-width="2" />
+    <path d="M200 20C200 20 300 80 400 50C500 20 600 100 700 80C800 60 900 10 1000 40C1100 70 1200 30 1300 60" stroke="#4B9FFF" stroke-width="2" />
     
-    <path d="M100 120C100 120 200 170 300 140C400 110 500 180 600 150C700 120 800 160 900 130C1000 100 1100 150 1200 120C1300 90 1400 140 1500 110" stroke="#26A69A" stroke-width="2" />
+    <path d="M100 120C100 120 200 170 300 140C400 110 500 180 600 150C700 120 800 160 900 130C1000 100 1100 150 1200 120C1300 90 1400 140 1500 110" stroke="#4B9FFF" stroke-width="2" />
     
     <!-- Digital circuit-like lines -->
-    <path d="M0 100H1440" stroke="#26A69A" stroke-width="0.5" stroke-dasharray="10 5" />
-    <path d="M0 50H1440" stroke="#26A69A" stroke-width="0.5" stroke-dasharray="5 10" />
-    <path d="M0 150H1440" stroke="#26A69A" stroke-width="0.5" stroke-dasharray="8 8" />
+    <path d="M0 100H1440" stroke="#4B9FFF" stroke-width="0.5" stroke-dasharray="10 5" />
+    <path d="M0 50H1440" stroke="#4B9FFF" stroke-width="0.5" stroke-dasharray="5 10" />
+    <path d="M0 150H1440" stroke="#4B9FFF" stroke-width="0.5" stroke-dasharray="8 8" />
     
     <!-- Vertical connection lines -->
-    <path d="M200 0V200" stroke="#26A69A" stroke-width="0.5" stroke-dasharray="5 10" />
-    <path d="M600 0V200" stroke="#26A69A" stroke-width="0.5" stroke-dasharray="8 8" />
-    <path d="M1000 0V200" stroke="#26A69A" stroke-width="0.5" stroke-dasharray="10 5" />
+    <path d="M200 0V200" stroke="#4B9FFF" stroke-width="0.5" stroke-dasharray="5 10" />
+    <path d="M600 0V200" stroke="#4B9FFF" stroke-width="0.5" stroke-dasharray="8 8" />
+    <path d="M1000 0V200" stroke="#4B9FFF" stroke-width="0.5" stroke-dasharray="10 5" />
     
     <!-- Connection nodes -->
-    <circle cx="200" cy="50" r="3" fill="#26A69A" />
-    <circle cx="200" cy="100" r="3" fill="#26A69A" />
-    <circle cx="200" cy="150" r="3" fill="#26A69A" />
+    <circle cx="200" cy="50" r="3" fill="#4B9FFF" />
+    <circle cx="200" cy="100" r="3" fill="#4B9FFF" />
+    <circle cx="200" cy="150" r="3" fill="#4B9FFF" />
     
-    <circle cx="600" cy="50" r="3" fill="#26A69A" />
-    <circle cx="600" cy="100" r="3" fill="#26A69A" />
-    <circle cx="600" cy="150" r="3" fill="#26A69A" />
+    <circle cx="600" cy="50" r="3" fill="#4B9FFF" />
+    <circle cx="600" cy="100" r="3" fill="#4B9FFF" />
+    <circle cx="600" cy="150" r="3" fill="#4B9FFF" />
     
-    <circle cx="1000" cy="50" r="3" fill="#26A69A" />
-    <circle cx="1000" cy="100" r="3" fill="#26A69A" />
-    <circle cx="1000" cy="150" r="3" fill="#26A69A" />
+    <circle cx="1000" cy="50" r="3" fill="#4B9FFF" />
+    <circle cx="1000" cy="100" r="3" fill="#4B9FFF" />
+    <circle cx="1000" cy="150" r="3" fill="#4B9FFF" />
   </g>
   
   <!-- Gradient definition for dark background -->
