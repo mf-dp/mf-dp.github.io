@@ -1,16 +1,23 @@
 import { useLanguage } from '@/context/LanguageContext';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
-import { useRef } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import { useRef, useState, useEffect } from 'react';
+import { FaArrowRight, FaSearch } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useQuery } from '@tanstack/react-query';
+import { getQueryFn } from '@/lib/queryClient';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 export function Articles() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
+  const [searchTopic, setSearchTopic] = useState('');
+  const [searchQuery, setSearchQuery] = useState(''); // Track actual query for API call
 
+  // Define animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -27,21 +34,59 @@ export function Articles() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
   };
 
-  // Get articles from translations
-  const articlesData = t('articles.items');
-  const articles = Array.isArray(articlesData) ? articlesData : [];
+  // Fetch article recommendations based on search topic
+  const { data: searchResults, isLoading: searchLoading } = useQuery({
+    queryKey: ['/api/articles/search', searchQuery],
+    queryFn: getQueryFn({ on401: "returnNull" }),
+    enabled: !!searchQuery, // Only run query when searchQuery is not empty
+  });
 
-  // Get category color based on category name
+  // Fetch all articles when no search is performed
+  const { data: allArticlesData, isLoading: allArticlesLoading } = useQuery({
+    queryKey: ['/api/articles'],
+    queryFn: getQueryFn({ on401: "returnNull" }),
+    enabled: !searchQuery, // Only run query when searchQuery is empty
+  });
+  
+  // Determine which articles to display
+  const articlesData = searchQuery ? 
+    searchResults?.data : 
+    allArticlesData?.data;
+  
+  const articles = Array.isArray(articlesData) ? articlesData : [];
+  
+  // Handle search form submission
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSearchQuery(searchTopic);
+  };
+  
+  // Reset search
+  const handleReset = () => {
+    setSearchTopic('');
+    setSearchQuery('');
+  };
+
+  // Get category color based on category name for visual distinction
   const getCategoryColor = (category: string) => {
     const colors = {
-      'UX Design': 'blue',
-      'Development': 'green',
-      'Design Systems': 'purple',
-      'User Research': 'red',
-      'Diseño UX': 'blue',
-      'Desarrollo': 'green',
-      'Sistemas de Diseño': 'purple',
-      'Investigación de Usuario': 'red'
+      'Research Methods': 'blue',
+      'Data Analysis': 'green',
+      'Education': 'purple',
+      'Educational Technology': 'indigo',
+      'Data Science': 'red',
+      'Network Analysis': 'emerald',
+      'Research Evaluation': 'amber',
+      'Data Sources': 'cyan',
+      // Spanish translations
+      'Métodos de Investigación': 'blue',
+      'Análisis de Datos': 'green',
+      'Educación': 'purple',
+      'Tecnología Educativa': 'indigo',
+      'Ciencia de Datos': 'red',
+      'Análisis de Redes': 'emerald',
+      'Evaluación de Investigación': 'amber',
+      'Fuentes de Datos': 'cyan'
     };
     
     return colors[category as keyof typeof colors] || 'gray';
