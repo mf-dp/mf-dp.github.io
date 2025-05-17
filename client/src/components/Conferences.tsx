@@ -479,7 +479,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ delay: 0.5, duration: 0.4 }}
                             >
-                              <FaMicrophone className="mr-2 text-primary dark:text-primary" />
+                              <span className="mr-2 text-primary dark:text-primary">🏆</span>
                               <span>{conference.role}</span>
                             </motion.div>
                           )}

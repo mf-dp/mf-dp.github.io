@@ -6,12 +6,14 @@ import { Menu } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import { MFLogo } from '@/assets/MFLogo';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
+import { motion } from 'framer-motion';
 
 export function Header() {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,16 +77,39 @@ export function Header() {
 
         {/* Bottom Row: Navigation (Center) */}
         <div className="hidden md:flex justify-center">
-          <nav className="flex flex-wrap justify-center gap-4">
-            {navItems.map(item => (
-              <Link 
-                key={item.id} 
-                href={item.path} 
-                className="font-medium hover:text-primary transition-colors px-2"
-              >
-                {item.label}
-              </Link>
-            ))}
+          <nav className="flex flex-wrap justify-center gap-3">
+            {navItems.map(item => {
+              const isActive = location === item.path || 
+                (item.path !== '/' && location.startsWith(item.path));
+              
+              return (
+                <motion.div 
+                  key={item.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link 
+                    href={item.path} 
+                    className={`font-medium px-3 py-2 rounded-md transition-all duration-300 ${
+                      isActive 
+                        ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 shadow-sm' 
+                        : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                    }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <motion.div
+                        className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-0.5 rounded-full"
+                        layoutId="activeNavIndicator"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    )}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </nav>
         </div>
 
@@ -97,17 +122,39 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-6 pt-6">
-                {navItems.map(item => (
-                  <Link 
-                    key={item.id} 
-                    href={item.path} 
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                    onClick={handleMobileMenuClose}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+              <nav className="flex flex-col space-y-3 pt-6">
+                {navItems.map(item => {
+                  const isActive = location === item.path || 
+                    (item.path !== '/' && location.startsWith(item.path));
+                  
+                  return (
+                    <motion.div
+                      key={item.id}
+                      whileHover={{ x: 5 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Link 
+                        href={item.path} 
+                        className={`block text-lg font-medium p-2 rounded-md ${
+                          isActive 
+                            ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' 
+                            : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                        }`}
+                        onClick={handleMobileMenuClose}
+                      >
+                        {item.label}
+                        {isActive && (
+                          <motion.div
+                            className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-1 w-1/3 rounded-full"
+                            initial={{ width: 0 }}
+                            animate={{ width: '33%' }}
+                            transition={{ duration: 0.3 }}
+                          />
+                        )}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
               </nav>
             </SheetContent>
           </Sheet>
