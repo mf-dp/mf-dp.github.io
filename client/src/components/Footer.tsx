@@ -7,12 +7,12 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   const navItems = [
-    { id: 'about', label: t('nav.about') },
-    { id: 'skills', label: t('nav.skills') },
-    { id: 'projects', label: t('nav.projects') },
-    { id: 'conferences', label: t('nav.conferences') },
-    { id: 'articles', label: t('nav.articles') },
-    { id: 'contact', label: t('nav.contact') },
+    { id: 'about', label: t('nav.about'), href: '/about' },
+    { id: 'skills', label: t('nav.skills'), href: '/skills' },
+    { id: 'projects', label: t('nav.projects'), href: '/projects' },
+    { id: 'conferences', label: t('nav.conferences'), href: '/conferences' },
+    { id: 'articles', label: t('nav.articles'), href: '/articles' },
+    { id: 'contact', label: t('nav.contact'), href: '/contact' },
   ];
 
   return (
@@ -28,7 +28,7 @@ export function Footer() {
             {navItems.map(item => (
               <a 
                 key={item.id} 
-                href={`#${item.id}`} 
+                href={item.href} 
                 className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
               >
                 {item.label}

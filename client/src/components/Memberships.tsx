@@ -60,7 +60,20 @@ export function Memberships() {
                     <FaUsers className="text-primary text-xl" />
                   </div>
                   
-                  <h3 className="text-xl font-semibold mb-2">{membership.organization}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {membership.url ? (
+                      <a 
+                        href={membership.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-primary transition-colors"
+                      >
+                        {membership.organization}
+                      </a>
+                    ) : (
+                      membership.organization
+                    )}
+                  </h3>
                   
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-gray-600 dark:text-gray-400">{membership.role}</span>
