@@ -4,8 +4,8 @@ import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
 import { FaLinkedin, FaGithub, FaGlobe, FaFileAlt } from 'react-icons/fa';
 import { LazyImage } from '@/components/ui/lazy-image';
-// Use path to the profile image in assets folder
-const profileImagePath = '/src/assets/mahdieh-profile.jpg';
+// Use path to the profile image in public folder
+const profileImagePath = '/images/profile/mahdieh-profile.jpg';
 
 export function About() {
   const { t } = useLanguage();
