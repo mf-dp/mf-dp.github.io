@@ -448,14 +448,14 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                         </motion.div>
                       </motion.button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[600px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-amber-200 dark:border-amber-800">
+                    <DialogContent className="sm:max-w-[600px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-blue-200 dark:border-blue-800">
                       <DialogHeader>
                         <DialogTitle className="flex items-center gap-2">
                           <motion.span
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"
+                            className="text-2xl font-bold text-primary"
                           >
                             {conference.title}
                           </motion.span>
@@ -463,7 +463,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.3, delay: 0.1 }}
-                            className="text-sm font-normal text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/30 px-2 py-1 rounded-full"
+                            className="text-sm font-normal text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded-full"
                           >
                             {conference.year}
                           </motion.span>
@@ -482,7 +482,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                           className="overflow-hidden rounded-xl shadow-md"
                         >
                           <LazyImage 
-                            src={conferenceImages[index % conferenceImages.length]} 
+                            src={conference.path} 
                             alt={conference.title} 
                             className="w-full h-72 object-cover" 
                             placeholderBlur={true}
