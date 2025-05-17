@@ -41,14 +41,14 @@ export function Conferences() {
   const [selectedConference, setSelectedConference] = useState<any | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   
-  // Colors for the conference section - using orange theme
-  const orangeTheme = {
-    primary: 'text-orange-600 dark:text-orange-500',
-    secondary: 'text-orange-700 dark:text-orange-400',
-    background: 'from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/10',
-    heading: 'text-orange-600 dark:text-orange-400',
-    card: 'border-orange-200 dark:border-orange-800 hover:border-orange-400 dark:hover:border-orange-600',
-    cardBg: 'hover:bg-orange-50 dark:hover:bg-orange-900/20'
+  // Colors for the conference section - using blue theme (same as site theme)
+  const themeColors = {
+    primary: 'text-primary dark:text-primary',
+    secondary: 'text-blue-700 dark:text-blue-400',
+    background: 'from-blue-50 to-blue-100/30 dark:from-blue-900/20 dark:to-blue-800/10',
+    heading: 'text-primary dark:text-primary',
+    card: 'border-blue-200 dark:border-blue-800 hover:border-primary dark:hover:border-primary',
+    cardBg: 'hover:bg-blue-50 dark:hover:bg-blue-900/20'
   };
   
   useEffect(() => {
@@ -127,20 +127,20 @@ export function Conferences() {
 
   // Conference images from the extracted zip file
   const conferenceImages = [
-    '/images/conferences/Conference/2018.11.14-16.jpg',
-    '/images/conferences/Conference/2019.01-02.30-01.01.jpg',
-    '/images/conferences/Conference/2019.10.25.01.jpg',
-    '/images/conferences/Conference/2019.11.20-21.jpg',
-    '/images/conferences/Conference/2017.01.25-27.jpg',
-    '/images/conferences/Conference/2016.11.16-18.jpg',
-    '/images/conferences/Conference/2015.11.17-19.01.jpg',
-    '/images/conferences/Conference/2016.05.12-13.jpg',
-    '/images/conferences/Conference/2018.04.25-27.jpg',
-    '/images/conferences/Conference/2018.09.04-05.jpg',
-    '/images/conferences/Conference/2019.01-02.30-01.02.jpg',
-    '/images/conferences/Conference/2019.01-02.30-01.03.jpg',
-    '/images/conferences/Conference/2019.10.25.02.jpg',
-    '/images/conferences/Conference/2021.03.09-10.jpg'
+    '/images/conferences/2018.11.14-16.jpg',
+    '/images/conferences/2019.01-02.30-01.01.jpg',
+    '/images/conferences/2019.10.25.01.jpg',
+    '/images/conferences/2019.11.20-21.jpg',
+    '/images/conferences/2017.01.25-27.jpg',
+    '/images/conferences/2016.11.16-18.jpg',
+    '/images/conferences/2015.11.17-19.01.jpg',
+    '/images/conferences/2016.05.12-13.jpg',
+    '/images/conferences/2018.04.25-27.jpg',
+    '/images/conferences/2018.09.04-05.jpg',
+    '/images/conferences/2019.01-02.30-01.02.jpg',
+    '/images/conferences/2019.01-02.30-01.03.jpg',
+    '/images/conferences/2019.10.25.02.jpg',
+    '/images/conferences/2021.03.09-10.jpg'
   ];
 
   const openConferenceDetails = (conference: any) => {
@@ -151,12 +151,12 @@ export function Conferences() {
     <section 
       id="conferences"
       ref={sectionRef}
-      className="py-24 relative overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-gray-900"
+      className="py-24 relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/40 dark:to-gray-900"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
-          className="absolute bottom-0 right-0 w-96 h-96 md:w-[600px] md:h-[600px] bg-gradient-to-br from-amber-100/20 to-orange-100/10 dark:from-amber-900/10 dark:to-orange-900/5 rounded-full blur-3xl"
+          className="absolute bottom-0 right-0 w-96 h-96 md:w-[600px] md:h-[600px] bg-gradient-to-br from-blue-100/20 to-blue-200/10 dark:from-blue-900/10 dark:to-blue-800/5 rounded-full blur-3xl"
           animate={{ 
             scale: [0.8, 1, 0.8],
             opacity: [0.3, 0.5, 0.3], 
@@ -234,7 +234,7 @@ export function Conferences() {
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-primary dark:text-primary"
           initial={{ opacity: 0, y: -20 }}
           animate={controls}
           variants={{
