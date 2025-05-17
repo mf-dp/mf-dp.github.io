@@ -112,24 +112,14 @@ export function Resume() {
             {/* Contact Information */}
             <Card>
               <CardHeader>
-                <CardTitle>{t('resume.contact')}</CardTitle>
+                <CardTitle className="text-center">{t('resume.more')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-center gap-2">
-                  <FaEnvelope className="text-primary" />
-                  <span>{t('contact.email')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaPhone className="text-primary" />
-                  <span>{t('contact.phone')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaMapMarkerAlt className="text-primary" />
-                  <span>{t('contact.location')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaGlobe className="text-primary" />
-                  <span>mahdiehfakhar.com</span>
+                <div className="flex items-center justify-center gap-2">
+                  <a href="/contact" className="text-primary hover:text-primary-dark transition-colors flex items-center gap-2">
+                    <FaEnvelope className="text-primary" />
+                    <span>{t('resume.contactPage')}</span>
+                  </a>
                 </div>
               </CardContent>
             </Card>
