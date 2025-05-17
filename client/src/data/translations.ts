@@ -599,34 +599,81 @@ export const translations = {
       title: "Artículos y Publicaciones",
       readArticle: "Leer Artículo",
       viewAllButton: "Ver Todos los Artículos",
+      journalTab: "Publicaciones en Revistas",
+      conferenceTab: "Ponencias en Conferencias",
+      subtitle: "Publicaciones académicas en aprendizaje de idiomas, tecnología educativa y ciencia de datos",
       items: [
         {
-          title: "Diseñando para Accesibilidad: Una Guía Práctica",
-          category: "Diseño UX",
-          date: "15 Jun, 2023",
-          description: "Aprende cómo hacer tus productos digitales más accesibles con estas pautas prácticas y ejemplos del mundo real.",
-          link: "https://example.com/article1"
+          title: "Approaches on Machine Translation: Quality Assessment, Acceptance, and Language Trends",
+          category: "Tecnología de Traducción",
+          date: "2024 (en prensa)",
+          description: "Artículo de investigación que estudia enfoques de traducción automática, centrándose en la evaluación de calidad, aceptación del usuario y tendencias lingüísticas en el campo.",
+          link: "https://doi.org/10.1075/ttmc",
+          type: "journal",
+          authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P."
         },
         {
-          title: "Construyendo Aplicaciones React de Alto Rendimiento",
-          category: "Desarrollo",
-          date: "22 Abr, 2023",
-          description: "Técnicas avanzadas para optimizar aplicaciones React para un mejor rendimiento y experiencia de usuario.",
-          link: "https://example.com/article2"
+          title: "Two Decades of Technology-Mediated Reading Enhancement: A Systematic Review and Bibliometric Analysis",
+          category: "Tecnología Educativa",
+          date: "2024 (en prensa)",
+          description: "Revisión sistemática exhaustiva y análisis bibliométrico de la mejora de la lectura mediada por tecnología durante las últimas dos décadas.",
+          link: "https://www.peterlang.com/",
+          type: "journal",
+          authors: "Fakhar Shahreza, M."
         },
         {
-          title: "Creando un Sistema de Diseño Escalable desde Cero",
-          category: "Sistemas de Diseño",
-          date: "8 Feb, 2023",
-          description: "El proceso completo de construcción de un sistema de diseño que puede crecer con las necesidades de tu organización.",
-          link: "https://example.com/article3"
+          title: "The Study of EFL Students' Self-Regulation, Locus of Control, and Academic Achievement through Mobile-Assisted Language Learning",
+          category: "Aprendizaje de Idiomas",
+          date: "2023",
+          description: "Estudio de investigación sobre el impacto de las aplicaciones móviles en el aprendizaje de idiomas, centrándose en la autorregulación, el locus de control y el rendimiento académico de los estudiantes de inglés.",
+          link: "https://www.comares.com/libro/positive-impacts-of-mall_135583/",
+          type: "journal",
+          authors: "Fakhar Shahreza, M., Barcena Madera, E., & Khany, R."
         },
         {
-          title: "Técnicas Efectivas de Entrevista de Usuario",
-          category: "Investigación de Usuario",
-          date: "3 Ene, 2023",
-          description: "Cómo extraer insights valiosos durante entrevistas de usuario y aplicarlos a tu proceso de desarrollo de producto.",
-          link: "https://example.com/article4"
+          title: "Development, Factor Analysis, and Validation of an EFL Teacher Change Scale (TCS)",
+          category: "Investigación Educativa",
+          date: "2016",
+          description: "Desarrollo y validación de una escala de medición para evaluar los cambios en las prácticas de enseñanza entre profesores de inglés como lengua extranjera (EFL).",
+          link: "https://journals.modares.ac.ir/article-14-11064-en.html",
+          type: "journal",
+          authors: "Khany, R. & Fakhar Shahreza, M."
+        },
+        {
+          title: "Social Media in Higher Education: Case Studies, Reflections, and Analysis",
+          category: "Reseña de Libro",
+          date: "2022",
+          description: "Una reseña del libro editado por C. Rowel, que analiza estudios de casos, reflexiones y análisis del uso de las redes sociales en contextos de educación superior.",
+          link: "https://www.researchgate.net/publication/358943346_Social_Media_in_Higher_Education_Case_Studies_Reflections_and_Analysis",
+          type: "journal",
+          authors: "Fakhar Shahreza, M."
+        },
+        {
+          title: "Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills: The Case of Medium App",
+          category: "Ponencia de Conferencia",
+          date: "2022",
+          venue: "19ª Conferencia Internacional TELLSI, Universidad de Birjand, Irán",
+          description: "Presentación de investigación que estudia cómo la plataforma Medium afecta las habilidades de escritura y pensamiento crítico de los estudiantes de inglés.",
+          type: "conference",
+          authors: "Khany, R., & Fakhar Shahreza, M."
+        },
+        {
+          title: "Visualized Network of Online Interactions in an Ed-Tech Enhanced EFL Language Learning Context Using Gephi Software",
+          category: "Ponencia de Conferencia",
+          date: "2021",
+          venue: "18ª Conferencia Internacional TELLSI, Universidad Tarbiat Modares, Irán",
+          description: "Presentación que demuestra técnicas de visualización de redes para analizar interacciones en línea en contextos de tecnología educativa para el aprendizaje de idiomas.",
+          type: "conference", 
+          authors: "Khany, R., & Fakhar Shahreza, M."
+        },
+        {
+          title: "Iranian University Students' Familiarity with Digital Portfolio Creation Tools during the COVID-19 Pandemic: Merits, Demerits",
+          category: "Ponencia de Conferencia",
+          date: "2021",
+          venue: "Conferencia Internacional sobre Tendencias Actuales en Oriente Medio, Conferencia Conjunta Virtual Internacional sobre COVID-19",
+          description: "Investigación que explora el conocimiento y uso de herramientas de portafolio digital por parte de estudiantes iraníes durante la pandemia, destacando beneficios y desafíos.",
+          type: "conference",
+          authors: "Aliakbari, M., & Fakhar Shahreza, M."
         }
       ]
     },
