@@ -241,43 +241,57 @@ export const translations = {
           description: "Research article investigating approaches to machine translation, focusing on quality assessment, user acceptance, and language trends in the field.",
           link: "https://www.researchgate.net/publication/374539452_Approaches_on_Machine_Translation_Quality_Assessment_Acceptance_and_Language_Trends",
           type: "journal",
-          authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P."
+          authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P.",
+          journal: "Translation and Translanguaging in Multilingual Contexts (Special Issue)",
+          doi: "10.1075/ttmc"
         },
         {
           title: "Two Decades of Technology-Mediated Reading Enhancement: A Systematic Review and Bibliometric Analysis",
           category: "Educational Technology",
           date: "2024 (in press)",
-          description: "Comprehensive systematic review and bibliometric analysis of technology-mediated reading enhancement over the past twenty years.",
+          description: "Comprehensive systematic review and bibliometric analysis of technology-mediated reading enhancement over the past twenty years. This study examines reading enhancement technologies and their effectiveness in educational contexts.",
           link: "https://www.researchgate.net/publication/374539565_Two_Decades_of_Technology-Mediated_Reading_Enhancement_A_Systematic_Review_and_Bibliometric_Analysis",
           type: "journal",
-          authors: "Fakhar Shahreza, M."
+          authors: "Fakhar Shahreza, M.",
+          journal: "The Bumpy Road to Reading in the Digital Age (Peter Lang Publishers)",
+          editors: "Bárcena, E. & Goicoechea, M. (Eds.)"
         },
         {
           title: "The Study of EFL Students' Self-Regulation, Locus of Control, and Academic Achievement through Mobile-Assisted Language Learning",
           category: "Language Learning",
           date: "2023",
-          description: "Research study on the impact of mobile applications on language learning, focusing on self-regulation, locus of control, and academic achievement of English language learners.",
+          description: "Research study on the impact of mobile applications on language learning, focusing on self-regulation, locus of control, and academic achievement of English language learners. This study presents the Duolingo app as a case study for MALL effectiveness.",
           link: "https://www.researchgate.net/publication/370548175_The_Study_of_EFL_Students'_Self-Regulation_Locus_of_Control_and_Academic_Achievement_through_Mobile-Assisted_Language_Learning_The_Case_of_DuolingoR_App",
           type: "journal",
-          authors: "Fakhar Shahreza, M., Barcena Madera, E., & Khany, R."
+          authors: "Fakhar Shahreza, M., Barcena Madera, E., & Khany, R.",
+          journal: "Positive Impacts of MALL (Comares Publishing)",
+          editors: "Arrosagaray, M., Sedano, B., & Sanz-Gil, M. (Eds.)",
+          isbn: "978-84-1369-694-2"
         },
         {
           title: "Development, Factor Analysis, and Validation of an EFL Teacher Change Scale (TCS)",
           category: "Education Research",
           date: "2016",
-          description: "Development and validation of a measurement scale for assessing changes in teaching practices among English as a Foreign Language (EFL) teachers.",
+          description: "Development and validation of a measurement scale for assessing changes in teaching practices among English as a Foreign Language (EFL) teachers. The study presents a comprehensive scale to measure teacher change in educational contexts.",
           link: "https://www.researchgate.net/publication/341042764_Development_Factor_Analysis_and_Validation_of_an_EFL_Teacher_Change_Scale_TCS",
           type: "journal",
-          authors: "Khany, R. & Fakhar Shahreza, M."
+          authors: "Khany, R. & Fakhar Shahreza, M.",
+          journal: "Journal of Applied Linguistic Studies",
+          volume: "8",
+          issue: "2",
+          pages: "123-158"
         },
         {
           title: "Social Media in Higher Education: Case Studies, Reflections, and Analysis",
           category: "Book Review",
           date: "2022",
-          description: "A review of the book edited by C. Rowel, discussing case studies, reflections, and analysis of social media use in higher education contexts.",
+          description: "A review of the book edited by C. Rowel, discussing case studies, reflections, and analysis of social media use in higher education contexts. This review analyzes the pedagogical implications of social media in educational environments.",
           link: "https://www.researchgate.net/publication/358943346_Social_Media_in_Higher_Education_Case_Studies_Reflections_and_Analysis",
           type: "journal",
-          authors: "Fakhar Shahreza, M."
+          authors: "Fakhar Shahreza, M.",
+          publisher: "Open Book Publishers, Cambridge, UK",
+          isbn: "978-1-78374-668-2",
+          format: "Book Review"
         },
         {
           title: "Investigating the Impacts of an Online Writing Platform on EFL Students' Writing and Critical Thinking Skills: The Case of Medium App",
