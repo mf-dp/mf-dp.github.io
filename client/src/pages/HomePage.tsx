@@ -77,12 +77,12 @@ export default function HomePage() {
       <main>
         <Hero />
         <About />
-        <Skills />
-        <Projects />
-        <Conferences />
         <Education />
         <CareerHistory />
+        <Skills />
+        <Projects />
         <Articles />
+        <Conferences />
         <Memberships />
         <Resume />
         <Contact />
