@@ -43,7 +43,30 @@ export function Header() {
   ];
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-md border-b ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-800' : 'bg-transparent border-transparent'}`}>
+    <header 
+      className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-md border-b relative overflow-hidden ${
+        isScrolled ? 'bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-800' : 'bg-transparent border-transparent'
+      }`}
+    >
+      {/* Background decoration */}
+      <div 
+        className="absolute inset-0 w-full h-full transition-opacity duration-500 dark:opacity-0"
+        style={{
+          backgroundImage: `url('/images/backgrounds/header-bg.svg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: isScrolled ? 0.7 : 1,
+        }}
+      />
+      <div 
+        className="absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0 dark:opacity-100"
+        style={{
+          backgroundImage: `url('/images/backgrounds/header-bg-dark.svg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: isScrolled ? 0.7 : 1,
+        }}
+      />
       <div className="container mx-auto px-4 py-4">
         {/* Top Row: Logo (Left), Name (Center), Profile Image (Right) */}
         <div className="flex justify-between items-center mb-4">
