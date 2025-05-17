@@ -125,21 +125,24 @@ export function Conferences() {
   const conferencesData = t('conferences.items');
   const conferences = Array.isArray(conferencesData) ? conferencesData : [];
 
-  // Conference images from the extracted zip file
+  // Conference images from the extracted zip file (all 17 certificates)
   const conferenceImages = [
-    '/images/conferences/2018.11.14-16.jpg',
-    '/images/conferences/2019.01-02.30-01.01.jpg',
-    '/images/conferences/2019.10.25.01.jpg',
-    '/images/conferences/2019.11.20-21.jpg',
-    '/images/conferences/2017.01.25-27.jpg',
-    '/images/conferences/2016.11.16-18.jpg',
     '/images/conferences/2015.11.17-19.01.jpg',
+    '/images/conferences/2015.11.17-19.02.jpg',
+    '/images/conferences/2015.11.17-19.03.jpg',
+    '/images/conferences/2015.11.17-19.04.jpg',
     '/images/conferences/2016.05.12-13.jpg',
+    '/images/conferences/2016.11.16-18.jpg',
+    '/images/conferences/2017.01.25-27.jpg',
     '/images/conferences/2018.04.25-27.jpg',
     '/images/conferences/2018.09.04-05.jpg',
+    '/images/conferences/2018.11.14-16.jpg',
+    '/images/conferences/2019.01-02.30-01.01.jpg',
     '/images/conferences/2019.01-02.30-01.02.jpg',
     '/images/conferences/2019.01-02.30-01.03.jpg',
+    '/images/conferences/2019.10.25.01.jpg',
     '/images/conferences/2019.10.25.02.jpg',
+    '/images/conferences/2019.11.20-21.jpg',
     '/images/conferences/2021.03.09-10.jpg'
   ];
 
