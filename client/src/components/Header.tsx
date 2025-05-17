@@ -106,14 +106,14 @@ export function Header() {
                 (item.path !== '/' && location.startsWith(item.path));
               
               return (
-                <motion.div 
+                <Link 
                   key={item.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  href={item.path} 
                 >
-                  <Link 
-                    href={item.path} 
-                    className={`font-medium px-3 py-2 rounded-md transition-all duration-300 ${
+                  <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`font-medium px-3 py-2 rounded-md transition-all duration-300 cursor-pointer ${
                       isActive 
                         ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 shadow-sm' 
                         : 'hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -129,8 +129,8 @@ export function Header() {
                         transition={{ duration: 0.3 }}
                       />
                     )}
-                  </Link>
-                </motion.div>
+                  </motion.div>
+                </Link>
               );
             })}
           </nav>
@@ -151,19 +151,19 @@ export function Header() {
                     (item.path !== '/' && location.startsWith(item.path));
                   
                   return (
-                    <motion.div
+                    <Link 
                       key={item.id}
-                      whileHover={{ x: 5 }}
-                      whileTap={{ scale: 0.98 }}
+                      href={item.path}
+                      onClick={handleMobileMenuClose}
                     >
-                      <Link 
-                        href={item.path} 
-                        className={`block text-lg font-medium p-2 rounded-md ${
+                      <motion.div
+                        whileHover={{ x: 5 }}
+                        whileTap={{ scale: 0.98 }}
+                        className={`block text-lg font-medium p-2 rounded-md cursor-pointer ${
                           isActive 
                             ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' 
                             : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                         }`}
-                        onClick={handleMobileMenuClose}
                       >
                         {item.label}
                         {isActive && (
@@ -174,8 +174,8 @@ export function Header() {
                             transition={{ duration: 0.3 }}
                           />
                         )}
-                      </Link>
-                    </motion.div>
+                      </motion.div>
+                    </Link>
                   );
                 })}
               </nav>
