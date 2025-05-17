@@ -1,29 +1,25 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
-import Articles from "./components/Articles";
-import Conferences from "./components/Conferences";
-import Memberships from "./components/Memberships";
-import CareerHistory from "./components/CareerHistory";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import NotFound from "@/pages/not-found";
+import HomePage from "@/pages/HomePage";
+import AboutPage from "@/pages/AboutPage";
+import SkillsPage from "@/pages/SkillsPage";
+import ResumePage from "@/pages/ResumePage";
+import ConferencesPage from "@/pages/ConferencesPage";
+import ProjectsPage from "@/pages/ProjectsPage";
+import ArticlesPage from "@/pages/ArticlesPage";
+import ContactPage from "@/pages/ContactPage";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext";
 import { SEO } from "@/components/SEO";
 
-function AppContent() {
+function Router() {
   const { theme } = useTheme();
   const { language } = useLanguage();
-  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     // Set the document language
@@ -45,22 +41,18 @@ function AppContent() {
         keywords="Mahdieh Fakhar, Data Science, Big Data, Research, Academic, UNIR, UNED, Machine Learning, Data Analysis, Scientometrics, Bibliometrics"
       />
       <Toaster />
-      <div className="min-h-screen font-sans bg-light text-dark dark:bg-dark dark:text-light transition-colors duration-300">
-        <Header />
-        <main ref={mainRef} className="pt-20">
-          <Hero />
-          <About />
-          <Education />
-          <Articles />
-          <Conferences />
-          <Memberships />
-          <CareerHistory />
-          <Skills />
-          <Projects />
-          <Resume />
-          <Contact />
-        </main>
-        <Footer />
+      <div className="min-h-screen font-sans bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+        <Switch>
+          <Route path="/" component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/skills" component={SkillsPage} />
+          <Route path="/resume" component={ResumePage} />
+          <Route path="/conferences" component={ConferencesPage} />
+          <Route path="/projects" component={ProjectsPage} />
+          <Route path="/articles" component={ArticlesPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </>
   );
@@ -72,7 +64,7 @@ function App() {
       <ThemeProvider>
         <LanguageProvider>
           <TooltipProvider>
-            <AppContent />
+            <Router />
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
