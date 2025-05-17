@@ -121,12 +121,44 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                         <h3 className="text-xl font-semibold mb-3">{article?.title || 'Untitled Article'}</h3>
                         
                         {article?.authors && (
-                          <p className="text-sm text-gray-500 dark:text-gray-500 mb-3 italic">
+                          <p className="text-sm text-gray-500 dark:text-gray-500 mb-2 italic">
                             {article.authors}
                           </p>
                         )}
                         
-                        <p className="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
+                        {article?.journal && (
+                          <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            {article.journal}
+                            {article.volume && article.issue && `, ${article.volume}(${article.issue})`}
+                            {article.pages && `, pp. ${article.pages}`}
+                          </p>
+                        )}
+                        
+                        {article?.publisher && (
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                            {article.publisher}
+                          </p>
+                        )}
+                        
+                        {article?.editors && (
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                            Editors: {article.editors}
+                          </p>
+                        )}
+                        
+                        {article?.doi && (
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                            DOI: {article.doi}
+                          </p>
+                        )}
+                        
+                        {article?.isbn && (
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                            ISBN: {article.isbn}
+                          </p>
+                        )}
+                        
+                        <p className="text-gray-600 dark:text-gray-400 mt-3 mb-6 flex-grow">
                           {article?.description || ''}
                         </p>
                         
@@ -170,19 +202,31 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                         
                         <h3 className="text-xl font-semibold mb-3">{article?.title || 'Untitled Paper'}</h3>
                         
-                        {article?.venue && (
-                          <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                            {article.venue}
-                          </p>
-                        )}
-                        
                         {article?.authors && (
-                          <p className="text-sm text-gray-500 dark:text-gray-500 mb-3 italic">
+                          <p className="text-sm text-gray-500 dark:text-gray-500 mb-2 italic">
                             {article.authors}
                           </p>
                         )}
                         
-                        <p className="text-gray-600 dark:text-gray-400 mb-6 flex-grow">
+                        {article?.venue && (
+                          <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            {article.venue}
+                          </p>
+                        )}
+                        
+                        {article?.publisher && (
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                            {article.publisher}
+                          </p>
+                        )}
+                        
+                        {article?.isbn && (
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                            ISBN: {article.isbn}
+                          </p>
+                        )}
+                        
+                        <p className="text-gray-600 dark:text-gray-400 mt-3 mb-6 flex-grow">
                           {article?.description || ''}
                         </p>
                         
