@@ -2,7 +2,9 @@ import { useLanguage } from '@/context/LanguageContext';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef, useState, useEffect } from 'react';
-import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt } from 'react-icons/fa';
+import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt, FaUniversity, FaAward, FaTags } from 'react-icons/fa';
+import { useQuery } from '@tanstack/react-query';
+import { getQueryFn } from '@/lib/queryClient';
 import { Card, CardContent } from '@/components/ui/card';
 import { LazyImage } from '@/components/ui/lazy-image';
 import {
