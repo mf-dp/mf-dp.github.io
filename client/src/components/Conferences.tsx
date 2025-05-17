@@ -481,18 +481,42 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                             transition={{ delay: 0.4, duration: 0.4 }}
                           >
                             <FaCalendarAlt className="mr-2 text-primary dark:text-primary" />
-                            <span>{conference.year}</span>
+                            <span>{conference.dateRange || conference.year}</span>
                           </motion.div>
                           
-                          {conference.role && (
+                          {conference.organization && (
                             <motion.div 
                               className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
                               initial={{ y: 20, opacity: 0 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ delay: 0.5, duration: 0.4 }}
                             >
+                              <span className="mr-2 text-primary dark:text-primary">🏛️</span>
+                              <span>{conference.organization}</span>
+                            </motion.div>
+                          )}
+                          
+                          {conference.role && (
+                            <motion.div 
+                              className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
+                              initial={{ y: 20, opacity: 0 }}
+                              animate={{ y: 0, opacity: 1 }}
+                              transition={{ delay: 0.6, duration: 0.4 }}
+                            >
                               <span className="mr-2 text-primary dark:text-primary">🏆</span>
                               <span>{conference.role}</span>
+                            </motion.div>
+                          )}
+                          
+                          {conference.topic && (
+                            <motion.div 
+                              className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
+                              initial={{ y: 20, opacity: 0 }}
+                              animate={{ y: 0, opacity: 1 }}
+                              transition={{ delay: 0.7, duration: 0.4 }}
+                            >
+                              <span className="mr-2 text-primary dark:text-primary">📝</span>
+                              <span>{conference.topic}</span>
                             </motion.div>
                           )}
                         </div>
