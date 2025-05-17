@@ -105,9 +105,9 @@ export function Header() {
                 (item.path !== '/' && location.startsWith(item.path));
               
               return (
-                <Link 
+                <button 
                   key={item.id}
-                  href={item.path} 
+                  onClick={() => window.location.href = item.path}
                   className={`font-medium px-3 py-2 rounded-md transition-all duration-300 ${
                     isActive 
                       ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 shadow-sm' 
@@ -120,7 +120,7 @@ export function Header() {
                       className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-0.5 rounded-full"
                     />
                   )}
-                </Link>
+                </button>
               );
             })}
           </nav>
@@ -141,11 +141,13 @@ export function Header() {
                     (item.path !== '/' && location.startsWith(item.path));
                   
                   return (
-                    <Link 
+                    <button 
                       key={item.id}
-                      href={item.path}
-                      onClick={handleMobileMenuClose}
-                      className={`block text-lg font-medium p-2 rounded-md ${
+                      onClick={() => {
+                        handleMobileMenuClose();
+                        window.location.href = item.path;
+                      }}
+                      className={`block text-lg font-medium p-2 rounded-md text-left ${
                         isActive 
                           ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' 
                           : 'hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -157,7 +159,7 @@ export function Header() {
                           className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-1 w-1/3 rounded-full"
                         />
                       )}
-                    </Link>
+                    </button>
                   );
                 })}
               </nav>
