@@ -15,6 +15,7 @@ import ContactPage from "@/pages/ContactPage";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { SEO } from "@/components/SEO";
+import { BackgroundWrapper } from "@/components/BackgroundWrapper";
 import { Background } from "@/components/Background";
 
 function Router() {
@@ -40,9 +41,10 @@ function App() {
         <LanguageProvider>
           <TooltipProvider>
             <SEO />
-            <Background />
-            <Toaster />
-            <Router />
+            <BackgroundWrapper>
+              <Toaster />
+              <Router />
+            </BackgroundWrapper>
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>

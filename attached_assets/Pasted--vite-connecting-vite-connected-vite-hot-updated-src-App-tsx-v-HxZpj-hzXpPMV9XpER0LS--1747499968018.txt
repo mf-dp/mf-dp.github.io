@@ -1,0 +1,31 @@
+[vite] connecting...
+[vite] connected.
+[vite] hot updated: /src/App.tsx?v=HxZpj_hzXpPMV9XpER0LS
+[vite] hot updated: /src/index.css?v=HxZpj_hzXpPMV9XpER0LS
+Warning: Received &#x60;true&#x60; for a non-boolean attribute &#x60;jsx&#x60;.
+
+If you want to write it to the DOM, pass a string instead: jsx=&quot;true&quot; or jsx={value.toString()}.
+    at style
+    at QueryClientProvider (https://845db648-fe39-42bf-bfa3-9180dc4eb6a0-00-2ftag7m5bko04.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=b339dc12:2881:3)
+    at App
+
+If you want to write it to the DOM, pass a string instead: jsx=&amp;quot;true&amp;quot; or jsx={value.toString()}.
+at style
+at QueryClientProvider (https://845db648-fe39-42bf-bfa3-9180dc4eb6a0-00-2ftag7m5bko04.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=b339dc12:2881:3)
+at App
+at t.value (https://845db648-fe39-42bf-bfa3-9180dc4eb6a0-00-2ftag7m5bko04.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://845db648-fe39-42bf-bfa3-9180dc4eb6a0-00-2ftag7m5bko04.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://845db648-fe39-42bf-bfa3-9180dc4eb6a0-00-2ftag7m5bko04.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://845db648-fe39-42bf-bfa3-9180dc4eb6a0-00-2ftag7m5bko04.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
+Warning: Received &#x60;true&#x60; for a non-boolean attribute &#x60;global&#x60;.
+
+If you want to write it to the DOM, pass a string instead: global=&quot;true&quot; or global={value.toString()}.
+    at style
+    at QueryClientProvider (https://845db648-fe39-42bf-bfa3-9180dc4eb6a0-00-2ftag7m5bko04.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=b339dc12:2881:3)
+    at App
+[vite] hot updated: /src/App.tsx?v=HxZpj_hzXpPMV9XpER0LS
+[vite] hot updated: /src/index.css?v=HxZpj_hzXpPMV9XpER0LS
+[vite] hot updated: /src/App.tsx?v=HxZpj_hzXpPMV9XpER0LS
+[vite] hot updated: /src/index.css?v=HxZpj_hzXpPMV9XpER0LS
+[vite] hot updated: /src/App.tsx?v=HxZpj_hzXpPMV9XpER0LS
+[vite] hot updated: /src/index.css?v=HxZpj_hzXpPMV9XpER0LS

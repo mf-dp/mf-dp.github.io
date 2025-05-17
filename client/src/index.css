@@ -59,35 +59,25 @@
     height: 100%;
     width: 100%;
   }
-  
-  #root {
-    position: relative;
-    min-height: 100vh;
-  }
-  
-  #root::before {
-    content: '';
-    background-image: url('/bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -2;
-  }
-  
-  #root::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: -1;
-  }
+}
+
+/* Background image for the entire site */
+body {
+  background-image: url('/background-image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Dark overlay for better readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
 }
