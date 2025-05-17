@@ -1,11 +1,10 @@
 import { useLanguage } from '@/context/LanguageContext';
-import { motion } from 'framer-motion';
+import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
-import { useRef, useState } from 'react';
-import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt, FaGraduationCap } from 'react-icons/fa';
+import { useRef, useState, useEffect } from 'react';
+import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt, FaGraduationCap, FaMicrophone, FaUsers, FaUniversity, FaCertificate } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
 import { LazyImage } from '@/components/ui/lazy-image';
-import { Link } from 'wouter';
 import {
   Dialog,
   DialogContent,
@@ -20,22 +19,86 @@ export function Conferences() {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
+  const controls = useAnimation();
   const [selectedConference, setSelectedConference] = useState<any | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1
+        staggerChildren: 0.15,
+        delayChildren: 0.2
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+    hidden: { y: 30, opacity: 0, scale: 0.95 },
+    visible: { 
+      y: 0, 
+      opacity: 1, 
+      scale: 1,
+      transition: { 
+        type: "spring", 
+        stiffness: 100, 
+        damping: 10,
+        duration: 0.7 
+      } 
+    }
+  };
+  
+  const imageVariants = {
+    initial: { scale: 1 },
+    hover: { 
+      scale: 1.05,
+      transition: { 
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
+  
+  const buttonVariants = {
+    initial: { scale: 1 },
+    hover: { 
+      scale: 1.05, 
+      backgroundColor: "#3b82f6",
+      color: "#ffffff",
+      transition: { 
+        type: "spring", 
+        stiffness: 400, 
+        damping: 10 
+      } 
+    }
+  };
+  
+  const iconVariants = {
+    initial: { scale: 1 },
+    hover: { 
+      scale: 1.2, 
+      rotate: 5,
+      transition: { 
+        type: "spring", 
+        stiffness: 400, 
+        damping: 10 
+      } 
+    },
+    pulse: {
+      scale: [1, 1.1, 1],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "mirror"
+      }
+    }
   };
 
   // Get conferences from translations
@@ -68,14 +131,103 @@ export function Conferences() {
     <section 
       id="conferences"
       ref={sectionRef}
-      className="py-20 bg-gray-50 dark:bg-gray-800"
+      className="py-24 relative overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-gray-900"
     >
-      <div className="container mx-auto px-4">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div 
+          className="absolute bottom-0 right-0 w-96 h-96 md:w-[600px] md:h-[600px] bg-gradient-to-br from-amber-100/20 to-orange-100/10 dark:from-amber-900/10 dark:to-orange-900/5 rounded-full blur-3xl"
+          animate={{ 
+            scale: [0.8, 1, 0.8],
+            opacity: [0.3, 0.5, 0.3], 
+            y: [0, -20, 0],
+            x: [0, 20, 0]
+          }}
+          transition={{ 
+            duration: 20, 
+            repeat: Infinity, 
+            repeatType: "reverse" 
+          }}
+        />
+        <motion.div 
+          className="absolute top-1/4 -left-24 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-orange-100/20 to-amber-100/10 dark:from-orange-900/10 dark:to-amber-900/5 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2], 
+            y: [0, 30, 0]
+          }}
+          transition={{ 
+            duration: 25, 
+            repeat: Infinity, 
+            repeatType: "reverse" 
+          }}
+        />
+        
+        {/* Decorative conference elements */}
+        <motion.div 
+          className="absolute top-20 left-[10%] w-8 h-8 text-amber-500 opacity-10 md:opacity-30"
+          animate={{
+            y: [0, -15, 0],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <FaMicrophone size={32} />
+        </motion.div>
+        
+        <motion.div 
+          className="absolute bottom-40 right-[15%] w-10 h-10 text-orange-500 opacity-10 md:opacity-30"
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.3, 0.7, 0.3]
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+        >
+          <FaUsers size={40} />
+        </motion.div>
+        
+        <motion.div 
+          className="absolute top-1/3 right-[30%] w-8 h-8 text-amber-600 opacity-0 md:opacity-20"
+          animate={{
+            y: [0, -10, 0],
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <FaUniversity size={32} />
+        </motion.div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-12 text-center"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
+          animate={controls}
+          variants={{
+            hidden: { opacity: 0, y: -20 },
+            visible: { 
+              opacity: 1, 
+              y: 0, 
+              transition: { 
+                duration: 0.7, 
+                ease: "easeOut" 
+              } 
+            }
+          }}
         >
           {t('conferences.title')}
         </motion.h2>
@@ -83,66 +235,179 @@ export function Conferences() {
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={controls}
           variants={containerVariants}
         >
           {conferences.map((conference, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg relative">
-                <LazyImage 
-                  src={conferenceImages[index % conferenceImages.length]} 
-                  alt={conference.title} 
-                  className="w-full h-48 object-cover" 
-                  placeholderBlur={true}
-                />
-                
-                <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {conference.year}
-                </div>
+            <motion.div 
+              key={index} 
+              variants={itemVariants}
+              onHoverStart={() => setHoveredCard(index)}
+              onHoverEnd={() => setHoveredCard(null)}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <Card className="overflow-hidden h-full shadow-lg hover:shadow-xl border border-transparent hover:border-amber-200 dark:hover:border-amber-800 transition-all duration-300 bg-white dark:bg-gray-900 backdrop-blur-sm">
+                <motion.div 
+                  className="relative overflow-hidden"
+                  variants={imageVariants}
+                  initial="initial"
+                  animate={hoveredCard === index ? "hover" : "initial"}
+                >
+                  <LazyImage 
+                    src={conferenceImages[index % conferenceImages.length]} 
+                    alt={conference.title} 
+                    className="w-full h-56 object-cover" 
+                    placeholderBlur={true}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div className="text-white space-y-1">
+                      <p className="font-medium text-amber-200">{conference.year}</p>
+                      <p className="font-medium">{t('conferences.viewDetails')}</p>
+                    </div>
+                  </div>
+                  
+                  <motion.div 
+                    className="absolute top-4 left-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-lg"
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.3 + (index * 0.1), duration: 0.5, type: "spring" }}
+                  >
+                    {conference.year}
+                  </motion.div>
+                </motion.div>
                 
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{conference.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">{conference.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                     {conference.description}
                   </p>
                   
-                  <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4">
-                    <FaMapMarkerAlt className="mr-2" />
+                  <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4 bg-amber-50 dark:bg-amber-950/30 p-2 rounded-lg">
+                    <motion.div
+                      animate={{ 
+                        scale: [1, 1.1, 1],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "mirror"
+                      }}
+                      className="text-amber-600 dark:text-amber-400 mr-2"
+                    >
+                      <FaMapMarkerAlt />
+                    </motion.div>
                     <span>{conference.location}</span>
                   </div>
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <button 
-                        className="text-primary hover:text-primary/80 flex items-center gap-1"
+                      <motion.button 
+                        className="w-full bg-amber-100 hover:bg-gradient-to-r hover:from-amber-500 hover:to-orange-500 hover:text-white text-amber-700 font-medium py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 mt-2 border border-amber-200 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-400"
+                        variants={buttonVariants}
+                        initial="initial"
+                        whileHover="hover"
                         onClick={() => openConferenceDetails(conference)}
                       >
                         <span>{t('conferences.viewDetails')}</span>
-                        <FaChevronRight className="text-sm" />
-                      </button>
+                        <motion.div
+                          whileHover={{ 
+                            scale: 1.2, 
+                            rotate: 5,
+                          }}
+                          transition={{ 
+                            type: "spring", 
+                            stiffness: 400, 
+                            damping: 10 
+                          }}
+                        >
+                          <FaChevronRight className="text-sm" />
+                        </motion.div>
+                      </motion.button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[425px]">
+                    <DialogContent className="sm:max-w-[600px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-amber-200 dark:border-amber-800">
                       <DialogHeader>
                         <DialogTitle className="flex items-center gap-2">
-                          <span>{conference.title}</span>
-                          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                            ({conference.year})
-                          </span>
+                          <motion.span
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent"
+                          >
+                            {conference.title}
+                          </motion.span>
+                          <motion.span 
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3, delay: 0.1 }}
+                            className="text-sm font-normal text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/30 px-2 py-1 rounded-full"
+                          >
+                            {conference.year}
+                          </motion.span>
                         </DialogTitle>
                       </DialogHeader>
-                      <div className="grid gap-4 py-4">
-                        <LazyImage 
-                          src={conferenceImages[index % conferenceImages.length]} 
-                          alt={conference.title} 
-                          className="w-full h-48 object-cover rounded-md" 
-                          placeholderBlur={true}
-                        />
-                        <p className="text-gray-700 dark:text-gray-300">{conference.description}</p>
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <FaMapMarkerAlt className="mr-2" />
-                          <span>{conference.location}</span>
+                      <motion.div 
+                        className="grid gap-6 py-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        <motion.div
+                          initial={{ scale: 0.95, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{ duration: 0.5 }}
+                          className="overflow-hidden rounded-xl shadow-md"
+                        >
+                          <LazyImage 
+                            src={conferenceImages[index % conferenceImages.length]} 
+                            alt={conference.title} 
+                            className="w-full h-72 object-cover" 
+                            placeholderBlur={true}
+                          />
+                        </motion.div>
+                        
+                        <div className="space-y-4">
+                          <motion.div
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.2, duration: 0.4 }}
+                          >
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{conference.description}</p>
+                          </motion.div>
+                          
+                          <motion.div 
+                            className="flex items-center text-gray-600 dark:text-gray-400 bg-amber-50 dark:bg-amber-950/30 p-3 rounded-lg"
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.3, duration: 0.4 }}
+                          >
+                            <FaMapMarkerAlt className="mr-2 text-amber-600 dark:text-amber-400" />
+                            <span>{conference.location}</span>
+                          </motion.div>
+                          
+                          <motion.div 
+                            className="flex items-center text-gray-600 dark:text-gray-400 bg-amber-50 dark:bg-amber-950/30 p-3 rounded-lg"
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.4, duration: 0.4 }}
+                          >
+                            <FaCalendarAlt className="mr-2 text-amber-600 dark:text-amber-400" />
+                            <span>{conference.year}</span>
+                          </motion.div>
+                          
+                          {conference.role && (
+                            <motion.div 
+                              className="flex items-center text-gray-600 dark:text-gray-400 bg-amber-50 dark:bg-amber-950/30 p-3 rounded-lg"
+                              initial={{ y: 20, opacity: 0 }}
+                              animate={{ y: 0, opacity: 1 }}
+                              transition={{ delay: 0.5, duration: 0.4 }}
+                            >
+                              <FaMicrophone className="mr-2 text-amber-600 dark:text-amber-400" />
+                              <span>{conference.role}</span>
+                            </motion.div>
+                          )}
                         </div>
-                      </div>
+                      </motion.div>
                     </DialogContent>
                   </Dialog>
                 </CardContent>
@@ -152,16 +417,31 @@ export function Conferences() {
         </motion.div>
         
         <motion.div 
-          className="mt-12 text-center"
+          className="mt-16 text-center"
           variants={itemVariants}
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          animate={controls}
+          transition={{ delay: 0.6, duration: 0.5 }}
         >
-          <a href="/conferences" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
-            <span>{t('conferences.viewAllButton')}</span>
-            <FaArrowRight />
-          </a>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <a 
+              href="/conferences" 
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <span>{t('conferences.viewAllButton')}</span>
+              <motion.div
+                variants={iconVariants}
+                initial="initial"
+                whileHover="hover"
+              >
+                <FaArrowRight />
+              </motion.div>
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>
