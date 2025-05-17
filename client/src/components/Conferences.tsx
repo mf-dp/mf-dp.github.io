@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from 'react';
 import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt, FaUniversity, FaAward, FaTags } from 'react-icons/fa';
 import { useQuery } from '@tanstack/react-query';
 import { getQueryFn } from '@/lib/queryClient';
+import { CertificateAnalyzer, CertificateAnalysisData } from './CertificateAnalyzer';
 import { Card, CardContent } from '@/components/ui/card';
 import { LazyImage } from '@/components/ui/lazy-image';
 import {
@@ -466,61 +467,60 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{conference.description}</p>
                           </motion.div>
                           
+                          {/* Organizer/Institution */}
                           <motion.div 
                             className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.3, duration: 0.4 }}
                           >
-                            <FaMapMarkerAlt className="mr-2 text-primary dark:text-primary" />
-                            <span>{conference.location}</span>
+                            <FaUniversity className="mr-2 text-primary dark:text-primary" />
+                            <span>{conference.organization || 'Teaching English Language and Literature Society of Iran'}</span>
                           </motion.div>
                           
+                          {/* Location */}
                           <motion.div 
                             className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.4 }}
                           >
-                            <FaCalendarAlt className="mr-2 text-primary dark:text-primary" />
-                            <span>{conference.dateRange || conference.year}</span>
+                            <FaMapMarkerAlt className="mr-2 text-primary dark:text-primary" />
+                            <span>{conference.location}</span>
                           </motion.div>
                           
-                          {conference.organization && (
-                            <motion.div 
-                              className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                              initial={{ y: 20, opacity: 0 }}
-                              animate={{ y: 0, opacity: 1 }}
-                              transition={{ delay: 0.5, duration: 0.4 }}
-                            >
-                              <span className="mr-2 text-primary dark:text-primary">🏛️</span>
-                              <span>{conference.organization}</span>
-                            </motion.div>
-                          )}
+                          {/* Date Range */}
+                          <motion.div 
+                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.5, duration: 0.4 }}
+                          >
+                            <FaCalendarAlt className="mr-2 text-primary dark:text-primary" />
+                            <span>{conference.dateRange || `${conference.year}`}</span>
+                          </motion.div>
                           
-                          {conference.role && (
-                            <motion.div 
-                              className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                              initial={{ y: 20, opacity: 0 }}
-                              animate={{ y: 0, opacity: 1 }}
-                              transition={{ delay: 0.6, duration: 0.4 }}
-                            >
-                              <span className="mr-2 text-primary dark:text-primary">🏆</span>
-                              <span>{conference.role}</span>
-                            </motion.div>
-                          )}
+                          {/* Role */}
+                          <motion.div 
+                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.6, duration: 0.4 }}
+                          >
+                            <FaAward className="mr-2 text-primary dark:text-primary" />
+                            <span>{conference.role || 'Presenter'}</span>
+                          </motion.div>
                           
-                          {conference.topic && (
-                            <motion.div 
-                              className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                              initial={{ y: 20, opacity: 0 }}
-                              animate={{ y: 0, opacity: 1 }}
-                              transition={{ delay: 0.7, duration: 0.4 }}
-                            >
-                              <span className="mr-2 text-primary dark:text-primary">📝</span>
-                              <span>{conference.topic}</span>
-                            </motion.div>
-                          )}
+                          {/* Topic */}
+                          <motion.div 
+                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.7, duration: 0.4 }}
+                          >
+                            <FaTags className="mr-2 text-primary dark:text-primary" />
+                            <span>{conference.topic || 'Language Education Research'}</span>
+                          </motion.div>
                         </div>
                       </motion.div>
                     </DialogContent>
