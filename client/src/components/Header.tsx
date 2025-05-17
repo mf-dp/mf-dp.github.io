@@ -48,24 +48,30 @@ export function Header() {
         isScrolled ? 'bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-800' : 'bg-transparent border-transparent'
       }`}
     >
-      {/* Background decoration */}
+      {/* Background decoration with real photos */}
       <div 
         className="absolute inset-0 w-full h-full transition-opacity duration-500 dark:opacity-0"
         style={{
-          backgroundImage: `url('/images/backgrounds/header-bg.svg')`,
+          backgroundImage: `url('/images/headers/header-bg.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: isScrolled ? 0.7 : 1,
+          backgroundPosition: 'center top',
+          opacity: isScrolled ? 0.1 : 0.15,
         }}
       />
       <div 
         className="absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0 dark:opacity-100"
         style={{
-          backgroundImage: `url('/images/backgrounds/header-bg-dark.svg')`,
+          backgroundImage: `url('/images/headers/header-bg-dark.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: isScrolled ? 0.7 : 1,
+          opacity: isScrolled ? 0.1 : 0.15,
         }}
+      />
+      
+      {/* Overlay gradient effect */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-gradient-to-b from-white/80 to-white/95 dark:from-gray-900/80 dark:to-gray-900/95 transition-opacity duration-300"
+        style={{ opacity: isScrolled ? 0.9 : 0.7 }}
       />
       <div className="container mx-auto px-4 py-4">
         {/* Top Row: Logo (Left), Name (Center), Profile Image (Right) */}
