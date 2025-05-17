@@ -33,7 +33,7 @@ const conferenceCertificates = [
   { id: 17, path: '/images/conferences/2015.11.17-19.04.jpg', year: 2015 },
 ];
 
-export function Conferences() {
+export function Conferences({ showAll = false }: { showAll?: boolean }) {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
@@ -122,8 +122,11 @@ export function Conferences() {
   };
 
   // Get conferences from translations
-  const conferencesData = t('conferences.items');
-  const conferences = Array.isArray(conferencesData) ? conferencesData : [];
+  const conferencesData = t('conferences.items') as any[];
+  const allConferences = Array.isArray(conferencesData) ? conferencesData : [];
+  
+  // If we're not showing all (on homepage), limit to 6 most recent conferences
+  const conferences = !showAll ? allConferences.slice(0, 6) : allConferences;
 
   // Conference images from the extracted zip file (all 17 certificates)
   const conferenceImages = [
@@ -439,39 +442,41 @@ export function Conferences() {
           ))}
         </motion.div>
         
-        <motion.div 
-          className="mt-16 text-center"
-          variants={itemVariants}
-          initial={{ opacity: 0, y: 20 }}
-          animate={controls}
-          transition={{ delay: 0.6, duration: 0.5 }}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        {!showAll && (
+          <motion.div 
+            className="mt-16 text-center"
+            variants={itemVariants}
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <a 
-              href="/conferences" 
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <span>{t('conferences.viewAllButton')}</span>
-              <motion.div
-                whileHover={{ 
-                  scale: 1.2, 
-                  rotate: 5,
-                }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 10 
-                }}
+              <a 
+                href="/conferences" 
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-primary hover:from-blue-600 hover:to-primary/90 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <FaArrowRight />
-              </motion.div>
-            </a>
+                <span>{t('conferences.viewAllButton')}</span>
+                <motion.div
+                  whileHover={{ 
+                    scale: 1.2, 
+                    rotate: 5,
+                  }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 10 
+                  }}
+                >
+                  <FaArrowRight />
+                </motion.div>
+              </a>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        )}
       </div>
     </section>
   );

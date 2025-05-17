@@ -19,7 +19,7 @@ export default function ConferencesPage() {
         title="MAHDIEH FAKHAR - Conferences"
         description="Academic and professional conferences attended and presented by Mahdieh Fakhar."
         keywords="conferences, academic conferences, technology conferences, data science conferences, professional events"
-        ogImage="/images/conferences/Conference/2019.11.20-21.jpg"
+        ogImage="/images/conferences/2019.11.20-21.jpg"
       />
       <Header />
       <div className="flex-grow">
