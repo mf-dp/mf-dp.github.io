@@ -107,21 +107,22 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                 
                 return (
                   <motion.div key={`journal-${index}`} variants={itemVariants}>
-                    <Card className="overflow-hidden h-full transition-transform hover:-translate-y-1 hover:shadow-lg flex flex-col">
+                    <Card className="overflow-hidden h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col border-gray-200 shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
                       <CardContent className="p-6 flex-1 flex flex-col">
                         <div className="flex justify-between items-start mb-4">
                           <Badge 
                             variant="secondary"
+                            className="font-medium text-xs shadow-sm"
                           >
                             {article?.category || 'Journal Article'}
                           </Badge>
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{article?.date || ''}</span>
+                          <span className="text-sm text-gray-600 dark:text-gray-400 font-medium">{article?.date || ''}</span>
                         </div>
                         
-                        <h3 className="text-xl font-semibold mb-3">{article?.title || 'Untitled Article'}</h3>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">{article?.title || 'Untitled Article'}</h3>
                         
                         {article?.authors && (
-                          <p className="text-sm text-gray-500 dark:text-gray-500 mb-2 italic">
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2 italic">
                             {article.authors}
                           </p>
                         )}
@@ -158,13 +159,13 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                           </p>
                         )}
                         
-                        <p className="text-gray-600 dark:text-gray-400 mt-3 mb-6 flex-grow">
+                        <p className="text-gray-700 dark:text-gray-300 mt-3 mb-6 flex-grow">
                           {article?.description || ''}
                         </p>
                         
                         <a 
                           href={article?.link || '#'} 
-                          className="text-primary hover:text-primary/80 flex items-center gap-1 mt-auto self-start"
+                          className="text-primary hover:text-primary/80 flex items-center gap-1 mt-auto self-start font-medium"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -189,21 +190,22 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
               {groupedArticles.conferences.map((article: any, index: number) => {
                 return (
                   <motion.div key={`conference-${index}`} variants={itemVariants}>
-                    <Card className="overflow-hidden h-full transition-transform hover:-translate-y-1 hover:shadow-lg flex flex-col">
+                    <Card className="overflow-hidden h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col border-gray-200 shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
                       <CardContent className="p-6 flex-1 flex flex-col">
                         <div className="flex justify-between items-start mb-4">
                           <Badge 
                             variant="secondary"
+                            className="font-medium text-xs shadow-sm"
                           >
                             {article?.category || 'Conference Paper'}
                           </Badge>
-                          <span className="text-sm text-gray-600 dark:text-gray-400">{article?.date || ''}</span>
+                          <span className="text-sm text-gray-600 dark:text-gray-400 font-medium">{article?.date || ''}</span>
                         </div>
                         
-                        <h3 className="text-xl font-semibold mb-3">{article?.title || 'Untitled Paper'}</h3>
+                        <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-gray-100">{article?.title || 'Untitled Paper'}</h3>
                         
                         {article?.authors && (
-                          <p className="text-sm text-gray-500 dark:text-gray-500 mb-2 italic">
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-2 italic">
                             {article.authors}
                           </p>
                         )}
@@ -226,13 +228,13 @@ export function Articles({ showAll = false }: { showAll?: boolean }) {
                           </p>
                         )}
                         
-                        <p className="text-gray-600 dark:text-gray-400 mt-3 mb-6 flex-grow">
+                        <p className="text-gray-700 dark:text-gray-300 mt-3 mb-6 flex-grow">
                           {article?.description || ''}
                         </p>
                         
                         <a 
                           href={article?.link || '#'} 
-                          className="text-primary hover:text-primary/80 flex items-center gap-1 mt-auto self-start"
+                          className="text-primary hover:text-primary/80 flex items-center gap-1 mt-auto self-start font-medium"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
