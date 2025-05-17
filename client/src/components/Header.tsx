@@ -42,37 +42,56 @@ export function Header() {
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-md border-b ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-800' : 'bg-transparent border-transparent'}`}>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/" className="text-2xl font-bold flex items-center space-x-3">
-          <MFLogo className="w-16 h-16" />
-          <span>MAHDIEH FAKHAR</span>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          {navItems.map(item => (
-            <Link 
-              key={item.id} 
-              href={item.path} 
-              className="font-medium hover:text-primary transition-colors"
-            >
-              {item.label}
+      <div className="container mx-auto px-4 py-4">
+        {/* Top Row: Logo (Left), Name (Center), Profile Image (Right) */}
+        <div className="flex justify-between items-center mb-4">
+          {/* Logo Left */}
+          <div className="flex flex-col items-center">
+            <Link href="/" className="flex items-center">
+              <MFLogo className="w-16 h-16" />
             </Link>
-          ))}
-        </nav>
+            {/* Theme & Language Controls under logo */}
+            <div className="flex items-center space-x-2 mt-2">
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
+          </div>
 
-        {/* Mobile Navigation Toggle + Theme & Language Controls */}
-        <div className="flex items-center space-x-2">
-          {/* Theme Toggle */}
-          <ThemeToggle />
-          
-          {/* Language Switcher */}
-          <LanguageSwitcher />
-          
-          {/* Mobile Menu Button */}
+          {/* Name Center */}
+          <Link href="/" className="text-2xl font-bold text-center">
+            MAHDIEH FAKHAR
+          </Link>
+
+          {/* Profile Image Right */}
+          <div className="w-16 h-16 rounded-full overflow-hidden">
+            <img 
+              src="/profile-image.jpg" 
+              alt="Mahdieh Fakhar"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: '50% 20%' }}
+            />
+          </div>
+        </div>
+
+        {/* Bottom Row: Navigation (Center) */}
+        <div className="hidden md:flex justify-center">
+          <nav className="flex flex-wrap justify-center gap-4">
+            {navItems.map(item => (
+              <Link 
+                key={item.id} 
+                href={item.path} 
+                className="font-medium hover:text-primary transition-colors px-2"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex justify-end">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800">
                 <Menu className="h-5 w-5" />
               </Button>
