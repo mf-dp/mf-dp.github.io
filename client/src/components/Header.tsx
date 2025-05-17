@@ -115,14 +115,14 @@ export function Header() {
                     href={item.path} 
                     className={`font-medium px-3 py-2 rounded-md transition-all duration-300 ${
                       isActive 
-                        ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 shadow-sm' 
+                        ? 'bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300 shadow-sm' 
                         : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                     }`}
                   >
                     {item.label}
                     {isActive && (
                       <motion.div
-                        className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-0.5 rounded-full"
+                        className="h-[3px] bg-teal-600 dark:bg-teal-400 mt-0.5 rounded-full"
                         layoutId="activeNavIndicator"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -160,7 +160,7 @@ export function Header() {
                         href={item.path} 
                         className={`block text-lg font-medium p-2 rounded-md ${
                           isActive 
-                            ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' 
+                            ? 'bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300' 
                             : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                         }`}
                         onClick={handleMobileMenuClose}
@@ -168,7 +168,7 @@ export function Header() {
                         {item.label}
                         {isActive && (
                           <motion.div
-                            className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-1 w-1/3 rounded-full"
+                            className="h-[3px] bg-teal-600 dark:bg-teal-400 mt-1 w-1/3 rounded-full"
                             initial={{ width: 0 }}
                             animate={{ width: '33%' }}
                             transition={{ duration: 0.3 }}
