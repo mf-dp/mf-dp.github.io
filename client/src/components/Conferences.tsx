@@ -170,7 +170,7 @@ export function Conferences() {
           }}
         />
         <motion.div 
-          className="absolute top-1/4 -left-24 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-orange-100/20 to-amber-100/10 dark:from-orange-900/10 dark:to-amber-900/5 rounded-full blur-3xl"
+          className="absolute top-1/4 -left-24 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-tr from-blue-200/20 to-blue-100/10 dark:from-blue-800/10 dark:to-blue-900/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2], 
@@ -185,7 +185,7 @@ export function Conferences() {
         
         {/* Decorative conference elements */}
         <motion.div 
-          className="absolute top-20 left-[10%] w-8 h-8 text-amber-500 opacity-10 md:opacity-30"
+          className="absolute top-20 left-[10%] w-8 h-8 text-primary opacity-10 md:opacity-30"
           animate={{
             y: [0, -15, 0],
             opacity: [0.3, 0.6, 0.3]
@@ -200,7 +200,7 @@ export function Conferences() {
         </motion.div>
         
         <motion.div 
-          className="absolute bottom-40 right-[15%] w-10 h-10 text-orange-500 opacity-10 md:opacity-30"
+          className="absolute bottom-40 right-[15%] w-10 h-10 text-blue-600 opacity-10 md:opacity-30"
           animate={{
             y: [0, -20, 0],
             opacity: [0.3, 0.7, 0.3]
@@ -216,7 +216,7 @@ export function Conferences() {
         </motion.div>
         
         <motion.div 
-          className="absolute top-1/3 right-[30%] w-8 h-8 text-amber-600 opacity-0 md:opacity-20"
+          className="absolute top-1/3 right-[30%] w-8 h-8 text-blue-600 opacity-0 md:opacity-20"
           animate={{
             y: [0, -10, 0],
             opacity: [0.2, 0.5, 0.2]
@@ -288,7 +288,7 @@ export function Conferences() {
                   </div>
                   
                   <motion.div 
-                    className="absolute top-4 left-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-lg"
+                    className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-primary text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-lg"
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.3 + (index * 0.1), duration: 0.5, type: "spring" }}
@@ -298,7 +298,7 @@ export function Conferences() {
                 </motion.div>
                 
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">{conference.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-primary">{conference.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                     {conference.description}
                   </p>
