@@ -239,7 +239,7 @@ export const translations = {
           category: "Translation Technology",
           date: "2024 (in press)",
           description: "Research article investigating approaches to machine translation, focusing on quality assessment, user acceptance, and language trends in the field.",
-          link: "https://doi.org/10.1075/ttmc",
+          link: "https://www.researchgate.net/publication/374539452_Approaches_on_Machine_Translation_Quality_Assessment_Acceptance_and_Language_Trends",
           type: "journal",
           authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P."
         },
@@ -248,7 +248,7 @@ export const translations = {
           category: "Educational Technology",
           date: "2024 (in press)",
           description: "Comprehensive systematic review and bibliometric analysis of technology-mediated reading enhancement over the past twenty years.",
-          link: "https://www.peterlang.com/",
+          link: "https://www.researchgate.net/publication/374539565_Two_Decades_of_Technology-Mediated_Reading_Enhancement_A_Systematic_Review_and_Bibliometric_Analysis",
           type: "journal",
           authors: "Fakhar Shahreza, M."
         },
@@ -257,7 +257,7 @@ export const translations = {
           category: "Language Learning",
           date: "2023",
           description: "Research study on the impact of mobile applications on language learning, focusing on self-regulation, locus of control, and academic achievement of English language learners.",
-          link: "https://www.comares.com/libro/positive-impacts-of-mall_135583/",
+          link: "https://www.researchgate.net/publication/370548175_The_Study_of_EFL_Students'_Self-Regulation_Locus_of_Control_and_Academic_Achievement_through_Mobile-Assisted_Language_Learning_The_Case_of_DuolingoR_App",
           type: "journal",
           authors: "Fakhar Shahreza, M., Barcena Madera, E., & Khany, R."
         },
@@ -266,7 +266,7 @@ export const translations = {
           category: "Education Research",
           date: "2016",
           description: "Development and validation of a measurement scale for assessing changes in teaching practices among English as a Foreign Language (EFL) teachers.",
-          link: "https://journals.modares.ac.ir/article-14-11064-en.html",
+          link: "https://www.researchgate.net/publication/341042764_Development_Factor_Analysis_and_Validation_of_an_EFL_Teacher_Change_Scale_TCS",
           type: "journal",
           authors: "Khany, R. & Fakhar Shahreza, M."
         },
@@ -285,6 +285,7 @@ export const translations = {
           date: "2022",
           venue: "19th International TELLSI Conference, Birjand University, Iran",
           description: "Research presentation investigating how the Medium platform affects writing skills and critical thinking abilities of English language learners.",
+          link: "https://www.researchgate.net/publication/365510453_Investigating_the_Impacts_of_an_Online_Writing_Platform_on_EFL_Students'_Writing_and_Critical_Thinking_Skills_The_Case_of_Medium_App",
           type: "conference",
           authors: "Khany, R., & Fakhar Shahreza, M."
         },
@@ -294,6 +295,7 @@ export const translations = {
           date: "2021",
           venue: "18th International TELLSI Conference, Tarbiat Modares University, Iran",
           description: "Presentation demonstrating network visualization techniques for analyzing online interactions in education technology contexts for language learning.",
+          link: "https://www.researchgate.net/publication/354825307_Visualized_Network_of_Online_Interactions_in_an_Ed-Tech_Enhanced_EFL_Language_Learning_Context_Using_Gephi_Software", 
           type: "conference", 
           authors: "Khany, R., & Fakhar Shahreza, M."
         },
@@ -303,6 +305,7 @@ export const translations = {
           date: "2021",
           venue: "International Conference on Current Trends in the Middle East, Virtual International Joint Conference on COVID-19",
           description: "Research exploring Iranian students' knowledge and use of digital portfolio tools during the pandemic, highlighting benefits and challenges.",
+          link: "https://www.researchgate.net/publication/355991622_Iranian_University_Students'_Familiarity_with_Digital_Portfolio_Creation_Tools_during_the_COVID-19_Pandemic_Merits_Demerits",
           type: "conference",
           authors: "Aliakbari, M., & Fakhar Shahreza, M."
         }
@@ -608,7 +611,7 @@ export const translations = {
           category: "Tecnología de Traducción",
           date: "2024 (en prensa)",
           description: "Artículo de investigación que estudia enfoques de traducción automática, centrándose en la evaluación de calidad, aceptación del usuario y tendencias lingüísticas en el campo.",
-          link: "https://doi.org/10.1075/ttmc",
+          link: "https://www.researchgate.net/publication/374539452_Approaches_on_Machine_Translation_Quality_Assessment_Acceptance_and_Language_Trends",
           type: "journal",
           authors: "Fakhar Shahreza, M., Vilhelm, M., & Díez-Arcón, P."
         },
@@ -617,7 +620,7 @@ export const translations = {
           category: "Tecnología Educativa",
           date: "2024 (en prensa)",
           description: "Revisión sistemática exhaustiva y análisis bibliométrico de la mejora de la lectura mediada por tecnología durante las últimas dos décadas.",
-          link: "https://www.peterlang.com/",
+          link: "https://www.researchgate.net/publication/374539565_Two_Decades_of_Technology-Mediated_Reading_Enhancement_A_Systematic_Review_and_Bibliometric_Analysis",
           type: "journal",
           authors: "Fakhar Shahreza, M."
         },
@@ -626,7 +629,7 @@ export const translations = {
           category: "Aprendizaje de Idiomas",
           date: "2023",
           description: "Estudio de investigación sobre el impacto de las aplicaciones móviles en el aprendizaje de idiomas, centrándose en la autorregulación, el locus de control y el rendimiento académico de los estudiantes de inglés.",
-          link: "https://www.comares.com/libro/positive-impacts-of-mall_135583/",
+          link: "https://www.researchgate.net/publication/370548175_The_Study_of_EFL_Students'_Self-Regulation_Locus_of_Control_and_Academic_Achievement_through_Mobile-Assisted_Language_Learning_The_Case_of_DuolingoR_App",
           type: "journal",
           authors: "Fakhar Shahreza, M., Barcena Madera, E., & Khany, R."
         },
@@ -635,7 +638,7 @@ export const translations = {
           category: "Investigación Educativa",
           date: "2016",
           description: "Desarrollo y validación de una escala de medición para evaluar los cambios en las prácticas de enseñanza entre profesores de inglés como lengua extranjera (EFL).",
-          link: "https://journals.modares.ac.ir/article-14-11064-en.html",
+          link: "https://www.researchgate.net/publication/341042764_Development_Factor_Analysis_and_Validation_of_an_EFL_Teacher_Change_Scale_TCS",
           type: "journal",
           authors: "Khany, R. & Fakhar Shahreza, M."
         },
@@ -654,6 +657,7 @@ export const translations = {
           date: "2022",
           venue: "19ª Conferencia Internacional TELLSI, Universidad de Birjand, Irán",
           description: "Presentación de investigación que estudia cómo la plataforma Medium afecta las habilidades de escritura y pensamiento crítico de los estudiantes de inglés.",
+          link: "https://www.researchgate.net/publication/365510453_Investigating_the_Impacts_of_an_Online_Writing_Platform_on_EFL_Students'_Writing_and_Critical_Thinking_Skills_The_Case_of_Medium_App",
           type: "conference",
           authors: "Khany, R., & Fakhar Shahreza, M."
         },
@@ -663,6 +667,7 @@ export const translations = {
           date: "2021",
           venue: "18ª Conferencia Internacional TELLSI, Universidad Tarbiat Modares, Irán",
           description: "Presentación que demuestra técnicas de visualización de redes para analizar interacciones en línea en contextos de tecnología educativa para el aprendizaje de idiomas.",
+          link: "https://www.researchgate.net/publication/354825307_Visualized_Network_of_Online_Interactions_in_an_Ed-Tech_Enhanced_EFL_Language_Learning_Context_Using_Gephi_Software",
           type: "conference", 
           authors: "Khany, R., & Fakhar Shahreza, M."
         },
@@ -672,6 +677,7 @@ export const translations = {
           date: "2021",
           venue: "Conferencia Internacional sobre Tendencias Actuales en Oriente Medio, Conferencia Conjunta Virtual Internacional sobre COVID-19",
           description: "Investigación que explora el conocimiento y uso de herramientas de portafolio digital por parte de estudiantes iraníes durante la pandemia, destacando beneficios y desafíos.",
+          link: "https://www.researchgate.net/publication/355991622_Iranian_University_Students'_Familiarity_with_Digital_Portfolio_Creation_Tools_during_the_COVID-19_Pandemic_Merits_Demerits",
           type: "conference",
           authors: "Aliakbari, M., & Fakhar Shahreza, M."
         }
