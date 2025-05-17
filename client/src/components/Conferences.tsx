@@ -267,7 +267,7 @@ export function Conferences() {
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <Card className="overflow-hidden h-full shadow-lg hover:shadow-xl border border-transparent hover:border-amber-200 dark:hover:border-amber-800 transition-all duration-300 bg-white dark:bg-gray-900 backdrop-blur-sm">
+              <Card className="overflow-hidden h-full shadow-lg hover:shadow-xl border border-transparent hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 bg-white dark:bg-gray-900 backdrop-blur-sm">
                 <motion.div 
                   className="relative overflow-hidden"
                   variants={imageVariants}
@@ -282,7 +282,7 @@ export function Conferences() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <div className="text-white space-y-1">
-                      <p className="font-medium text-amber-200">{conference.year}</p>
+                      <p className="font-medium text-blue-200">{conference.year}</p>
                       <p className="font-medium">{t('conferences.viewDetails')}</p>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export function Conferences() {
                     {conference.description}
                   </p>
                   
-                  <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4 bg-amber-50 dark:bg-amber-950/30 p-2 rounded-lg">
+                  <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4 bg-blue-50 dark:bg-blue-950/30 p-2 rounded-lg">
                     <motion.div
                       animate={{ 
                         scale: [1, 1.1, 1],
@@ -313,7 +313,7 @@ export function Conferences() {
                         repeat: Infinity,
                         repeatType: "mirror"
                       }}
-                      className="text-amber-600 dark:text-amber-400 mr-2"
+                      className="text-primary dark:text-primary mr-2"
                     >
                       <FaMapMarkerAlt />
                     </motion.div>
@@ -323,7 +323,7 @@ export function Conferences() {
                   <Dialog>
                     <DialogTrigger asChild>
                       <motion.button 
-                        className="w-full bg-amber-100 hover:bg-gradient-to-r hover:from-amber-500 hover:to-orange-500 hover:text-white text-amber-700 font-medium py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 mt-2 border border-amber-200 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-400"
+                        className="w-full bg-blue-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-primary hover:text-white text-blue-700 font-medium py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 mt-2 border border-blue-200 dark:border-blue-800 dark:bg-blue-900/20 dark:text-blue-400"
                         variants={buttonVariants}
                         initial="initial"
                         whileHover="hover"
@@ -396,33 +396,33 @@ export function Conferences() {
                           </motion.div>
                           
                           <motion.div 
-                            className="flex items-center text-gray-600 dark:text-gray-400 bg-amber-50 dark:bg-amber-950/30 p-3 rounded-lg"
+                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.3, duration: 0.4 }}
                           >
-                            <FaMapMarkerAlt className="mr-2 text-amber-600 dark:text-amber-400" />
+                            <FaMapMarkerAlt className="mr-2 text-primary dark:text-primary" />
                             <span>{conference.location}</span>
                           </motion.div>
                           
                           <motion.div 
-                            className="flex items-center text-gray-600 dark:text-gray-400 bg-amber-50 dark:bg-amber-950/30 p-3 rounded-lg"
+                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.4 }}
                           >
-                            <FaCalendarAlt className="mr-2 text-amber-600 dark:text-amber-400" />
+                            <FaCalendarAlt className="mr-2 text-primary dark:text-primary" />
                             <span>{conference.year}</span>
                           </motion.div>
                           
                           {conference.role && (
                             <motion.div 
-                              className="flex items-center text-gray-600 dark:text-gray-400 bg-amber-50 dark:bg-amber-950/30 p-3 rounded-lg"
+                              className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
                               initial={{ y: 20, opacity: 0 }}
                               animate={{ y: 0, opacity: 1 }}
                               transition={{ delay: 0.5, duration: 0.4 }}
                             >
-                              <FaMicrophone className="mr-2 text-amber-600 dark:text-amber-400" />
+                              <FaMicrophone className="mr-2 text-primary dark:text-primary" />
                               <span>{conference.role}</span>
                             </motion.div>
                           )}
