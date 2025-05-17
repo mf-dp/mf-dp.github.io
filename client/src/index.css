@@ -58,7 +58,7 @@
 
   body {
     @apply font-sans antialiased text-foreground relative;
-    background-image: url('/images/backgrounds/ai-background.png');
+    background-image: url('/background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
