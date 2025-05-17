@@ -1,17 +1,36 @@
 import React from 'react';
-import backgroundImage from '../assets/ai-background.png';
+
+const backgroundStyle = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  zIndex: -10,
+  backgroundImage: "url('/background.png')",
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
+};
+
+const overlayStyle = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  zIndex: -5,
+  backgroundColor: 'rgba(0, 0, 0, 0.4)',
+  backdropFilter: 'blur(2px)',
+};
 
 export function Background() {
   return (
-    <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden">
-      <img 
-        src={backgroundImage} 
-        alt="Background" 
-        className="h-full w-full object-cover"
-        style={{ opacity: 0.8 }}
-      />
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
-    </div>
+    <>
+      <div style={backgroundStyle}></div>
+      <div style={overlayStyle}></div>
+    </>
   );
 }
 
