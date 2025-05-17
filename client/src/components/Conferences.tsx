@@ -12,8 +12,26 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-// Use direct path to image in public folder
-const conferenceImagePath = '/images/profile.jpg';
+// Conference certificates images
+const conferenceCertificates = [
+  { id: 1, path: '/images/conferences/2021.03.09-10.jpg', year: 2021 },
+  { id: 2, path: '/images/conferences/2019.11.20-21.jpg', year: 2019 },
+  { id: 3, path: '/images/conferences/2019.10.25.01.jpg', year: 2019 },
+  { id: 4, path: '/images/conferences/2019.10.25.02.jpg', year: 2019 },
+  { id: 5, path: '/images/conferences/2019.01-02.30-01.01.jpg', year: 2019 },
+  { id: 6, path: '/images/conferences/2019.01-02.30-01.02.jpg', year: 2019 },
+  { id: 7, path: '/images/conferences/2019.01-02.30-01.03.jpg', year: 2019 },
+  { id: 8, path: '/images/conferences/2018.11.14-16.jpg', year: 2018 },
+  { id: 9, path: '/images/conferences/2018.09.04-05.jpg', year: 2018 },
+  { id: 10, path: '/images/conferences/2018.04.25-27.jpg', year: 2018 },
+  { id: 11, path: '/images/conferences/2017.01.25-27.jpg', year: 2017 },
+  { id: 12, path: '/images/conferences/2016.11.16-18.jpg', year: 2016 },
+  { id: 13, path: '/images/conferences/2016.05.12-13.jpg', year: 2016 },
+  { id: 14, path: '/images/conferences/2015.11.17-19.01.jpg', year: 2015 },
+  { id: 15, path: '/images/conferences/2015.11.17-19.02.jpg', year: 2015 },
+  { id: 16, path: '/images/conferences/2015.11.17-19.03.jpg', year: 2015 },
+  { id: 17, path: '/images/conferences/2015.11.17-19.04.jpg', year: 2015 },
+];
 
 export function Conferences() {
   const { t } = useLanguage();
@@ -22,6 +40,16 @@ export function Conferences() {
   const controls = useAnimation();
   const [selectedConference, setSelectedConference] = useState<any | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  
+  // Colors for the conference section - using orange theme
+  const orangeTheme = {
+    primary: 'text-orange-600 dark:text-orange-500',
+    secondary: 'text-orange-700 dark:text-orange-400',
+    background: 'from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/10',
+    heading: 'text-orange-600 dark:text-orange-400',
+    card: 'border-orange-200 dark:border-orange-800 hover:border-orange-400 dark:hover:border-orange-600',
+    cardBg: 'hover:bg-orange-50 dark:hover:bg-orange-900/20'
+  };
   
   useEffect(() => {
     if (isInView) {
