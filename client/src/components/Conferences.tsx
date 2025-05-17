@@ -12,25 +12,144 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-// Conference certificates images
+// Conference certificates data with full information for each certificate
 const conferenceCertificates = [
-  { id: 1, path: '/images/conferences/2021.03.09-10.jpg', year: 2021 },
-  { id: 2, path: '/images/conferences/2019.11.20-21.jpg', year: 2019 },
-  { id: 3, path: '/images/conferences/2019.10.25.01.jpg', year: 2019 },
-  { id: 4, path: '/images/conferences/2019.10.25.02.jpg', year: 2019 },
-  { id: 5, path: '/images/conferences/2019.01-02.30-01.01.jpg', year: 2019 },
-  { id: 6, path: '/images/conferences/2019.01-02.30-01.02.jpg', year: 2019 },
-  { id: 7, path: '/images/conferences/2019.01-02.30-01.03.jpg', year: 2019 },
-  { id: 8, path: '/images/conferences/2018.11.14-16.jpg', year: 2018 },
-  { id: 9, path: '/images/conferences/2018.09.04-05.jpg', year: 2018 },
-  { id: 10, path: '/images/conferences/2018.04.25-27.jpg', year: 2018 },
-  { id: 11, path: '/images/conferences/2017.01.25-27.jpg', year: 2017 },
-  { id: 12, path: '/images/conferences/2016.11.16-18.jpg', year: 2016 },
-  { id: 13, path: '/images/conferences/2016.05.12-13.jpg', year: 2016 },
-  { id: 14, path: '/images/conferences/2015.11.17-19.01.jpg', year: 2015 },
-  { id: 15, path: '/images/conferences/2015.11.17-19.02.jpg', year: 2015 },
-  { id: 16, path: '/images/conferences/2015.11.17-19.03.jpg', year: 2015 },
-  { id: 17, path: '/images/conferences/2015.11.17-19.04.jpg', year: 2015 },
+  { 
+    id: 1, 
+    path: '/images/conferences/2021.03.09-10.jpg', 
+    year: 2021,
+    title: "TELLSI Conference 2021",
+    description: "Certificate of presentation at the 19th International TELLSI Conference",
+    location: "Tarbiat Modares University, Iran"
+  },
+  { 
+    id: 2, 
+    path: '/images/conferences/2019.11.20-21.jpg', 
+    year: 2019,
+    title: "English Language Research Conference 2019",
+    description: "Certificate of attendance and presentation at the International Conference on English Language Research",
+    location: "Tehran, Iran"
+  },
+  { 
+    id: 3, 
+    path: '/images/conferences/2019.10.25.01.jpg', 
+    year: 2019,
+    title: "TELLSI Conference 2019 (1)",
+    description: "Certificate from the 17th International TELLSI Conference",
+    location: "Islamic Azad University, Iran"
+  },
+  { 
+    id: 4, 
+    path: '/images/conferences/2019.10.25.02.jpg', 
+    year: 2019,
+    title: "TELLSI Conference 2019 (2)",
+    description: "Certificate of paper presentation at the 17th International TELLSI Conference",
+    location: "Islamic Azad University, Iran"
+  },
+  { 
+    id: 5, 
+    path: '/images/conferences/2019.01-02.30-01.01.jpg', 
+    year: 2019,
+    title: "Applied Linguistics Conference 2019 (1)",
+    description: "Certificate from the International Conference on Applied Linguistics and Language Teaching",
+    location: "Tehran, Iran"
+  },
+  { 
+    id: 6, 
+    path: '/images/conferences/2019.01-02.30-01.02.jpg', 
+    year: 2019,
+    title: "Applied Linguistics Conference 2019 (2)",
+    description: "Certificate of presentation at the International Conference on Applied Linguistics",
+    location: "Tehran, Iran"
+  },
+  { 
+    id: 7, 
+    path: '/images/conferences/2019.01-02.30-01.03.jpg', 
+    year: 2019,
+    title: "Applied Linguistics Conference 2019 (3)",
+    description: "Certificate of attendance at the International Conference on Applied Linguistics",
+    location: "Tehran, Iran"
+  },
+  { 
+    id: 8, 
+    path: '/images/conferences/2018.11.14-16.jpg', 
+    year: 2018,
+    title: "International Conference on Language Research 2018",
+    description: "Certificate of participation in the International Conference on Language Research",
+    location: "University of Tehran, Iran"
+  },
+  { 
+    id: 9, 
+    path: '/images/conferences/2018.09.04-05.jpg', 
+    year: 2018,
+    title: "TELLSI Conference 2018",
+    description: "Certificate from the 16th International TELLSI Conference",
+    location: "Kharazmi University, Iran"
+  },
+  { 
+    id: 10, 
+    path: '/images/conferences/2018.04.25-27.jpg', 
+    year: 2018,
+    title: "Foreign Language Education Conference 2018",
+    description: "Certificate of participation in the International Conference on Foreign Language Education",
+    location: "Mashhad, Iran"
+  },
+  { 
+    id: 11, 
+    path: '/images/conferences/2017.01.25-27.jpg', 
+    year: 2017,
+    title: "Language Teaching Research Conference 2017",
+    description: "Certificate of presentation at the International Conference on Language Teaching Research",
+    location: "Shiraz University, Iran"
+  },
+  { 
+    id: 12, 
+    path: '/images/conferences/2016.11.16-18.jpg', 
+    year: 2016,
+    title: "TELLSI Conference 2016",
+    description: "Certificate from the 14th International TELLSI Conference",
+    location: "Urmia University, Iran"
+  },
+  { 
+    id: 13, 
+    path: '/images/conferences/2016.05.12-13.jpg', 
+    year: 2016,
+    title: "ELT Conference 2016",
+    description: "Certificate of participation in the International Conference on English Language Teaching",
+    location: "Tehran, Iran"
+  },
+  { 
+    id: 14, 
+    path: '/images/conferences/2015.11.17-19.01.jpg', 
+    year: 2015,
+    title: "TELLSI Conference 2015 (1)",
+    description: "Certificate from the 13th International TELLSI Conference",
+    location: "Lorestan University, Iran"
+  },
+  { 
+    id: 15, 
+    path: '/images/conferences/2015.11.17-19.02.jpg', 
+    year: 2015,
+    title: "TELLSI Conference 2015 (2)",
+    description: "Certificate of presentation at the 13th International TELLSI Conference",
+    location: "Lorestan University, Iran"
+  },
+  { 
+    id: 16, 
+    path: '/images/conferences/2015.11.17-19.03.jpg', 
+    year: 2015,
+    title: "TELLSI Conference 2015 (3)",
+    description: "Certificate of paper acceptance at the 13th International TELLSI Conference",
+    location: "Lorestan University, Iran"
+  },
+  { 
+    id: 17, 
+    path: '/images/conferences/2015.11.17-19.04.jpg', 
+    year: 2015,
+    title: "TELLSI Conference 2015 (4)",
+    description: "Certificate of attendance at the 13th International TELLSI Conference",
+    location: "Lorestan University, Iran"
+  },
 ];
 
 export function Conferences({ showAll = false }: { showAll?: boolean }) {
@@ -121,33 +240,11 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
     }
   };
 
-  // Get conferences from translations
-  const conferencesData = t('conferences.items') as unknown as any[];
-  const allConferences = Array.isArray(conferencesData) ? conferencesData : [];
-  
-  // If we're not showing all (on homepage), limit to 6 most recent conferences
-  const conferences = !showAll ? allConferences.slice(0, 6) : allConferences;
-
-  // Conference images from the extracted zip file (all 17 certificates)
-  const conferenceImages = [
-    '/images/conferences/2015.11.17-19.01.jpg',
-    '/images/conferences/2015.11.17-19.02.jpg',
-    '/images/conferences/2015.11.17-19.03.jpg',
-    '/images/conferences/2015.11.17-19.04.jpg',
-    '/images/conferences/2016.05.12-13.jpg',
-    '/images/conferences/2016.11.16-18.jpg',
-    '/images/conferences/2017.01.25-27.jpg',
-    '/images/conferences/2018.04.25-27.jpg',
-    '/images/conferences/2018.09.04-05.jpg',
-    '/images/conferences/2018.11.14-16.jpg',
-    '/images/conferences/2019.01-02.30-01.01.jpg',
-    '/images/conferences/2019.01-02.30-01.02.jpg',
-    '/images/conferences/2019.01-02.30-01.03.jpg',
-    '/images/conferences/2019.10.25.01.jpg',
-    '/images/conferences/2019.10.25.02.jpg',
-    '/images/conferences/2019.11.20-21.jpg',
-    '/images/conferences/2021.03.09-10.jpg'
-  ];
+  // Use the conferenceCertificates data directly
+  // If we're not showing all (on homepage), limit to 6 most recent certificates
+  const conferences = !showAll 
+    ? [...conferenceCertificates].sort((a, b) => b.year - a.year).slice(0, 6)
+    : [...conferenceCertificates].sort((a, b) => b.year - a.year);
 
   const openConferenceDetails = (conference: any) => {
     setSelectedConference(conference);
@@ -281,7 +378,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                   animate={hoveredCard === index ? "hover" : "initial"}
                 >
                   <LazyImage 
-                    src={conferenceImages[index % conferenceImages.length]} 
+                    src={conference.path} 
                     alt={conference.title} 
                     className="w-full h-56 object-cover" 
                     placeholderBlur={true}
