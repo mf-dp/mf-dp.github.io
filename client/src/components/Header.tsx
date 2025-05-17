@@ -46,34 +46,20 @@ export function Header() {
       className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-md border-b relative overflow-hidden ${
         isScrolled ? 'bg-white/80 dark:bg-gray-900/80 border-gray-200 dark:border-gray-800' : 'bg-transparent border-transparent'
       }`}
+      style={{
+        backgroundImage: `url('/images/backgrounds/header-bg${!isScrolled ? '' : '.svg'}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      {/* Background decoration */}
-      <div 
-        className="absolute inset-0 w-full h-full transition-opacity duration-500 dark:opacity-0"
-        style={{
-          backgroundImage: `url('/images/backgrounds/header-bg.svg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: isScrolled ? 0.7 : 1,
-        }}
-      />
-      <div 
-        className="absolute inset-0 w-full h-full transition-opacity duration-500 opacity-0 dark:opacity-100"
-        style={{
-          backgroundImage: `url('/images/backgrounds/header-bg-dark.svg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: isScrolled ? 0.7 : 1,
-        }}
-      />
       <div className="container mx-auto px-4 py-4">
         {/* Top Row: Logo (Left), Name (Center), Profile Image (Right) */}
         <div className="flex justify-between items-center mb-4">
           {/* Logo Left */}
           <div className="flex flex-col items-center">
-            <Link href="/" className="flex items-center">
+            <div className="flex items-center cursor-pointer" onClick={() => window.location.href = '/'}>
               <MFLogo className="w-16 h-16" />
-            </Link>
+            </div>
             {/* Theme & Language Controls under logo */}
             <div className="flex items-center space-x-2 mt-2">
               <ThemeToggle />
@@ -82,9 +68,12 @@ export function Header() {
           </div>
 
           {/* Name Center */}
-          <Link href="/" className="text-2xl font-bold text-center">
+          <div 
+            className="text-2xl font-bold text-center cursor-pointer"
+            onClick={() => window.location.href = '/'}
+          >
             MAHDIEH FAKHAR
-          </Link>
+          </div>
 
           {/* Profile Image Right */}
           <div className="w-16 h-16 rounded-full overflow-hidden">
@@ -105,14 +94,14 @@ export function Header() {
                 (item.path !== '/' && location.startsWith(item.path));
               
               return (
-                <button 
+                <div 
                   key={item.id}
-                  onClick={() => window.location.href = item.path}
-                  className={`font-medium px-3 py-2 rounded-md transition-all duration-300 ${
+                  className={`font-medium px-3 py-2 rounded-md transition-all duration-300 cursor-pointer ${
                     isActive 
                       ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 shadow-sm' 
                       : 'hover:bg-gray-100 dark:hover:bg-gray-800'
                   }`}
+                  onClick={() => window.location.href = item.path}
                 >
                   {item.label}
                   {isActive && (
@@ -120,7 +109,7 @@ export function Header() {
                       className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-0.5 rounded-full"
                     />
                   )}
-                </button>
+                </div>
               );
             })}
           </nav>
@@ -141,13 +130,13 @@ export function Header() {
                     (item.path !== '/' && location.startsWith(item.path));
                   
                   return (
-                    <button 
+                    <div
                       key={item.id}
                       onClick={() => {
                         handleMobileMenuClose();
                         window.location.href = item.path;
                       }}
-                      className={`block text-lg font-medium p-2 rounded-md text-left ${
+                      className={`block text-lg font-medium p-2 rounded-md cursor-pointer ${
                         isActive 
                           ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' 
                           : 'hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -159,7 +148,7 @@ export function Header() {
                           className="h-[3px] bg-blue-600 dark:bg-blue-400 mt-1 w-1/3 rounded-full"
                         />
                       )}
-                    </button>
+                    </div>
                   );
                 })}
               </nav>
