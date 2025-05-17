@@ -105,7 +105,7 @@ export function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <a href="#" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
+          <a href="/projects" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
             <span>{t('projects.viewAllButton')}</span>
             <FaArrowRight />
           </a>

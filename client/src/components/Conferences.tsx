@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt, FaGraduationCap } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
 import { LazyImage } from '@/components/ui/lazy-image';
+import { Link } from 'wouter';
 import {
   Dialog,
   DialogContent,
@@ -157,7 +158,7 @@ export function Conferences() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <a href="#" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
+          <a href="/conferences" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
             <span>{t('conferences.viewAllButton')}</span>
             <FaArrowRight />
           </a>
