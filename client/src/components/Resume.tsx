@@ -118,7 +118,7 @@ export function Resume() {
                 <div className="flex items-center justify-center gap-2">
                   <a href="/contact" className="text-primary hover:text-primary-dark transition-colors flex items-center gap-2">
                     <FaEnvelope className="text-primary" />
-                    <span>{t('resume.contactPage')}</span>
+                    <span>{t('contact.title')}</span>
                   </a>
                 </div>
               </CardContent>
@@ -127,7 +127,7 @@ export function Resume() {
             {/* Skills */}
             <Card>
               <CardHeader>
-                <CardTitle>{t('resume.skills')}</CardTitle>
+                <CardTitle className="text-center">{t('resume.skills')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
@@ -261,7 +261,7 @@ export function Resume() {
             {/* Education */}
             <Card>
               <CardHeader>
-                <CardTitle>{t('resume.education')}</CardTitle>
+                <CardTitle className="text-center">{t('resume.education')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
