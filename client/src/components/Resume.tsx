@@ -89,9 +89,11 @@ export function Resume() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Button variant="outline" className="flex items-center gap-2">
-              <FaDownload className="text-sm" />
-              <span>{t('resume.download')}</span>
+            <Button variant="outline" className="flex items-center gap-2" asChild>
+              <a href="/resume.pdf" download>
+                <FaDownload className="text-sm" />
+                <span>{t('resume.download')}</span>
+              </a>
             </Button>
           </motion.div>
         </div>

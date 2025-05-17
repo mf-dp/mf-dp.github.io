@@ -115,7 +115,7 @@ export function Articles() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <a href="#" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
+          <a href="/articles" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium">
             <span>{t('articles.viewAllButton')}</span>
             <FaArrowRight />
           </a>
