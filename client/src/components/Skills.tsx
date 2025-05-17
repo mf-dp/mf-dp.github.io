@@ -131,16 +131,20 @@ export function Skills() {
     ]
   };
 
-  // Render skill dots based on level (1-5)
-  const renderSkillLevel = (level: number) => {
+  // Render skill bar based on level (1-5)
+  const renderSkillLevel = (level: number, index: number) => {
     return (
-      <div className="flex gap-1">
-        {[...Array(5)].map((_, i) => (
-          <span 
-            key={i} 
-            className={`w-2 h-2 rounded-full ${i < level ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-700'}`}
-          ></span>
-        ))}
+      <div className="relative w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <motion.div 
+          className="absolute left-0 top-0 h-full bg-gradient-to-r from-primary to-primary/80 rounded-full"
+          custom={level}
+          variants={skillBarVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            delay: 0.3 + (index * 0.1)
+          }}
+        />
       </div>
     );
   };
@@ -149,39 +153,61 @@ export function Skills() {
   const skillCategories: SkillCategory[] = [
     {
       id: 'dataAnalysis',
-      icon: <FaDatabase className="text-2xl text-primary mr-3" />,
+      icon: <FaDatabase className="text-2xl" />,
       title: t('skills.dataAnalysis.title'),
       items: sampleSkillData.dataAnalysis
     },
     {
       id: 'visualization',
-      icon: <FaChartBar className="text-2xl text-primary mr-3" />,
+      icon: <FaChartBar className="text-2xl" />,
       title: t('skills.visualization.title'),
       items: sampleSkillData.visualization
     },
     {
       id: 'tools',
-      icon: <FaToolbox className="text-2xl text-primary mr-3" />,
+      icon: <FaToolbox className="text-2xl" />,
       title: t('skills.tools.title'),
       items: sampleSkillData.tools
     },
     {
       id: 'soft',
-      icon: <FaComments className="text-2xl text-primary mr-3" />,
+      icon: <FaComments className="text-2xl" />,
       title: t('skills.soft.title'),
       items: sampleSkillData.soft
     },
     {
-      id: 'analytics',
-      icon: <FaSearch className="text-2xl text-primary mr-3" />,
+      id: 'analytics', 
+      icon: <FaSearch className="text-2xl" />,
       title: t('skills.analytics.title'),
       items: sampleSkillData.analytics
     },
     {
       id: 'web',
-      icon: <FaLaptopCode className="text-2xl text-primary mr-3" />,
+      icon: <FaLaptopCode className="text-2xl" />,
       title: t('skills.web.title'),
       items: sampleSkillData.web
+    },
+    {
+      id: 'ai',
+      icon: <FaBrain className="text-2xl" />,
+      title: 'Artificial Intelligence',
+      items: [
+        { name: "Machine Learning", level: 5 },
+        { name: "Deep Learning", level: 4 },
+        { name: "Natural Language Processing", level: 4 },
+        { name: "Computer Vision", level: 3 }
+      ]
+    },
+    {
+      id: 'cloud',
+      icon: <FaCloudUploadAlt className="text-2xl" />,
+      title: 'Cloud Computing',
+      items: [
+        { name: "AWS", level: 4 },
+        { name: "Google Cloud", level: 3 },
+        { name: "Azure", level: 3 },
+        { name: "Serverless Architecture", level: 4 }
+      ]
     }
   ];
 
@@ -189,14 +215,44 @@ export function Skills() {
     <section 
       id="skills"
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+      className="py-20 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
     >
-      <div className="container mx-auto px-4">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div 
+          className="absolute top-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl"
+          animate={{ 
+            scale: [0.9, 1.1, 0.9],
+            opacity: [0.3, 0.5, 0.3], 
+            y: [0, 30, 0] 
+          }}
+          transition={{ 
+            duration: 15, 
+            repeat: Infinity, 
+            repeatType: "reverse" 
+          }}
+        />
+        <motion.div 
+          className="absolute -top-20 -left-20 w-64 h-64 md:w-96 md:h-96 bg-accent/5 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1.1, 0.9, 1.1],
+            opacity: [0.3, 0.5, 0.3], 
+            y: [0, -30, 0] 
+          }}
+          transition={{ 
+            duration: 18, 
+            repeat: Infinity, 
+            repeatType: "reverse" 
+          }}
+        />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
           {t('skills.title')}
         </motion.h2>
@@ -214,14 +270,22 @@ export function Skills() {
               variants={itemVariants}
             >
               <div className="flex items-center mb-6">
-                {category.icon}
+                <motion.div
+                  className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4"
+                  variants={iconVariants}
+                  whileHover="hover"
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <span className="text-primary">{category.icon}</span>
+                </motion.div>
                 <h3 className="text-xl font-semibold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">{category.title}</h3>
               </div>
               <ul className="space-y-4">
                 {category.items.map((skill, idx) => (
                   <li key={idx} className="flex justify-between items-center">
                     <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
-                    {renderSkillLevel(skill.level)}
+                    {renderSkillLevel(skill.level, idx)}
                   </li>
                 ))}
               </ul>
