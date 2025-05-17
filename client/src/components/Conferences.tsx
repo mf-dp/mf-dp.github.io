@@ -2,7 +2,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from '@/hooks/useIntersectionObserver';
 import { useRef, useState, useEffect } from 'react';
-import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt, FaGraduationCap, FaMicrophone, FaUsers, FaUniversity, FaCertificate } from 'react-icons/fa';
+import { FaArrowRight, FaMapMarkerAlt, FaChevronRight, FaCalendarAlt } from 'react-icons/fa';
 import { Card, CardContent } from '@/components/ui/card';
 import { LazyImage } from '@/components/ui/lazy-image';
 import {
@@ -286,53 +286,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
           }}
         />
         
-        {/* Decorative conference elements */}
-        <motion.div 
-          className="absolute top-20 left-[10%] w-8 h-8 text-primary opacity-10 md:opacity-30"
-          animate={{
-            y: [0, -15, 0],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <FaMicrophone size={32} />
-        </motion.div>
-        
-        <motion.div 
-          className="absolute bottom-40 right-[15%] w-10 h-10 text-blue-600 opacity-10 md:opacity-30"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.3, 0.7, 0.3]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        >
-          <FaUsers size={40} />
-        </motion.div>
-        
-        <motion.div 
-          className="absolute top-1/3 right-[30%] w-8 h-8 text-blue-600 opacity-0 md:opacity-20"
-          animate={{
-            y: [0, -10, 0],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        >
-          <FaUniversity size={32} />
-        </motion.div>
+        {/* No decorative conference elements */}
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
