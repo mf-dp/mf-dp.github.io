@@ -27,6 +27,8 @@ const conferenceCertificates = [
     organization: "TELLSI (Teaching English Language and Literature Society of Iran)",
     location: "Tarbiat Modares University, Tehran, Iran",
     role: "Presenter",
+    participantType: "Presenter",
+    typeColor: "green", // 🟩 Presenter
     topic: "Language Education Research"
   },
   { 
@@ -39,6 +41,8 @@ const conferenceCertificates = [
     organization: "Iran University of Science and Technology",
     location: "Tehran, Iran",
     role: "Contributor",
+    participantType: "Panelist / Moderator",
+    typeColor: "orange", // 🟧 Panelist / Moderator
     topic: "Language Education Methodologies"
   },
   { 
@@ -51,6 +55,8 @@ const conferenceCertificates = [
     organization: "TELLSI (Teaching English Language and Literature Society of Iran)",
     location: "Islamic Azad University, Tabriz Branch, Iran",
     role: "Presenter",
+    participantType: "Presenter",
+    typeColor: "green", // 🟩 Presenter
     topic: "Language Teaching and Research"
   },
   { 
@@ -59,7 +65,10 @@ const conferenceCertificates = [
     year: 2019,
     title: "TELLSI Conference 2019 (2)",
     description: "Certificate of paper presentation at the 17th International TELLSI Conference",
-    location: "Islamic Azad University, Iran"
+    location: "Islamic Azad University, Iran",
+    role: "Presenter",
+    participantType: "Presenter",
+    typeColor: "green" // 🟩 Presenter
   },
   { 
     id: 5, 
@@ -67,7 +76,10 @@ const conferenceCertificates = [
     year: 2019,
     title: "Applied Linguistics Conference 2019 (1)",
     description: "Certificate from the International Conference on Applied Linguistics and Language Teaching",
-    location: "Tehran, Iran"
+    location: "Tehran, Iran",
+    role: "Organizing Committee Member",
+    participantType: "Organizing Committee / Executive Member",
+    typeColor: "red" // 🟥 Organizing Committee / Executive Member
   },
   { 
     id: 6, 
@@ -75,7 +87,10 @@ const conferenceCertificates = [
     year: 2019,
     title: "Applied Linguistics Conference 2019 (2)",
     description: "Certificate of presentation at the International Conference on Applied Linguistics",
-    location: "Tehran, Iran"
+    location: "Tehran, Iran",
+    role: "Presenter",
+    participantType: "Presenter",
+    typeColor: "green" // 🟩 Presenter
   },
   { 
     id: 7, 
@@ -83,7 +98,10 @@ const conferenceCertificates = [
     year: 2019,
     title: "Applied Linguistics Conference 2019 (3)",
     description: "Certificate of attendance at the International Conference on Applied Linguistics",
-    location: "Tehran, Iran"
+    location: "Tehran, Iran",
+    role: "Attendee",
+    participantType: "Attendee (Audience)",
+    typeColor: "yellow" // 🟨 Attendee (Audience)
   },
   { 
     id: 8, 
