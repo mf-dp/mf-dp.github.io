@@ -326,6 +326,9 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
       return [...conferenceCertificates].sort((a, b) => b.year - a.year).slice(0, 6);
     }
     
+    console.log("Active tab:", activeTab); // For debugging
+    console.log("All conferences count:", groupedConferences.all.length);
+    
     switch (activeTab) {
       case 'presenters':
         return groupedConferences.presenters;
@@ -339,8 +342,10 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
         return groupedConferences.organizers;
       case 'keynote':
         return groupedConferences.keynote;
+      case 'all':
+        return [...conferenceCertificates].sort((a, b) => b.year - a.year);
       default:
-        return groupedConferences.all;
+        return [...conferenceCertificates].sort((a, b) => b.year - a.year);
     }
   };
   
@@ -410,52 +415,59 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
         </motion.h2>
         
         {showAll && (
-          <div className="mb-10">
-            <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid w-full md:w-auto md:inline-flex grid-cols-2 md:grid-cols-none gap-2 mb-8 p-1 bg-blue-50/80 dark:bg-blue-900/20 rounded-lg">
-                <TabsTrigger 
-                  value="all"
-                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-blue-500 data-[state=active]:to-blue-600 data-[state=active]:text-white"
-                >
-                  All Conferences
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="presenters"
-                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white"
-                >
-                  🟩 Presenters
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="workshop"
-                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-blue-500 data-[state=active]:to-blue-600 data-[state=active]:text-white"
-                >
-                  🟦 Workshop Participants
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="attendees"
-                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-yellow-500 data-[state=active]:to-yellow-600 data-[state=active]:text-white"
-                >
-                  🟨 Attendees
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="panelists"
-                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white"
-                >
-                  🟧 Panelists
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="organizers"
-                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-red-500 data-[state=active]:to-red-600 data-[state=active]:text-white"
-                >
-                  🟥 Organizers
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="keynote"
-                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white"
-                >
-                  ⬛ Keynote Speakers
-                </TabsTrigger>
-              </TabsList>
+          <div className="mb-10 flex justify-center">
+            <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full max-w-3xl mx-auto">
+              <div className="flex justify-center mb-8">
+                <TabsList className="inline-flex p-1.5 bg-blue-50/80 dark:bg-blue-900/20 rounded-xl shadow-md border border-blue-100 dark:border-blue-800">
+                  <TabsTrigger 
+                    value="all"
+                    className="min-w-24 px-6 py-2.5 rounded-lg font-medium text-sm data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                  >
+                    All Certificates
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="presenters"
+                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                  >
+                    <span className="text-green-500">●</span> Presenters
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="workshop"
+                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                  >
+                    <span className="text-blue-500">●</span> Workshops
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="attendees"
+                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                  >
+                    <span className="text-yellow-500">●</span> Attendees
+                  </TabsTrigger>
+                </TabsList>
+              </div>
+              
+              <div className="flex justify-center mb-6">
+                <TabsList className="inline-flex p-1.5 bg-blue-50/80 dark:bg-blue-900/20 rounded-xl shadow-md border border-blue-100 dark:border-blue-800">
+                  <TabsTrigger 
+                    value="panelists"
+                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                  >
+                    <span className="text-orange-500">●</span> Panelists
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="organizers"
+                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                  >
+                    <span className="text-red-500">●</span> Organizers
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="keynote"
+                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                  >
+                    <span className="text-gray-900 dark:text-white">●</span> Keynotes
+                  </TabsTrigger>
+                </TabsList>
+              </div>
             </Tabs>
           </div>
         )}
