@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Conference certificates data with detailed information extracted from certificate images
 const conferenceCertificates = [
@@ -220,6 +221,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
   const controls = useAnimation();
   const [selectedConference, setSelectedConference] = useState<any | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState('all');
   
   // Colors for the conference section - using blue theme (same as site theme)
   const themeColors = {
@@ -301,11 +303,50 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
     }
   };
 
+  // Group conferences by participant type
+  const groupConferencesByType = () => {
+    const sorted = [...conferenceCertificates].sort((a, b) => b.year - a.year);
+    
+    return {
+      all: sorted,
+      presenters: sorted.filter(conf => conf.participantType === "Presenter"),
+      workshop: sorted.filter(conf => conf.participantType === "Workshop Participant"),
+      attendees: sorted.filter(conf => conf.participantType === "Attendee (Audience)"),
+      panelists: sorted.filter(conf => conf.participantType === "Panelist / Moderator"),
+      organizers: sorted.filter(conf => conf.participantType === "Organizing Committee / Executive Member"),
+      keynote: sorted.filter(conf => conf.participantType === "Keynote Speaker / Invited Speaker")
+    };
+  };
+  
+  const groupedConferences = groupConferencesByType();
+  
+  // Get filtered conferences based on active tab
+  const getFilteredConferences = () => {
+    if (!showAll) {
+      return [...conferenceCertificates].sort((a, b) => b.year - a.year).slice(0, 6);
+    }
+    
+    switch (activeTab) {
+      case 'presenters':
+        return groupedConferences.presenters;
+      case 'workshop':
+        return groupedConferences.workshop;
+      case 'attendees':
+        return groupedConferences.attendees;
+      case 'panelists':
+        return groupedConferences.panelists;
+      case 'organizers':
+        return groupedConferences.organizers;
+      case 'keynote':
+        return groupedConferences.keynote;
+      default:
+        return groupedConferences.all;
+    }
+  };
+  
   // Use the conferenceCertificates data directly
   // If we're not showing all (on homepage), limit to 6 most recent certificates
-  const conferences = !showAll 
-    ? [...conferenceCertificates].sort((a, b) => b.year - a.year).slice(0, 6)
-    : [...conferenceCertificates].sort((a, b) => b.year - a.year);
+  const conferences = getFilteredConferences();
 
   const openConferenceDetails = (conference: any) => {
     setSelectedConference(conference);
@@ -367,6 +408,57 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
         >
           {t('conferences.title')}
         </motion.h2>
+        
+        {showAll && (
+          <div className="mb-10">
+            <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full">
+              <TabsList className="grid w-full md:w-auto md:inline-flex grid-cols-2 md:grid-cols-none gap-2 mb-8 p-1 bg-blue-50/80 dark:bg-blue-900/20 rounded-lg">
+                <TabsTrigger 
+                  value="all"
+                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-blue-500 data-[state=active]:to-blue-600 data-[state=active]:text-white"
+                >
+                  All Conferences
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="presenters"
+                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white"
+                >
+                  🟩 Presenters
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="workshop"
+                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-blue-500 data-[state=active]:to-blue-600 data-[state=active]:text-white"
+                >
+                  🟦 Workshop Participants
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="attendees"
+                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-yellow-500 data-[state=active]:to-yellow-600 data-[state=active]:text-white"
+                >
+                  🟨 Attendees
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="panelists"
+                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white"
+                >
+                  🟧 Panelists
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="organizers"
+                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-red-500 data-[state=active]:to-red-600 data-[state=active]:text-white"
+                >
+                  🟥 Organizers
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="keynote"
+                  className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white"
+                >
+                  ⬛ Keynote Speakers
+                </TabsTrigger>
+              </TabsList>
+            </Tabs>
+          </div>
+        )}
         
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
