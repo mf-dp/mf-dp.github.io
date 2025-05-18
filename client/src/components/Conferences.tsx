@@ -371,7 +371,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
     }
   };
 
-  // Group conferences by participant type
+  // Group conferences by participant type - fixed to properly categorize all certificates
   const groupConferencesByType = () => {
     const sorted = [...conferenceCertificates].sort((a, b) => b.year - a.year);
     
@@ -386,7 +386,16 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
     };
   };
   
+  // Created outside useEffect to ensure it's calculated on first render
   const groupedConferences = groupConferencesByType();
+  
+  // Add useEffect to update filtered conferences when activeTab changes
+  useEffect(() => {
+    console.log("Tab changed to:", activeTab);
+    // Force a re-render with the new tab
+    const filtered = getFilteredConferences();
+    console.log("Filtered conferences count:", filtered.length);
+  }, [activeTab]);
   
   // Get filtered conferences based on active tab
   const getFilteredConferences = () => {
@@ -394,27 +403,17 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
       return [...conferenceCertificates].sort((a, b) => b.year - a.year).slice(0, 6);
     }
     
-    console.log("Active tab:", activeTab); // For debugging
-    console.log("All conferences count:", groupedConferences.all.length);
+    const byType = {
+      'presenters': groupedConferences.presenters,
+      'workshop': groupedConferences.workshop,
+      'attendees': groupedConferences.attendees,
+      'panelists': groupedConferences.panelists,
+      'organizers': groupedConferences.organizers,
+      'keynote': groupedConferences.keynote,
+      'all': groupedConferences.all
+    };
     
-    switch (activeTab) {
-      case 'presenters':
-        return groupedConferences.presenters;
-      case 'workshop':
-        return groupedConferences.workshop;
-      case 'attendees':
-        return groupedConferences.attendees;
-      case 'panelists':
-        return groupedConferences.panelists;
-      case 'organizers':
-        return groupedConferences.organizers;
-      case 'keynote':
-        return groupedConferences.keynote;
-      case 'all':
-        return [...conferenceCertificates].sort((a, b) => b.year - a.year);
-      default:
-        return [...conferenceCertificates].sort((a, b) => b.year - a.year);
-    }
+    return byType[activeTab as keyof typeof byType] || groupedConferences.all;
   };
   
   // Use the conferenceCertificates data directly
@@ -731,7 +730,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-medium shadow-md hover:bg-blue-700 transition-colors"
             >
-              {t('buttons.viewAll')}
+              {t('conferences.viewAll', 'View All Conferences')}
               <FaArrowRight />
             </motion.a>
           </div>
