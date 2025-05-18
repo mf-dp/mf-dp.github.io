@@ -16,7 +16,6 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { SEO } from "@/components/SEO";
 import { Layout } from "@/components/Layout";
-import { useEffect } from "react";
 
 function Router() {
   return (
@@ -34,58 +33,12 @@ function Router() {
   );
 }
 
-// This component handles setting up the background image globally
-function BackgroundSetup() {
-  useEffect(() => {
-    // Add CSS for the fixed background globally
-    const style = document.createElement('style');
-    style.innerHTML = `
-      body {
-        margin: 0;
-        padding: 0;
-        background-image: url('/images/ai-background.png');
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-      }
-      
-      body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        z-index: 0;
-        pointer-events: none;
-      }
-      
-      #root {
-        position: relative;
-        z-index: 1;
-      }
-    `;
-    document.head.appendChild(style);
-    
-    return () => {
-      // Clean up if needed
-      document.head.removeChild(style);
-    };
-  }, []);
-  
-  return null;
-}
-
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <LanguageProvider>
           <TooltipProvider>
-            <BackgroundSetup />
             <SEO />
             <Layout>
               <Toaster />

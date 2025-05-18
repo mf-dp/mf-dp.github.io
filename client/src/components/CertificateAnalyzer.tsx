@@ -30,10 +30,7 @@ export function CertificateAnalyzer({ filename, onAnalysisComplete }: Certificat
     staleTime: Infinity,
   });
   
-  // Type assertion to handle the response format from the API
-  const analysis: CertificateAnalysisData | null = response && 'data' in response 
-    ? (response.data as CertificateAnalysisData) 
-    : null;
+  const analysis: CertificateAnalysisData | null = response?.data ?? null;
   
   useEffect(() => {
     if (analysis && onAnalysisComplete && !analysisDisplayed) {
