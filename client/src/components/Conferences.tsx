@@ -730,7 +730,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-medium shadow-md hover:bg-blue-700 transition-colors"
             >
-              {t('conferences.viewAll', 'View All Conferences')}
+              {t('conferences.viewAllButton')}
               <FaArrowRight />
             </motion.a>
           </div>
