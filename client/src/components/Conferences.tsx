@@ -469,28 +469,35 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
           {t('conferences.title')}
         </motion.h2>
         
-        {/* Conference Filters (only shown on the dedicated conferences page) */}
+        {/* Simple conference filters */}
         {showAll && (
           <div className="mb-10">
             <div className="flex justify-center">
-              <div className="flex flex-wrap justify-center gap-2 mb-6">
-                {filterOptions.map(option => (
-                  <button
-                    key={option.id}
-                    onClick={() => setActiveFilter(option.id)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1.5 shadow-sm border 
-                      ${activeFilter === option.id 
-                        ? `bg-${option.color}-500 text-white border-${option.color}-600` 
-                        : 'bg-white/80 dark:bg-gray-800/60 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700/50'
-                      }`}
-                  >
-                    <span className={`text-${option.color}-500 ${activeFilter === option.id ? 'text-white' : ''}`}>●</span>
-                    {option.label}
-                    <span className="ml-1 px-1.5 py-0.5 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
-                      {option.count}
-                    </span>
-                  </button>
-                ))}
+              <div className="inline-flex flex-wrap justify-center gap-2 bg-white dark:bg-gray-800 p-2 rounded-lg shadow border border-gray-100 dark:border-gray-700">
+                <button
+                  onClick={() => setActiveFilter('all')}
+                  className={`px-4 py-2 rounded text-sm font-medium transition-colors ${activeFilter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+                >
+                  All Conferences ({conferenceCertificates.length})
+                </button>
+                <button
+                  onClick={() => setActiveFilter('presenters')}
+                  className={`px-4 py-2 rounded text-sm font-medium transition-colors ${activeFilter === 'presenters' ? 'bg-green-500 text-white' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+                >
+                  <span className="text-green-500 mr-1">●</span> Presenters ({conferenceCertificates.filter(c => c.participantType === "Presenter").length})
+                </button>
+                <button
+                  onClick={() => setActiveFilter('workshop')}
+                  className={`px-4 py-2 rounded text-sm font-medium transition-colors ${activeFilter === 'workshop' ? 'bg-blue-500 text-white' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+                >
+                  <span className="text-blue-500 mr-1">●</span> Workshops ({conferenceCertificates.filter(c => c.participantType === "Workshop Participant").length})
+                </button>
+                <button
+                  onClick={() => setActiveFilter('organizers')}
+                  className={`px-4 py-2 rounded text-sm font-medium transition-colors ${activeFilter === 'organizers' ? 'bg-red-500 text-white' : 'bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
+                >
+                  <span className="text-red-500 mr-1">●</span> Organizers ({conferenceCertificates.filter(c => c.participantType === "Organizing Committee / Executive Member").length})
+                </button>
               </div>
             </div>
           </div>
