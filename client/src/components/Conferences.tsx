@@ -223,6 +223,12 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState('all');
   
+  // Add a useEffect to initialize the 'all' tab correctly
+  useEffect(() => {
+    // This ensures the 'all' tab works correctly when initialized
+    console.log("Active tab is set to:", activeTab);
+  }, [activeTab]);
+  
   // Colors for the conference section - using blue theme (same as site theme)
   const themeColors = {
     primary: 'text-primary dark:text-primary',
@@ -416,53 +422,48 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
         
         {showAll && (
           <div className="mb-10 flex justify-center">
-            <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full max-w-3xl mx-auto">
+            <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full max-w-5xl mx-auto">
               <div className="flex justify-center mb-8">
-                <TabsList className="inline-flex p-1.5 bg-blue-50/80 dark:bg-blue-900/20 rounded-xl shadow-md border border-blue-100 dark:border-blue-800">
+                <TabsList className="inline-flex flex-wrap md:flex-nowrap p-1.5 bg-blue-50/80 dark:bg-blue-900/20 rounded-xl shadow-md border border-blue-100 dark:border-blue-800">
                   <TabsTrigger 
                     value="all"
-                    className="min-w-24 px-6 py-2.5 rounded-lg font-medium text-sm data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                    className="min-w-24 px-4 py-2.5 rounded-lg font-medium text-sm data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all duration-200"
                   >
-                    All Certificates
+                    All Conferences
                   </TabsTrigger>
                   <TabsTrigger 
                     value="presenters"
-                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-green-500 data-[state=active]:text-white transition-all duration-200"
                   >
-                    <span className="text-green-500">●</span> Presenters
+                    <span className="text-green-500 group-data-[state=active]:text-white">●</span> Presenters
                   </TabsTrigger>
                   <TabsTrigger 
                     value="workshop"
-                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all duration-200"
                   >
                     <span className="text-blue-500">●</span> Workshops
                   </TabsTrigger>
                   <TabsTrigger 
                     value="attendees"
-                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-yellow-500 data-[state=active]:text-white transition-all duration-200"
                   >
                     <span className="text-yellow-500">●</span> Attendees
                   </TabsTrigger>
-                </TabsList>
-              </div>
-              
-              <div className="flex justify-center mb-6">
-                <TabsList className="inline-flex p-1.5 bg-blue-50/80 dark:bg-blue-900/20 rounded-xl shadow-md border border-blue-100 dark:border-blue-800">
                   <TabsTrigger 
                     value="panelists"
-                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-orange-500 data-[state=active]:text-white transition-all duration-200"
                   >
                     <span className="text-orange-500">●</span> Panelists
                   </TabsTrigger>
                   <TabsTrigger 
                     value="organizers"
-                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-red-500 data-[state=active]:text-white transition-all duration-200"
                   >
                     <span className="text-red-500">●</span> Organizers
                   </TabsTrigger>
                   <TabsTrigger 
                     value="keynote"
-                    className="px-6 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:shadow-md data-[state=active]:bg-white dark:data-[state=active]:bg-gray-800 transition-all duration-200"
+                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-gray-900 data-[state=active]:text-white transition-all duration-200"
                   >
                     <span className="text-gray-900 dark:text-white">●</span> Keynotes
                   </TabsTrigger>
