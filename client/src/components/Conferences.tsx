@@ -213,7 +213,7 @@ const conferenceCertificates = [
   },
 ];
 
-export default function Conferences({ showAll = false }: { showAll?: boolean }) {
+export function Conferences({ showAll = false }: { showAll?: boolean }) {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });

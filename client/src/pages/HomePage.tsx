@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
-import Conferences from "@/components/Conferences";
+import { Conferences } from "@/components/Conferences";
 import Education from "@/components/Education";
 import CareerHistory from "@/components/CareerHistory";
 import Articles from "@/components/Articles";
