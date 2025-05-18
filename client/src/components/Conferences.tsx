@@ -109,7 +109,10 @@ const conferenceCertificates = [
     year: 2018,
     title: "International Conference on Language Research 2018",
     description: "Certificate of participation in the International Conference on Language Research",
-    location: "University of Tehran, Iran"
+    location: "University of Tehran, Iran",
+    role: "Workshop Participant",
+    participantType: "Workshop Participant",
+    typeColor: "blue" // 🟦 Workshop Participant
   },
   { 
     id: 9, 
@@ -117,7 +120,10 @@ const conferenceCertificates = [
     year: 2018,
     title: "TELLSI Conference 2018",
     description: "Certificate from the 16th International TELLSI Conference",
-    location: "Kharazmi University, Iran"
+    location: "Kharazmi University, Iran",
+    role: "Keynote Speaker",
+    participantType: "Keynote Speaker / Invited Speaker",
+    typeColor: "black" // ⬛ Keynote Speaker / Invited Speaker
   },
   { 
     id: 10, 
@@ -125,7 +131,10 @@ const conferenceCertificates = [
     year: 2018,
     title: "Foreign Language Education Conference 2018",
     description: "Certificate of participation in the International Conference on Foreign Language Education",
-    location: "Mashhad, Iran"
+    location: "Mashhad, Iran",
+    role: "Panelist",
+    participantType: "Panelist / Moderator",
+    typeColor: "orange" // 🟧 Panelist / Moderator
   },
   { 
     id: 11, 
@@ -133,7 +142,10 @@ const conferenceCertificates = [
     year: 2017,
     title: "Language Teaching Research Conference 2017",
     description: "Certificate of presentation at the International Conference on Language Teaching Research",
-    location: "Shiraz University, Iran"
+    location: "Shiraz University, Iran",
+    role: "Presenter",
+    participantType: "Presenter",
+    typeColor: "green" // 🟩 Presenter
   },
   { 
     id: 12, 
@@ -141,7 +153,10 @@ const conferenceCertificates = [
     year: 2016,
     title: "TELLSI Conference 2016",
     description: "Certificate from the 14th International TELLSI Conference",
-    location: "Urmia University, Iran"
+    location: "Urmia University, Iran",
+    role: "Attendee",
+    participantType: "Attendee (Audience)",
+    typeColor: "yellow" // 🟨 Attendee (Audience)
   },
   { 
     id: 13, 
@@ -149,7 +164,10 @@ const conferenceCertificates = [
     year: 2016,
     title: "ELT Conference 2016",
     description: "Certificate of participation in the International Conference on English Language Teaching",
-    location: "Tehran, Iran"
+    location: "Tehran, Iran",
+    role: "Workshop Participant",
+    participantType: "Workshop Participant",
+    typeColor: "blue" // 🟦 Workshop Participant
   },
   { 
     id: 14, 
@@ -157,7 +175,10 @@ const conferenceCertificates = [
     year: 2015,
     title: "TELLSI Conference 2015 (1)",
     description: "Certificate from the 13th International TELLSI Conference",
-    location: "Lorestan University, Iran"
+    location: "Lorestan University, Iran",
+    role: "Organizing Committee Member",
+    participantType: "Organizing Committee / Executive Member",
+    typeColor: "red" // 🟥 Organizing Committee / Executive Member
   },
   { 
     id: 15, 
@@ -165,7 +186,10 @@ const conferenceCertificates = [
     year: 2015,
     title: "TELLSI Conference 2015 (2)",
     description: "Certificate of presentation at the 13th International TELLSI Conference",
-    location: "Lorestan University, Iran"
+    location: "Lorestan University, Iran",
+    role: "Presenter",
+    participantType: "Presenter",
+    typeColor: "green" // 🟩 Presenter
   },
   { 
     id: 16, 
@@ -173,7 +197,10 @@ const conferenceCertificates = [
     year: 2015,
     title: "TELLSI Conference 2015 (3)",
     description: "Certificate of paper acceptance at the 13th International TELLSI Conference",
-    location: "Lorestan University, Iran"
+    location: "Lorestan University, Iran",
+    role: "Presenter",
+    participantType: "Presenter",
+    typeColor: "green" // 🟩 Presenter
   },
   { 
     id: 17, 
@@ -181,7 +208,10 @@ const conferenceCertificates = [
     year: 2015,
     title: "TELLSI Conference 2015 (4)",
     description: "Certificate of attendance at the 13th International TELLSI Conference",
-    location: "Lorestan University, Iran"
+    location: "Lorestan University, Iran",
+    role: "Attendee",
+    participantType: "Attendee (Audience)",
+    typeColor: "yellow" // 🟨 Attendee (Audience)
   },
 ];
 
