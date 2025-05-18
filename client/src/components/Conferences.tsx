@@ -389,31 +389,56 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
   // Created outside useEffect to ensure it's calculated on first render
   const groupedConferences = groupConferencesByType();
   
+  // State to store filtered conferences
+  const [filteredConferences, setFilteredConferences] = useState<typeof conferenceCertificates>([]);
+  
   // Add useEffect to update filtered conferences when activeTab changes
   useEffect(() => {
     console.log("Tab changed to:", activeTab);
-    // Force a re-render with the new tab
-    const filtered = getFilteredConferences();
+    // Update the filtered conferences when tab changes
+    const filtered = getFilteredConferencesByTab(activeTab);
+    setFilteredConferences(filtered);
     console.log("Filtered conferences count:", filtered.length);
-  }, [activeTab]);
+  }, [activeTab, showAll]);
+  
+  // Initialize on first render
+  useEffect(() => {
+    const initial = getFilteredConferencesByTab(activeTab);
+    setFilteredConferences(initial);
+  }, []);
   
   // Get filtered conferences based on active tab
-  const getFilteredConferences = () => {
+  const getFilteredConferencesByTab = (tabName: string) => {
     if (!showAll) {
       return [...conferenceCertificates].sort((a, b) => b.year - a.year).slice(0, 6);
     }
     
-    const byType = {
-      'presenters': groupedConferences.presenters,
-      'workshop': groupedConferences.workshop,
-      'attendees': groupedConferences.attendees,
-      'panelists': groupedConferences.panelists,
-      'organizers': groupedConferences.organizers,
-      'keynote': groupedConferences.keynote,
-      'all': groupedConferences.all
-    };
+    console.log("Getting conferences for tab:", tabName);
     
-    return byType[activeTab as keyof typeof byType] || groupedConferences.all;
+    const sortedConferences = [...conferenceCertificates].sort((a, b) => b.year - a.year);
+    
+    switch (tabName) {
+      case 'presenters':
+        return sortedConferences.filter(conf => conf.participantType === "Presenter");
+      case 'workshop':
+        return sortedConferences.filter(conf => conf.participantType === "Workshop Participant");
+      case 'attendees':
+        return sortedConferences.filter(conf => conf.participantType === "Attendee (Audience)");
+      case 'panelists':
+        return sortedConferences.filter(conf => conf.participantType === "Panelist / Moderator");
+      case 'organizers':
+        return sortedConferences.filter(conf => conf.participantType === "Organizing Committee / Executive Member");
+      case 'keynote':
+        return sortedConferences.filter(conf => conf.participantType === "Keynote Speaker / Invited Speaker");
+      case 'all':
+      default:
+        return sortedConferences;
+    }
+  };
+  
+  // Simplified function to maintain backwards compatibility with existing code
+  const getFilteredConferences = () => {
+    return filteredConferences.length > 0 ? filteredConferences : getFilteredConferencesByTab(activeTab);
   };
   
   // Use the conferenceCertificates data directly
