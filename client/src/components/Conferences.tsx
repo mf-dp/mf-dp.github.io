@@ -507,55 +507,61 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
         </motion.h2>
         
         {showAll && (
-          <div className="mb-10 flex justify-center">
-            <Tabs defaultValue="all" onValueChange={setActiveTab} className="w-full max-w-5xl mx-auto">
-              <div className="flex justify-center mb-8">
-                <TabsList className="inline-flex flex-wrap md:flex-nowrap p-1.5 bg-blue-50/80 dark:bg-blue-900/20 rounded-xl shadow-md border border-blue-100 dark:border-blue-800">
-                  <TabsTrigger 
-                    value="all"
-                    className="min-w-24 px-4 py-2.5 rounded-lg font-medium text-sm data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all duration-200"
+          <div className="mb-10">
+            <div className="flex justify-center">
+              <div className="w-full max-w-5xl">
+                <div className="flex flex-wrap justify-center gap-2 mb-6">
+                  <button 
+                    onClick={() => setActiveTab('all')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === 'all' ? 'bg-blue-500 text-white' : 'bg-blue-50 dark:bg-blue-900/30 text-gray-800 dark:text-gray-200'}`}
                   >
                     All Conferences
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="presenters"
-                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-green-500 data-[state=active]:text-white transition-all duration-200"
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('presenters')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${activeTab === 'presenters' ? 'bg-green-500 text-white' : 'bg-blue-50 dark:bg-blue-900/30 text-gray-800 dark:text-gray-200'}`}
                   >
-                    <span className="text-green-500 data-[state=active]:text-white">●</span> Presenters
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="workshop"
-                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all duration-200"
+                    <span className="text-green-500">●</span> Presenters
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('workshop')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${activeTab === 'workshop' ? 'bg-blue-500 text-white' : 'bg-blue-50 dark:bg-blue-900/30 text-gray-800 dark:text-gray-200'}`}
                   >
                     <span className="text-blue-500">●</span> Workshops
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="attendees"
-                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-yellow-500 data-[state=active]:text-white transition-all duration-200"
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('attendees')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${activeTab === 'attendees' ? 'bg-yellow-500 text-white' : 'bg-blue-50 dark:bg-blue-900/30 text-gray-800 dark:text-gray-200 opacity-50'}`}
+                    disabled={true}
+                    title="No Attendees in the current dataset"
                   >
                     <span className="text-yellow-500">●</span> Attendees
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="panelists"
-                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-orange-500 data-[state=active]:text-white transition-all duration-200"
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('panelists')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${activeTab === 'panelists' ? 'bg-orange-500 text-white' : 'bg-blue-50 dark:bg-blue-900/30 text-gray-800 dark:text-gray-200 opacity-50'}`}
+                    disabled={true}
+                    title="No Panelists in the current dataset"
                   >
                     <span className="text-orange-500">●</span> Panelists
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="organizers"
-                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-red-500 data-[state=active]:text-white transition-all duration-200"
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('organizers')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${activeTab === 'organizers' ? 'bg-red-500 text-white' : 'bg-blue-50 dark:bg-blue-900/30 text-gray-800 dark:text-gray-200'}`}
                   >
                     <span className="text-red-500">●</span> Organizers
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="keynote"
-                    className="px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-1.5 border-l border-blue-100 dark:border-blue-800 data-[state=active]:bg-gray-900 data-[state=active]:text-white transition-all duration-200"
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('keynote')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${activeTab === 'keynote' ? 'bg-gray-900 text-white' : 'bg-blue-50 dark:bg-blue-900/30 text-gray-800 dark:text-gray-200 opacity-50'}`}
+                    disabled={true}
+                    title="No Keynote Speakers in the current dataset"
                   >
                     <span className="text-gray-900 dark:text-white">●</span> Keynotes
-                  </TabsTrigger>
-                </TabsList>
+                  </button>
+                </div>
               </div>
-            </Tabs>
+            </div>
           </div>
         )}
         
