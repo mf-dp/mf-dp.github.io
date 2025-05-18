@@ -1,0 +1,187 @@
+2021.03.09-10.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Participation
+	3	Paper Title	(Not specified in the certificate)
+	4	Role	Presenter
+	5	Event Name / Abbreviation	The 4th ICCTME 2021
+	6	Conference Title	Current Trends in the Middle East: Virtual International Joint Conference on COVID-19 Global Impacts
+	7	Date	9–10 March 2021
+	8	Type of Event	Virtual International Joint Conference
+	9	University / Issuer	Universiti Teknologi Malaysia (UTM)
+	10	In Collaboration with	Ilam University, Tokat Gaziosmanpaşa University, Payame Noor University
+2019.11.20-21.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Presentation
+	3	Paper Title	An Exploration of Iranian EFL Stakeholders’ Attitudes and Knowledge of Different Educational Management Systems
+	4	Role	Paper Presenter
+	5	Event Name / Abbreviation	The 17th International TELLSI Conference
+	6	Conference Title	New Horizons in Language Studies
+	7	Date	November 20–21, 2019 (Aban 29–30, 1398)
+	8	Type of Event	Academic Conference (Paper Presentation)
+	9	University / Issuer	Islamic Azad University of Tabriz Branch
+	10	In Collaboration with	TELLSI (Teaching English Language and Literature Society of Iran)
+2019.10.25.02.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Attendance
+	3	Paper Title	Implementing Learning Analytics in a Higher Education Institution: Issues and Considerations
+	4	Role	Workshop Attendee
+	5	Event Name / Abbreviation	EUROKD Conference
+	6	Conference Title	International Conference on Education, Psychology, and Behavioral Science
+	7	Date	25 October 2019
+	8	Type of Event	International Academic Workshop
+	9	University / Issuer	University of Leeds (with support from Universitat Politècnica de València)
+	10	In Collaboration with	EUROKD, Universitat Politècnica de València, University of Leeds
+2019.10.25.01.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Attendance
+	3	Paper Title	Developmental Psychology without Positivistic Pretentions
+	4	Role	Workshop Attendee
+	5	Event Name / Abbreviation	EUROKD Conference
+	6	Conference Title	International Conference on Education, Psychology, and Behavioral Science
+	7	Date	25 October 2019
+	8	Type of Event	International Academic Workshop
+	9	University / Issuer	University of Leeds (with support from Universitat Politècnica de València)
+	10	In Collaboration with	EUROKD, Universitat Politècnica de València, University of Leeds
+2019.01-02.30-01.03.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Workshop Presentation
+	3	Paper Title	Planning Research in Applied Linguistics
+	4	Role	Workshop Participant
+	5	Event Name / Abbreviation	5th International LDP Conference
+	6	Conference Title	5th International Conference on Language, Discourse and Pragmatics
+	7	Date	January 30 – February 1, 2019
+	8	Type of Event	International Academic Workshop (within a Conference)
+	9	University / Issuer	Shahid Chamran University of Ahvaz
+	10	In Collaboration with	KELTA, University of Amsterdam, UNED, ISC
+2019.01-02.30-01.02.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Workshop Presentation
+	3	Paper Title	How to do a Valid Pragmatics Research: Dealing with Theory and Data
+	4	Role	Workshop Participant
+	5	Event Name / Abbreviation	5th International LDP Conference
+	6	Conference Title	5th International Conference on Language, Discourse and Pragmatics
+	7	Date	January 30 – February 1, 2019
+	8	Type of Event	International Academic Workshop (within a Conference)
+	9	University / Issuer	Shahid Chamran University of Ahvaz
+	10	In Collaboration with	KELTA, University of Amsterdam, UNED, ISC
+2019.01-02.30-01.01.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Presentation
+	3	Paper Title	Subjectivity and Objectivity in Discussion Sections of Iranian M.A. Thesis and Ph.D. Dissertations; the Case of Hard and Soft Science Fields of Studies
+	4	Role	Paper Presenter
+	5	Event Name / Abbreviation	5th International LDP Conference
+	6	Conference Title	5th International Conference on Language, Discourse and Pragmatics
+	7	Date	January 30 – February 1, 2019
+	8	Type of Event	International Academic Conference
+	9	University / Issuer	Shahid Chamran University of Ahvaz
+	10	In Collaboration with	KELTA, University of Amsterdam, UNED, ISC
+2018.11.14-16.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza & Reza Khany
+	2	Certificate Title	Certificate of Presentation
+	3	Paper Title	An Ecological Exploration of Iranian EFL Students’ Self-Change, Self-Construal, and Change Management through Classroom Communication Tasks
+	4	Role	Paper Presenter
+	5	Event Name / Abbreviation	16th International TELLSI Conference
+	6	Conference Title	Futurology of English Language Teaching and Literature
+	7	Date	November 14–16, 2018
+	8	Type of Event	International Academic Conference
+	9	University / Issuer	Shiraz University
+	10	In Collaboration with	TELLSI, ISC, Iran National Science Foundation, Salman Farsi University of Kazerun, Shahid Bahonar University, Navid Educational Group
+2018.09.04-05.jpg			
+	1	Recipient Name	Reza Khany, Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Presentation
+	3	Paper Title	Investigating the Effect of EFL Teachers’ Self-leadership on their Processional Development and Change
+	4	Role	Paper Presenter
+	5	Event Name / Abbreviation	3rd Conference on New Trends in English Language Teaching and Testing (NTELTT)
+	6	Conference Title	New Trends in English Language Teaching and Testing
+	7	Date	4–5 September 2018
+	8	Type of Event	International Academic Conference
+	9	University / Issuer	Not explicitly mentioned; associated with NTELTT and hosted in Tehran, Iran
+	10	In Collaboration with	CIKD, Victoria University of Wellington, CIVILICA, Maeen Danesh, NTELT.IR
+2018.04.25-27.jpg			
+	1	Recipient Name	Mahdieh Fakhar
+	2	Certificate Title	Executive Committee Appointment Letter
+	3	Paper Title	(Not applicable – no paper presented)
+	4	Role	Executive Committee Member
+	5	Event Name / Abbreviation	The 2nd International Conference on Dust (2DUST)
+	6	Conference Title	The 2nd International Conference on Dust
+	7	Date	25–27 April 2018
+	8	Type of Event	International Scientific Conference
+	9	University / Issuer	Ilam University
+	10	In Collaboration with	
+2017.01.25-27.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Presentation
+	3	Paper Title	Paralogism, Ambiguity and Circumlocution: Do Compensation Strategies Help?
+	4	Role	Paper Presenter
+	5	Event Name / Abbreviation	4th International LDP Conference
+	6	Conference Title	Fourth International Conference on Language, Discourse and Pragmatics
+	7	Date	January 25–27, 2017
+	8	Type of Event	International Academic Conference
+	9	University / Issuer	Shahid Chamran University of Ahvaz
+	10	In Collaboration with	KELTA, ISC, UNED, UNSW Australia, ISFLA
+2016.11.16-18.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Presentation
+	3	Paper Title	(Not specified in the certificate)
+	4	Role	Paper Presenter
+	5	Event Name / Abbreviation	14th International TELLSI Conference
+	6	Conference Title	TELLSI: Teaching English Language and Literature Society of Iran
+	7	Date	November 16–18, 2016
+	8	Type of Event	International Academic Conference
+	9	University / Issuer	Islamic Azad University (Kerman Branch)
+	10	In Collaboration with	TELLSI (Teaching English Language and Literature Society of Iran)
+2016.05.12-13.jpg			
+	1	Recipient Name	Mahdie Fakhar Shahreza
+	2	Certificate Title	Certificate of Presentation
+	3	Paper Title	Language Learning through WhatsApp or Telegram, Which Court is the Ball in?
+	4	Role	Poster Presenter
+	5	Event Name / Abbreviation	The First English-French Conference
+	6	Conference Title	The First English-French Conference on Applied Linguistics and Literature
+	7	Date	May 12–13, 2016
+	8	Type of Event	International Academic Conference with Poster Presentation
+	9	University / Issuer	University of Kurdistan, Sanandaj
+	10	In Collaboration with	TELLSI Kurdistan, AILF (Association française de linguistique appliquée), Kurdistan English Teachers’ Association
+2015.11.17-19.01.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Attendance
+	3	Paper Title	Revisiting and Implementing Critical Pedagogy in Second Language Learning
+	4	Role	Workshop Participant
+	5	Event Name / Abbreviation	TELLSI 13 International Conference
+	6	Conference Title	13th International TELLSI Conference
+	7	Date	November 17–19, 2015
+	8	Type of Event	International Academic Conference (Workshop Attendance)
+	9	University / Issuer	Lorestan University
+	10	In Collaboration with	TELLSI (Teaching English Language and Literature Society of Iran), Allameh Tabataba’i University
+2015.11.17-19.02.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Attendance
+	3	Paper Title	Instructional Pragmatics: Teaching Students to Use Language Appropriately
+	4	Role	Workshop Participant
+	5	Event Name / Abbreviation	TELLSI 13 International Conference
+	6	Conference Title	13th International TELLSI Conference
+	7	Date	November 17–19, 2015
+	8	Type of Event	International Academic Conference (Workshop Attendance)
+	9	University / Issuer	Lorestan University
+	10	In Collaboration with	TELLSI (Teaching English Language and Literature Society of Iran), Texas A&M University, Hosei University
+2015.11.17-19.03.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Attendance
+	3	Paper Title	Innovative Practices in English Language Learning and Research: Use of ICT Tools for the Preparation of Pre-Service English Teachers at the National Institute of Education in Singapore
+	4	Role	Workshop Participant
+	5	Event Name / Abbreviation	TELLSI 13 International Conference
+	6	Conference Title	13th International TELLSI Conference
+	7	Date	November 17–19, 2015
+	8	Type of Event	International Academic Conference (Workshop Attendance)
+	9	University / Issuer	Lorestan University
+	10	In Collaboration with	TELLSI (Teaching English Language and Literature Society of Iran), National Institute of Education in Singapore
+2015.11.17-19.04.jpg			
+	1	Recipient Name	Mahdieh Fakhar Shahreza
+	2	Certificate Title	Certificate of Attendance
+	3	Paper Title	Professional Change, Professional Development, and Professional Identity of Iranian EFL Beginner vs. Experienced Teachers
+	4	Role	Presenter
+	5	Event Name / Abbreviation	TELLSI 13 International Conference
+	6	Conference Title	13th International TELLSI Conference
+	7	Date	November 17–19, 2015
+	8	Type of Event	International Academic Conference
+	9	University / Issuer	Lorestan University
+	10	In Collaboration with	TELLSI (Teaching English Language and Literature Society of Iran)
