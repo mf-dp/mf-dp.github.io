@@ -15,7 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 // Conference certificates data with detailed information extracted from certificate images
 const conferenceCertificates = [
   { 
@@ -29,8 +29,7 @@ const conferenceCertificates = [
     location: "Tarbiat Modares University, Tehran, Iran",
     role: "Presenter",
     participantType: "Presenter",
-    typeColor: "green", // 🟩 Presenter
-    topic: "Language Education Research"
+    typeColor: "green"
   },
   { 
     id: 2, 
@@ -43,8 +42,7 @@ const conferenceCertificates = [
     location: "Tehran, Iran",
     role: "Contributor",
     participantType: "Panelist / Moderator",
-    typeColor: "orange", // 🟧 Panelist / Moderator
-    topic: "Language Education Methodologies"
+    typeColor: "orange"
   },
   { 
     id: 3, 
@@ -57,8 +55,7 @@ const conferenceCertificates = [
     location: "Islamic Azad University, Tabriz Branch, Iran",
     role: "Presenter",
     participantType: "Presenter",
-    typeColor: "green", // 🟩 Presenter
-    topic: "Language Teaching and Research"
+    typeColor: "green"
   },
   { 
     id: 4, 
@@ -69,7 +66,7 @@ const conferenceCertificates = [
     location: "Islamic Azad University, Iran",
     role: "Presenter",
     participantType: "Presenter",
-    typeColor: "green" // 🟩 Presenter
+    typeColor: "green"
   },
   { 
     id: 5, 
@@ -80,7 +77,7 @@ const conferenceCertificates = [
     location: "Tehran, Iran",
     role: "Organizing Committee Member",
     participantType: "Organizing Committee / Executive Member",
-    typeColor: "red" // 🟥 Organizing Committee / Executive Member
+    typeColor: "red"
   },
   { 
     id: 6, 
@@ -91,7 +88,7 @@ const conferenceCertificates = [
     location: "Tehran, Iran",
     role: "Presenter",
     participantType: "Presenter",
-    typeColor: "green" // 🟩 Presenter
+    typeColor: "green"
   },
   { 
     id: 7, 
@@ -102,7 +99,7 @@ const conferenceCertificates = [
     location: "Tehran, Iran",
     role: "Attendee",
     participantType: "Attendee (Audience)",
-    typeColor: "yellow" // 🟨 Attendee (Audience)
+    typeColor: "yellow"
   },
   { 
     id: 8, 
@@ -113,7 +110,7 @@ const conferenceCertificates = [
     location: "University of Tehran, Iran",
     role: "Workshop Participant",
     participantType: "Workshop Participant",
-    typeColor: "blue" // 🟦 Workshop Participant
+    typeColor: "blue"
   },
   { 
     id: 9, 
@@ -124,7 +121,7 @@ const conferenceCertificates = [
     location: "Kharazmi University, Iran",
     role: "Keynote Speaker",
     participantType: "Keynote Speaker / Invited Speaker",
-    typeColor: "black" // ⬛ Keynote Speaker / Invited Speaker
+    typeColor: "black"
   },
   { 
     id: 10, 
@@ -135,7 +132,7 @@ const conferenceCertificates = [
     location: "Mashhad, Iran",
     role: "Panelist",
     participantType: "Panelist / Moderator",
-    typeColor: "orange" // 🟧 Panelist / Moderator
+    typeColor: "orange"
   },
   { 
     id: 11, 
@@ -146,7 +143,7 @@ const conferenceCertificates = [
     location: "Shiraz University, Iran",
     role: "Presenter",
     participantType: "Presenter",
-    typeColor: "green" // 🟩 Presenter
+    typeColor: "green"
   },
   { 
     id: 12, 
@@ -157,7 +154,7 @@ const conferenceCertificates = [
     location: "Urmia University, Iran",
     role: "Attendee",
     participantType: "Attendee (Audience)",
-    typeColor: "yellow" // 🟨 Attendee (Audience)
+    typeColor: "yellow"
   },
   { 
     id: 13, 
@@ -168,7 +165,7 @@ const conferenceCertificates = [
     location: "Tehran, Iran",
     role: "Workshop Participant",
     participantType: "Workshop Participant",
-    typeColor: "blue" // 🟦 Workshop Participant
+    typeColor: "blue"
   },
   { 
     id: 14, 
@@ -179,7 +176,7 @@ const conferenceCertificates = [
     location: "Lorestan University, Iran",
     role: "Organizing Committee Member",
     participantType: "Organizing Committee / Executive Member",
-    typeColor: "red" // 🟥 Organizing Committee / Executive Member
+    typeColor: "red"
   },
   { 
     id: 15, 
@@ -190,7 +187,7 @@ const conferenceCertificates = [
     location: "Lorestan University, Iran",
     role: "Presenter",
     participantType: "Presenter",
-    typeColor: "green" // 🟩 Presenter
+    typeColor: "green"
   },
   { 
     id: 16, 
@@ -201,7 +198,7 @@ const conferenceCertificates = [
     location: "Lorestan University, Iran",
     role: "Presenter",
     participantType: "Presenter",
-    typeColor: "green" // 🟩 Presenter
+    typeColor: "green"
   },
   { 
     id: 17, 
@@ -212,11 +209,11 @@ const conferenceCertificates = [
     location: "Lorestan University, Iran",
     role: "Attendee",
     participantType: "Attendee (Audience)",
-    typeColor: "yellow" // 🟨 Attendee (Audience)
+    typeColor: "yellow"
   },
 ];
 
-export function Conferences({ showAll = false }: { showAll?: boolean }) {
+export default function Conferences({ showAll = false }: { showAll?: boolean }) {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
@@ -304,29 +301,11 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
     }
   };
 
-  // Group conferences by participant type
-  const groupConferencesByType = () => {
-    const sorted = [...conferenceCertificates].sort((a, b) => b.year - a.year);
-    
-    const byType = {
-      presenters: sorted.filter(conf => conf.participantType === "Presenter"),
-      workshop: sorted.filter(conf => conf.participantType === "Workshop Participant"),
-      attendees: sorted.filter(conf => conf.participantType === "Attendee (Audience)"),
-      panelists: sorted.filter(conf => conf.participantType === "Panelist / Moderator"),
-      organizers: sorted.filter(conf => conf.participantType === "Organizing Committee / Executive Member"),
-      keynote: sorted.filter(conf => conf.participantType === "Keynote Speaker / Invited Speaker"),
-    };
-    
-    return byType;
-  };
-  
-  const groupedConferences = groupConferencesByType();
-  
   // Use the conferenceCertificates data directly
   // If we're not showing all (on homepage), limit to 6 most recent certificates
   const conferences = !showAll 
     ? [...conferenceCertificates].sort((a, b) => b.year - a.year).slice(0, 6)
-    : [...conferenceCertificates].sort((a, b) => b.year);
+    : [...conferenceCertificates].sort((a, b) => b.year - a.year);
 
   const openConferenceDetails = (conference: any) => {
     setSelectedConference(conference);
@@ -367,8 +346,6 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
             repeatType: "reverse" 
           }}
         />
-        
-        {/* No decorative conference elements */}
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -391,284 +368,13 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
           {t('conferences.title')}
         </motion.h2>
         
-        {!showAll ? (
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            animate={controls}
-            variants={containerVariants}
-          >
-            {conferences.map((conference: any, index: number) => {
-              return (
-                <motion.div 
-                  key={index} 
-                  variants={itemVariants}
-                  onHoverStart={() => setHoveredCard(index)}
-                  onHoverEnd={() => setHoveredCard(null)}
-                  whileHover={{ y: -8 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <Card className="overflow-hidden h-full shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-200 dark:border-gray-700 dark:hover:border-blue-800 transition-all duration-300 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 backdrop-blur-sm">
-                    <motion.div 
-                      className="relative overflow-hidden"
-                      variants={imageVariants}
-                      initial="initial"
-                      animate={hoveredCard === index ? "hover" : "initial"}
-                    >
-                      <LazyImage 
-                        src={conference.path} 
-                        alt={conference.title} 
-                        className="w-full h-56 object-cover" 
-                        placeholderBlur={true}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <div className="text-white space-y-1">
-                          <p className="font-medium text-blue-200">{conference.year}</p>
-                          <p className="font-medium">{t('conferences.viewDetails')}</p>
-                        </div>
-                      </div>
-                      
-                      <motion.div 
-                        className="absolute top-4 left-4 bg-gradient-to-r from-blue-600 to-primary text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-lg"
-                        initial={{ x: -20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.3 + (index * 0.1), duration: 0.5, type: "spring" }}
-                      >
-                        {conference.year}
-                      </motion.div>
-                    </motion.div>
-                    
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-2 text-primary">{conference.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
-                        {conference.description}
-                      </p>
-                      
-                      <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4 bg-blue-50 dark:bg-blue-950/30 p-2 rounded-lg">
-                        <motion.div
-                          animate={{ 
-                            scale: [1, 1.1, 1],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            repeatType: "mirror"
-                          }}
-                          className="text-primary dark:text-primary mr-2"
-                        >
-                          <FaMapMarkerAlt />
-                        </motion.div>
-                        <span>{conference.location}</span>
-                      </div>
-                      
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <motion.button 
-                            className="w-full bg-blue-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-primary hover:text-white text-blue-700 font-medium py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 mt-2 border border-blue-200 dark:border-blue-800 dark:bg-blue-900/20 dark:text-blue-400"
-                            variants={buttonVariants}
-                            initial="initial"
-                            whileHover="hover"
-                            onClick={() => openConferenceDetails(conference)}
-                          >
-                            <span>{t('conferences.viewDetails')}</span>
-                            <motion.div
-                              whileHover={{ 
-                                scale: 1.2, 
-                                rotate: 5,
-                              }}
-                              transition={{ 
-                                type: "spring", 
-                                stiffness: 400, 
-                                damping: 10 
-                              }}
-                            >
-                              <FaChevronRight className="text-sm" />
-                            </motion.div>
-                          </motion.button>
-                        </DialogTrigger>
-                        <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto bg-blue-50/95 dark:bg-gray-900/95 backdrop-blur-sm border-blue-200 dark:border-blue-800">
-                          <DialogHeader>
-                            <DialogTitle className="flex items-center gap-2">
-                              <motion.span
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="text-primary"
-                              >
-                                <FaAward />
-                              </motion.span>
-                              {conference.title}
-                            </DialogTitle>
-                          </DialogHeader>
-                          
-                          <div className="mt-4">
-                            <LazyImage 
-                              src={conference.path} 
-                              alt={conference.title} 
-                              className="w-full h-64 object-cover rounded-lg shadow-md border border-blue-200 dark:border-blue-800" 
-                              placeholderBlur={true}
-                            />
-                            
-                            <div className="space-y-4 mt-6">
-                              <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                <FaCalendarAlt className="text-primary dark:text-primary" />
-                                <span>{conference.year}</span>
-                                {conference.dateRange && (
-                                  <span className="text-gray-500 dark:text-gray-400 text-sm">({conference.dateRange})</span>
-                                )}
-                              </div>
-                              
-                              <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                <FaMapMarkerAlt className="text-primary dark:text-primary" />
-                                <span>{conference.location}</span>
-                              </div>
-                              
-                              {conference.organization && (
-                                <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                  <FaUniversity className="text-primary dark:text-primary" />
-                                  <span>{conference.organization}</span>
-                                </div>
-                              )}
-                              
-                              {conference.role && (
-                                <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                  <FaTags className="text-primary dark:text-primary" />
-                                  <span>{conference.role || 'Presenter'}</span>
-                                </div>
-                              )}
-                              
-                              {conference.topic && (
-                                <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg mt-4">
-                                  <h4 className="font-medium text-primary dark:text-primary mb-2">Research Topic:</h4>
-                                  <p className="text-gray-700 dark:text-gray-300">{conference.topic}</p>
-                                </div>
-                              )}
-                              
-                              <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
-                                <h4 className="font-medium text-primary dark:text-primary mb-2">Description:</h4>
-                                <p className="text-gray-700 dark:text-gray-300">{conference.description}</p>
-                              </div>
-                            </div>
-                          </div>
-                        </DialogContent>
-                      </Dialog>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        ) : (
-          <Tabs defaultValue="presenters" className="w-full">
-            <TabsList className="grid w-full md:w-auto md:inline-flex grid-cols-2 md:grid-cols-none gap-2 mb-8 p-1 bg-blue-50/80 dark:bg-blue-900/20 rounded-lg">
-              <TabsTrigger 
-                value="presenters"
-                className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-green-500 data-[state=active]:to-green-600 data-[state=active]:text-white"
-              >
-                🟩 Presenters
-              </TabsTrigger>
-              <TabsTrigger 
-                value="workshop"
-                className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-blue-500 data-[state=active]:to-blue-600 data-[state=active]:text-white"
-              >
-                🟦 Workshop Participants
-              </TabsTrigger>
-              <TabsTrigger 
-                value="attendees"
-                className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-yellow-500 data-[state=active]:to-yellow-600 data-[state=active]:text-white"
-              >
-                🟨 Attendees
-              </TabsTrigger>
-              <TabsTrigger 
-                value="panelists"
-                className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white"
-              >
-                🟧 Panelists
-              </TabsTrigger>
-              <TabsTrigger 
-                value="organizers"
-                className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-red-500 data-[state=active]:to-red-600 data-[state=active]:text-white"
-              >
-                🟥 Organizers
-              </TabsTrigger>
-              <TabsTrigger 
-                value="keynote"
-                className="px-5 data-[state=active]:bg-gradient-to-b data-[state=active]:from-gray-700 data-[state=active]:to-gray-900 data-[state=active]:text-white"
-              >
-                ⬛ Keynote Speakers
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="presenters" className="mt-0">
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                animate={controls}
-                variants={containerVariants}
-              >
-                {groupedConferences.presenters.map((conference: any, index: number) => (
-            </TabsContent>
-            
-            <TabsContent value="workshop" className="mt-0">
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                animate={controls}
-                variants={containerVariants}
-              >
-                {groupedConferences.workshop.map((conference: any, index: number) => (
-            </TabsContent>
-            
-            <TabsContent value="attendees" className="mt-0">
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                animate={controls}
-                variants={containerVariants}
-              >
-                {groupedConferences.attendees.map((conference: any, index: number) => (
-            </TabsContent>
-            
-            <TabsContent value="panelists" className="mt-0">
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                animate={controls}
-                variants={containerVariants}
-              >
-                {groupedConferences.panelists.map((conference: any, index: number) => (
-            </TabsContent>
-            
-            <TabsContent value="organizers" className="mt-0">
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                animate={controls}
-                variants={containerVariants}
-              >
-                {groupedConferences.organizers.map((conference: any, index: number) => (
-            </TabsContent>
-            
-            <TabsContent value="keynote" className="mt-0">
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                animate={controls}
-                variants={containerVariants}
-              >
-                {groupedConferences.keynote.map((conference: any, index: number) => (
-            </TabsContent>
-          </Tabs>
-        )}
-        
-        {!showAll ? (
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            animate={controls}
-            variants={containerVariants}
-          >
-            {conferences.map((conference: any, index: number) => (
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate={controls}
+          variants={containerVariants}
+        >
+          {conferences.map((conference: any, index: number) => (
             <motion.div 
               key={index} 
               variants={itemVariants}
@@ -677,7 +383,14 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <Card className="overflow-hidden h-full shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-200 dark:border-gray-700 dark:hover:border-blue-800 transition-all duration-300 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 backdrop-blur-sm">
+              <Card className={`overflow-hidden h-full shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-200 dark:border-gray-700 dark:hover:border-blue-800 transition-all duration-300 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 backdrop-blur-sm ${
+                conference.typeColor === 'green' ? 'border-l-4 border-l-green-500' :
+                conference.typeColor === 'blue' ? 'border-l-4 border-l-blue-500' :
+                conference.typeColor === 'yellow' ? 'border-l-4 border-l-yellow-500' :
+                conference.typeColor === 'orange' ? 'border-l-4 border-l-orange-500' :
+                conference.typeColor === 'red' ? 'border-l-4 border-l-red-500' :
+                conference.typeColor === 'black' ? 'border-l-4 border-l-gray-900 dark:border-l-white' : ''
+              }`}>
                 <motion.div 
                   className="relative overflow-hidden"
                   variants={imageVariants}
@@ -705,6 +418,20 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                   >
                     {conference.year}
                   </motion.div>
+
+                  {showAll && (
+                    <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium shadow-lg ${
+                      conference.typeColor === 'green' ? 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300' :
+                      conference.typeColor === 'blue' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300' :
+                      conference.typeColor === 'yellow' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300' :
+                      conference.typeColor === 'orange' ? 'bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300' :
+                      conference.typeColor === 'red' ? 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-300' :
+                      conference.typeColor === 'black' ? 'bg-gray-800 text-white dark:bg-gray-900 dark:text-gray-200' : 
+                      'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200'
+                    }`}>
+                      {conference.role}
+                    </div>
+                  )}
                 </motion.div>
                 
                 <CardContent className="p-6">
@@ -716,7 +443,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                   <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4 bg-blue-50 dark:bg-blue-950/30 p-2 rounded-lg">
                     <motion.div
                       animate={{ 
-                        scale: [1, 1.1, 1],
+                        scale: [1, 1.1, 1]
                       }}
                       transition={{
                         duration: 2,
@@ -743,7 +470,7 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                         <motion.div
                           whileHover={{ 
                             scale: 1.2, 
-                            rotate: 5,
+                            rotate: 5
                           }}
                           transition={{ 
                             type: "spring", 
@@ -762,105 +489,63 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="text-2xl font-bold text-primary"
+                            className="text-primary"
                           >
-                            {conference.title}
+                            <FaAward />
                           </motion.span>
-                          <motion.span 
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3, delay: 0.1 }}
-                            className="text-sm font-normal text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded-full"
-                          >
-                            {conference.year}
-                          </motion.span>
+                          {conference.title}
                         </DialogTitle>
                       </DialogHeader>
-                      <motion.div 
-                        className="grid gap-6 py-4"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.4 }}
-                      >
-                        <motion.div
-                          initial={{ scale: 0.95, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ duration: 0.5 }}
-                          className="overflow-hidden rounded-xl shadow-md"
-                        >
-                          <LazyImage 
-                            src={conference.path} 
-                            alt={conference.title} 
-                            className="w-full h-72 object-cover" 
-                            placeholderBlur={true}
-                          />
-                        </motion.div>
+                      
+                      <div className="mt-4">
+                        <LazyImage 
+                          src={conference.path} 
+                          alt={conference.title} 
+                          className="w-full h-64 object-cover rounded-lg shadow-md border border-blue-200 dark:border-blue-800" 
+                          placeholderBlur={true}
+                        />
                         
-                        <div className="space-y-4">
-                          <motion.div
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.2, duration: 0.4 }}
-                          >
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{conference.description}</p>
-                          </motion.div>
+                        <div className="space-y-4 mt-6">
+                          <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                            <FaCalendarAlt className="text-primary dark:text-primary" />
+                            <span>{conference.year}</span>
+                            {conference.dateRange && (
+                              <span className="text-gray-500 dark:text-gray-400 text-sm">({conference.dateRange})</span>
+                            )}
+                          </div>
                           
-                          {/* Organizer/Institution */}
-                          <motion.div 
-                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.3, duration: 0.4 }}
-                          >
-                            <FaUniversity className="mr-2 text-primary dark:text-primary" />
-                            <span>{conference.organization || 'Teaching English Language and Literature Society of Iran'}</span>
-                          </motion.div>
-                          
-                          {/* Location */}
-                          <motion.div 
-                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.4, duration: 0.4 }}
-                          >
-                            <FaMapMarkerAlt className="mr-2 text-primary dark:text-primary" />
+                          <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                            <FaMapMarkerAlt className="text-primary dark:text-primary" />
                             <span>{conference.location}</span>
-                          </motion.div>
+                          </div>
                           
-                          {/* Date Range */}
-                          <motion.div 
-                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 0.4 }}
-                          >
-                            <FaCalendarAlt className="mr-2 text-primary dark:text-primary" />
-                            <span>{conference.dateRange || `${conference.year}`}</span>
-                          </motion.div>
+                          {conference.organization && (
+                            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                              <FaUniversity className="text-primary dark:text-primary" />
+                              <span>{conference.organization}</span>
+                            </div>
+                          )}
                           
-                          {/* Role */}
-                          <motion.div 
-                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.6, duration: 0.4 }}
-                          >
-                            <FaAward className="mr-2 text-primary dark:text-primary" />
-                            <span>{conference.role || 'Presenter'}</span>
-                          </motion.div>
+                          {conference.role && (
+                            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                              <FaTags className="text-primary dark:text-primary" />
+                              <span>{conference.role}</span>
+                            </div>
+                          )}
                           
-                          {/* Topic */}
-                          <motion.div 
-                            className="flex items-center text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.7, duration: 0.4 }}
-                          >
-                            <FaTags className="mr-2 text-primary dark:text-primary" />
-                            <span>{conference.topic || 'Language Education Research'}</span>
-                          </motion.div>
+                          {conference.topic && (
+                            <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg mt-4">
+                              <h4 className="font-medium text-primary dark:text-primary mb-2">Research Topic:</h4>
+                              <p className="text-gray-700 dark:text-gray-300">{conference.topic}</p>
+                            </div>
+                          )}
+                          
+                          <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
+                            <h4 className="font-medium text-primary dark:text-primary mb-2">Description:</h4>
+                            <p className="text-gray-700 dark:text-gray-300">{conference.description}</p>
+                          </div>
                         </div>
-                      </motion.div>
+                      </div>
                     </DialogContent>
                   </Dialog>
                 </CardContent>
@@ -870,43 +555,32 @@ export function Conferences({ showAll = false }: { showAll?: boolean }) {
         </motion.div>
         
         {!showAll && (
-          <motion.div 
-            className="mt-16 text-center"
-            variants={itemVariants}
-            initial={{ opacity: 0, y: 20 }}
-            animate={controls}
-            transition={{ delay: 0.6, duration: 0.5 }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+          <div className="flex justify-center mt-16">
+            <motion.a
+              href="/conferences"
+              className="flex items-center gap-2 bg-blue-100 hover:bg-primary hover:text-white text-blue-700 font-medium py-3 px-6 rounded-full transition-all duration-300 border border-blue-200 group dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800"
+              whileHover={{ 
+                scale: 1.05, 
+                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)" 
+              }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <a 
-                href="/conferences" 
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-primary hover:from-blue-600 hover:to-primary/90 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              <span>{t('conferences.viewAll')}</span>
+              <motion.div
+                initial={{ x: 0 }}
+                animate={{ x: [0, 5, 0] }}
+                transition={{ 
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "mirror" 
+                }}
               >
-                <span>{t('conferences.viewAllButton')}</span>
-                <motion.div
-                  whileHover={{ 
-                    scale: 1.2, 
-                    rotate: 5,
-                  }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 400, 
-                    damping: 10 
-                  }}
-                >
-                  <FaArrowRight />
-                </motion.div>
-              </a>
-            </motion.div>
-          </motion.div>
+                <FaArrowRight className="text-sm group-hover:text-white" />
+              </motion.div>
+            </motion.a>
+          </div>
         )}
       </div>
     </section>
   );
 }
-
-export default Conferences;
